@@ -161,11 +161,6 @@ namespace Programa_STPMJ
             }
             
                 Application.Exit();
-            
-
-            
-                        
-            
         }
     }
 }
