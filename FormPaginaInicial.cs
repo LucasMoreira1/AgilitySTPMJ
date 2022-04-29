@@ -2,18 +2,22 @@
 using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
+using System.Drawing;
+
 
 namespace Programa_STPMJ
 {
+
     public partial class formPaginaInicial : Form
     {
-        //public Boolean CameraOn = false;
+        
         public formPaginaInicial()
         {
             InitializeComponent();
             CustomizeDesign();
 
         }
+        
         private void CustomizeDesign()
         {
             panelCadastros.Visible = false;
@@ -145,19 +149,9 @@ namespace Programa_STPMJ
             childForm.Show();
         }
 
-        private void formPaginaInicial_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //videoCaptureDevice.Stop();
-            
-            
-        }
 
         private void formPaginaInicial_FormClosing(object sender, FormClosingEventArgs e)
         {
-            FormCadastro formCadastro = new FormCadastro();
-            formCadastro.btnEncerrarCamera_Click(sender, e);
-            formCadastro.EncerrarCamera();
-            formCadastro.CameraOn = false;
 
             var resposta = MessageBox.Show("Deseja fechar a aplicação?", "Confirmação",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -165,6 +159,11 @@ namespace Programa_STPMJ
             {
                 e.Cancel = true;
             }
+            
+                Application.Exit();
+            
+
+            
                         
             
         }

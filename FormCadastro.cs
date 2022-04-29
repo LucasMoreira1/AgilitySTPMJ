@@ -10,6 +10,7 @@ namespace Programa_STPMJ
 {
     public partial class FormCadastro : Form
     {
+        
         public Boolean CameraOn = false;
         public FormCadastro()
         {
@@ -184,11 +185,15 @@ namespace Programa_STPMJ
         {
             txtDataCadastro.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
+            //formPaginaInicial formPaginaInicial = new formPaginaInicial();
+            ////cboxCamera.Items.Add(formPaginaInicial.comboCamera.Text);
+            //cboxCamera.SelectedValue = formPaginaInicial.comboCamera.SelectedItem;
+
             //Camera
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo filterInfo in filterInfoCollection)
                 cboxCamera.Items.Add(filterInfo.Name);
-                cboxCamera.SelectedIndex = 0;
+            cboxCamera.SelectedIndex = 0;
             videoCaptureDevice = new VideoCaptureDevice();
         }
 
@@ -223,7 +228,7 @@ namespace Programa_STPMJ
 
         private void FormCadastro_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            EncerrarCamera();
         }
 
         private void btnTirarFoto_Click(object sender, EventArgs e)
@@ -234,7 +239,7 @@ namespace Programa_STPMJ
                 return;
             }
                 
-            string imgFileName = @"C:\Users\Lucas Moreira\Desktop\Agility\PROJETOS\Projetos\Projeto 5 - Sistema Sindicato\Fotos\" + txtMatricula.Text + ".jpeg";
+            string imgFileName = @"C:\Users\Lucas\OneDrive\Área de Trabalho\Agility\PROJETOS\Projetos\Projeto 5 - Sistema Sindicato\Fotos" + txtMatricula.Text + ".jpeg";
             var bitmap = new Bitmap(imgCamera.Width, imgCamera.Height);
             imgCamera.DrawToBitmap(bitmap, imgCamera.ClientRectangle);
             System.Drawing.Imaging.ImageFormat imageFormat = null;
@@ -246,8 +251,6 @@ namespace Programa_STPMJ
         public void btnEncerrarCamera_Click(object sender, EventArgs e)
         {
             EncerrarCamera();
-            MessageBox.Show("Camera encerrada","Camera",
-                MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
     }
 }

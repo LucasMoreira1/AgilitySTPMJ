@@ -7,11 +7,7 @@ namespace Programa_STPMJ
 {
     class Funcoes
     {
-        public Boolean CameraOn = false;
-        FilterInfoCollection filterInfoCollection;
-        VideoCaptureDevice videoCaptureDevice;
-        FormCadastro formCadastro = new FormCadastro();
-
+        
         public void CarregarCamera()
         {
             //filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
@@ -34,7 +30,7 @@ namespace Programa_STPMJ
 
         public void VideoCaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
-            formCadastro.imgCamera.Image = (Bitmap)eventArgs.Frame.Clone();
+            //imgCamera.Image = (Bitmap)eventArgs.Frame.Clone();
         }
     }
 }
