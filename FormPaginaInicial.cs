@@ -14,7 +14,6 @@ namespace Programa_STPMJ
             CustomizeDesign();
 
         }
-        VideoCaptureDevice videoCaptureDevice;
         private void CustomizeDesign()
         {
             panelCadastros.Visible = false;

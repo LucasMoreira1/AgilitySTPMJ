@@ -18,7 +18,7 @@ namespace Programa_STPMJ
 
         }
         FilterInfoCollection filterInfoCollection;
-        public VideoCaptureDevice videoCaptureDevice;
+        VideoCaptureDevice videoCaptureDevice;
 
         private void ResetMe()
         {
@@ -183,30 +183,24 @@ namespace Programa_STPMJ
         private void FormCadastro_Load(object sender, EventArgs e)
         {
             txtDataCadastro.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            
+
             //Camera
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo filterInfo in filterInfoCollection)
                 cboxCamera.Items.Add(filterInfo.Name);
-            cboxCamera.SelectedIndex = 0;
+                cboxCamera.SelectedIndex = 0;
             videoCaptureDevice = new VideoCaptureDevice();
         }
 
         private void btnIniciarCamera_Click(object sender, EventArgs e)
         {
-
-            {   
-
-                if (!CameraOn)
-                {
-                    videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[cboxCamera.SelectedIndex].MonikerString);
-                    videoCaptureDevice.NewFrame += new NewFrameEventHandler(VideoCaptureDevice_NewFrame);
-                    CameraOn = true;
-                    videoCaptureDevice.Start();
-                }
+            if (!CameraOn)
+            {
+                videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[cboxCamera.SelectedIndex].MonikerString);
+                videoCaptureDevice.NewFrame += new NewFrameEventHandler(VideoCaptureDevice_NewFrame);
+                CameraOn = true;
+                videoCaptureDevice.Start();
             }
-
-
         }
         public void EncerrarCamera()
         {
