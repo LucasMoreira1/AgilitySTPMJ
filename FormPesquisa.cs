@@ -2,7 +2,8 @@
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
+using System.IO;
+using System.Drawing;
 
 namespace Programa_STPMJ
 {
@@ -11,6 +12,7 @@ namespace Programa_STPMJ
     {
         private int row = 0;
         private string id = "";
+        MySqlDataReader reader;
         public FormPesquisa()
         {
             InitializeComponent();
@@ -51,6 +53,7 @@ namespace Programa_STPMJ
             dgv.AutoGenerateColumns = true;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.DataSource = dt;
+            dgv.Columns["Foto"].Visible = false;
 
         }
         private void loadData(string keyword)
@@ -82,6 +85,7 @@ namespace Programa_STPMJ
             dgv.AutoGenerateColumns = true;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.DataSource = dt;
+            dgv.Columns["Foto"].Visible = false;
 
         }
 
@@ -89,6 +93,15 @@ namespace Programa_STPMJ
         {
             DataGridView dgv = dataGridView1;
             FormCadastro formcadastro = new FormCadastro();
+
+            //reader = CRUD.cmd.ExecuteReader();
+            //if (reader.Read())
+            //{
+            //    byte[] img = (byte[])(reader["foto"]);
+            //    MemoryStream ms = new MemoryStream(img);
+            //    formcadastro.imgCamera.Image = Image.FromStream(ms);
+            //}
+
             formcadastro.btnSalvar.Visible = false;
             formcadastro.btnAtualizar.Visible = true;
             formcadastro.Show();
@@ -117,7 +130,9 @@ namespace Programa_STPMJ
             formcadastro.txtLimite.Text = Convert.ToString(dgv.CurrentRow.Cells[22].Value);
             formcadastro.txtDisponivel.Text = Convert.ToString(dgv.CurrentRow.Cells[23].Value);
             formcadastro.txtObservacao.Text = Convert.ToString(dgv.CurrentRow.Cells[24].Value);
-            formcadastro.txtRegistro.Text = Convert.ToString(dgv.CurrentRow.Cells[25].Value);
+            MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[25].Value);
+            formcadastro.imgCamera.Image = Image.FromStream(ms);
+            formcadastro.txtRegistro.Text = Convert.ToString(dgv.CurrentRow.Cells[26].Value);
 
         }
 
@@ -127,7 +142,7 @@ namespace Programa_STPMJ
             {
                 DataGridView dgv = dataGridView1;
                 this.id = Convert.ToString(dgv.CurrentRow.Cells[0].Value);
-                txtRegistroSelecionado.Text = Convert.ToString(dgv.CurrentRow.Cells[25].Value);
+                txtRegistroSelecionado.Text = Convert.ToString(dgv.CurrentRow.Cells[26].Value);
                 btnAtualizar.Text = "Atualizar (" + this.id + ")";
                 btnDeletar.Text = "Deletar (" + this.id + ")";
 
@@ -166,7 +181,8 @@ namespace Programa_STPMJ
             formcadastro.txtLimite.Text = Convert.ToString(dgv.CurrentRow.Cells[22].Value);
             formcadastro.txtDisponivel.Text = Convert.ToString(dgv.CurrentRow.Cells[23].Value);
             formcadastro.txtObservacao.Text = Convert.ToString(dgv.CurrentRow.Cells[24].Value);
-            formcadastro.txtRegistro.Text = Convert.ToString(dgv.CurrentRow.Cells[25].Value);
+
+            formcadastro.txtRegistro.Text = Convert.ToString(dgv.CurrentRow.Cells[26].Value);
 
         }
 
@@ -184,12 +200,12 @@ namespace Programa_STPMJ
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            int registroSlecionado = Convert.ToInt32(txtRegistroSelecionado.Text);
+            int registroSelecionado = Convert.ToInt32(txtRegistroSelecionado.Text);
 
             if(MessageBox.Show("Tem certeza que deseja deletar os dados selecionados?","Deletar Dados",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                CRUD.sql = "DELETE FROM SOCIOS WHERE RegistroSindical = " + registroSlecionado + "";
+                CRUD.sql = "DELETE FROM SOCIOS WHERE RegistroSindical = " + registroSelecionado + "";
                 CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
                 CRUD.PerformCRUD(CRUD.cmd);
 

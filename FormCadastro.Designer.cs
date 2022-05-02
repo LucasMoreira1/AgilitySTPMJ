@@ -94,6 +94,7 @@
             this.txtObservacao = new System.Windows.Forms.TextBox();
             this.btnAtualizar = new FontAwesome.Sharp.IconButton();
             this.btnFechar = new FontAwesome.Sharp.IconButton();
+            this.btnImportarFoto = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCamera)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -108,6 +109,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.btnEncerrarCamera);
+            this.groupBox1.Controls.Add(this.btnImportarFoto);
             this.groupBox1.Controls.Add(this.btnTirarFoto);
             this.groupBox1.Controls.Add(this.btnIniciarCamera);
             this.groupBox1.Controls.Add(this.imgCamera);
@@ -145,9 +147,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtMatricula);
             this.groupBox1.Location = new System.Drawing.Point(16, 47);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(972, 352);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -155,8 +157,8 @@
             // 
             // btnEncerrarCamera
             // 
-            this.btnEncerrarCamera.Location = new System.Drawing.Point(712, 288);
-            this.btnEncerrarCamera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEncerrarCamera.Location = new System.Drawing.Point(842, 254);
+            this.btnEncerrarCamera.Margin = new System.Windows.Forms.Padding(4);
             this.btnEncerrarCamera.Name = "btnEncerrarCamera";
             this.btnEncerrarCamera.Size = new System.Drawing.Size(121, 28);
             this.btnEncerrarCamera.TabIndex = 18;
@@ -169,8 +171,8 @@
             this.btnTirarFoto.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnTirarFoto.IconColor = System.Drawing.Color.Black;
             this.btnTirarFoto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTirarFoto.Location = new System.Drawing.Point(841, 256);
-            this.btnTirarFoto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTirarFoto.Location = new System.Drawing.Point(712, 286);
+            this.btnTirarFoto.Margin = new System.Windows.Forms.Padding(4);
             this.btnTirarFoto.Name = "btnTirarFoto";
             this.btnTirarFoto.Size = new System.Drawing.Size(121, 28);
             this.btnTirarFoto.TabIndex = 13;
@@ -183,8 +185,8 @@
             this.btnIniciarCamera.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnIniciarCamera.IconColor = System.Drawing.Color.Black;
             this.btnIniciarCamera.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnIniciarCamera.Location = new System.Drawing.Point(712, 256);
-            this.btnIniciarCamera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIniciarCamera.Location = new System.Drawing.Point(711, 253);
+            this.btnIniciarCamera.Margin = new System.Windows.Forms.Padding(4);
             this.btnIniciarCamera.Name = "btnIniciarCamera";
             this.btnIniciarCamera.Size = new System.Drawing.Size(121, 28);
             this.btnIniciarCamera.TabIndex = 13;
@@ -196,7 +198,7 @@
             // 
             this.imgCamera.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imgCamera.Location = new System.Drawing.Point(712, 23);
-            this.imgCamera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgCamera.Margin = new System.Windows.Forms.Padding(4);
             this.imgCamera.Name = "imgCamera";
             this.imgCamera.Size = new System.Drawing.Size(250, 187);
             this.imgCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -206,7 +208,7 @@
             // txtRG
             // 
             this.txtRG.Location = new System.Drawing.Point(135, 87);
-            this.txtRG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRG.Margin = new System.Windows.Forms.Padding(4);
             this.txtRG.Mask = "00.000.000-0";
             this.txtRG.Name = "txtRG";
             this.txtRG.Size = new System.Drawing.Size(115, 22);
@@ -215,7 +217,7 @@
             // txtCPF
             // 
             this.txtCPF.Location = new System.Drawing.Point(135, 119);
-            this.txtCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCPF.Margin = new System.Windows.Forms.Padding(4);
             this.txtCPF.Mask = "000.000.000-00";
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(115, 22);
@@ -224,7 +226,7 @@
             // txtAdmissao
             // 
             this.txtAdmissao.Location = new System.Drawing.Point(532, 256);
-            this.txtAdmissao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAdmissao.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdmissao.Mask = "00/00/0000";
             this.txtAdmissao.Name = "txtAdmissao";
             this.txtAdmissao.Size = new System.Drawing.Size(107, 22);
@@ -234,7 +236,7 @@
             // txtDataNascimento
             // 
             this.txtDataNascimento.Location = new System.Drawing.Point(135, 154);
-            this.txtDataNascimento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDataNascimento.Margin = new System.Windows.Forms.Padding(4);
             this.txtDataNascimento.Mask = "00/00/0000";
             this.txtDataNascimento.Name = "txtDataNascimento";
             this.txtDataNascimento.Size = new System.Drawing.Size(115, 22);
@@ -244,7 +246,7 @@
             // txtRecado
             // 
             this.txtRecado.Location = new System.Drawing.Point(329, 320);
-            this.txtRecado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRecado.Margin = new System.Windows.Forms.Padding(4);
             this.txtRecado.Mask = "(99)00000-0000";
             this.txtRecado.Name = "txtRecado";
             this.txtRecado.Size = new System.Drawing.Size(115, 22);
@@ -253,7 +255,7 @@
             // txtTelefone
             // 
             this.txtTelefone.Location = new System.Drawing.Point(135, 320);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefone.Mask = "(99)00000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(116, 22);
@@ -269,7 +271,7 @@
             "01 - SECRETARIA DA SAÚDE",
             "02 - SECRETARIA DA EDUCAÇÃO"});
             this.cboxEmpresa.Location = new System.Drawing.Point(135, 223);
-            this.cboxEmpresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboxEmpresa.Margin = new System.Windows.Forms.Padding(4);
             this.cboxEmpresa.Name = "cboxEmpresa";
             this.cboxEmpresa.Size = new System.Drawing.Size(504, 24);
             this.cboxEmpresa.TabIndex = 10;
@@ -280,9 +282,9 @@
             this.cboxCamera.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboxCamera.FormattingEnabled = true;
             this.cboxCamera.Location = new System.Drawing.Point(712, 223);
-            this.cboxCamera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboxCamera.Margin = new System.Windows.Forms.Padding(4);
             this.cboxCamera.Name = "cboxCamera";
-            this.cboxCamera.Size = new System.Drawing.Size(249, 24);
+            this.cboxCamera.Size = new System.Drawing.Size(251, 24);
             this.cboxCamera.TabIndex = 6;
             // 
             // cboxEstadoCivil
@@ -297,7 +299,7 @@
             "4-DIVORCIADO",
             "5-VIÚVO"});
             this.cboxEstadoCivil.Location = new System.Drawing.Point(388, 154);
-            this.cboxEstadoCivil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboxEstadoCivil.Margin = new System.Windows.Forms.Padding(4);
             this.cboxEstadoCivil.Name = "cboxEstadoCivil";
             this.cboxEstadoCivil.Size = new System.Drawing.Size(152, 24);
             this.cboxEstadoCivil.TabIndex = 7;
@@ -325,7 +327,7 @@
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(135, 55);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(405, 22);
             this.txtNome.TabIndex = 3;
@@ -393,7 +395,7 @@
             // txtRegistro
             // 
             this.txtRegistro.Location = new System.Drawing.Point(388, 191);
-            this.txtRegistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRegistro.Margin = new System.Windows.Forms.Padding(4);
             this.txtRegistro.Name = "txtRegistro";
             this.txtRegistro.ReadOnly = true;
             this.txtRegistro.Size = new System.Drawing.Size(152, 22);
@@ -402,7 +404,7 @@
             // txtDataCadastro
             // 
             this.txtDataCadastro.Location = new System.Drawing.Point(388, 23);
-            this.txtDataCadastro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDataCadastro.Margin = new System.Windows.Forms.Padding(4);
             this.txtDataCadastro.Name = "txtDataCadastro";
             this.txtDataCadastro.ReadOnly = true;
             this.txtDataCadastro.Size = new System.Drawing.Size(152, 22);
@@ -481,7 +483,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(509, 320);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(453, 22);
             this.txtEmail.TabIndex = 17;
@@ -489,7 +491,7 @@
             // txtLocalTrabalho
             // 
             this.txtLocalTrabalho.Location = new System.Drawing.Point(135, 288);
-            this.txtLocalTrabalho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLocalTrabalho.Margin = new System.Windows.Forms.Padding(4);
             this.txtLocalTrabalho.Name = "txtLocalTrabalho";
             this.txtLocalTrabalho.Size = new System.Drawing.Size(504, 22);
             this.txtLocalTrabalho.TabIndex = 14;
@@ -497,7 +499,7 @@
             // txtFuncao
             // 
             this.txtFuncao.Location = new System.Drawing.Point(135, 256);
-            this.txtFuncao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFuncao.Margin = new System.Windows.Forms.Padding(4);
             this.txtFuncao.Name = "txtFuncao";
             this.txtFuncao.Size = new System.Drawing.Size(309, 22);
             this.txtFuncao.TabIndex = 11;
@@ -505,7 +507,7 @@
             // txtNacionalidade
             // 
             this.txtNacionalidade.Location = new System.Drawing.Point(135, 191);
-            this.txtNacionalidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNacionalidade.Margin = new System.Windows.Forms.Padding(4);
             this.txtNacionalidade.Name = "txtNacionalidade";
             this.txtNacionalidade.Size = new System.Drawing.Size(116, 22);
             this.txtNacionalidade.TabIndex = 8;
@@ -523,7 +525,7 @@
             // txtMatricula
             // 
             this.txtMatricula.Location = new System.Drawing.Point(135, 23);
-            this.txtMatricula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMatricula.Margin = new System.Windows.Forms.Padding(4);
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(116, 22);
             this.txtMatricula.TabIndex = 1;
@@ -540,7 +542,7 @@
             this.btnVoltar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVoltar.IconSize = 35;
             this.btnVoltar.Location = new System.Drawing.Point(16, 0);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(49, 39);
             this.btnVoltar.TabIndex = 31;
@@ -567,9 +569,9 @@
             this.groupBox2.Controls.Add(this.txtNumero);
             this.groupBox2.Controls.Add(this.txtLogradouro);
             this.groupBox2.Location = new System.Drawing.Point(16, 406);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(972, 155);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
@@ -578,7 +580,7 @@
             // txtCEP
             // 
             this.txtCEP.Location = new System.Drawing.Point(133, 23);
-            this.txtCEP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCEP.Margin = new System.Windows.Forms.Padding(4);
             this.txtCEP.Mask = "00.000-000";
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(117, 22);
@@ -590,7 +592,7 @@
             this.btnBuscarCEP.IconColor = System.Drawing.Color.Black;
             this.btnBuscarCEP.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBuscarCEP.Location = new System.Drawing.Point(329, 23);
-            this.btnBuscarCEP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarCEP.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarCEP.Name = "btnBuscarCEP";
             this.btnBuscarCEP.Size = new System.Drawing.Size(116, 25);
             this.btnBuscarCEP.TabIndex = 19;
@@ -671,15 +673,15 @@
             // txtComplemento
             // 
             this.txtComplemento.Location = new System.Drawing.Point(811, 55);
-            this.txtComplemento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtComplemento.Margin = new System.Windows.Forms.Padding(4);
             this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(152, 22);
+            this.txtComplemento.Size = new System.Drawing.Size(151, 22);
             this.txtComplemento.TabIndex = 22;
             // 
             // txtEstado
             // 
             this.txtEstado.Location = new System.Drawing.Point(135, 119);
-            this.txtEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEstado.Margin = new System.Windows.Forms.Padding(4);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(116, 22);
             this.txtEstado.TabIndex = 25;
@@ -687,7 +689,7 @@
             // txtCidade
             // 
             this.txtCidade.Location = new System.Drawing.Point(581, 87);
-            this.txtCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCidade.Margin = new System.Windows.Forms.Padding(4);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(381, 22);
             this.txtCidade.TabIndex = 24;
@@ -695,7 +697,7 @@
             // txtBairro
             // 
             this.txtBairro.Location = new System.Drawing.Point(135, 87);
-            this.txtBairro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBairro.Margin = new System.Windows.Forms.Padding(4);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(309, 22);
             this.txtBairro.TabIndex = 23;
@@ -703,7 +705,7 @@
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(581, 55);
-            this.txtNumero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumero.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(117, 22);
             this.txtNumero.TabIndex = 21;
@@ -711,7 +713,7 @@
             // txtLogradouro
             // 
             this.txtLogradouro.Location = new System.Drawing.Point(135, 55);
-            this.txtLogradouro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLogradouro.Margin = new System.Windows.Forms.Padding(4);
             this.txtLogradouro.Name = "txtLogradouro";
             this.txtLogradouro.Size = new System.Drawing.Size(309, 22);
             this.txtLogradouro.TabIndex = 20;
@@ -723,7 +725,7 @@
             this.btnSalvar.IconColor = System.Drawing.Color.Black;
             this.btnSalvar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalvar.Location = new System.Drawing.Point(769, 619);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(100, 43);
             this.btnSalvar.TabIndex = 29;
@@ -740,9 +742,9 @@
             this.groupBox3.Controls.Add(this.label24);
             this.groupBox3.Controls.Add(this.label26);
             this.groupBox3.Location = new System.Drawing.Point(16, 569);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(267, 94);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
@@ -753,7 +755,7 @@
             this.txtDisponivel.DecimalPlaces = 2;
             this.txtDisponivel.InterceptArrowKeys = false;
             this.txtDisponivel.Location = new System.Drawing.Point(133, 59);
-            this.txtDisponivel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDisponivel.Margin = new System.Windows.Forms.Padding(4);
             this.txtDisponivel.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -775,7 +777,7 @@
             this.txtLimite.DecimalPlaces = 2;
             this.txtLimite.InterceptArrowKeys = false;
             this.txtLimite.Location = new System.Drawing.Point(133, 25);
-            this.txtLimite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLimite.Margin = new System.Windows.Forms.Padding(4);
             this.txtLimite.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -814,7 +816,7 @@
             this.btnLimpar.IconColor = System.Drawing.Color.Black;
             this.btnLimpar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpar.Location = new System.Drawing.Point(880, 619);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(100, 43);
             this.btnLimpar.TabIndex = 30;
@@ -828,9 +830,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.txtObservacao);
             this.groupBox4.Location = new System.Drawing.Point(291, 569);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(435, 94);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
@@ -839,7 +841,7 @@
             // txtObservacao
             // 
             this.txtObservacao.Location = new System.Drawing.Point(8, 27);
-            this.txtObservacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtObservacao.Margin = new System.Windows.Forms.Padding(4);
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -852,8 +854,8 @@
             this.btnAtualizar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAtualizar.IconColor = System.Drawing.Color.Black;
             this.btnAtualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAtualizar.Location = new System.Drawing.Point(769, 619);
-            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtualizar.Location = new System.Drawing.Point(769, 583);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(100, 43);
             this.btnAtualizar.TabIndex = 29;
@@ -873,13 +875,27 @@
             this.btnFechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFechar.IconSize = 35;
             this.btnFechar.Location = new System.Drawing.Point(939, 0);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(4);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(49, 39);
             this.btnFechar.TabIndex = 32;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Visible = false;
             this.btnFechar.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // btnImportarFoto
+            // 
+            this.btnImportarFoto.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnImportarFoto.IconColor = System.Drawing.Color.Black;
+            this.btnImportarFoto.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnImportarFoto.Location = new System.Drawing.Point(841, 286);
+            this.btnImportarFoto.Margin = new System.Windows.Forms.Padding(4);
+            this.btnImportarFoto.Name = "btnImportarFoto";
+            this.btnImportarFoto.Size = new System.Drawing.Size(121, 28);
+            this.btnImportarFoto.TabIndex = 13;
+            this.btnImportarFoto.Text = "Importar foto";
+            this.btnImportarFoto.UseVisualStyleBackColor = true;
+            this.btnImportarFoto.Click += new System.EventHandler(this.btnImportarFoto_Click);
             // 
             // FormCadastro
             // 
@@ -897,7 +913,7 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
@@ -987,5 +1003,6 @@
         public FontAwesome.Sharp.IconButton btnIniciarCamera;
         public System.Windows.Forms.PictureBox imgCamera;
         public FontAwesome.Sharp.IconButton btnTirarFoto;
+        public FontAwesome.Sharp.IconButton btnImportarFoto;
     }
 }

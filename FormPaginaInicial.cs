@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using AForge.Video;
-using AForge.Video.DirectShow;
-using System.Drawing;
-
 
 namespace Programa_STPMJ
 {

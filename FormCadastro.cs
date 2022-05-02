@@ -5,6 +5,7 @@ using AForge.Video;
 using AForge.Video.DirectShow;
 using System.Drawing;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace Programa_STPMJ
 {
@@ -12,6 +13,7 @@ namespace Programa_STPMJ
     {
         
         public Boolean CameraOn = false;
+        public string localizacaoFoto;
         public FormCadastro()
         {
             InitializeComponent();
@@ -47,6 +49,7 @@ namespace Programa_STPMJ
             txtLimite.Text = "";
             txtDisponivel.Text = "";
             txtObservacao.Text = "";
+            imgCamera.Image = null;
         }
 
         private void Executar(string mySQL, string param)
@@ -59,7 +62,20 @@ namespace Programa_STPMJ
         private void AddParametros(string str)
         {
             CRUD.cmd.Parameters.Clear();
-           
+
+            //byte[] img = null;
+
+            //FileStream Stream = new FileStream(localizacaoFoto, FileMode.Open, FileAccess.Read);
+            //BinaryReader brs = new BinaryReader(Stream);
+            //img = brs.ReadBytes((int)Stream.Length);
+
+            MemoryStream ms = new MemoryStream();
+            imgCamera.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            byte[] img = ms.GetBuffer();
+
+
+
+
             CRUD.cmd.Parameters.AddWithValue("matricula", txtMatricula.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("nome", txtNome.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("rg", txtRG.Text.Trim());
@@ -85,6 +101,7 @@ namespace Programa_STPMJ
             CRUD.cmd.Parameters.AddWithValue("limite", txtLimite.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("disponivel", txtDisponivel.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("observacao", txtObservacao.Text.Trim());
+            CRUD.cmd.Parameters.AddWithValue("foto", img);
             CRUD.cmd.Parameters.AddWithValue("registro_sindical", txtRegistro.Text.Trim());
         }
 
@@ -102,15 +119,16 @@ namespace Programa_STPMJ
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            
 
             CRUD.sql = "INSERT INTO SOCIOS(matricula,nome,rg,cpf,datanascimento,estadocivil," +
                 "nacionalidade,datacadastro,empresa,funcao,admissao,localtrabalho," +
                 "telefone,recados,email,cep,logradouro,numero,complemento,bairro,cidade,estado," +
-                "limite,disponivel,observacao)" +
+                "limite,disponivel,observacao,foto)" +
                 "Values(@matricula,@nome,@rg,@cpf,@data_nascimento,@estado_civil,@nacionalidade," +
                 "@data_cadastro,@empresa,@funcao,@admissao,@local_trabalho," +
                 "@telefone,@recado,@email,@cep,@logradouro,@numero,@complemento,@bairro,@cidade,@estado," +
-                "@limite,@disponivel,@observacao);";
+                "@limite,@disponivel,@observacao,@foto);";
 
 
             Executar(CRUD.sql, "Insert");
@@ -166,7 +184,7 @@ namespace Programa_STPMJ
                 "telefone = @telefone, recados = @recado, email = @email, cep = @cep, " +
                 "logradouro = @logradouro, numero = @numero, complemento = @complemento, bairro = @bairro," +
                 "cidade = @cidade, estado = @estado, limite = @limite, disponivel = @disponivel, " +
-                "observacao = @observacao WHERE registrosindical = @registro_sindical";
+                "observacao = @observacao, foto = @foto WHERE registrosindical = @registro_sindical";
 
 
             Executar(CRUD.sql, "Update");
@@ -233,24 +251,33 @@ namespace Programa_STPMJ
 
         private void btnTirarFoto_Click(object sender, EventArgs e)
         {
-            if (txtMatricula.Text == "")
-            {   MessageBox.Show("Favor preencher a Matricula do Sócio", "Câmera",
-                      MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+
+            if (CameraOn)
+            {
+                //  FinalVideo.Stop();     // <-removed
+                videoCaptureDevice.SignalToStop();
+                // FinalVideo.WaitForStop();  // <- removed this to my suprice isn't needed, in fact my closing started to work only after marking this one out
+                CameraOn = false;
+                videoCaptureDevice.NewFrame -= new NewFrameEventHandler(VideoCaptureDevice_NewFrame); // <- decouple the newFrame event.
+                videoCaptureDevice = null;
             }
-                
-            string imgFileName = @"C:\Users\Lucas\OneDrive\Área de Trabalho\Agility\PROJETOS\Projetos\Projeto 5 - Sistema Sindicato\Fotos" + txtMatricula.Text + ".jpeg";
-            var bitmap = new Bitmap(imgCamera.Width, imgCamera.Height);
-            imgCamera.DrawToBitmap(bitmap, imgCamera.ClientRectangle);
-            System.Drawing.Imaging.ImageFormat imageFormat = null;
-            imageFormat = System.Drawing.Imaging.ImageFormat.Jpeg;
-            bitmap.Save(imgFileName, imageFormat);
-                
+
         }
 
         public void btnEncerrarCamera_Click(object sender, EventArgs e)
         {
             EncerrarCamera();
+        }
+
+        private void btnImportarFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Escolha a foto(*.jpeg;*.png;*.gif) |*.jpeg;*.png;*.gif";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                localizacaoFoto = ofd.FileName.ToString();
+                imgCamera.ImageLocation = localizacaoFoto;
+            }
         }
     }
 }
