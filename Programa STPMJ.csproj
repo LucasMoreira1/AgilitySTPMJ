@@ -191,6 +191,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Programa STPMJ_TemporaryKey.pfx" />
@@ -213,6 +214,7 @@
     <Content Include="icone.ico" />
     <Content Include="icone2_sem_fundo.ico" />
     <Content Include="logo_2_sem_fundo.ico" />
+    <None Include="Socio_sem_foto.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="ADODB">

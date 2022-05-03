@@ -70,10 +70,19 @@ namespace Programa_STPMJ
             //img = brs.ReadBytes((int)Stream.Length);
 
             MemoryStream ms = new MemoryStream();
-            imgCamera.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            if (imgCamera.Image == null)
+            {
+                imgCamera.BackgroundImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
+            else
+            {
+                imgCamera.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
+            
+            
             byte[] img = ms.GetBuffer();
 
-
+            
 
 
             CRUD.cmd.Parameters.AddWithValue("matricula", txtMatricula.Text.Trim());
@@ -202,7 +211,7 @@ namespace Programa_STPMJ
         private void FormCadastro_Load(object sender, EventArgs e)
         {
             txtDataCadastro.Text = DateTime.Now.ToString("dd/MM/yyyy");
-
+            
             //formPaginaInicial formPaginaInicial = new formPaginaInicial();
             ////cboxCamera.Items.Add(formPaginaInicial.comboCamera.Text);
             //cboxCamera.SelectedValue = formPaginaInicial.comboCamera.SelectedItem;
