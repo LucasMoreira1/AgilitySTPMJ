@@ -149,14 +149,15 @@ namespace Programa_STPMJ
         private void formPaginaInicial_FormClosing(object sender, FormClosingEventArgs e)
         {
 
-            var resposta = MessageBox.Show("Deseja fechar a aplicação?", "Confirmação",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (resposta == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
-            
-                Application.Exit();
+            //var resposta = MessageBox.Show("Deseja fechar a aplicação?", "Confirmação",
+            //    MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            //if (MessageBox.Show("Deseja fechar a aplicação?", "Confirmação",
+            //    MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+            //{
+            //    e.Cancel = true;
+            //}
+
+            Application.Exit();
         }
     }
 }

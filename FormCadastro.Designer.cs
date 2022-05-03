@@ -800,7 +800,7 @@
             this.btnAtualizar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAtualizar.IconColor = System.Drawing.Color.Black;
             this.btnAtualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAtualizar.Location = new System.Drawing.Point(577, 474);
+            this.btnAtualizar.Location = new System.Drawing.Point(577, 503);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(75, 35);
             this.btnAtualizar.TabIndex = 29;
