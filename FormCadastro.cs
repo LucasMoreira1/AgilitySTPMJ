@@ -288,5 +288,24 @@ namespace Programa_STPMJ
                 imgCamera.ImageLocation = localizacaoFoto;
             }
         }
+
+        private void btnImagemEmBranco_Click(object sender, EventArgs e)
+        {
+
+
+            CRUD.sql = "UPDATE SOCIOS SET foto = @foto";
+
+
+            Executar(CRUD.sql, "Update");
+
+            MessageBox.Show("Dados atualizados.", "Cadastro",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            FormPesquisa formpesquisa = new FormPesquisa();
+            formpesquisa.btnPesquisar_Click(sender, e);
+
+            ResetMe();
+            this.Close();
+        }
     }
 }

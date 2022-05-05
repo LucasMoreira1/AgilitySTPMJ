@@ -95,6 +95,7 @@
             this.txtObservacao = new System.Windows.Forms.TextBox();
             this.btnAtualizar = new FontAwesome.Sharp.IconButton();
             this.btnFechar = new FontAwesome.Sharp.IconButton();
+            this.btnImagemEmBranco = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCamera)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -516,7 +517,7 @@
             this.btnVoltar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnVoltar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVoltar.IconSize = 35;
-            this.btnVoltar.Location = new System.Drawing.Point(12, 0);
+            this.btnVoltar.Location = new System.Drawing.Point(704, 0);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(37, 32);
             this.btnVoltar.TabIndex = 31;
@@ -819,13 +820,28 @@
             this.btnFechar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnFechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFechar.IconSize = 35;
-            this.btnFechar.Location = new System.Drawing.Point(704, 0);
+            this.btnFechar.Location = new System.Drawing.Point(644, 0);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(37, 32);
             this.btnFechar.TabIndex = 32;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Visible = false;
             this.btnFechar.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // btnImagemEmBranco
+            // 
+            this.btnImagemEmBranco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImagemEmBranco.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnImagemEmBranco.IconColor = System.Drawing.Color.Black;
+            this.btnImagemEmBranco.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnImagemEmBranco.Location = new System.Drawing.Point(577, 467);
+            this.btnImagemEmBranco.Name = "btnImagemEmBranco";
+            this.btnImagemEmBranco.Size = new System.Drawing.Size(75, 35);
+            this.btnImagemEmBranco.TabIndex = 29;
+            this.btnImagemEmBranco.Text = "ImagemEmBranco";
+            this.btnImagemEmBranco.UseVisualStyleBackColor = true;
+            this.btnImagemEmBranco.Visible = false;
+            this.btnImagemEmBranco.Click += new System.EventHandler(this.btnImagemEmBranco_Click);
             // 
             // FormCadastro
             // 
@@ -834,6 +850,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(753, 570);
             this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.btnImagemEmBranco);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.groupBox4);
@@ -933,5 +950,6 @@
         public System.Windows.Forms.PictureBox imgCamera;
         public FontAwesome.Sharp.IconButton btnTirarFoto;
         public FontAwesome.Sharp.IconButton btnImportarFoto;
+        public FontAwesome.Sharp.IconButton btnImagemEmBranco;
     }
 }
