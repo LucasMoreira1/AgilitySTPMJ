@@ -77,7 +77,7 @@ namespace Programa_STPMJ
             this.panelEsquerdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelEsquerdo.Location = new System.Drawing.Point(0, 0);
             this.panelEsquerdo.Name = "panelEsquerdo";
-            this.panelEsquerdo.Size = new System.Drawing.Size(215, 600);
+            this.panelEsquerdo.Size = new System.Drawing.Size(215, 681);
             this.panelEsquerdo.TabIndex = 0;
             // 
             // btnAjuda
@@ -98,7 +98,7 @@ namespace Programa_STPMJ
             this.btnAjuda.Location = new System.Drawing.Point(0, 562);
             this.btnAjuda.Name = "btnAjuda";
             this.btnAjuda.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnAjuda.Size = new System.Drawing.Size(198, 45);
+            this.btnAjuda.Size = new System.Drawing.Size(215, 45);
             this.btnAjuda.TabIndex = 9;
             this.btnAjuda.Text = "Ajuda";
             this.btnAjuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -114,7 +114,7 @@ namespace Programa_STPMJ
             this.panelDocumentos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDocumentos.Location = new System.Drawing.Point(0, 468);
             this.panelDocumentos.Name = "panelDocumentos";
-            this.panelDocumentos.Size = new System.Drawing.Size(198, 94);
+            this.panelDocumentos.Size = new System.Drawing.Size(215, 94);
             this.panelDocumentos.TabIndex = 8;
             // 
             // btnCheques
@@ -135,7 +135,7 @@ namespace Programa_STPMJ
             this.btnCheques.Location = new System.Drawing.Point(0, 45);
             this.btnCheques.Name = "btnCheques";
             this.btnCheques.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCheques.Size = new System.Drawing.Size(198, 45);
+            this.btnCheques.Size = new System.Drawing.Size(215, 45);
             this.btnCheques.TabIndex = 3;
             this.btnCheques.Text = "Cheques";
             this.btnCheques.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -161,7 +161,7 @@ namespace Programa_STPMJ
             this.btnCarteirinha.Location = new System.Drawing.Point(0, 0);
             this.btnCarteirinha.Name = "btnCarteirinha";
             this.btnCarteirinha.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCarteirinha.Size = new System.Drawing.Size(198, 45);
+            this.btnCarteirinha.Size = new System.Drawing.Size(215, 45);
             this.btnCarteirinha.TabIndex = 2;
             this.btnCarteirinha.Text = "Carteirinha";
             this.btnCarteirinha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -187,7 +187,7 @@ namespace Programa_STPMJ
             this.btnDocumentos.Location = new System.Drawing.Point(0, 423);
             this.btnDocumentos.Name = "btnDocumentos";
             this.btnDocumentos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnDocumentos.Size = new System.Drawing.Size(198, 45);
+            this.btnDocumentos.Size = new System.Drawing.Size(215, 45);
             this.btnDocumentos.TabIndex = 7;
             this.btnDocumentos.Text = "Documentos";
             this.btnDocumentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -213,7 +213,7 @@ namespace Programa_STPMJ
             this.btnRelatorios.Location = new System.Drawing.Point(0, 378);
             this.btnRelatorios.Name = "btnRelatorios";
             this.btnRelatorios.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnRelatorios.Size = new System.Drawing.Size(198, 45);
+            this.btnRelatorios.Size = new System.Drawing.Size(215, 45);
             this.btnRelatorios.TabIndex = 5;
             this.btnRelatorios.Text = "Relatorios";
             this.btnRelatorios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -229,7 +229,7 @@ namespace Programa_STPMJ
             this.panelPesquisas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPesquisas.Location = new System.Drawing.Point(0, 284);
             this.panelPesquisas.Name = "panelPesquisas";
-            this.panelPesquisas.Size = new System.Drawing.Size(198, 94);
+            this.panelPesquisas.Size = new System.Drawing.Size(215, 94);
             this.panelPesquisas.TabIndex = 4;
             // 
             // btnPesquisarEmpresa
@@ -250,7 +250,7 @@ namespace Programa_STPMJ
             this.btnPesquisarEmpresa.Location = new System.Drawing.Point(0, 45);
             this.btnPesquisarEmpresa.Name = "btnPesquisarEmpresa";
             this.btnPesquisarEmpresa.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnPesquisarEmpresa.Size = new System.Drawing.Size(198, 45);
+            this.btnPesquisarEmpresa.Size = new System.Drawing.Size(215, 45);
             this.btnPesquisarEmpresa.TabIndex = 3;
             this.btnPesquisarEmpresa.Text = "Pesquisar Convênio";
             this.btnPesquisarEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -276,7 +276,7 @@ namespace Programa_STPMJ
             this.btnPesquisarCliente.Location = new System.Drawing.Point(0, 0);
             this.btnPesquisarCliente.Name = "btnPesquisarCliente";
             this.btnPesquisarCliente.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnPesquisarCliente.Size = new System.Drawing.Size(198, 45);
+            this.btnPesquisarCliente.Size = new System.Drawing.Size(215, 45);
             this.btnPesquisarCliente.TabIndex = 2;
             this.btnPesquisarCliente.Text = "Pesquisar sócio";
             this.btnPesquisarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -302,7 +302,7 @@ namespace Programa_STPMJ
             this.btnPesquisar.Location = new System.Drawing.Point(0, 239);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnPesquisar.Size = new System.Drawing.Size(198, 45);
+            this.btnPesquisar.Size = new System.Drawing.Size(215, 45);
             this.btnPesquisar.TabIndex = 3;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -318,7 +318,7 @@ namespace Programa_STPMJ
             this.panelCadastros.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCadastros.Location = new System.Drawing.Point(0, 145);
             this.panelCadastros.Name = "panelCadastros";
-            this.panelCadastros.Size = new System.Drawing.Size(198, 94);
+            this.panelCadastros.Size = new System.Drawing.Size(215, 94);
             this.panelCadastros.TabIndex = 2;
             // 
             // btnCadastroEmpresa
@@ -339,7 +339,7 @@ namespace Programa_STPMJ
             this.btnCadastroEmpresa.Location = new System.Drawing.Point(0, 45);
             this.btnCadastroEmpresa.Name = "btnCadastroEmpresa";
             this.btnCadastroEmpresa.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCadastroEmpresa.Size = new System.Drawing.Size(198, 45);
+            this.btnCadastroEmpresa.Size = new System.Drawing.Size(215, 45);
             this.btnCadastroEmpresa.TabIndex = 3;
             this.btnCadastroEmpresa.Text = "Cadastrar Convênio";
             this.btnCadastroEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -365,7 +365,7 @@ namespace Programa_STPMJ
             this.btnCadastroCliente.Location = new System.Drawing.Point(0, 0);
             this.btnCadastroCliente.Name = "btnCadastroCliente";
             this.btnCadastroCliente.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCadastroCliente.Size = new System.Drawing.Size(198, 45);
+            this.btnCadastroCliente.Size = new System.Drawing.Size(215, 45);
             this.btnCadastroCliente.TabIndex = 2;
             this.btnCadastroCliente.Text = "Cadastrar sócio";
             this.btnCadastroCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -391,7 +391,7 @@ namespace Programa_STPMJ
             this.btnCadastros.Location = new System.Drawing.Point(0, 100);
             this.btnCadastros.Name = "btnCadastros";
             this.btnCadastros.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnCadastros.Size = new System.Drawing.Size(198, 45);
+            this.btnCadastros.Size = new System.Drawing.Size(215, 45);
             this.btnCadastros.TabIndex = 1;
             this.btnCadastros.Text = "Cadastros";
             this.btnCadastros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -406,7 +406,7 @@ namespace Programa_STPMJ
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(198, 100);
+            this.panelLogo.Size = new System.Drawing.Size(215, 100);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -415,7 +415,7 @@ namespace Programa_STPMJ
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(198, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(215, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -426,18 +426,19 @@ namespace Programa_STPMJ
             this.panelFormTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelFormTitulo.Location = new System.Drawing.Point(215, 0);
             this.panelFormTitulo.Name = "panelFormTitulo";
-            this.panelFormTitulo.Size = new System.Drawing.Size(753, 30);
+            this.panelFormTitulo.Size = new System.Drawing.Size(1049, 30);
             this.panelFormTitulo.TabIndex = 1;
             // 
             // panelFormCentral
             // 
             this.panelFormCentral.BackColor = System.Drawing.Color.White;
             this.panelFormCentral.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelFormCentral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelFormCentral.Controls.Add(this.webView21);
             this.panelFormCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormCentral.Location = new System.Drawing.Point(215, 30);
             this.panelFormCentral.Name = "panelFormCentral";
-            this.panelFormCentral.Size = new System.Drawing.Size(753, 570);
+            this.panelFormCentral.Size = new System.Drawing.Size(1049, 651);
             this.panelFormCentral.TabIndex = 2;
             // 
             // webView21
@@ -448,7 +449,7 @@ namespace Programa_STPMJ
             this.webView21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webView21.Location = new System.Drawing.Point(0, 0);
             this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(753, 570);
+            this.webView21.Size = new System.Drawing.Size(1047, 649);
             this.webView21.Source = new System.Uri("https://stpmj.org.br/", System.UriKind.Absolute);
             this.webView21.TabIndex = 0;
             this.webView21.ZoomFactor = 1D;
@@ -458,12 +459,12 @@ namespace Programa_STPMJ
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(968, 600);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panelFormCentral);
             this.Controls.Add(this.panelFormTitulo);
             this.Controls.Add(this.panelEsquerdo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(800, 599);
+            this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "formPaginaInicial";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

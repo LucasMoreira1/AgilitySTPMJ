@@ -30,8 +30,8 @@ namespace Programa_STPMJ
 
         public void btnPesquisar_Click(object sender, EventArgs e)
         {
-            CRUD.sql = "SELECT * FROM SOCIOS WHERE " + comboBox1.Text.Trim() + " LIKE '" + textBox1.Text.Trim() + "' AND " +
-                "" + comboBox2.Text.Trim() + " LIKE '%" + textBox2.Text.Trim() + "%';";
+            CRUD.sql = "SELECT * FROM SOCIOS WHERE " + cboxFiltro2.Text.Trim() + " LIKE '%" + txtFiltro2.Text.Trim() + "%' AND " +
+                "" + cboxFiltro3.Text.Trim() + " LIKE '%" + txtFiltro3.Text.Trim() + "%';";
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);

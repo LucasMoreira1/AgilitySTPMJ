@@ -33,12 +33,12 @@ namespace Programa_STPMJ
             this.btnPesquisar = new FontAwesome.Sharp.IconButton();
             this.btnMostrarTodos = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.cboxFiltro2 = new System.Windows.Forms.ComboBox();
+            this.txtFiltro2 = new System.Windows.Forms.TextBox();
+            this.lblFiltro2 = new System.Windows.Forms.Label();
+            this.cboxFiltro3 = new System.Windows.Forms.ComboBox();
+            this.txtFiltro3 = new System.Windows.Forms.TextBox();
+            this.lblFiltro3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -46,6 +46,9 @@ namespace Programa_STPMJ
             this.btnDeletar = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.txtRegistroSelecionado = new System.Windows.Forms.TextBox();
+            this.txtFiltroMatricula = new System.Windows.Forms.TextBox();
+            this.lblFiltro1 = new System.Windows.Forms.Label();
+            this.txtFiltro1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +63,7 @@ namespace Programa_STPMJ
             this.btnPesquisar.IconColor = System.Drawing.Color.Black;
             this.btnPesquisar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPesquisar.IconSize = 32;
-            this.btnPesquisar.Location = new System.Drawing.Point(284, 62);
+            this.btnPesquisar.Location = new System.Drawing.Point(580, 62);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnPesquisar.Size = new System.Drawing.Size(135, 30);
@@ -82,7 +85,7 @@ namespace Programa_STPMJ
             this.btnMostrarTodos.IconColor = System.Drawing.Color.Black;
             this.btnMostrarTodos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMostrarTodos.IconSize = 32;
-            this.btnMostrarTodos.Location = new System.Drawing.Point(284, 97);
+            this.btnMostrarTodos.Location = new System.Drawing.Point(580, 97);
             this.btnMostrarTodos.Name = "btnMostrarTodos";
             this.btnMostrarTodos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnMostrarTodos.Size = new System.Drawing.Size(135, 30);
@@ -112,10 +115,10 @@ namespace Programa_STPMJ
             this.iconButton3.UseVisualStyleBackColor = false;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
-            // comboBox1
+            // cboxFiltro2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboxFiltro2.FormattingEnabled = true;
+            this.cboxFiltro2.Items.AddRange(new object[] {
             "RegistroSindical",
             "Matricula",
             "Nome",
@@ -140,35 +143,35 @@ namespace Programa_STPMJ
             "Recados",
             "Limite",
             "Disponivel"});
-            this.comboBox1.Location = new System.Drawing.Point(16, 82);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.Text = "Matricula";
+            this.cboxFiltro2.Location = new System.Drawing.Point(139, 85);
+            this.cboxFiltro2.Name = "cboxFiltro2";
+            this.cboxFiltro2.Size = new System.Drawing.Size(121, 21);
+            this.cboxFiltro2.TabIndex = 3;
+            this.cboxFiltro2.Text = "Matricula";
             // 
-            // textBox1
+            // txtFiltro2
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.txtFiltro2.Location = new System.Drawing.Point(139, 112);
+            this.txtFiltro2.Name = "txtFiltro2";
+            this.txtFiltro2.Size = new System.Drawing.Size(121, 20);
+            this.txtFiltro2.TabIndex = 4;
+            this.txtFiltro2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
-            // label1
+            // lblFiltro2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Filtro 1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblFiltro2.AutoSize = true;
+            this.lblFiltro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltro2.Location = new System.Drawing.Point(135, 62);
+            this.lblFiltro2.Name = "lblFiltro2";
+            this.lblFiltro2.Size = new System.Drawing.Size(57, 20);
+            this.lblFiltro2.TabIndex = 5;
+            this.lblFiltro2.Text = "Filtro 2";
+            this.lblFiltro2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox2
+            // cboxFiltro3
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cboxFiltro3.FormattingEnabled = true;
+            this.cboxFiltro3.Items.AddRange(new object[] {
             "Matricula",
             "Nome",
             "RG",
@@ -193,30 +196,30 @@ namespace Programa_STPMJ
             "Recados",
             "Limite",
             "Disponivel"});
-            this.comboBox2.Location = new System.Drawing.Point(157, 82);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 3;
-            this.comboBox2.Text = "Matricula";
+            this.cboxFiltro3.Location = new System.Drawing.Point(266, 85);
+            this.cboxFiltro3.Name = "cboxFiltro3";
+            this.cboxFiltro3.Size = new System.Drawing.Size(121, 21);
+            this.cboxFiltro3.TabIndex = 3;
+            this.cboxFiltro3.Text = "Matricula";
             // 
-            // textBox2
+            // txtFiltro3
             // 
-            this.textBox2.Location = new System.Drawing.Point(157, 109);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.txtFiltro3.Location = new System.Drawing.Point(266, 112);
+            this.txtFiltro3.Name = "txtFiltro3";
+            this.txtFiltro3.Size = new System.Drawing.Size(121, 20);
+            this.txtFiltro3.TabIndex = 4;
+            this.txtFiltro3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
-            // label2
+            // lblFiltro3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(153, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Filtro 2";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblFiltro3.AutoSize = true;
+            this.lblFiltro3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltro3.Location = new System.Drawing.Point(262, 62);
+            this.lblFiltro3.Name = "lblFiltro3";
+            this.lblFiltro3.Size = new System.Drawing.Size(57, 20);
+            this.lblFiltro3.TabIndex = 5;
+            this.lblFiltro3.Text = "Filtro 3";
+            this.lblFiltro3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dataGridView1
             // 
@@ -230,7 +233,7 @@ namespace Programa_STPMJ
             this.dataGridView1.Location = new System.Drawing.Point(12, 147);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(729, 398);
+            this.dataGridView1.Size = new System.Drawing.Size(1025, 479);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -241,9 +244,9 @@ namespace Programa_STPMJ
             this.statusStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 548);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 629);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(753, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1049, 22);
             this.statusStrip1.TabIndex = 7;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -264,7 +267,7 @@ namespace Programa_STPMJ
             this.btnAtualizar.IconColor = System.Drawing.Color.Black;
             this.btnAtualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAtualizar.IconSize = 32;
-            this.btnAtualizar.Location = new System.Drawing.Point(606, 62);
+            this.btnAtualizar.Location = new System.Drawing.Point(902, 62);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnAtualizar.Size = new System.Drawing.Size(135, 30);
@@ -286,7 +289,7 @@ namespace Programa_STPMJ
             this.btnDeletar.IconColor = System.Drawing.Color.Black;
             this.btnDeletar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDeletar.IconSize = 32;
-            this.btnDeletar.Location = new System.Drawing.Point(606, 97);
+            this.btnDeletar.Location = new System.Drawing.Point(902, 97);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnDeletar.Size = new System.Drawing.Size(135, 30);
@@ -316,22 +319,53 @@ namespace Programa_STPMJ
             this.txtRegistroSelecionado.TabIndex = 10;
             this.txtRegistroSelecionado.Visible = false;
             // 
+            // txtFiltroMatricula
+            // 
+            this.txtFiltroMatricula.Enabled = false;
+            this.txtFiltroMatricula.Location = new System.Drawing.Point(12, 86);
+            this.txtFiltroMatricula.Name = "txtFiltroMatricula";
+            this.txtFiltroMatricula.Size = new System.Drawing.Size(121, 20);
+            this.txtFiltroMatricula.TabIndex = 11;
+            this.txtFiltroMatricula.Text = "Matricula";
+            // 
+            // lblFiltro1
+            // 
+            this.lblFiltro1.AutoSize = true;
+            this.lblFiltro1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltro1.Location = new System.Drawing.Point(12, 62);
+            this.lblFiltro1.Name = "lblFiltro1";
+            this.lblFiltro1.Size = new System.Drawing.Size(57, 20);
+            this.lblFiltro1.TabIndex = 5;
+            this.lblFiltro1.Text = "Filtro 1";
+            this.lblFiltro1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtFiltro1
+            // 
+            this.txtFiltro1.Location = new System.Drawing.Point(12, 112);
+            this.txtFiltro1.Name = "txtFiltro1";
+            this.txtFiltro1.Size = new System.Drawing.Size(121, 20);
+            this.txtFiltro1.TabIndex = 4;
+            this.txtFiltro1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            // 
             // FormPesquisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(753, 570);
+            this.ClientSize = new System.Drawing.Size(1049, 651);
+            this.Controls.Add(this.txtFiltroMatricula);
             this.Controls.Add(this.txtRegistroSelecionado);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.lblFiltro3);
+            this.Controls.Add(this.txtFiltro3);
+            this.Controls.Add(this.lblFiltro1);
+            this.Controls.Add(this.lblFiltro2);
+            this.Controls.Add(this.cboxFiltro3);
+            this.Controls.Add(this.txtFiltro1);
+            this.Controls.Add(this.txtFiltro2);
+            this.Controls.Add(this.cboxFiltro2);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.btnMostrarTodos);
@@ -356,12 +390,12 @@ namespace Programa_STPMJ
         #endregion
         private FontAwesome.Sharp.IconButton btnMostrarTodos;
         private FontAwesome.Sharp.IconButton iconButton3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cboxFiltro2;
+        private System.Windows.Forms.TextBox txtFiltro2;
+        private System.Windows.Forms.Label lblFiltro2;
+        private System.Windows.Forms.ComboBox cboxFiltro3;
+        private System.Windows.Forms.TextBox txtFiltro3;
+        private System.Windows.Forms.Label lblFiltro3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
@@ -370,5 +404,8 @@ namespace Programa_STPMJ
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtRegistroSelecionado;
         public FontAwesome.Sharp.IconButton btnPesquisar;
+        private System.Windows.Forms.Label lblFiltro1;
+        private System.Windows.Forms.TextBox txtFiltro1;
+        public System.Windows.Forms.TextBox txtFiltroMatricula;
     }
 }

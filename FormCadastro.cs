@@ -201,9 +201,6 @@ namespace Programa_STPMJ
             MessageBox.Show("Dados atualizados.", "Cadastro",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            FormPesquisa formpesquisa = new FormPesquisa();
-            formpesquisa.btnPesquisar_Click(sender, e);
-
             ResetMe();
             this.Close();
         }
