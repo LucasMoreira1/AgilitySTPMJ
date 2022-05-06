@@ -30,6 +30,8 @@ namespace Programa_STPMJ
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnPesquisar = new FontAwesome.Sharp.IconButton();
             this.btnMostrarTodos = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -59,6 +61,7 @@ namespace Programa_STPMJ
             this.btnPesquisar.BackColor = System.Drawing.Color.LightGray;
             this.btnPesquisar.FlatAppearance.BorderSize = 0;
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisar.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btnPesquisar.IconColor = System.Drawing.Color.Black;
             this.btnPesquisar.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -81,6 +84,7 @@ namespace Programa_STPMJ
             this.btnMostrarTodos.BackColor = System.Drawing.Color.LightGray;
             this.btnMostrarTodos.FlatAppearance.BorderSize = 0;
             this.btnMostrarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrarTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrarTodos.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btnMostrarTodos.IconColor = System.Drawing.Color.Black;
             this.btnMostrarTodos.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -117,6 +121,7 @@ namespace Programa_STPMJ
             // 
             // cboxFiltro2
             // 
+            this.cboxFiltro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxFiltro2.FormattingEnabled = true;
             this.cboxFiltro2.Items.AddRange(new object[] {
             "RegistroSindical",
@@ -145,15 +150,16 @@ namespace Programa_STPMJ
             "Disponivel"});
             this.cboxFiltro2.Location = new System.Drawing.Point(139, 85);
             this.cboxFiltro2.Name = "cboxFiltro2";
-            this.cboxFiltro2.Size = new System.Drawing.Size(121, 21);
+            this.cboxFiltro2.Size = new System.Drawing.Size(121, 28);
             this.cboxFiltro2.TabIndex = 3;
             this.cboxFiltro2.Text = "Matricula";
             // 
             // txtFiltro2
             // 
+            this.txtFiltro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFiltro2.Location = new System.Drawing.Point(139, 112);
             this.txtFiltro2.Name = "txtFiltro2";
-            this.txtFiltro2.Size = new System.Drawing.Size(121, 20);
+            this.txtFiltro2.Size = new System.Drawing.Size(121, 26);
             this.txtFiltro2.TabIndex = 4;
             this.txtFiltro2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
@@ -170,6 +176,7 @@ namespace Programa_STPMJ
             // 
             // cboxFiltro3
             // 
+            this.cboxFiltro3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxFiltro3.FormattingEnabled = true;
             this.cboxFiltro3.Items.AddRange(new object[] {
             "Matricula",
@@ -198,15 +205,16 @@ namespace Programa_STPMJ
             "Disponivel"});
             this.cboxFiltro3.Location = new System.Drawing.Point(266, 85);
             this.cboxFiltro3.Name = "cboxFiltro3";
-            this.cboxFiltro3.Size = new System.Drawing.Size(121, 21);
+            this.cboxFiltro3.Size = new System.Drawing.Size(121, 28);
             this.cboxFiltro3.TabIndex = 3;
             this.cboxFiltro3.Text = "Matricula";
             // 
             // txtFiltro3
             // 
+            this.txtFiltro3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFiltro3.Location = new System.Drawing.Point(266, 112);
             this.txtFiltro3.Name = "txtFiltro3";
-            this.txtFiltro3.Size = new System.Drawing.Size(121, 20);
+            this.txtFiltro3.Size = new System.Drawing.Size(121, 26);
             this.txtFiltro3.TabIndex = 4;
             this.txtFiltro3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
@@ -229,10 +237,27 @@ namespace Programa_STPMJ
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(12, 147);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView1.Size = new System.Drawing.Size(1025, 479);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -263,6 +288,7 @@ namespace Programa_STPMJ
             this.btnAtualizar.BackColor = System.Drawing.Color.LightGray;
             this.btnAtualizar.FlatAppearance.BorderSize = 0;
             this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizar.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btnAtualizar.IconColor = System.Drawing.Color.Black;
             this.btnAtualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -285,6 +311,7 @@ namespace Programa_STPMJ
             this.btnDeletar.BackColor = System.Drawing.Color.LightGray;
             this.btnDeletar.FlatAppearance.BorderSize = 0;
             this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletar.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btnDeletar.IconColor = System.Drawing.Color.Black;
             this.btnDeletar.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -322,9 +349,10 @@ namespace Programa_STPMJ
             // txtFiltroMatricula
             // 
             this.txtFiltroMatricula.Enabled = false;
+            this.txtFiltroMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFiltroMatricula.Location = new System.Drawing.Point(12, 86);
             this.txtFiltroMatricula.Name = "txtFiltroMatricula";
-            this.txtFiltroMatricula.Size = new System.Drawing.Size(121, 20);
+            this.txtFiltroMatricula.Size = new System.Drawing.Size(121, 26);
             this.txtFiltroMatricula.TabIndex = 11;
             this.txtFiltroMatricula.Text = "Matricula";
             // 
@@ -341,9 +369,10 @@ namespace Programa_STPMJ
             // 
             // txtFiltro1
             // 
+            this.txtFiltro1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFiltro1.Location = new System.Drawing.Point(12, 112);
             this.txtFiltro1.Name = "txtFiltro1";
-            this.txtFiltro1.Size = new System.Drawing.Size(121, 20);
+            this.txtFiltro1.Size = new System.Drawing.Size(121, 26);
             this.txtFiltro1.TabIndex = 4;
             this.txtFiltro1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
@@ -391,10 +420,8 @@ namespace Programa_STPMJ
         private FontAwesome.Sharp.IconButton btnMostrarTodos;
         private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.ComboBox cboxFiltro2;
-        private System.Windows.Forms.TextBox txtFiltro2;
         private System.Windows.Forms.Label lblFiltro2;
         private System.Windows.Forms.ComboBox cboxFiltro3;
-        private System.Windows.Forms.TextBox txtFiltro3;
         private System.Windows.Forms.Label lblFiltro3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.StatusStrip statusStrip1;
@@ -405,7 +432,9 @@ namespace Programa_STPMJ
         private System.Windows.Forms.TextBox txtRegistroSelecionado;
         public FontAwesome.Sharp.IconButton btnPesquisar;
         private System.Windows.Forms.Label lblFiltro1;
-        private System.Windows.Forms.TextBox txtFiltro1;
         public System.Windows.Forms.TextBox txtFiltroMatricula;
+        public System.Windows.Forms.TextBox txtFiltro2;
+        public System.Windows.Forms.TextBox txtFiltro3;
+        public System.Windows.Forms.TextBox txtFiltro1;
     }
 }

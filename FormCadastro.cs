@@ -203,16 +203,16 @@ namespace Programa_STPMJ
 
             ResetMe();
             this.Close();
+
+            //FormPesquisa formPesquisa = new FormPesquisa();
+            //formPesquisa.loadFiltro();
+            
         }
 
         private void FormCadastro_Load(object sender, EventArgs e)
         {
             txtDataCadastro.Text = DateTime.Now.ToString("dd/MM/yyyy");
             
-            //formPaginaInicial formPaginaInicial = new formPaginaInicial();
-            ////cboxCamera.Items.Add(formPaginaInicial.comboCamera.Text);
-            //cboxCamera.SelectedValue = formPaginaInicial.comboCamera.SelectedItem;
-
             //Camera
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo filterInfo in filterInfoCollection)

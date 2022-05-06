@@ -30,8 +30,13 @@ namespace Programa_STPMJ
 
         public void btnPesquisar_Click(object sender, EventArgs e)
         {
+            loadFiltro();
+        }
+
+        public void loadFiltro()
+        {
             CRUD.sql = "SELECT * FROM SOCIOS WHERE " + cboxFiltro2.Text.Trim() + " LIKE '%" + txtFiltro2.Text.Trim() + "%' AND " +
-                "" + cboxFiltro3.Text.Trim() + " LIKE '%" + txtFiltro3.Text.Trim() + "%';";
+              "" + cboxFiltro3.Text.Trim() + " LIKE '%" + txtFiltro3.Text.Trim() + "%';";
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
@@ -54,8 +59,8 @@ namespace Programa_STPMJ
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.DataSource = dt;
             dgv.Columns["Foto"].Visible = false;
-
         }
+
         private void loadData(string keyword)
         {
             //CRUD.sql = "SELECT * FROM SOCIOS WHERE nome LIKE @keyword1 OR matricula = @keyword2;";
@@ -220,7 +225,7 @@ namespace Programa_STPMJ
             //loadData("");
         }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        public void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 btnPesquisar_Click(sender,e);
