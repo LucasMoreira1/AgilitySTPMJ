@@ -217,7 +217,11 @@ namespace Programa_STPMJ
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo filterInfo in filterInfoCollection)
                 cboxCamera.Items.Add(filterInfo.Name);
-            cboxCamera.SelectedIndex = 0;
+            if (cboxCamera.Items.Count >= 1) 
+            {
+                cboxCamera.SelectedIndex = 0;
+            }
+            //cboxCamera.SelectedIndex = 0;
             videoCaptureDevice = new VideoCaptureDevice();
         }
 
@@ -272,7 +276,7 @@ namespace Programa_STPMJ
 
         public void btnEncerrarCamera_Click(object sender, EventArgs e)
         {
-            EncerrarCamera();
+            imgCamera.Image = null;
         }
 
         private void btnImportarFoto_Click(object sender, EventArgs e)
