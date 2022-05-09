@@ -30,8 +30,8 @@ namespace Programa_STPMJ
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnPesquisar = new FontAwesome.Sharp.IconButton();
             this.btnMostrarTodos = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -66,10 +66,10 @@ namespace Programa_STPMJ
             this.btnPesquisar.IconColor = System.Drawing.Color.Black;
             this.btnPesquisar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPesquisar.IconSize = 32;
-            this.btnPesquisar.Location = new System.Drawing.Point(580, 62);
+            this.btnPesquisar.Location = new System.Drawing.Point(580, 44);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnPesquisar.Size = new System.Drawing.Size(135, 30);
+            this.btnPesquisar.Size = new System.Drawing.Size(200, 47);
             this.btnPesquisar.TabIndex = 1;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -92,7 +92,7 @@ namespace Programa_STPMJ
             this.btnMostrarTodos.Location = new System.Drawing.Point(580, 97);
             this.btnMostrarTodos.Name = "btnMostrarTodos";
             this.btnMostrarTodos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMostrarTodos.Size = new System.Drawing.Size(135, 30);
+            this.btnMostrarTodos.Size = new System.Drawing.Size(200, 47);
             this.btnMostrarTodos.TabIndex = 1;
             this.btnMostrarTodos.Text = "Mostrar Todos";
             this.btnMostrarTodos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -157,7 +157,7 @@ namespace Programa_STPMJ
             // txtFiltro2
             // 
             this.txtFiltro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltro2.Location = new System.Drawing.Point(139, 112);
+            this.txtFiltro2.Location = new System.Drawing.Point(139, 118);
             this.txtFiltro2.Name = "txtFiltro2";
             this.txtFiltro2.Size = new System.Drawing.Size(121, 26);
             this.txtFiltro2.TabIndex = 4;
@@ -212,7 +212,7 @@ namespace Programa_STPMJ
             // txtFiltro3
             // 
             this.txtFiltro3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltro3.Location = new System.Drawing.Point(266, 112);
+            this.txtFiltro3.Location = new System.Drawing.Point(266, 118);
             this.txtFiltro3.Name = "txtFiltro3";
             this.txtFiltro3.Size = new System.Drawing.Size(121, 26);
             this.txtFiltro3.TabIndex = 4;
@@ -237,28 +237,28 @@ namespace Programa_STPMJ
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 147);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 150);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView1.Size = new System.Drawing.Size(1025, 479);
+            this.dataGridView1.Size = new System.Drawing.Size(1025, 476);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -293,10 +293,10 @@ namespace Programa_STPMJ
             this.btnAtualizar.IconColor = System.Drawing.Color.Black;
             this.btnAtualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAtualizar.IconSize = 32;
-            this.btnAtualizar.Location = new System.Drawing.Point(902, 62);
+            this.btnAtualizar.Location = new System.Drawing.Point(837, 44);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnAtualizar.Size = new System.Drawing.Size(135, 30);
+            this.btnAtualizar.Size = new System.Drawing.Size(200, 47);
             this.btnAtualizar.TabIndex = 1;
             this.btnAtualizar.Text = "Atualizar ( )";
             this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -316,10 +316,10 @@ namespace Programa_STPMJ
             this.btnDeletar.IconColor = System.Drawing.Color.Black;
             this.btnDeletar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDeletar.IconSize = 32;
-            this.btnDeletar.Location = new System.Drawing.Point(902, 97);
+            this.btnDeletar.Location = new System.Drawing.Point(837, 97);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnDeletar.Size = new System.Drawing.Size(135, 30);
+            this.btnDeletar.Size = new System.Drawing.Size(200, 47);
             this.btnDeletar.TabIndex = 1;
             this.btnDeletar.Text = "Deletar ( )";
             this.btnDeletar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -331,7 +331,7 @@ namespace Programa_STPMJ
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(464, 80);
+            this.label3.Location = new System.Drawing.Point(419, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 13);
             this.label3.TabIndex = 9;
@@ -340,7 +340,7 @@ namespace Programa_STPMJ
             // 
             // txtRegistroSelecionado
             // 
-            this.txtRegistroSelecionado.Location = new System.Drawing.Point(562, 77);
+            this.txtRegistroSelecionado.Location = new System.Drawing.Point(517, 90);
             this.txtRegistroSelecionado.Name = "txtRegistroSelecionado";
             this.txtRegistroSelecionado.Size = new System.Drawing.Size(18, 20);
             this.txtRegistroSelecionado.TabIndex = 10;
@@ -370,7 +370,7 @@ namespace Programa_STPMJ
             // txtFiltro1
             // 
             this.txtFiltro1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltro1.Location = new System.Drawing.Point(12, 112);
+            this.txtFiltro1.Location = new System.Drawing.Point(12, 118);
             this.txtFiltro1.Name = "txtFiltro1";
             this.txtFiltro1.Size = new System.Drawing.Size(121, 26);
             this.txtFiltro1.TabIndex = 4;

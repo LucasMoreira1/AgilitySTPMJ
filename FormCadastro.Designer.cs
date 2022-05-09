@@ -156,7 +156,7 @@
             this.btnEncerrarCamera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEncerrarCamera.Location = new System.Drawing.Point(892, 355);
             this.btnEncerrarCamera.Name = "btnEncerrarCamera";
-            this.btnEncerrarCamera.Size = new System.Drawing.Size(91, 23);
+            this.btnEncerrarCamera.Size = new System.Drawing.Size(91, 33);
             this.btnEncerrarCamera.TabIndex = 18;
             this.btnEncerrarCamera.Text = "Encerrar";
             this.btnEncerrarCamera.UseVisualStyleBackColor = true;
@@ -169,9 +169,9 @@
             this.btnImportarFoto.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnImportarFoto.IconColor = System.Drawing.Color.Black;
             this.btnImportarFoto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnImportarFoto.Location = new System.Drawing.Point(892, 381);
+            this.btnImportarFoto.Location = new System.Drawing.Point(892, 394);
             this.btnImportarFoto.Name = "btnImportarFoto";
-            this.btnImportarFoto.Size = new System.Drawing.Size(91, 23);
+            this.btnImportarFoto.Size = new System.Drawing.Size(91, 30);
             this.btnImportarFoto.TabIndex = 13;
             this.btnImportarFoto.Text = "Importar foto";
             this.btnImportarFoto.UseVisualStyleBackColor = true;
@@ -184,9 +184,9 @@
             this.btnTirarFoto.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnTirarFoto.IconColor = System.Drawing.Color.Black;
             this.btnTirarFoto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTirarFoto.Location = new System.Drawing.Point(693, 381);
+            this.btnTirarFoto.Location = new System.Drawing.Point(693, 394);
             this.btnTirarFoto.Name = "btnTirarFoto";
-            this.btnTirarFoto.Size = new System.Drawing.Size(91, 23);
+            this.btnTirarFoto.Size = new System.Drawing.Size(90, 30);
             this.btnTirarFoto.TabIndex = 13;
             this.btnTirarFoto.Text = "Tirar foto";
             this.btnTirarFoto.UseVisualStyleBackColor = true;
@@ -201,7 +201,7 @@
             this.btnIniciarCamera.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnIniciarCamera.Location = new System.Drawing.Point(692, 355);
             this.btnIniciarCamera.Name = "btnIniciarCamera";
-            this.btnIniciarCamera.Size = new System.Drawing.Size(91, 23);
+            this.btnIniciarCamera.Size = new System.Drawing.Size(91, 33);
             this.btnIniciarCamera.TabIndex = 13;
             this.btnIniciarCamera.Text = "Iniciar Camera";
             this.btnIniciarCamera.UseVisualStyleBackColor = true;
@@ -225,7 +225,7 @@
             this.txtRG.Location = new System.Drawing.Point(145, 96);
             this.txtRG.Mask = "00.000.000-0";
             this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(88, 26);
+            this.txtRG.Size = new System.Drawing.Size(122, 26);
             this.txtRG.TabIndex = 4;
             // 
             // txtCPF
@@ -234,16 +234,16 @@
             this.txtCPF.Location = new System.Drawing.Point(145, 132);
             this.txtCPF.Mask = "000.000.000-00";
             this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(87, 26);
+            this.txtCPF.Size = new System.Drawing.Size(121, 26);
             this.txtCPF.TabIndex = 5;
             // 
             // txtAdmissao
             // 
             this.txtAdmissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdmissao.Location = new System.Drawing.Point(450, 174);
+            this.txtAdmissao.Location = new System.Drawing.Point(436, 174);
             this.txtAdmissao.Mask = "00/00/0000";
             this.txtAdmissao.Name = "txtAdmissao";
-            this.txtAdmissao.Size = new System.Drawing.Size(115, 26);
+            this.txtAdmissao.Size = new System.Drawing.Size(129, 26);
             this.txtAdmissao.TabIndex = 12;
             this.txtAdmissao.ValidatingType = typeof(System.DateTime);
             // 
@@ -253,17 +253,17 @@
             this.txtDataNascimento.Location = new System.Drawing.Point(145, 168);
             this.txtDataNascimento.Mask = "00/00/0000";
             this.txtDataNascimento.Name = "txtDataNascimento";
-            this.txtDataNascimento.Size = new System.Drawing.Size(87, 26);
+            this.txtDataNascimento.Size = new System.Drawing.Size(121, 26);
             this.txtDataNascimento.TabIndex = 6;
             this.txtDataNascimento.ValidatingType = typeof(System.DateTime);
             // 
             // txtRecado
             // 
             this.txtRecado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRecado.Location = new System.Drawing.Point(450, 355);
+            this.txtRecado.Location = new System.Drawing.Point(436, 349);
             this.txtRecado.Mask = "(99)00000-0000";
             this.txtRecado.Name = "txtRecado";
-            this.txtRecado.Size = new System.Drawing.Size(115, 26);
+            this.txtRecado.Size = new System.Drawing.Size(129, 26);
             this.txtRecado.TabIndex = 16;
             // 
             // txtTelefone
@@ -272,7 +272,7 @@
             this.txtTelefone.Location = new System.Drawing.Point(146, 349);
             this.txtTelefone.Mask = "(99)00000-0000";
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(88, 26);
+            this.txtTelefone.Size = new System.Drawing.Size(122, 26);
             this.txtTelefone.TabIndex = 15;
             // 
             // cboxEmpresa
@@ -339,9 +339,9 @@
             "3-SEPARADO",
             "4-DIVORCIADO",
             "5-VIÚVO"});
-            this.cboxEstadoCivil.Location = new System.Drawing.Point(450, 95);
+            this.cboxEstadoCivil.Location = new System.Drawing.Point(436, 95);
             this.cboxEstadoCivil.Name = "cboxEstadoCivil";
-            this.cboxEstadoCivil.Size = new System.Drawing.Size(115, 28);
+            this.cboxEstadoCivil.Size = new System.Drawing.Size(129, 28);
             this.cboxEstadoCivil.TabIndex = 7;
             // 
             // label2
@@ -435,19 +435,19 @@
             // txtRegistro
             // 
             this.txtRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegistro.Location = new System.Drawing.Point(450, 136);
+            this.txtRegistro.Location = new System.Drawing.Point(436, 136);
             this.txtRegistro.Name = "txtRegistro";
             this.txtRegistro.ReadOnly = true;
-            this.txtRegistro.Size = new System.Drawing.Size(115, 26);
+            this.txtRegistro.Size = new System.Drawing.Size(129, 26);
             this.txtRegistro.TabIndex = 9;
             // 
             // txtDataCadastro
             // 
             this.txtDataCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataCadastro.Location = new System.Drawing.Point(450, 24);
+            this.txtDataCadastro.Location = new System.Drawing.Point(436, 24);
             this.txtDataCadastro.Name = "txtDataCadastro";
             this.txtDataCadastro.ReadOnly = true;
-            this.txtDataCadastro.Size = new System.Drawing.Size(115, 26);
+            this.txtDataCadastro.Size = new System.Drawing.Size(129, 26);
             this.txtDataCadastro.TabIndex = 2;
             // 
             // label23
@@ -549,7 +549,7 @@
             this.txtNacionalidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNacionalidade.Location = new System.Drawing.Point(145, 204);
             this.txtNacionalidade.Name = "txtNacionalidade";
-            this.txtNacionalidade.Size = new System.Drawing.Size(88, 26);
+            this.txtNacionalidade.Size = new System.Drawing.Size(122, 26);
             this.txtNacionalidade.TabIndex = 8;
             // 
             // label1
@@ -567,7 +567,7 @@
             this.txtMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatricula.Location = new System.Drawing.Point(145, 24);
             this.txtMatricula.Name = "txtMatricula";
-            this.txtMatricula.Size = new System.Drawing.Size(89, 26);
+            this.txtMatricula.Size = new System.Drawing.Size(123, 26);
             this.txtMatricula.TabIndex = 1;
             // 
             // groupBox2
@@ -589,7 +589,7 @@
             this.groupBox2.Controls.Add(this.txtLogradouro);
             this.groupBox2.Location = new System.Drawing.Point(12, 484);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1103, 126);
+            this.groupBox2.Size = new System.Drawing.Size(1103, 177);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Endereço";
@@ -609,9 +609,9 @@
             this.btnBuscarCEP.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnBuscarCEP.IconColor = System.Drawing.Color.Black;
             this.btnBuscarCEP.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscarCEP.Location = new System.Drawing.Point(247, 19);
+            this.btnBuscarCEP.Location = new System.Drawing.Point(237, 19);
             this.btnBuscarCEP.Name = "btnBuscarCEP";
-            this.btnBuscarCEP.Size = new System.Drawing.Size(87, 20);
+            this.btnBuscarCEP.Size = new System.Drawing.Size(98, 26);
             this.btnBuscarCEP.TabIndex = 19;
             this.btnBuscarCEP.Text = "Buscar";
             this.btnBuscarCEP.UseVisualStyleBackColor = true;
@@ -631,7 +631,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(6, 100);
+            this.label20.Location = new System.Drawing.Point(7, 118);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(60, 20);
             this.label20.TabIndex = 1;
@@ -641,7 +641,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(341, 74);
+            this.label19.Location = new System.Drawing.Point(341, 86);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(59, 20);
             this.label19.TabIndex = 1;
@@ -651,7 +651,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(6, 74);
+            this.label18.Location = new System.Drawing.Point(7, 86);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(51, 20);
             this.label18.TabIndex = 1;
@@ -671,7 +671,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(6, 48);
+            this.label15.Location = new System.Drawing.Point(7, 54);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(91, 20);
             this.label15.TabIndex = 1;
@@ -690,7 +690,7 @@
             // txtComplemento
             // 
             this.txtComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComplemento.Location = new System.Drawing.Point(608, 45);
+            this.txtComplemento.Location = new System.Drawing.Point(669, 48);
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(114, 26);
             this.txtComplemento.TabIndex = 22;
@@ -698,7 +698,7 @@
             // txtEstado
             // 
             this.txtEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstado.Location = new System.Drawing.Point(101, 97);
+            this.txtEstado.Location = new System.Drawing.Point(102, 115);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(88, 26);
             this.txtEstado.TabIndex = 25;
@@ -706,15 +706,15 @@
             // txtCidade
             // 
             this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidade.Location = new System.Drawing.Point(436, 71);
+            this.txtCidade.Location = new System.Drawing.Point(436, 83);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(287, 26);
+            this.txtCidade.Size = new System.Drawing.Size(347, 26);
             this.txtCidade.TabIndex = 24;
             // 
             // txtBairro
             // 
             this.txtBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBairro.Location = new System.Drawing.Point(101, 71);
+            this.txtBairro.Location = new System.Drawing.Point(102, 83);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(233, 26);
             this.txtBairro.TabIndex = 23;
@@ -730,22 +730,20 @@
             // txtLogradouro
             // 
             this.txtLogradouro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogradouro.Location = new System.Drawing.Point(101, 45);
+            this.txtLogradouro.Location = new System.Drawing.Point(102, 51);
             this.txtLogradouro.Name = "txtLogradouro";
             this.txtLogradouro.Size = new System.Drawing.Size(233, 26);
             this.txtLogradouro.TabIndex = 20;
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.txtDisponivel);
             this.groupBox3.Controls.Add(this.txtLimite);
             this.groupBox3.Controls.Add(this.label24);
             this.groupBox3.Controls.Add(this.label26);
-            this.groupBox3.Location = new System.Drawing.Point(12, 616);
+            this.groupBox3.Location = new System.Drawing.Point(12, 667);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(401, 115);
+            this.groupBox3.Size = new System.Drawing.Size(206, 115);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Limites e Saldos";
@@ -755,7 +753,7 @@
             this.txtDisponivel.DecimalPlaces = 2;
             this.txtDisponivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDisponivel.InterceptArrowKeys = false;
-            this.txtDisponivel.Location = new System.Drawing.Point(100, 48);
+            this.txtDisponivel.Location = new System.Drawing.Point(100, 52);
             this.txtDisponivel.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -803,7 +801,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(6, 48);
+            this.label26.Location = new System.Drawing.Point(6, 52);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(81, 20);
             this.label26.TabIndex = 1;
@@ -863,7 +861,7 @@
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtObservacao.Size = new System.Drawing.Size(308, 87);
+            this.txtObservacao.Size = new System.Drawing.Size(427, 87);
             this.txtObservacao.TabIndex = 28;
             // 
             // btnLimpar
@@ -888,7 +886,7 @@
             this.groupBox4.Controls.Add(this.btnImagemEmBranco);
             this.groupBox4.Controls.Add(this.btnSalvar);
             this.groupBox4.Controls.Add(this.btnAtualizar);
-            this.groupBox4.Location = new System.Drawing.Point(218, 616);
+            this.groupBox4.Location = new System.Drawing.Point(218, 667);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(897, 115);
             this.groupBox4.TabIndex = 3;
@@ -900,7 +898,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1127, 749);
+            this.ClientSize = new System.Drawing.Size(1127, 831);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
