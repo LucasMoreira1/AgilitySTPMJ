@@ -95,14 +95,14 @@
             this.btnLimpar = new FontAwesome.Sharp.IconButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCamera)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -631,7 +631,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(531, 48);
+            this.label17.Location = new System.Drawing.Point(531, 54);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(108, 20);
             this.label17.TabIndex = 1;
@@ -671,7 +671,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(341, 48);
+            this.label16.Location = new System.Drawing.Point(341, 54);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(65, 20);
             this.label16.TabIndex = 1;
@@ -700,7 +700,7 @@
             // txtComplemento
             // 
             this.txtComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComplemento.Location = new System.Drawing.Point(669, 48);
+            this.txtComplemento.Location = new System.Drawing.Point(669, 51);
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(114, 26);
             this.txtComplemento.TabIndex = 22;
@@ -732,7 +732,7 @@
             // txtNumero
             // 
             this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(436, 45);
+            this.txtNumero.Location = new System.Drawing.Point(436, 51);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(89, 26);
             this.txtNumero.TabIndex = 21;
@@ -920,6 +920,50 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Dependentes";
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(590, 97);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 26);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Lista";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(590, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 62);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Adicionar dependente";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(146, 97);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(419, 26);
+            this.textBox3.TabIndex = 2;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(146, 61);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(419, 26);
+            this.textBox2.TabIndex = 2;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(146, 25);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(419, 26);
+            this.textBox1.TabIndex = 2;
+            // 
             // label25
             // 
             this.label25.AutoSize = true;
@@ -949,50 +993,6 @@
             this.label28.Size = new System.Drawing.Size(132, 20);
             this.label28.TabIndex = 1;
             this.label28.Text = "Data Nascimento";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(146, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(419, 26);
-            this.textBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(146, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(419, 26);
-            this.textBox2.TabIndex = 2;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(146, 97);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(419, 26);
-            this.textBox3.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(590, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 62);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Adicionar dependente";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(590, 97);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 26);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Lista";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // FormCadastro
             // 
