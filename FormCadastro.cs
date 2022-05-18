@@ -50,6 +50,9 @@ namespace Programa_STPMJ
             txtDisponivel.Text = "";
             txtObservacao.Text = "";
             imgCamera.Image = null;
+            txtNomeDependente.Text = "";
+            txtDataNascimentoDependente.Text = "";
+            txtGrauParentesco.Text = "";
         }
 
         private void Executar(string mySQL, string param)
@@ -62,12 +65,6 @@ namespace Programa_STPMJ
         private void AddParametros(string str)
         {
             CRUD.cmd.Parameters.Clear();
-
-            //byte[] img = null;
-
-            //FileStream Stream = new FileStream(localizacaoFoto, FileMode.Open, FileAccess.Read);
-            //BinaryReader brs = new BinaryReader(Stream);
-            //img = brs.ReadBytes((int)Stream.Length);
 
             MemoryStream ms = new MemoryStream();
             if (imgCamera.Image == null)
@@ -112,6 +109,10 @@ namespace Programa_STPMJ
             CRUD.cmd.Parameters.AddWithValue("observacao", txtObservacao.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("foto", img);
             CRUD.cmd.Parameters.AddWithValue("registro_sindical", txtRegistro.Text.Trim());
+            CRUD.cmd.Parameters.AddWithValue("nomeDependente", txtNomeDependente.Text.Trim());
+            CRUD.cmd.Parameters.AddWithValue("DataNascimentoDependnete", txtDataNascimentoDependente.Text.Trim());
+            CRUD.cmd.Parameters.AddWithValue("GrauParentesco", txtGrauParentesco.Text.Trim());
+           
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
@@ -307,6 +308,46 @@ namespace Programa_STPMJ
 
             ResetMe();
             this.Close();
+        }
+
+        private void btnAdcDependente_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtMatricula.Text.Trim()) ||
+                   string.IsNullOrEmpty(txtNome.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira a Matrícula e Nome completo", "Dados Obrigatórios",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+
+            CRUD.sql = "INSERT INTO DEPENDENTES(MatReferencia,Nome,DataNascimento,GrauParantesco)" +
+                "Values(@matricula, @nomeDependente, @DataNascimentoDependnete, @GrauParentesco);";
+
+
+            Executar(CRUD.sql, "Insert");
+
+            MessageBox.Show("Dependente registrado.", "Cadastro Dependente",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //loadData("");
+            ResetDependente();
+        }
+
+        private void ResetDependente()
+        {
+            txtNomeDependente.Text = "";
+            txtDataNascimentoDependente.Text = "";
+            txtGrauParentesco.Text = "";
+        }
+
+        private void btnListaDependentes_Click(object sender, EventArgs e)
+        {
+            FormDependentes formDependentes = new FormDependentes();
+            formDependentes.txtMatReferencia.Text = txtMatricula.Text;
+            formDependentes.txtNomeSocio.Text = txtNome.Text;
+            formDependentes.Show();
+            
         }
     }
 }

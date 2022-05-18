@@ -95,14 +95,14 @@
             this.btnLimpar = new FontAwesome.Sharp.IconButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnListaDependentes = new System.Windows.Forms.Button();
+            this.btnAdcDependente = new System.Windows.Forms.Button();
+            this.txtGrauParentesco = new System.Windows.Forms.TextBox();
+            this.txtNomeDependente = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.txtDataNascimentoDependente = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCamera)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -233,7 +233,7 @@
             // 
             this.txtRG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRG.Location = new System.Drawing.Point(145, 96);
-            this.txtRG.Mask = "00.000.000-0";
+            this.txtRG.Mask = "00,000,000-0";
             this.txtRG.Name = "txtRG";
             this.txtRG.Size = new System.Drawing.Size(122, 26);
             this.txtRG.TabIndex = 4;
@@ -242,7 +242,7 @@
             // 
             this.txtCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCPF.Location = new System.Drawing.Point(145, 132);
-            this.txtCPF.Mask = "000.000.000-00";
+            this.txtCPF.Mask = "000,000,000-00";
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(121, 26);
             this.txtCPF.TabIndex = 5;
@@ -608,7 +608,7 @@
             // 
             this.txtCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCEP.Location = new System.Drawing.Point(100, 19);
-            this.txtCEP.Mask = "00.000-000";
+            this.txtCEP.Mask = "00,000-000";
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(89, 26);
             this.txtCEP.TabIndex = 18;
@@ -905,11 +905,11 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.button2);
-            this.groupBox5.Controls.Add(this.button1);
-            this.groupBox5.Controls.Add(this.textBox3);
-            this.groupBox5.Controls.Add(this.textBox2);
-            this.groupBox5.Controls.Add(this.textBox1);
+            this.groupBox5.Controls.Add(this.txtDataNascimentoDependente);
+            this.groupBox5.Controls.Add(this.btnListaDependentes);
+            this.groupBox5.Controls.Add(this.btnAdcDependente);
+            this.groupBox5.Controls.Add(this.txtGrauParentesco);
+            this.groupBox5.Controls.Add(this.txtNomeDependente);
             this.groupBox5.Controls.Add(this.label25);
             this.groupBox5.Controls.Add(this.label27);
             this.groupBox5.Controls.Add(this.label28);
@@ -920,49 +920,43 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Dependentes";
             // 
-            // button2
+            // btnListaDependentes
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(590, 97);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 26);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Lista";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnListaDependentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaDependentes.Location = new System.Drawing.Point(590, 97);
+            this.btnListaDependentes.Name = "btnListaDependentes";
+            this.btnListaDependentes.Size = new System.Drawing.Size(103, 26);
+            this.btnListaDependentes.TabIndex = 3;
+            this.btnListaDependentes.Text = "Lista";
+            this.btnListaDependentes.UseVisualStyleBackColor = true;
+            this.btnListaDependentes.Click += new System.EventHandler(this.btnListaDependentes_Click);
             // 
-            // button1
+            // btnAdcDependente
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(590, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 62);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Adicionar dependente";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdcDependente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdcDependente.Location = new System.Drawing.Point(590, 25);
+            this.btnAdcDependente.Name = "btnAdcDependente";
+            this.btnAdcDependente.Size = new System.Drawing.Size(103, 62);
+            this.btnAdcDependente.TabIndex = 3;
+            this.btnAdcDependente.Text = "Adicionar dependente";
+            this.btnAdcDependente.UseVisualStyleBackColor = true;
+            this.btnAdcDependente.Click += new System.EventHandler(this.btnAdcDependente_Click);
             // 
-            // textBox3
+            // txtGrauParentesco
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(146, 97);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(419, 26);
-            this.textBox3.TabIndex = 2;
+            this.txtGrauParentesco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGrauParentesco.Location = new System.Drawing.Point(146, 61);
+            this.txtGrauParentesco.Name = "txtGrauParentesco";
+            this.txtGrauParentesco.Size = new System.Drawing.Size(419, 26);
+            this.txtGrauParentesco.TabIndex = 2;
             // 
-            // textBox2
+            // txtNomeDependente
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(146, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(419, 26);
-            this.textBox2.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(146, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(419, 26);
-            this.textBox1.TabIndex = 2;
+            this.txtNomeDependente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeDependente.Location = new System.Drawing.Point(146, 25);
+            this.txtNomeDependente.Name = "txtNomeDependente";
+            this.txtNomeDependente.Size = new System.Drawing.Size(419, 26);
+            this.txtNomeDependente.TabIndex = 2;
             // 
             // label25
             // 
@@ -993,6 +987,16 @@
             this.label28.Size = new System.Drawing.Size(132, 20);
             this.label28.TabIndex = 1;
             this.label28.Text = "Data Nascimento";
+            // 
+            // txtDataNascimentoDependente
+            // 
+            this.txtDataNascimentoDependente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataNascimentoDependente.Location = new System.Drawing.Point(145, 97);
+            this.txtDataNascimentoDependente.Mask = "00/00/0000";
+            this.txtDataNascimentoDependente.Name = "txtDataNascimentoDependente";
+            this.txtDataNascimentoDependente.Size = new System.Drawing.Size(420, 26);
+            this.txtDataNascimentoDependente.TabIndex = 4;
+            this.txtDataNascimentoDependente.ValidatingType = typeof(System.DateTime);
             // 
             // FormCadastro
             // 
@@ -1097,13 +1101,13 @@
         private FontAwesome.Sharp.IconButton btnLimpar;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnListaDependentes;
+        private System.Windows.Forms.Button btnAdcDependente;
+        private System.Windows.Forms.TextBox txtGrauParentesco;
+        private System.Windows.Forms.TextBox txtNomeDependente;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.MaskedTextBox txtDataNascimentoDependente;
     }
 }

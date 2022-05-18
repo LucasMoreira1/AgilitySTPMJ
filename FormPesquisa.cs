@@ -41,16 +41,16 @@ namespace Programa_STPMJ
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
 
-            if (dt.Rows.Count > 0)
-            {
-                row = Convert.ToInt32(dt.Rows.Count.ToString());
-            }
-            else
-            {
-                row = 0;
-            }
+            //if (dt.Rows.Count > 0)
+            //{
+            //    row = Convert.ToInt32(dt.Rows.Count.ToString());
+            //}
+            //else
+            //{
+            //    row = 0;
+            //}
 
-            toolStripStatusLabel1.Text = "Número de linha(s): " + row.ToString();
+            //toolStripStatusLabel1.Text = "Número de linha(s): " + row.ToString();
 
             DataGridView dgv = dataGridView1;
 
@@ -59,30 +59,28 @@ namespace Programa_STPMJ
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.DataSource = dt;
             dgv.Columns["Foto"].Visible = false;
+            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
 
         private void loadData(string keyword)
         {
-            //CRUD.sql = "SELECT * FROM SOCIOS WHERE nome LIKE @keyword1 OR matricula = @keyword2;";
-            // string strKeyword = string.Format("%{0}%", keyword);
+
             CRUD.sql = "SELECT * FROM SOCIOS;";
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
-            //CRUD.cmd.Parameters.Clear();
-            //CRUD.cmd.Parameters.AddWithValue("keyword1", strKeyword);
-            //CRUD.cmd.Parameters.AddWithValue("keyword2", keyword);
+
 
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
             
-            if (dt.Rows.Count > 0)
-            {
-                row = Convert.ToInt32(dt.Rows.Count.ToString());
-            }
-            else
-            {
-                row = 0;
-            }
+            //if (dt.Rows.Count > 0)
+            //{
+            //    row = Convert.ToInt32(dt.Rows.Count.ToString());
+            //}
+            //else
+            //{
+            //    row = 0;
+            //}
 
-            toolStripStatusLabel1.Text = "Número de linha(s): " + row.ToString();
+            //toolStripStatusLabel1.Text = "Número de linha(s): " + row.ToString();
 
             DataGridView dgv = dataGridView1;
 
@@ -91,7 +89,7 @@ namespace Programa_STPMJ
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.DataSource = dt;
             dgv.Columns["Foto"].Visible = false;
-
+            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
