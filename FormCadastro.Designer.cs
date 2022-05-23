@@ -95,6 +95,7 @@
             this.btnLimpar = new FontAwesome.Sharp.IconButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtDataNascimentoDependente = new System.Windows.Forms.MaskedTextBox();
             this.btnListaDependentes = new System.Windows.Forms.Button();
             this.btnAdcDependente = new System.Windows.Forms.Button();
             this.txtGrauParentesco = new System.Windows.Forms.TextBox();
@@ -102,7 +103,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.txtDataNascimentoDependente = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCamera)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -631,7 +631,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(531, 54);
+            this.label17.Location = new System.Drawing.Point(631, 54);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(108, 20);
             this.label17.TabIndex = 1;
@@ -651,7 +651,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(341, 86);
+            this.label19.Location = new System.Drawing.Point(441, 86);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(59, 20);
             this.label19.TabIndex = 1;
@@ -671,7 +671,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(341, 54);
+            this.label16.Location = new System.Drawing.Point(441, 54);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(65, 20);
             this.label16.TabIndex = 1;
@@ -700,7 +700,7 @@
             // txtComplemento
             // 
             this.txtComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComplemento.Location = new System.Drawing.Point(669, 51);
+            this.txtComplemento.Location = new System.Drawing.Point(769, 51);
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(114, 26);
             this.txtComplemento.TabIndex = 22;
@@ -716,7 +716,7 @@
             // txtCidade
             // 
             this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidade.Location = new System.Drawing.Point(436, 83);
+            this.txtCidade.Location = new System.Drawing.Point(536, 83);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(347, 26);
             this.txtCidade.TabIndex = 24;
@@ -726,13 +726,13 @@
             this.txtBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBairro.Location = new System.Drawing.Point(102, 83);
             this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(233, 26);
+            this.txtBairro.Size = new System.Drawing.Size(333, 26);
             this.txtBairro.TabIndex = 23;
             // 
             // txtNumero
             // 
             this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(436, 51);
+            this.txtNumero.Location = new System.Drawing.Point(536, 51);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(89, 26);
             this.txtNumero.TabIndex = 21;
@@ -742,7 +742,7 @@
             this.txtLogradouro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLogradouro.Location = new System.Drawing.Point(102, 51);
             this.txtLogradouro.Name = "txtLogradouro";
-            this.txtLogradouro.Size = new System.Drawing.Size(233, 26);
+            this.txtLogradouro.Size = new System.Drawing.Size(333, 26);
             this.txtLogradouro.TabIndex = 20;
             // 
             // groupBox3
@@ -824,9 +824,9 @@
             this.btnSalvar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSalvar.IconColor = System.Drawing.Color.Black;
             this.btnSalvar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSalvar.Location = new System.Drawing.Point(735, 75);
+            this.btnSalvar.Location = new System.Drawing.Point(715, 74);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 35);
+            this.btnSalvar.Size = new System.Drawing.Size(85, 35);
             this.btnSalvar.TabIndex = 29;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -839,9 +839,9 @@
             this.btnAtualizar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAtualizar.IconColor = System.Drawing.Color.Black;
             this.btnAtualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAtualizar.Location = new System.Drawing.Point(736, 74);
+            this.btnAtualizar.Location = new System.Drawing.Point(715, 74);
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(75, 35);
+            this.btnAtualizar.Size = new System.Drawing.Size(85, 35);
             this.btnAtualizar.TabIndex = 29;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
@@ -855,9 +855,9 @@
             this.btnImagemEmBranco.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnImagemEmBranco.IconColor = System.Drawing.Color.Black;
             this.btnImagemEmBranco.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnImagemEmBranco.Location = new System.Drawing.Point(736, 33);
+            this.btnImagemEmBranco.Location = new System.Drawing.Point(715, 33);
             this.btnImagemEmBranco.Name = "btnImagemEmBranco";
-            this.btnImagemEmBranco.Size = new System.Drawing.Size(75, 35);
+            this.btnImagemEmBranco.Size = new System.Drawing.Size(85, 35);
             this.btnImagemEmBranco.TabIndex = 29;
             this.btnImagemEmBranco.Text = "ImagemEmBranco";
             this.btnImagemEmBranco.UseVisualStyleBackColor = true;
@@ -881,9 +881,9 @@
             this.btnLimpar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnLimpar.IconColor = System.Drawing.Color.Black;
             this.btnLimpar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLimpar.Location = new System.Drawing.Point(817, 74);
+            this.btnLimpar.Location = new System.Drawing.Point(806, 74);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(75, 35);
+            this.btnLimpar.Size = new System.Drawing.Size(85, 35);
             this.btnLimpar.TabIndex = 30;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
@@ -919,6 +919,16 @@
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Dependentes";
+            // 
+            // txtDataNascimentoDependente
+            // 
+            this.txtDataNascimentoDependente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataNascimentoDependente.Location = new System.Drawing.Point(145, 97);
+            this.txtDataNascimentoDependente.Mask = "00/00/0000";
+            this.txtDataNascimentoDependente.Name = "txtDataNascimentoDependente";
+            this.txtDataNascimentoDependente.Size = new System.Drawing.Size(420, 26);
+            this.txtDataNascimentoDependente.TabIndex = 4;
+            this.txtDataNascimentoDependente.ValidatingType = typeof(System.DateTime);
             // 
             // btnListaDependentes
             // 
@@ -987,16 +997,6 @@
             this.label28.Size = new System.Drawing.Size(132, 20);
             this.label28.TabIndex = 1;
             this.label28.Text = "Data Nascimento";
-            // 
-            // txtDataNascimentoDependente
-            // 
-            this.txtDataNascimentoDependente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataNascimentoDependente.Location = new System.Drawing.Point(145, 97);
-            this.txtDataNascimentoDependente.Mask = "00/00/0000";
-            this.txtDataNascimentoDependente.Name = "txtDataNascimentoDependente";
-            this.txtDataNascimentoDependente.Size = new System.Drawing.Size(420, 26);
-            this.txtDataNascimentoDependente.TabIndex = 4;
-            this.txtDataNascimentoDependente.ValidatingType = typeof(System.DateTime);
             // 
             // FormCadastro
             // 
