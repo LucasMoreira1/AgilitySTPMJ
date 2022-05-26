@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\BlazorDataGrid.5.0.0\build\BlazorDataGrid.props" Condition="Exists('packages\BlazorDataGrid.5.0.0\build\BlazorDataGrid.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -172,6 +173,12 @@
     <Compile Include="FormCadastro.Designer.cs">
       <DependentUpon>FormCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastroConvenio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroConvenio.Designer.cs">
+      <DependentUpon>FormCadastroConvenio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDependentes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,11 +203,20 @@
     <Compile Include="FormPesquisa.Designer.cs">
       <DependentUpon>FormPesquisa.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPesquisaConvenio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPesquisaConvenio.Designer.cs">
+      <DependentUpon>FormPesquisaConvenio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Funcoes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCadastro.resx">
       <DependentUpon>FormCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroConvenio.resx">
+      <DependentUpon>FormCadastroConvenio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDependentes.resx">
       <DependentUpon>FormDependentes.cs</DependentUpon>
@@ -210,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPesquisa.resx">
       <DependentUpon>FormPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPesquisaConvenio.resx">
+      <DependentUpon>FormPesquisaConvenio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -283,5 +302,6 @@
       <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('packages\Microsoft.Web.WebView2.1.0.1210.30\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Web.WebView2.1.0.1210.30\build\Microsoft.Web.WebView2.targets'))" />
+    <Error Condition="!Exists('packages\BlazorDataGrid.5.0.0\build\BlazorDataGrid.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\BlazorDataGrid.5.0.0\build\BlazorDataGrid.props'))" />
   </Target>
 </Project>

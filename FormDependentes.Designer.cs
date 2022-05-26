@@ -79,6 +79,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -98,7 +99,9 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(16, 41);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 70;
             this.dataGridView1.Size = new System.Drawing.Size(841, 241);
             this.dataGridView1.TabIndex = 2;
@@ -114,6 +117,7 @@
             this.Controls.Add(this.txtNomeSocio);
             this.Controls.Add(this.txtMatReferencia);
             this.Name = "FormDependentes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dependentes";
             this.Load += new System.EventHandler(this.FormDependentes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

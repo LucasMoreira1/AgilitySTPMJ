@@ -90,7 +90,7 @@ namespace Programa_STPMJ
             CRUD.cmd.Parameters.AddWithValue("estado_civil", cboxEstadoCivil.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("nacionalidade", txtNacionalidade.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("data_cadastro", txtDataCadastro.Text.Trim());
-            CRUD.cmd.Parameters.AddWithValue("empresa", cboxEmpresa.Text.Trim());
+            CRUD.cmd.Parameters.AddWithValue("secretaria", cboxEmpresa.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("funcao", txtFuncao.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("admissao", txtAdmissao.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("local_trabalho", txtLocalTrabalho.Text.Trim());
@@ -132,11 +132,11 @@ namespace Programa_STPMJ
             
 
             CRUD.sql = "INSERT INTO SOCIOS(matricula,nome,rg,cpf,datanascimento,estadocivil," +
-                "nacionalidade,datacadastro,empresa,funcao,admissao,localtrabalho," +
+                "nacionalidade,datacadastro,secretaria,funcao,admissao,localtrabalho," +
                 "telefone,recados,email,cep,logradouro,numero,complemento,bairro,cidade,estado," +
                 "limite,disponivel,observacao,foto)" +
                 "Values(@matricula,@nome,@rg,@cpf,@data_nascimento,@estado_civil,@nacionalidade," +
-                "@data_cadastro,@empresa,@funcao,@admissao,@local_trabalho," +
+                "@data_cadastro,@secretaria,@funcao,@admissao,@local_trabalho," +
                 "@telefone,@recado,@email,@cep,@logradouro,@numero,@complemento,@bairro,@cidade,@estado," +
                 "@limite,@disponivel,@observacao,@foto);";
 
@@ -189,7 +189,7 @@ namespace Programa_STPMJ
 
             CRUD.sql = "UPDATE SOCIOS SET matricula = @matricula, nome = @nome, rg = @rg, cpf = @cpf, " +
                 "datanascimento = @data_nascimento, estadocivil = @estado_civil," +
-                "nacionalidade = @nacionalidade, datacadastro = @data_cadastro, empresa = @empresa, " +
+                "nacionalidade = @nacionalidade, datacadastro = @data_cadastro, secretaria = @secretaria, " +
                 "funcao = @funcao, admissao = @admissao, localtrabalho = @local_trabalho, " +
                 "telefone = @telefone, recados = @recado, email = @email, cep = @cep, " +
                 "logradouro = @logradouro, numero = @numero, complemento = @complemento, bairro = @bairro," +
@@ -343,6 +343,12 @@ namespace Programa_STPMJ
 
         private void btnListaDependentes_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtMatricula.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira a Matrícula", "Dados Obrigatórios",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             FormDependentes formDependentes = new FormDependentes();
             formDependentes.txtMatReferencia.Text = txtMatricula.Text;
             formDependentes.txtNomeSocio.Text = txtNome.Text;

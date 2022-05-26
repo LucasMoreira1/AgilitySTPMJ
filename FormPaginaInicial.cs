@@ -60,6 +60,7 @@ namespace Programa_STPMJ
 
         private void btnCadastroEmpresa_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new FormCadastroConvenio());
             //..
             //Codigos
             //..
@@ -83,6 +84,7 @@ namespace Programa_STPMJ
 
         private void btnPesquisarEmpresa_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new FormPesquisaConvenio());
             //..
             //Codigos
             //..
@@ -160,5 +162,10 @@ namespace Programa_STPMJ
             Application.Exit();
         }
 
+        private void btnPaginaInicial_Click(object sender, EventArgs e)
+        {
+            panelFormCentral.Controls.Clear();
+            panelFormCentral.Controls.Add(webView21);
+        }
     }
 }

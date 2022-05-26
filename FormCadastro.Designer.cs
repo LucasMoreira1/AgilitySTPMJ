@@ -236,7 +236,7 @@
             this.txtRG.Mask = "00,000,000-0";
             this.txtRG.Name = "txtRG";
             this.txtRG.Size = new System.Drawing.Size(122, 26);
-            this.txtRG.TabIndex = 4;
+            this.txtRG.TabIndex = 3;
             // 
             // txtCPF
             // 
@@ -250,11 +250,11 @@
             // txtAdmissao
             // 
             this.txtAdmissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdmissao.Location = new System.Drawing.Point(436, 174);
+            this.txtAdmissao.Location = new System.Drawing.Point(436, 168);
             this.txtAdmissao.Mask = "00/00/0000";
             this.txtAdmissao.Name = "txtAdmissao";
             this.txtAdmissao.Size = new System.Drawing.Size(129, 26);
-            this.txtAdmissao.TabIndex = 12;
+            this.txtAdmissao.TabIndex = 7;
             this.txtAdmissao.ValidatingType = typeof(System.DateTime);
             // 
             // txtDataNascimento
@@ -274,7 +274,7 @@
             this.txtRecado.Mask = "(99)00000-0000";
             this.txtRecado.Name = "txtRecado";
             this.txtRecado.Size = new System.Drawing.Size(129, 26);
-            this.txtRecado.TabIndex = 16;
+            this.txtRecado.TabIndex = 13;
             // 
             // txtTelefone
             // 
@@ -283,7 +283,7 @@
             this.txtTelefone.Mask = "(99)00000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(122, 26);
-            this.txtTelefone.TabIndex = 15;
+            this.txtTelefone.TabIndex = 12;
             // 
             // cboxEmpresa
             // 
@@ -320,11 +320,11 @@
             "037-SIND.  DOS TRABS. PUBL. MUNIC.DE JACAREI",
             "038-CONSELHO TUTELAR",
             "039-SECRETARIA DE MOBILIDADE URBANA",
-            "099-CADASTRAR SECRET./EMPRESA CORRETA"});
+            "099-OUTROS(ESPECIFICAR NA OBSERVAÇÃO)"});
             this.cboxEmpresa.Location = new System.Drawing.Point(145, 240);
             this.cboxEmpresa.Name = "cboxEmpresa";
             this.cboxEmpresa.Size = new System.Drawing.Size(420, 28);
-            this.cboxEmpresa.TabIndex = 10;
+            this.cboxEmpresa.TabIndex = 9;
             // 
             // cboxCamera
             // 
@@ -349,10 +349,10 @@
             "3-SEPARADO",
             "4-DIVORCIADO",
             "5-VIÚVO"});
-            this.cboxEstadoCivil.Location = new System.Drawing.Point(436, 95);
+            this.cboxEstadoCivil.Location = new System.Drawing.Point(436, 96);
             this.cboxEstadoCivil.Name = "cboxEstadoCivil";
             this.cboxEstadoCivil.Size = new System.Drawing.Size(129, 28);
-            this.cboxEstadoCivil.TabIndex = 7;
+            this.cboxEstadoCivil.TabIndex = 4;
             // 
             // label2
             // 
@@ -380,7 +380,7 @@
             this.txtNome.Location = new System.Drawing.Point(145, 60);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(420, 26);
-            this.txtNome.TabIndex = 3;
+            this.txtNome.TabIndex = 2;
             // 
             // label6
             // 
@@ -445,7 +445,7 @@
             // txtRegistro
             // 
             this.txtRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegistro.Location = new System.Drawing.Point(436, 136);
+            this.txtRegistro.Location = new System.Drawing.Point(436, 132);
             this.txtRegistro.Name = "txtRegistro";
             this.txtRegistro.ReadOnly = true;
             this.txtRegistro.Size = new System.Drawing.Size(129, 26);
@@ -536,7 +536,7 @@
             this.txtEmail.Location = new System.Drawing.Point(145, 385);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(420, 26);
-            this.txtEmail.TabIndex = 17;
+            this.txtEmail.TabIndex = 14;
             // 
             // txtLocalTrabalho
             // 
@@ -544,7 +544,7 @@
             this.txtLocalTrabalho.Location = new System.Drawing.Point(145, 313);
             this.txtLocalTrabalho.Name = "txtLocalTrabalho";
             this.txtLocalTrabalho.Size = new System.Drawing.Size(420, 26);
-            this.txtLocalTrabalho.TabIndex = 14;
+            this.txtLocalTrabalho.TabIndex = 11;
             // 
             // txtFuncao
             // 
@@ -552,7 +552,7 @@
             this.txtFuncao.Location = new System.Drawing.Point(145, 277);
             this.txtFuncao.Name = "txtFuncao";
             this.txtFuncao.Size = new System.Drawing.Size(420, 26);
-            this.txtFuncao.TabIndex = 11;
+            this.txtFuncao.TabIndex = 10;
             // 
             // txtNacionalidade
             // 
@@ -927,7 +927,7 @@
             this.txtDataNascimentoDependente.Mask = "00/00/0000";
             this.txtDataNascimentoDependente.Name = "txtDataNascimentoDependente";
             this.txtDataNascimentoDependente.Size = new System.Drawing.Size(420, 26);
-            this.txtDataNascimentoDependente.TabIndex = 4;
+            this.txtDataNascimentoDependente.TabIndex = 17;
             this.txtDataNascimentoDependente.ValidatingType = typeof(System.DateTime);
             // 
             // btnListaDependentes
@@ -958,7 +958,7 @@
             this.txtGrauParentesco.Location = new System.Drawing.Point(146, 61);
             this.txtGrauParentesco.Name = "txtGrauParentesco";
             this.txtGrauParentesco.Size = new System.Drawing.Size(419, 26);
-            this.txtGrauParentesco.TabIndex = 2;
+            this.txtGrauParentesco.TabIndex = 16;
             // 
             // txtNomeDependente
             // 
@@ -966,7 +966,7 @@
             this.txtNomeDependente.Location = new System.Drawing.Point(146, 25);
             this.txtNomeDependente.Name = "txtNomeDependente";
             this.txtNomeDependente.Size = new System.Drawing.Size(419, 26);
-            this.txtNomeDependente.TabIndex = 2;
+            this.txtNomeDependente.TabIndex = 15;
             // 
             // label25
             // 
@@ -1002,6 +1002,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1127, 938);
             this.Controls.Add(this.groupBox5);

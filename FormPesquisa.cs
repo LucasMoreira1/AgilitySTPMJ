@@ -36,7 +36,7 @@ namespace Programa_STPMJ
         public void loadFiltro()
         {
             CRUD.sql = "SELECT * FROM SOCIOS WHERE " + cboxFiltro2.Text.Trim() + " LIKE '%" + txtFiltro2.Text.Trim() + "%' AND " +
-              "" + cboxFiltro3.Text.Trim() + " LIKE '%" + txtFiltro3.Text.Trim() + "%';";
+              "" + cboxFiltro3.Text.Trim() + " LIKE '%" + txtFiltro3.Text.Trim() + "%' LIMIT 25;";
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
@@ -60,6 +60,7 @@ namespace Programa_STPMJ
             dgv.DataSource = dt;
             dgv.Columns["Foto"].Visible = false;
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            
         }
 
         private void loadData(string keyword)
@@ -227,6 +228,40 @@ namespace Programa_STPMJ
         {
             if (e.KeyCode == Keys.Enter)
                 btnPesquisar_Click(sender,e);
+        }
+
+        private void filtro1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                filtro1();
+        }
+
+        private void filtro1()
+        {
+            CRUD.sql = "SELECT * FROM SOCIOS WHERE " + txtFiltroMatricula.Text.Trim() + " LIKE '" + txtFiltro1.Text.Trim() + "'";
+
+            CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
+            DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
+
+            //if (dt.Rows.Count > 0)
+            //{
+            //    row = Convert.ToInt32(dt.Rows.Count.ToString());
+            //}
+            //else
+            //{
+            //    row = 0;
+            //}
+
+            //toolStripStatusLabel1.Text = "Número de linha(s): " + row.ToString();
+
+            DataGridView dgv = dataGridView1;
+
+            dgv.MultiSelect = false;
+            dgv.AutoGenerateColumns = true;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.DataSource = dt;
+            dgv.Columns["Foto"].Visible = false;
+            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
     }
 }
