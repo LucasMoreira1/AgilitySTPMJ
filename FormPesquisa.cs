@@ -36,7 +36,7 @@ namespace Programa_STPMJ
         public void loadFiltro()
         {
             CRUD.sql = "SELECT * FROM SOCIOS WHERE " + cboxFiltro2.Text.Trim() + " LIKE '%" + txtFiltro2.Text.Trim() + "%' AND " +
-              "" + cboxFiltro3.Text.Trim() + " LIKE '%" + txtFiltro3.Text.Trim() + "%' LIMIT 25;";
+              "" + cboxFiltro3.Text.Trim() + " LIKE '%" + txtFiltro3.Text.Trim() + "%';";
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
@@ -56,9 +56,15 @@ namespace Programa_STPMJ
 
             dgv.MultiSelect = false;
             dgv.AutoGenerateColumns = true;
+            
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.DataSource = dt;
+
+            //dgv.Columns["Matricula"].Visible = true;
+            //dgv.Columns["Nome"].Visible = true;
             dgv.Columns["Foto"].Visible = false;
+            
+
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
             
         }

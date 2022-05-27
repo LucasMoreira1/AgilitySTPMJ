@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
+using AForge.Imaging.Filters;
 using System.Drawing;
 using MySql.Data.MySqlClient;
 using System.IO;
@@ -22,6 +23,7 @@ namespace Programa_STPMJ
         }
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice videoCaptureDevice;
+        Bitmap bitmap;
 
         private void ResetMe()
         {
@@ -213,7 +215,6 @@ namespace Programa_STPMJ
         private void FormCadastro_Load(object sender, EventArgs e)
         {
             txtDataCadastro.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            
             //Camera
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo filterInfo in filterInfoCollection)
@@ -234,6 +235,7 @@ namespace Programa_STPMJ
                 videoCaptureDevice.NewFrame += new NewFrameEventHandler(VideoCaptureDevice_NewFrame);
                 CameraOn = true;
                 videoCaptureDevice.Start();
+
             }
         }
         public void EncerrarCamera()
@@ -252,7 +254,18 @@ namespace Programa_STPMJ
 
         private void VideoCaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
-            imgCamera.Image = (Bitmap)eventArgs.Frame.Clone();
+            //imgCamera.Image = (Bitmap)eventArgs.Frame.Clone();
+
+            bitmap = (Bitmap)eventArgs.Frame.Clone();
+
+            ///add these two lines to mirror the image
+            var filter = new Mirror(false, true);
+            
+            filter.ApplyInPlace(bitmap);
+
+            ///
+
+            imgCamera.Image = bitmap;
         }
 
         private void FormCadastro_FormClosing(object sender, FormClosingEventArgs e)
@@ -277,6 +290,16 @@ namespace Programa_STPMJ
 
         public void btnEncerrarCamera_Click(object sender, EventArgs e)
         {
+            if (CameraOn)
+            {
+                //  FinalVideo.Stop();     // <-removed
+                videoCaptureDevice.SignalToStop();
+                // FinalVideo.WaitForStop();  // <- removed this to my suprice isn't needed, in fact my closing started to work only after marking this one out
+                CameraOn = false;
+                videoCaptureDevice.NewFrame -= new NewFrameEventHandler(VideoCaptureDevice_NewFrame); // <- decouple the newFrame event.
+                videoCaptureDevice = null;
+                imgCamera.Image = null;
+            }
             imgCamera.Image = null;
         }
 

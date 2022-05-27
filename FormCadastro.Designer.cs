@@ -155,31 +155,29 @@
             this.groupBox1.Controls.Add(this.txtMatricula);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1103, 443);
+            this.groupBox1.Size = new System.Drawing.Size(903, 443);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Identificação";
             // 
             // btnEncerrarCamera
             // 
-            this.btnEncerrarCamera.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEncerrarCamera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEncerrarCamera.Location = new System.Drawing.Point(892, 355);
+            this.btnEncerrarCamera.Location = new System.Drawing.Point(792, 357);
             this.btnEncerrarCamera.Name = "btnEncerrarCamera";
             this.btnEncerrarCamera.Size = new System.Drawing.Size(91, 33);
             this.btnEncerrarCamera.TabIndex = 18;
-            this.btnEncerrarCamera.Text = "Encerrar";
+            this.btnEncerrarCamera.Text = "Limpar";
             this.btnEncerrarCamera.UseVisualStyleBackColor = true;
             this.btnEncerrarCamera.Click += new System.EventHandler(this.btnEncerrarCamera_Click);
             // 
             // btnImportarFoto
             // 
-            this.btnImportarFoto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnImportarFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImportarFoto.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnImportarFoto.IconColor = System.Drawing.Color.Black;
             this.btnImportarFoto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnImportarFoto.Location = new System.Drawing.Point(892, 394);
+            this.btnImportarFoto.Location = new System.Drawing.Point(792, 396);
             this.btnImportarFoto.Name = "btnImportarFoto";
             this.btnImportarFoto.Size = new System.Drawing.Size(91, 30);
             this.btnImportarFoto.TabIndex = 13;
@@ -189,12 +187,11 @@
             // 
             // btnTirarFoto
             // 
-            this.btnTirarFoto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnTirarFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTirarFoto.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnTirarFoto.IconColor = System.Drawing.Color.Black;
             this.btnTirarFoto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTirarFoto.Location = new System.Drawing.Point(692, 394);
+            this.btnTirarFoto.Location = new System.Drawing.Point(590, 396);
             this.btnTirarFoto.Name = "btnTirarFoto";
             this.btnTirarFoto.Size = new System.Drawing.Size(91, 30);
             this.btnTirarFoto.TabIndex = 13;
@@ -204,12 +201,11 @@
             // 
             // btnIniciarCamera
             // 
-            this.btnIniciarCamera.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnIniciarCamera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarCamera.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnIniciarCamera.IconColor = System.Drawing.Color.Black;
             this.btnIniciarCamera.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnIniciarCamera.Location = new System.Drawing.Point(692, 355);
+            this.btnIniciarCamera.Location = new System.Drawing.Point(590, 357);
             this.btnIniciarCamera.Name = "btnIniciarCamera";
             this.btnIniciarCamera.Size = new System.Drawing.Size(91, 33);
             this.btnIniciarCamera.TabIndex = 13;
@@ -219,13 +215,12 @@
             // 
             // imgCamera
             // 
-            this.imgCamera.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.imgCamera.BackgroundImage = global::Programa_STPMJ.Properties.Resources.Socio_sem_foto;
             this.imgCamera.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgCamera.Location = new System.Drawing.Point(571, 19);
+            this.imgCamera.Location = new System.Drawing.Point(590, 19);
             this.imgCamera.Name = "imgCamera";
-            this.imgCamera.Size = new System.Drawing.Size(526, 305);
-            this.imgCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgCamera.Size = new System.Drawing.Size(293, 305);
+            this.imgCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.imgCamera.TabIndex = 17;
             this.imgCamera.TabStop = false;
             // 
@@ -328,13 +323,12 @@
             // 
             // cboxCamera
             // 
-            this.cboxCamera.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboxCamera.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.cboxCamera.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboxCamera.FormattingEnabled = true;
-            this.cboxCamera.Location = new System.Drawing.Point(692, 330);
+            this.cboxCamera.Location = new System.Drawing.Point(590, 330);
             this.cboxCamera.Name = "cboxCamera";
-            this.cboxCamera.Size = new System.Drawing.Size(291, 21);
+            this.cboxCamera.Size = new System.Drawing.Size(293, 21);
             this.cboxCamera.TabIndex = 6;
             // 
             // cboxEstadoCivil
@@ -599,7 +593,7 @@
             this.groupBox2.Controls.Add(this.txtLogradouro);
             this.groupBox2.Location = new System.Drawing.Point(12, 611);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1103, 177);
+            this.groupBox2.Size = new System.Drawing.Size(903, 177);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Endereço";
@@ -819,12 +813,11 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSalvar.IconColor = System.Drawing.Color.Black;
             this.btnSalvar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSalvar.Location = new System.Drawing.Point(715, 74);
+            this.btnSalvar.Location = new System.Drawing.Point(515, 74);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(85, 35);
             this.btnSalvar.TabIndex = 29;
@@ -834,12 +827,11 @@
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAtualizar.IconColor = System.Drawing.Color.Black;
             this.btnAtualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAtualizar.Location = new System.Drawing.Point(715, 74);
+            this.btnAtualizar.Location = new System.Drawing.Point(515, 74);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(85, 35);
             this.btnAtualizar.TabIndex = 29;
@@ -850,12 +842,11 @@
             // 
             // btnImagemEmBranco
             // 
-            this.btnImagemEmBranco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnImagemEmBranco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImagemEmBranco.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnImagemEmBranco.IconColor = System.Drawing.Color.Black;
             this.btnImagemEmBranco.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnImagemEmBranco.Location = new System.Drawing.Point(715, 33);
+            this.btnImagemEmBranco.Location = new System.Drawing.Point(515, 33);
             this.btnImagemEmBranco.Name = "btnImagemEmBranco";
             this.btnImagemEmBranco.Size = new System.Drawing.Size(85, 35);
             this.btnImagemEmBranco.TabIndex = 29;
@@ -876,12 +867,11 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnLimpar.IconColor = System.Drawing.Color.Black;
             this.btnLimpar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLimpar.Location = new System.Drawing.Point(806, 74);
+            this.btnLimpar.Location = new System.Drawing.Point(606, 74);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(85, 35);
             this.btnLimpar.TabIndex = 30;
@@ -898,7 +888,7 @@
             this.groupBox4.Controls.Add(this.btnAtualizar);
             this.groupBox4.Location = new System.Drawing.Point(218, 794);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(897, 115);
+            this.groupBox4.Size = new System.Drawing.Size(697, 115);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Observação";
@@ -915,7 +905,7 @@
             this.groupBox5.Controls.Add(this.label28);
             this.groupBox5.Location = new System.Drawing.Point(12, 461);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1103, 144);
+            this.groupBox5.Size = new System.Drawing.Size(903, 144);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Dependentes";
@@ -1004,7 +994,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1127, 938);
+            this.ClientSize = new System.Drawing.Size(933, 928);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -1013,6 +1003,7 @@
             this.Name = "FormCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormCadastro_FormClosing);
             this.Load += new System.EventHandler(this.FormCadastro_Load);
             this.groupBox1.ResumeLayout(false);
