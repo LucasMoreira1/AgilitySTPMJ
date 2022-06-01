@@ -269,5 +269,83 @@ namespace Programa_STPMJ
             dgv.Columns["Foto"].Visible = false;
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
+
+        private void MostrarCalendario1(object sender, EventArgs e)
+        {
+            calendario1.Visible = true;
+        }
+
+        private void calendario1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            txtData1.Text = calendario1.SelectionStart.Date.ToShortDateString();
+            calendario1.Visible = false;
+        }
+
+        private void MostrarCalendario2(object sender, EventArgs e)
+        {
+            calendario2.Visible = true;
+        }
+
+        private void calendario2_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            txtData2.Text = calendario2.SelectionStart.Date.ToShortDateString();
+            calendario2.Visible = false;
+        }
+
+        private void btnFiltroAniversario_Click(object sender, EventArgs e)
+        {
+            CRUD.sql = "SELECT * FROM SOCIOS WHERE " + txtFiltroMatricula.Text.Trim() + " LIKE '" + txtFiltro1.Text.Trim() + "'";
+
+            CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
+            DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
+
+            //if (dt.Rows.Count > 0)
+            //{
+            //    row = Convert.ToInt32(dt.Rows.Count.ToString());
+            //}
+            //else
+            //{
+            //    row = 0;
+            //}
+
+            //toolStripStatusLabel1.Text = "Número de linha(s): " + row.ToString();
+
+            DataGridView dgv = dataGridView1;
+
+            dgv.MultiSelect = false;
+            dgv.AutoGenerateColumns = true;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.DataSource = dt;
+            dgv.Columns["Foto"].Visible = false;
+            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+        }
+
+        private void btnFiltroCadastro_Click(object sender, EventArgs e)
+        {
+            CRUD.sql = "SELECT * FROM SOCIOS WHERE " + txtFiltroMatricula.Text.Trim() + " LIKE '" + txtFiltro1.Text.Trim() + "'";
+
+            CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
+            DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
+
+            //if (dt.Rows.Count > 0)
+            //{
+            //    row = Convert.ToInt32(dt.Rows.Count.ToString());
+            //}
+            //else
+            //{
+            //    row = 0;
+            //}
+
+            //toolStripStatusLabel1.Text = "Número de linha(s): " + row.ToString();
+
+            DataGridView dgv = dataGridView1;
+
+            dgv.MultiSelect = false;
+            dgv.AutoGenerateColumns = true;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.DataSource = dt;
+            dgv.Columns["Foto"].Visible = false;
+            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+        }
     }
 }

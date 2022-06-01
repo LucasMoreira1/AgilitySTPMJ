@@ -30,8 +30,8 @@ namespace Programa_STPMJ
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnPesquisar = new FontAwesome.Sharp.IconButton();
             this.btnMostrarTodos = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -51,6 +51,15 @@ namespace Programa_STPMJ
             this.txtFiltroMatricula = new System.Windows.Forms.TextBox();
             this.lblFiltro1 = new System.Windows.Forms.Label();
             this.txtFiltro1 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.calendario1 = new System.Windows.Forms.MonthCalendar();
+            this.txtData1 = new System.Windows.Forms.TextBox();
+            this.txtData2 = new System.Windows.Forms.TextBox();
+            this.calendario2 = new System.Windows.Forms.MonthCalendar();
+            this.btnFiltroAniversario = new FontAwesome.Sharp.IconButton();
+            this.btnFiltroCadastro = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +75,7 @@ namespace Programa_STPMJ
             this.btnPesquisar.IconColor = System.Drawing.Color.Black;
             this.btnPesquisar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPesquisar.IconSize = 32;
-            this.btnPesquisar.Location = new System.Drawing.Point(580, 44);
+            this.btnPesquisar.Location = new System.Drawing.Point(874, 44);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnPesquisar.Size = new System.Drawing.Size(200, 47);
@@ -89,7 +98,7 @@ namespace Programa_STPMJ
             this.btnMostrarTodos.IconColor = System.Drawing.Color.Black;
             this.btnMostrarTodos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMostrarTodos.IconSize = 32;
-            this.btnMostrarTodos.Location = new System.Drawing.Point(580, 97);
+            this.btnMostrarTodos.Location = new System.Drawing.Point(874, 97);
             this.btnMostrarTodos.Name = "btnMostrarTodos";
             this.btnMostrarTodos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnMostrarTodos.Size = new System.Drawing.Size(200, 47);
@@ -237,28 +246,28 @@ namespace Programa_STPMJ
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.Location = new System.Drawing.Point(12, 150);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView1.Size = new System.Drawing.Size(1025, 476);
+            this.dataGridView1.Size = new System.Drawing.Size(1319, 476);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -271,7 +280,7 @@ namespace Programa_STPMJ
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 629);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1049, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1343, 22);
             this.statusStrip1.TabIndex = 7;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -293,7 +302,7 @@ namespace Programa_STPMJ
             this.btnAtualizar.IconColor = System.Drawing.Color.Black;
             this.btnAtualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAtualizar.IconSize = 32;
-            this.btnAtualizar.Location = new System.Drawing.Point(837, 44);
+            this.btnAtualizar.Location = new System.Drawing.Point(1131, 44);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnAtualizar.Size = new System.Drawing.Size(200, 47);
@@ -316,7 +325,7 @@ namespace Programa_STPMJ
             this.btnDeletar.IconColor = System.Drawing.Color.Black;
             this.btnDeletar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDeletar.IconSize = 32;
-            this.btnDeletar.Location = new System.Drawing.Point(837, 97);
+            this.btnDeletar.Location = new System.Drawing.Point(1131, 97);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnDeletar.Size = new System.Drawing.Size(200, 47);
@@ -331,7 +340,7 @@ namespace Programa_STPMJ
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(419, 93);
+            this.label3.Location = new System.Drawing.Point(263, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 13);
             this.label3.TabIndex = 9;
@@ -340,7 +349,7 @@ namespace Programa_STPMJ
             // 
             // txtRegistroSelecionado
             // 
-            this.txtRegistroSelecionado.Location = new System.Drawing.Point(517, 90);
+            this.txtRegistroSelecionado.Location = new System.Drawing.Point(361, 16);
             this.txtRegistroSelecionado.Name = "txtRegistroSelecionado";
             this.txtRegistroSelecionado.Size = new System.Drawing.Size(18, 20);
             this.txtRegistroSelecionado.TabIndex = 10;
@@ -376,21 +385,153 @@ namespace Programa_STPMJ
             this.txtFiltro1.TabIndex = 4;
             this.txtFiltro1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.filtro1_KeyDown);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Janeiro",
+            "Fevereiro",
+            "Março",
+            "Abril",
+            "Maio",
+            "Junho",
+            "Julho",
+            "Agosto",
+            "Setembro",
+            "Outubro",
+            "Novembro",
+            "Dezembro"});
+            this.comboBox1.Location = new System.Drawing.Point(393, 84);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.TabIndex = 3;
+            this.comboBox1.Text = "Mês";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(389, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Mês Aniversário";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(583, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Data Cadastro";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // calendario1
+            // 
+            this.calendario1.Location = new System.Drawing.Point(526, 86);
+            this.calendario1.Name = "calendario1";
+            this.calendario1.TabIndex = 12;
+            this.calendario1.Visible = false;
+            this.calendario1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendario1_DateSelected);
+            // 
+            // txtData1
+            // 
+            this.txtData1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtData1.Location = new System.Drawing.Point(541, 84);
+            this.txtData1.Name = "txtData1";
+            this.txtData1.Size = new System.Drawing.Size(97, 26);
+            this.txtData1.TabIndex = 4;
+            this.txtData1.Click += new System.EventHandler(this.MostrarCalendario1);
+            // 
+            // txtData2
+            // 
+            this.txtData2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtData2.Location = new System.Drawing.Point(644, 84);
+            this.txtData2.Name = "txtData2";
+            this.txtData2.Size = new System.Drawing.Size(97, 26);
+            this.txtData2.TabIndex = 4;
+            this.txtData2.Click += new System.EventHandler(this.MostrarCalendario2);
+            // 
+            // calendario2
+            // 
+            this.calendario2.Location = new System.Drawing.Point(526, 86);
+            this.calendario2.Name = "calendario2";
+            this.calendario2.TabIndex = 13;
+            this.calendario2.Visible = false;
+            this.calendario2.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendario2_DateSelected);
+            // 
+            // btnFiltroAniversario
+            // 
+            this.btnFiltroAniversario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFiltroAniversario.BackColor = System.Drawing.Color.LightGray;
+            this.btnFiltroAniversario.FlatAppearance.BorderSize = 0;
+            this.btnFiltroAniversario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroAniversario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroAniversario.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnFiltroAniversario.IconColor = System.Drawing.Color.Black;
+            this.btnFiltroAniversario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFiltroAniversario.IconSize = 32;
+            this.btnFiltroAniversario.Location = new System.Drawing.Point(393, 11);
+            this.btnFiltroAniversario.Name = "btnFiltroAniversario";
+            this.btnFiltroAniversario.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnFiltroAniversario.Size = new System.Drawing.Size(110, 47);
+            this.btnFiltroAniversario.TabIndex = 1;
+            this.btnFiltroAniversario.Text = "Filtrar";
+            this.btnFiltroAniversario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiltroAniversario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFiltroAniversario.UseMnemonic = false;
+            this.btnFiltroAniversario.UseVisualStyleBackColor = false;
+            this.btnFiltroAniversario.Click += new System.EventHandler(this.btnFiltroAniversario_Click);
+            // 
+            // btnFiltroCadastro
+            // 
+            this.btnFiltroCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFiltroCadastro.BackColor = System.Drawing.Color.LightGray;
+            this.btnFiltroCadastro.FlatAppearance.BorderSize = 0;
+            this.btnFiltroCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroCadastro.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnFiltroCadastro.IconColor = System.Drawing.Color.Black;
+            this.btnFiltroCadastro.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFiltroCadastro.IconSize = 32;
+            this.btnFiltroCadastro.Location = new System.Drawing.Point(587, 12);
+            this.btnFiltroCadastro.Name = "btnFiltroCadastro";
+            this.btnFiltroCadastro.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnFiltroCadastro.Size = new System.Drawing.Size(110, 46);
+            this.btnFiltroCadastro.TabIndex = 1;
+            this.btnFiltroCadastro.Text = "Filtrar";
+            this.btnFiltroCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiltroCadastro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFiltroCadastro.UseMnemonic = false;
+            this.btnFiltroCadastro.UseVisualStyleBackColor = false;
+            this.btnFiltroCadastro.Click += new System.EventHandler(this.btnFiltroCadastro_Click);
+            // 
             // FormPesquisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1049, 651);
+            this.ClientSize = new System.Drawing.Size(1343, 651);
+            this.Controls.Add(this.calendario2);
+            this.Controls.Add(this.calendario1);
             this.Controls.Add(this.txtFiltroMatricula);
             this.Controls.Add(this.txtRegistroSelecionado);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblFiltro3);
+            this.Controls.Add(this.txtData2);
+            this.Controls.Add(this.txtData1);
             this.Controls.Add(this.txtFiltro3);
             this.Controls.Add(this.lblFiltro1);
             this.Controls.Add(this.lblFiltro2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cboxFiltro3);
             this.Controls.Add(this.txtFiltro1);
             this.Controls.Add(this.txtFiltro2);
@@ -399,6 +540,8 @@ namespace Programa_STPMJ
             this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.btnMostrarTodos);
             this.Controls.Add(this.btnAtualizar);
+            this.Controls.Add(this.btnFiltroCadastro);
+            this.Controls.Add(this.btnFiltroAniversario);
             this.Controls.Add(this.btnPesquisar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPesquisa";
@@ -436,5 +579,14 @@ namespace Programa_STPMJ
         public System.Windows.Forms.TextBox txtFiltro2;
         public System.Windows.Forms.TextBox txtFiltro3;
         public System.Windows.Forms.TextBox txtFiltro1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox txtData1;
+        public System.Windows.Forms.TextBox txtData2;
+        private System.Windows.Forms.MonthCalendar calendario1;
+        private System.Windows.Forms.MonthCalendar calendario2;
+        public FontAwesome.Sharp.IconButton btnFiltroAniversario;
+        public FontAwesome.Sharp.IconButton btnFiltroCadastro;
     }
 }
