@@ -25,7 +25,7 @@ namespace Programa_STPMJ
 
         private void btnMostrarTodos_Click(object sender, EventArgs e)
         {
-            loadData("");
+            loadData();
         }
 
         public void btnPesquisar_Click(object sender, EventArgs e)
@@ -41,61 +41,36 @@ namespace Programa_STPMJ
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
 
-            //if (dt.Rows.Count > 0)
-            //{
-            //    row = Convert.ToInt32(dt.Rows.Count.ToString());
-            //}
-            //else
-            //{
-            //    row = 0;
-            //}
-
-            //toolStripStatusLabel1.Text = "Número de linha(s): " + row.ToString();
-
             DataGridView dgv = dataGridView1;
 
             dgv.MultiSelect = false;
             dgv.AutoGenerateColumns = true;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.DataSource = dt;
+            dgv.Columns["Foto"].Visible = false;
+            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
             
+        }
+
+        private void loadData()
+        {
+            CRUD.sql = "SELECT * FROM SOCIOS LIMIT 50";
+            //CRUD.sql = "SELECT * FROM SOCIOS WHERE 1";
+
+            CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
+            DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
+            DataGridView dgv = dataGridView1;
+            dgv.MultiSelect = false;
+            dgv.AutoGenerateColumns = true;
+
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.DataSource = dt;
 
             //dgv.Columns["Matricula"].Visible = true;
             //dgv.Columns["Nome"].Visible = true;
             dgv.Columns["Foto"].Visible = false;
-            
-
-            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-            
-        }
-
-        private void loadData(string keyword)
-        {
-
-            CRUD.sql = "SELECT * FROM SOCIOS;";
-            CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
 
 
-            DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
-            
-            //if (dt.Rows.Count > 0)
-            //{
-            //    row = Convert.ToInt32(dt.Rows.Count.ToString());
-            //}
-            //else
-            //{
-            //    row = 0;
-            //}
-
-            //toolStripStatusLabel1.Text = "Número de linha(s): " + row.ToString();
-
-            DataGridView dgv = dataGridView1;
-
-            dgv.MultiSelect=false;
-            dgv.AutoGenerateColumns = true;
-            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv.DataSource = dt;
-            dgv.Columns["Foto"].Visible = false;
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
 
@@ -222,7 +197,7 @@ namespace Programa_STPMJ
                 MessageBox.Show("Dados deletados com sucesso.", "Deletar dados",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                loadData("");
+                loadData();
             }
         }
         private void FormPesquisa_Load(object sender, EventArgs e)
@@ -277,7 +252,8 @@ namespace Programa_STPMJ
 
         private void calendario1_DateSelected(object sender, DateRangeEventArgs e)
         {
-            txtData1.Text = calendario1.SelectionStart.Date.ToShortDateString();
+            txtData1Convert.Text = calendario1.SelectionStart.Date.ToString("yyyy/MM/dd");
+            txtData1.Text = calendario1.SelectionStart.Date.ToString("dd/MM/yyyy");
             calendario1.Visible = false;
         }
 
@@ -288,13 +264,14 @@ namespace Programa_STPMJ
 
         private void calendario2_DateSelected(object sender, DateRangeEventArgs e)
         {
-            txtData2.Text = calendario2.SelectionStart.Date.ToShortDateString();
+            txtData2Convert.Text = calendario2.SelectionStart.Date.ToString("yyyy/MM/dd");
+            txtData2.Text = calendario2.SelectionStart.Date.ToString("dd/MM/yyyy");
             calendario2.Visible = false;
         }
 
         private void btnFiltroAniversario_Click(object sender, EventArgs e)
         {
-            CRUD.sql = "SELECT * FROM SOCIOS WHERE " + txtFiltroMatricula.Text.Trim() + " LIKE '" + txtFiltro1.Text.Trim() + "'";
+            CRUD.sql = "SELECT * FROM SOCIOS WHERE MONTH(DATANASCIMENTO)= " + txtMesAniversario.Text + "";
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
@@ -314,15 +291,30 @@ namespace Programa_STPMJ
 
             dgv.MultiSelect = false;
             dgv.AutoGenerateColumns = true;
+
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.DataSource = dt;
+
+            //dgv.Columns["Matricula"].Visible = true;
+            //dgv.Columns["Nome"].Visible = true;
             dgv.Columns["Foto"].Visible = false;
+
+
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
 
         private void btnFiltroCadastro_Click(object sender, EventArgs e)
         {
-            CRUD.sql = "SELECT * FROM SOCIOS WHERE " + txtFiltroMatricula.Text.Trim() + " LIKE '" + txtFiltro1.Text.Trim() + "'";
+            DateTime d1 = DateTime.Parse(txtData1.Text);
+            txtData1Convert.Text = d1.ToString("yyyy/MM/dd");
+            DateTime d2 = DateTime.Parse(txtData2.Text);
+            txtData2Convert.Text = d2.ToString("yyyy/MM/dd");
+
+            var data1 = txtData1Convert.Text;
+            var data2 = txtData2Convert.Text;
+
+            CRUD.sql = "SELECT * FROM `SOCIOS` WHERE `DataCadastro` BETWEEN '" + data1 + "' AND '" + data2 + "' ;";
+
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
@@ -347,5 +339,60 @@ namespace Programa_STPMJ
             dgv.Columns["Foto"].Visible = false;
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
+
+        private void cboxMesAniversario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cboxMesAniversario.SelectedIndex)
+            {
+                case 0:
+                    txtMesAniversario.Text = "01";
+                    break;
+
+                case 1:
+                    txtMesAniversario.Text = "02";
+                    break;
+
+                case 2:
+                    txtMesAniversario.Text = "03";
+                    break;
+
+                case 3:
+                    txtMesAniversario.Text = "04";
+                    break;
+
+                case 4:
+                    txtMesAniversario.Text = "05";
+                    break;
+
+                case 5:
+                    txtMesAniversario.Text = "06";
+                    break;
+
+                case 6:
+                    txtMesAniversario.Text = "07";
+                    break;
+
+                case 7:
+                    txtMesAniversario.Text = "08";
+                    break;
+
+                case 8:
+                    txtMesAniversario.Text = "09";
+                    break;
+
+                case 9:
+                    txtMesAniversario.Text = "10";
+                    break;
+
+                case 10:
+                    txtMesAniversario.Text = "11";
+                    break;
+
+                case 11:
+                    txtMesAniversario.Text = "12";
+                    break;
+            }
+        }
+
     }
 }

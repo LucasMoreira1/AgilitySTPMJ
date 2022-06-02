@@ -88,13 +88,13 @@ namespace Programa_STPMJ
             CRUD.cmd.Parameters.AddWithValue("nome", txtNome.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("rg", txtRG.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("cpf", txtCPF.Text.Trim());
-            CRUD.cmd.Parameters.AddWithValue("data_nascimento", txtDataNascimento.Text.Trim());
+            CRUD.cmd.Parameters.AddWithValue("data_nascimento", Convert.ToDateTime(txtDataNascimento.Text.Trim()));
             CRUD.cmd.Parameters.AddWithValue("estado_civil", cboxEstadoCivil.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("nacionalidade", txtNacionalidade.Text.Trim());
-            CRUD.cmd.Parameters.AddWithValue("data_cadastro", txtDataCadastro.Text.Trim());
+            CRUD.cmd.Parameters.AddWithValue("data_cadastro", Convert.ToDateTime(txtDataCadastro.Text.Trim()));
             CRUD.cmd.Parameters.AddWithValue("secretaria", cboxEmpresa.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("funcao", txtFuncao.Text.Trim());
-            CRUD.cmd.Parameters.AddWithValue("admissao", txtAdmissao.Text.Trim());
+            CRUD.cmd.Parameters.AddWithValue("admissao", Convert.ToDateTime(txtAdmissao.Text.Trim()));
             CRUD.cmd.Parameters.AddWithValue("local_trabalho", txtLocalTrabalho.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("telefone", txtTelefone.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("recado", txtRecado.Text.Trim());
@@ -326,11 +326,6 @@ namespace Programa_STPMJ
             MessageBox.Show("Dados atualizados.", "Cadastro",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            FormPesquisa formpesquisa = new FormPesquisa();
-            formpesquisa.btnPesquisar_Click(sender, e);
-
-            ResetMe();
-            this.Close();
         }
 
         private void btnAdcDependente_Click(object sender, EventArgs e)

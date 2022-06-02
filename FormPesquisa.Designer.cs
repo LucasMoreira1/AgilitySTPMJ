@@ -30,8 +30,8 @@ namespace Programa_STPMJ
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnPesquisar = new FontAwesome.Sharp.IconButton();
             this.btnMostrarTodos = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -51,7 +51,7 @@ namespace Programa_STPMJ
             this.txtFiltroMatricula = new System.Windows.Forms.TextBox();
             this.lblFiltro1 = new System.Windows.Forms.Label();
             this.txtFiltro1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboxMesAniversario = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.calendario1 = new System.Windows.Forms.MonthCalendar();
@@ -60,6 +60,9 @@ namespace Programa_STPMJ
             this.calendario2 = new System.Windows.Forms.MonthCalendar();
             this.btnFiltroAniversario = new FontAwesome.Sharp.IconButton();
             this.btnFiltroCadastro = new FontAwesome.Sharp.IconButton();
+            this.txtData1Convert = new System.Windows.Forms.TextBox();
+            this.txtData2Convert = new System.Windows.Forms.TextBox();
+            this.txtMesAniversario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -246,23 +249,23 @@ namespace Programa_STPMJ
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(12, 150);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -385,11 +388,12 @@ namespace Programa_STPMJ
             this.txtFiltro1.TabIndex = 4;
             this.txtFiltro1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.filtro1_KeyDown);
             // 
-            // comboBox1
+            // cboxMesAniversario
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboxMesAniversario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxMesAniversario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxMesAniversario.FormattingEnabled = true;
+            this.cboxMesAniversario.Items.AddRange(new object[] {
             "Janeiro",
             "Fevereiro",
             "Março",
@@ -402,11 +406,11 @@ namespace Programa_STPMJ
             "Outubro",
             "Novembro",
             "Dezembro"});
-            this.comboBox1.Location = new System.Drawing.Point(393, 84);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.Text = "Mês";
+            this.cboxMesAniversario.Location = new System.Drawing.Point(393, 84);
+            this.cboxMesAniversario.Name = "cboxMesAniversario";
+            this.cboxMesAniversario.Size = new System.Drawing.Size(121, 28);
+            this.cboxMesAniversario.TabIndex = 3;
+            this.cboxMesAniversario.SelectedIndexChanged += new System.EventHandler(this.cboxMesAniversario_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -432,7 +436,7 @@ namespace Programa_STPMJ
             // 
             // calendario1
             // 
-            this.calendario1.Location = new System.Drawing.Point(526, 86);
+            this.calendario1.Location = new System.Drawing.Point(526, 90);
             this.calendario1.Name = "calendario1";
             this.calendario1.TabIndex = 12;
             this.calendario1.Visible = false;
@@ -445,7 +449,7 @@ namespace Programa_STPMJ
             this.txtData1.Name = "txtData1";
             this.txtData1.Size = new System.Drawing.Size(97, 26);
             this.txtData1.TabIndex = 4;
-            this.txtData1.Click += new System.EventHandler(this.MostrarCalendario1);
+            this.txtData1.DoubleClick += new System.EventHandler(this.MostrarCalendario1);
             // 
             // txtData2
             // 
@@ -454,11 +458,11 @@ namespace Programa_STPMJ
             this.txtData2.Name = "txtData2";
             this.txtData2.Size = new System.Drawing.Size(97, 26);
             this.txtData2.TabIndex = 4;
-            this.txtData2.Click += new System.EventHandler(this.MostrarCalendario2);
+            this.txtData2.DoubleClick += new System.EventHandler(this.MostrarCalendario2);
             // 
             // calendario2
             // 
-            this.calendario2.Location = new System.Drawing.Point(526, 86);
+            this.calendario2.Location = new System.Drawing.Point(526, 90);
             this.calendario2.Name = "calendario2";
             this.calendario2.TabIndex = 13;
             this.calendario2.Visible = false;
@@ -466,7 +470,6 @@ namespace Programa_STPMJ
             // 
             // btnFiltroAniversario
             // 
-            this.btnFiltroAniversario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFiltroAniversario.BackColor = System.Drawing.Color.LightGray;
             this.btnFiltroAniversario.FlatAppearance.BorderSize = 0;
             this.btnFiltroAniversario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -474,11 +477,11 @@ namespace Programa_STPMJ
             this.btnFiltroAniversario.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btnFiltroAniversario.IconColor = System.Drawing.Color.Black;
             this.btnFiltroAniversario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroAniversario.IconSize = 32;
-            this.btnFiltroAniversario.Location = new System.Drawing.Point(393, 11);
+            this.btnFiltroAniversario.IconSize = 25;
+            this.btnFiltroAniversario.Location = new System.Drawing.Point(400, 117);
             this.btnFiltroAniversario.Name = "btnFiltroAniversario";
             this.btnFiltroAniversario.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnFiltroAniversario.Size = new System.Drawing.Size(110, 47);
+            this.btnFiltroAniversario.Size = new System.Drawing.Size(110, 27);
             this.btnFiltroAniversario.TabIndex = 1;
             this.btnFiltroAniversario.Text = "Filtrar";
             this.btnFiltroAniversario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -489,7 +492,6 @@ namespace Programa_STPMJ
             // 
             // btnFiltroCadastro
             // 
-            this.btnFiltroCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFiltroCadastro.BackColor = System.Drawing.Color.LightGray;
             this.btnFiltroCadastro.FlatAppearance.BorderSize = 0;
             this.btnFiltroCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -497,11 +499,11 @@ namespace Programa_STPMJ
             this.btnFiltroCadastro.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btnFiltroCadastro.IconColor = System.Drawing.Color.Black;
             this.btnFiltroCadastro.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroCadastro.IconSize = 32;
-            this.btnFiltroCadastro.Location = new System.Drawing.Point(587, 12);
+            this.btnFiltroCadastro.IconSize = 25;
+            this.btnFiltroCadastro.Location = new System.Drawing.Point(586, 118);
             this.btnFiltroCadastro.Name = "btnFiltroCadastro";
             this.btnFiltroCadastro.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnFiltroCadastro.Size = new System.Drawing.Size(110, 46);
+            this.btnFiltroCadastro.Size = new System.Drawing.Size(110, 27);
             this.btnFiltroCadastro.TabIndex = 1;
             this.btnFiltroCadastro.Text = "Filtrar";
             this.btnFiltroCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -509,6 +511,32 @@ namespace Programa_STPMJ
             this.btnFiltroCadastro.UseMnemonic = false;
             this.btnFiltroCadastro.UseVisualStyleBackColor = false;
             this.btnFiltroCadastro.Click += new System.EventHandler(this.btnFiltroCadastro_Click);
+            // 
+            // txtData1Convert
+            // 
+            this.txtData1Convert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtData1Convert.Location = new System.Drawing.Point(703, 12);
+            this.txtData1Convert.Name = "txtData1Convert";
+            this.txtData1Convert.Size = new System.Drawing.Size(97, 26);
+            this.txtData1Convert.TabIndex = 4;
+            // 
+            // txtData2Convert
+            // 
+            this.txtData2Convert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtData2Convert.Location = new System.Drawing.Point(703, 44);
+            this.txtData2Convert.Name = "txtData2Convert";
+            this.txtData2Convert.Size = new System.Drawing.Size(97, 26);
+            this.txtData2Convert.TabIndex = 4;
+            this.txtData2Convert.Visible = false;
+            // 
+            // txtMesAniversario
+            // 
+            this.txtMesAniversario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMesAniversario.Location = new System.Drawing.Point(406, 118);
+            this.txtMesAniversario.Name = "txtMesAniversario";
+            this.txtMesAniversario.Size = new System.Drawing.Size(97, 26);
+            this.txtMesAniversario.TabIndex = 4;
+            this.txtMesAniversario.Visible = false;
             // 
             // FormPesquisa
             // 
@@ -527,11 +555,14 @@ namespace Programa_STPMJ
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblFiltro3);
             this.Controls.Add(this.txtData2);
+            this.Controls.Add(this.txtMesAniversario);
+            this.Controls.Add(this.txtData2Convert);
+            this.Controls.Add(this.txtData1Convert);
             this.Controls.Add(this.txtData1);
             this.Controls.Add(this.txtFiltro3);
             this.Controls.Add(this.lblFiltro1);
             this.Controls.Add(this.lblFiltro2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboxMesAniversario);
             this.Controls.Add(this.cboxFiltro3);
             this.Controls.Add(this.txtFiltro1);
             this.Controls.Add(this.txtFiltro2);
@@ -579,7 +610,7 @@ namespace Programa_STPMJ
         public System.Windows.Forms.TextBox txtFiltro2;
         public System.Windows.Forms.TextBox txtFiltro3;
         public System.Windows.Forms.TextBox txtFiltro1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboxMesAniversario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox txtData1;
@@ -588,5 +619,8 @@ namespace Programa_STPMJ
         private System.Windows.Forms.MonthCalendar calendario2;
         public FontAwesome.Sharp.IconButton btnFiltroAniversario;
         public FontAwesome.Sharp.IconButton btnFiltroCadastro;
+        public System.Windows.Forms.TextBox txtData1Convert;
+        public System.Windows.Forms.TextBox txtData2Convert;
+        public System.Windows.Forms.TextBox txtMesAniversario;
     }
 }
