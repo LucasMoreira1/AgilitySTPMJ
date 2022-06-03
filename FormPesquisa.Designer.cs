@@ -73,15 +73,15 @@ namespace Programa_STPMJ
             this.btnPesquisar.BackColor = System.Drawing.Color.LightGray;
             this.btnPesquisar.FlatAppearance.BorderSize = 0;
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisar.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btnPesquisar.IconColor = System.Drawing.Color.Black;
             this.btnPesquisar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPesquisar.IconSize = 32;
-            this.btnPesquisar.Location = new System.Drawing.Point(874, 44);
+            this.btnPesquisar.Location = new System.Drawing.Point(1031, 44);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnPesquisar.Size = new System.Drawing.Size(200, 47);
+            this.btnPesquisar.Size = new System.Drawing.Size(147, 47);
             this.btnPesquisar.TabIndex = 1;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -96,15 +96,15 @@ namespace Programa_STPMJ
             this.btnMostrarTodos.BackColor = System.Drawing.Color.LightGray;
             this.btnMostrarTodos.FlatAppearance.BorderSize = 0;
             this.btnMostrarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrarTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrarTodos.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btnMostrarTodos.IconColor = System.Drawing.Color.Black;
             this.btnMostrarTodos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMostrarTodos.IconSize = 32;
-            this.btnMostrarTodos.Location = new System.Drawing.Point(874, 97);
+            this.btnMostrarTodos.Location = new System.Drawing.Point(1031, 97);
             this.btnMostrarTodos.Name = "btnMostrarTodos";
             this.btnMostrarTodos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMostrarTodos.Size = new System.Drawing.Size(200, 47);
+            this.btnMostrarTodos.Size = new System.Drawing.Size(147, 47);
             this.btnMostrarTodos.TabIndex = 1;
             this.btnMostrarTodos.Text = "Mostrar Todos";
             this.btnMostrarTodos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -300,15 +300,15 @@ namespace Programa_STPMJ
             this.btnAtualizar.BackColor = System.Drawing.Color.LightGray;
             this.btnAtualizar.FlatAppearance.BorderSize = 0;
             this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizar.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btnAtualizar.IconColor = System.Drawing.Color.Black;
             this.btnAtualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAtualizar.IconSize = 32;
-            this.btnAtualizar.Location = new System.Drawing.Point(1131, 44);
+            this.btnAtualizar.Location = new System.Drawing.Point(1184, 44);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnAtualizar.Size = new System.Drawing.Size(200, 47);
+            this.btnAtualizar.Size = new System.Drawing.Size(147, 47);
             this.btnAtualizar.TabIndex = 1;
             this.btnAtualizar.Text = "Atualizar ( )";
             this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -323,15 +323,15 @@ namespace Programa_STPMJ
             this.btnDeletar.BackColor = System.Drawing.Color.LightGray;
             this.btnDeletar.FlatAppearance.BorderSize = 0;
             this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletar.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btnDeletar.IconColor = System.Drawing.Color.Black;
             this.btnDeletar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDeletar.IconSize = 32;
-            this.btnDeletar.Location = new System.Drawing.Point(1131, 97);
+            this.btnDeletar.Location = new System.Drawing.Point(1184, 97);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnDeletar.Size = new System.Drawing.Size(200, 47);
+            this.btnDeletar.Size = new System.Drawing.Size(147, 47);
             this.btnDeletar.TabIndex = 1;
             this.btnDeletar.Text = "Deletar ( )";
             this.btnDeletar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -519,6 +519,7 @@ namespace Programa_STPMJ
             this.txtData1Convert.Name = "txtData1Convert";
             this.txtData1Convert.Size = new System.Drawing.Size(97, 26);
             this.txtData1Convert.TabIndex = 4;
+            this.txtData1Convert.Visible = false;
             // 
             // txtData2Convert
             // 
@@ -532,7 +533,7 @@ namespace Programa_STPMJ
             // txtMesAniversario
             // 
             this.txtMesAniversario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMesAniversario.Location = new System.Drawing.Point(406, 118);
+            this.txtMesAniversario.Location = new System.Drawing.Point(400, 12);
             this.txtMesAniversario.Name = "txtMesAniversario";
             this.txtMesAniversario.Size = new System.Drawing.Size(97, 26);
             this.txtMesAniversario.TabIndex = 4;
