@@ -373,5 +373,21 @@ namespace Programa_STPMJ
             formDependentes.Show();
             
         }
+
+        private void IniciarEsquerda(object sender, EventArgs e)
+        {
+            
+            txtRG.SelectionStart = 0;
+            txtCPF.SelectionStart = 0;
+            txtDataNascimento.SelectionStart = 0;
+            txtAdmissao.SelectionStart = 0;
+            txtTelefone.SelectionStart = 0;
+            txtRecado.SelectionStart = 0;
+
+            txtDataNascimentoDependente.SelectionStart = 0;
+            
+            txtCEP.SelectionStart = 0;
+
+        }
     }
 }

@@ -232,6 +232,7 @@
             this.txtRG.Name = "txtRG";
             this.txtRG.Size = new System.Drawing.Size(122, 26);
             this.txtRG.TabIndex = 3;
+            this.txtRG.Click += new System.EventHandler(this.IniciarEsquerda);
             // 
             // txtCPF
             // 
@@ -241,6 +242,7 @@
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(121, 26);
             this.txtCPF.TabIndex = 5;
+            this.txtCPF.Click += new System.EventHandler(this.IniciarEsquerda);
             // 
             // txtAdmissao
             // 
@@ -251,6 +253,7 @@
             this.txtAdmissao.Size = new System.Drawing.Size(129, 26);
             this.txtAdmissao.TabIndex = 7;
             this.txtAdmissao.ValidatingType = typeof(System.DateTime);
+            this.txtAdmissao.Click += new System.EventHandler(this.IniciarEsquerda);
             // 
             // txtDataNascimento
             // 
@@ -261,6 +264,7 @@
             this.txtDataNascimento.Size = new System.Drawing.Size(121, 26);
             this.txtDataNascimento.TabIndex = 6;
             this.txtDataNascimento.ValidatingType = typeof(System.DateTime);
+            this.txtDataNascimento.Click += new System.EventHandler(this.IniciarEsquerda);
             // 
             // txtRecado
             // 
@@ -270,6 +274,7 @@
             this.txtRecado.Name = "txtRecado";
             this.txtRecado.Size = new System.Drawing.Size(129, 26);
             this.txtRecado.TabIndex = 13;
+            this.txtRecado.Click += new System.EventHandler(this.IniciarEsquerda);
             // 
             // txtTelefone
             // 
@@ -279,11 +284,13 @@
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(122, 26);
             this.txtTelefone.TabIndex = 12;
+            this.txtTelefone.Click += new System.EventHandler(this.IniciarEsquerda);
             // 
             // cboxEmpresa
             // 
             this.cboxEmpresa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.cboxEmpresa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboxEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxEmpresa.FormattingEnabled = true;
             this.cboxEmpresa.Items.AddRange(new object[] {
@@ -335,6 +342,7 @@
             // 
             this.cboxEstadoCivil.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.cboxEstadoCivil.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboxEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxEstadoCivil.FormattingEnabled = true;
             this.cboxEstadoCivil.Items.AddRange(new object[] {
@@ -606,6 +614,7 @@
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(89, 26);
             this.txtCEP.TabIndex = 18;
+            this.txtCEP.Click += new System.EventHandler(this.IniciarEsquerda);
             // 
             // btnBuscarCEP
             // 
@@ -852,6 +861,7 @@
             this.btnImagemEmBranco.TabIndex = 29;
             this.btnImagemEmBranco.Text = "ImagemEmBranco";
             this.btnImagemEmBranco.UseVisualStyleBackColor = true;
+            this.btnImagemEmBranco.Visible = false;
             this.btnImagemEmBranco.Click += new System.EventHandler(this.btnImagemEmBranco_Click);
             // 
             // txtObservacao
@@ -918,6 +928,7 @@
             this.txtDataNascimentoDependente.Size = new System.Drawing.Size(420, 26);
             this.txtDataNascimentoDependente.TabIndex = 17;
             this.txtDataNascimentoDependente.ValidatingType = typeof(System.DateTime);
+            this.txtDataNascimentoDependente.Click += new System.EventHandler(this.IniciarEsquerda);
             // 
             // btnListaDependentes
             // 
