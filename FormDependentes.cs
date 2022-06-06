@@ -46,5 +46,72 @@ namespace Programa_STPMJ
             dgv.Columns["MatReferencia"].Visible = false;
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
+
+        private void btnExluir_Click(object sender, EventArgs e)
+        {
+            string registroSelecionado = txtSelecionado.Text.Trim();
+
+
+            if (MessageBox.Show("Tem certeza que deseja deletar os dados selecionados?", "Deletar Dados",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                CRUD.sql = "DELETE FROM DEPENDENTES WHERE CadReferencia = '" + txtMatReferencia.Text + "' AND NOME = '" + registroSelecionado + "'";
+                CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
+                CRUD.PerformCRUD(CRUD.cmd);
+
+                MessageBox.Show("Dados deletados com sucesso.", "Deletar dados",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                CarregarDados();
+            }
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            CarregarDados();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            DataGridView dgv = dataGridView1;
+            FormCadastro formcadastro = new FormCadastro();
+
+
+            formcadastro.btnSalvar.Visible = false;
+            formcadastro.btnAtualizar.Visible = true;
+            formcadastro.Show();
+
+            formcadastro.txtMatricula.Text = txtMatReferencia.Text.Trim();
+            formcadastro.txtNomeDependente.Text = Convert.ToString(dgv.CurrentRow.Cells[1].Value);
+            formcadastro.txtGrauParentesco.Text = Convert.ToString(dgv.CurrentRow.Cells[3].Value);
+            formcadastro.txtDataNascimentoDependente.Text = Convert.ToString(dgv.CurrentRow.Cells[2].Value);
+        }
+
+        private void SelecionarDependente(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                DataGridView dgv = dataGridView1;
+                //this.id = Convert.ToString(dgv.CurrentRow.Cells[0].Value);
+                txtSelecionado.Text = Convert.ToString(dgv.CurrentRow.Cells[1].Value);
+
+            }
+        }
+
+        private void EditarDependente(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = dataGridView1;
+            FormCadastro formcadastro = new FormCadastro();
+
+
+            formcadastro.btnSalvar.Visible = false;
+            formcadastro.btnAtualizar.Visible = true;
+            formcadastro.Show();
+
+            formcadastro.txtMatricula.Text = txtMatReferencia.Text.Trim();
+            formcadastro.txtNomeDependente.Text = Convert.ToString(dgv.CurrentRow.Cells[1].Value);
+            formcadastro.txtGrauParentesco.Text = Convert.ToString(dgv.CurrentRow.Cells[3].Value);
+            formcadastro.txtDataNascimentoDependente.Text = Convert.ToString(dgv.CurrentRow.Cells[2].Value);
+        }
     }
 }

@@ -103,6 +103,8 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnImprimirFicha = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCamera)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -111,6 +113,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtLimite)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -294,35 +297,28 @@
             this.cboxEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxEmpresa.FormattingEnabled = true;
             this.cboxEmpresa.Items.AddRange(new object[] {
-            "002-GABINETE DO PREFEITO",
-            "003-SECRETARIA DE COMUNICAÇÃO",
-            "004-SECRETARIA DE PLANEJAMENTO",
-            "005-SECRETARIA DE NEGOCIOS JURIDICOS",
-            "006-SECRETARIA DE ADMINISTRACAO",
-            "007-SECRETARIA DE FINANÇAS",
-            "008-SECRETARIA DE ESPORTE RECREAÇÃO",
-            "009-SECRETARIA  DE ASSISTÊNCIA SOCIAL",
-            "010-SECRETARIA DE SAUDE",
-            "011-SECRETARIA MUNICIPAL DE EDUCACAO",
-            "012-SECRETARIA DE INFRAESTRUTURA",
-            "013-SECRETARIA DO MEIO AMBIENTE",
-            "014-FUNDAÇÃO PROLAR",
-            "015-SECRETARIA DE SERVICOS MUNICIPAIS",
-            "016-SECRETARIA DE GOVERNO",
-            "017-SECR. DE AGRICULTURA E ABASTECIMENTO",
-            "018-SECRETARIA DE DESENVOLVIMENTO ECONOMICO",
-            "019-SECRETARIA  DE SEGURANCA DEFESA CIVIL",
-            "022-APOSENTADO DA PREFEITURA COM INSS",
-            "031-APOSENTADO",
-            "032-CAMARA",
-            "033-FUNCIONARIO PUBLICO ESTADUAL",
-            "034-FUNDAÇÃO CULTURAL DE JACAREI",
-            "035-INSTITUTO DE PREVIDENCIA DO MUNICIPIO",
-            "036-PENSIONISTA",
-            "037-SIND.  DOS TRABS. PUBL. MUNIC.DE JACAREI",
-            "038-CONSELHO TUTELAR",
-            "039-SECRETARIA DE MOBILIDADE URBANA",
-            "099-OUTROS(ESPECIFICAR NA OBSERVAÇÃO)"});
+            "GABINETE (PREFEITO)",
+            "SECRETARIA DE ADMINISTRACAO E RH",
+            "SECRETARIA  DE ASSISTÊNCIA SOCIAL",
+            "SECRETARIA DE DESENVOLVIMENTO ECONOMICO",
+            "SECRETARIA MUNICIPAL DE EDUCACAO",
+            "SECRETARIA DE ESPORTE E RECREAÇÃO",
+            "SECRETARIA DE FINANÇAS",
+            "CHEFIA DE GABINETE",
+            "SECRETARIA DE GOVERNO E PLANEJAMENTO",
+            "SECRETARIA DE INFRAESTRUTURA",
+            "SECRETARIA DO MEIO AMBIENTE E ZELADORIA URBANA",
+            "SECRETARIA DE MOBILIDADE URBANA",
+            "PROCURADORIA GERAL",
+            "SECRETARIA DE SAUDE",
+            "SECRETARIA DE SEGURANCA E DEFESA DO CIDADÃO",
+            "FUNCIONARIO PUBLICO ESTADUAL",
+            "FUNDAÇÃO CULTURAL DE JACAREI",
+            "INSTITUTO DE PREVIDÊNCIA DO MUNICÍPIO DE JACAREÍ (IPMJ)",
+            "SIND.  DOS TRABS. PUBL. MUNIC.DE JACAREI",
+            "APOSENTADO",
+            "PENSIONISTA",
+            "OUTROS(ESPECIFICAR NA OBSERVAÇÃO)"});
             this.cboxEmpresa.Location = new System.Drawing.Point(145, 240);
             this.cboxEmpresa.Name = "cboxEmpresa";
             this.cboxEmpresa.Size = new System.Drawing.Size(420, 28);
@@ -581,6 +577,7 @@
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(123, 26);
             this.txtMatricula.TabIndex = 1;
+            this.txtMatricula.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Pesquisar);
             // 
             // groupBox2
             // 
@@ -855,7 +852,7 @@
             this.btnImagemEmBranco.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnImagemEmBranco.IconColor = System.Drawing.Color.Black;
             this.btnImagemEmBranco.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnImagemEmBranco.Location = new System.Drawing.Point(515, 33);
+            this.btnImagemEmBranco.Location = new System.Drawing.Point(606, 33);
             this.btnImagemEmBranco.Name = "btnImagemEmBranco";
             this.btnImagemEmBranco.Size = new System.Drawing.Size(85, 35);
             this.btnImagemEmBranco.TabIndex = 29;
@@ -893,6 +890,7 @@
             this.groupBox4.Controls.Add(this.btnLimpar);
             this.groupBox4.Controls.Add(this.txtObservacao);
             this.groupBox4.Controls.Add(this.btnImagemEmBranco);
+            this.groupBox4.Controls.Add(this.btnImprimirFicha);
             this.groupBox4.Controls.Add(this.btnSalvar);
             this.groupBox4.Controls.Add(this.btnAtualizar);
             this.groupBox4.Location = new System.Drawing.Point(218, 794);
@@ -904,6 +902,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.dataGridView1);
             this.groupBox5.Controls.Add(this.txtDataNascimentoDependente);
             this.groupBox5.Controls.Add(this.btnListaDependentes);
             this.groupBox5.Controls.Add(this.btnAdcDependente);
@@ -998,6 +997,29 @@
             this.label28.TabIndex = 1;
             this.label28.Text = "Data Nascimento";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(721, 23);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(160, 97);
+            this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.Visible = false;
+            // 
+            // btnImprimirFicha
+            // 
+            this.btnImprimirFicha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimirFicha.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnImprimirFicha.IconColor = System.Drawing.Color.Black;
+            this.btnImprimirFicha.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnImprimirFicha.Location = new System.Drawing.Point(515, 33);
+            this.btnImprimirFicha.Name = "btnImprimirFicha";
+            this.btnImprimirFicha.Size = new System.Drawing.Size(85, 35);
+            this.btnImprimirFicha.TabIndex = 29;
+            this.btnImprimirFicha.Text = "Imprimir";
+            this.btnImprimirFicha.UseVisualStyleBackColor = true;
+            this.btnImprimirFicha.Click += new System.EventHandler(this.Imprimir);
+            // 
             // FormCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1029,6 +1051,7 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1105,11 +1128,13 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button btnListaDependentes;
         private System.Windows.Forms.Button btnAdcDependente;
-        private System.Windows.Forms.TextBox txtGrauParentesco;
-        private System.Windows.Forms.TextBox txtNomeDependente;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.MaskedTextBox txtDataNascimentoDependente;
+        public System.Windows.Forms.TextBox txtGrauParentesco;
+        public System.Windows.Forms.TextBox txtNomeDependente;
+        public System.Windows.Forms.MaskedTextBox txtDataNascimentoDependente;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        public FontAwesome.Sharp.IconButton btnImprimirFicha;
     }
 }

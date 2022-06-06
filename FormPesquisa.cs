@@ -336,7 +336,7 @@ namespace Programa_STPMJ
             dgv.AutoGenerateColumns = true;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.DataSource = dt;
-            dgv.Columns["Foto"].Visible = false;
+            //dgv.Columns["Foto"].Visible = false;
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
 

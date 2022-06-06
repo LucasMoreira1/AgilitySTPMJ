@@ -35,6 +35,10 @@
             this.txtNomeSocio = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnExluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.txtSelecionado = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +67,7 @@
             this.txtNomeSocio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeSocio.Location = new System.Drawing.Point(254, 9);
             this.txtNomeSocio.Name = "txtNomeSocio";
-            this.txtNomeSocio.Size = new System.Drawing.Size(603, 26);
+            this.txtNomeSocio.Size = new System.Drawing.Size(427, 26);
             this.txtNomeSocio.TabIndex = 0;
             // 
             // label2
@@ -103,14 +107,61 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 70;
-            this.dataGridView1.Size = new System.Drawing.Size(841, 241);
+            this.dataGridView1.Size = new System.Drawing.Size(992, 241);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelecionarDependente);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EditarDependente);
+            // 
+            // btnExluir
+            // 
+            this.btnExluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExluir.Location = new System.Drawing.Point(905, 9);
+            this.btnExluir.Name = "btnExluir";
+            this.btnExluir.Size = new System.Drawing.Size(103, 26);
+            this.btnExluir.TabIndex = 3;
+            this.btnExluir.Text = "Excluir";
+            this.btnExluir.UseVisualStyleBackColor = true;
+            this.btnExluir.Click += new System.EventHandler(this.btnExluir_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(796, 9);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(103, 26);
+            this.btnEditar.TabIndex = 3;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(687, 9);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(103, 26);
+            this.btnAtualizar.TabIndex = 3;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // txtSelecionado
+            // 
+            this.txtSelecionado.Location = new System.Drawing.Point(512, -1);
+            this.txtSelecionado.Name = "txtSelecionado";
+            this.txtSelecionado.Size = new System.Drawing.Size(131, 20);
+            this.txtSelecionado.TabIndex = 4;
+            this.txtSelecionado.Visible = false;
             // 
             // FormDependentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 297);
+            this.ClientSize = new System.Drawing.Size(1020, 297);
+            this.Controls.Add(this.txtSelecionado);
+            this.Controls.Add(this.btnAtualizar);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnExluir);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -132,5 +183,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.TextBox txtMatReferencia;
         public System.Windows.Forms.TextBox txtNomeSocio;
+        private System.Windows.Forms.Button btnExluir;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.TextBox txtSelecionado;
     }
 }
