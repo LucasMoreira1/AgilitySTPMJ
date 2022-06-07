@@ -31,7 +31,7 @@
     <UpdateUrl>https://raw.githubusercontent.com/LucasMoreira1/AgilitySTPMJ/master/published/</UpdateUrl>
     <MinimumRequiredVersion>1.0.0.5</MinimumRequiredVersion>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -195,12 +195,6 @@
     <Compile Include="FormDependentes.Designer.cs">
       <DependentUpon>FormDependentes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormImprimirCadastro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormImprimirCadastro.Designer.cs">
-      <DependentUpon>FormImprimirCadastro.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,9 +230,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDependentes.resx">
       <DependentUpon>FormDependentes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormImprimirCadastro.resx">
-      <DependentUpon>FormImprimirCadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPaginaInicial.resx">
       <DependentUpon>FormPaginaInicial.cs</DependentUpon>
