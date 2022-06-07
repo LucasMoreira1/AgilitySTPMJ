@@ -195,6 +195,12 @@
     <Compile Include="FormDependentes.Designer.cs">
       <DependentUpon>FormDependentes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormImprimirCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImprimirCadastro.Designer.cs">
+      <DependentUpon>FormImprimirCadastro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDependentes.resx">
       <DependentUpon>FormDependentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImprimirCadastro.resx">
+      <DependentUpon>FormImprimirCadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPaginaInicial.resx">
       <DependentUpon>FormPaginaInicial.cs</DependentUpon>
@@ -271,6 +280,7 @@
     <Content Include="icone.ico" />
     <Content Include="icone2_sem_fundo.ico" />
     <Content Include="logo_2_sem_fundo.ico" />
+    <None Include="Resources\Logo_sem_bg.png" />
     <None Include="Socio_sem_foto.jpeg" />
   </ItemGroup>
   <ItemGroup>

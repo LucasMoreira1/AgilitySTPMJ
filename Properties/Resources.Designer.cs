@@ -63,6 +63,16 @@ namespace Programa_STPMJ.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_sem_bg {
+            get {
+                object obj = ResourceManager.GetObject("Logo_sem_bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Socio_sem_foto {
             get {
                 object obj = ResourceManager.GetObject("Socio_sem_foto", resourceCulture);
