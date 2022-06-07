@@ -82,7 +82,7 @@ namespace Programa_STPMJ
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnPesquisar.Size = new System.Drawing.Size(147, 47);
-            this.btnPesquisar.TabIndex = 1;
+            this.btnPesquisar.TabIndex = 0;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -105,7 +105,7 @@ namespace Programa_STPMJ
             this.btnMostrarTodos.Name = "btnMostrarTodos";
             this.btnMostrarTodos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnMostrarTodos.Size = new System.Drawing.Size(147, 47);
-            this.btnMostrarTodos.TabIndex = 1;
+            this.btnMostrarTodos.TabIndex = 0;
             this.btnMostrarTodos.Text = "Mostrar Todos";
             this.btnMostrarTodos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMostrarTodos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -127,7 +127,7 @@ namespace Programa_STPMJ
             this.iconButton3.Location = new System.Drawing.Point(12, 0);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(37, 32);
-            this.iconButton3.TabIndex = 2;
+            this.iconButton3.TabIndex = 0;
             this.iconButton3.UseVisualStyleBackColor = false;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
@@ -163,7 +163,7 @@ namespace Programa_STPMJ
             this.cboxFiltro2.Location = new System.Drawing.Point(139, 85);
             this.cboxFiltro2.Name = "cboxFiltro2";
             this.cboxFiltro2.Size = new System.Drawing.Size(121, 28);
-            this.cboxFiltro2.TabIndex = 3;
+            this.cboxFiltro2.TabIndex = 0;
             this.cboxFiltro2.Text = "Nome";
             // 
             // txtFiltro2
@@ -172,7 +172,7 @@ namespace Programa_STPMJ
             this.txtFiltro2.Location = new System.Drawing.Point(139, 118);
             this.txtFiltro2.Name = "txtFiltro2";
             this.txtFiltro2.Size = new System.Drawing.Size(121, 26);
-            this.txtFiltro2.TabIndex = 4;
+            this.txtFiltro2.TabIndex = 0;
             this.txtFiltro2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // lblFiltro2
@@ -182,7 +182,7 @@ namespace Programa_STPMJ
             this.lblFiltro2.Location = new System.Drawing.Point(135, 62);
             this.lblFiltro2.Name = "lblFiltro2";
             this.lblFiltro2.Size = new System.Drawing.Size(57, 20);
-            this.lblFiltro2.TabIndex = 5;
+            this.lblFiltro2.TabIndex = 0;
             this.lblFiltro2.Text = "Filtro 2";
             this.lblFiltro2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -218,7 +218,7 @@ namespace Programa_STPMJ
             this.cboxFiltro3.Location = new System.Drawing.Point(266, 85);
             this.cboxFiltro3.Name = "cboxFiltro3";
             this.cboxFiltro3.Size = new System.Drawing.Size(121, 28);
-            this.cboxFiltro3.TabIndex = 3;
+            this.cboxFiltro3.TabIndex = 0;
             this.cboxFiltro3.Text = "Secretaria";
             // 
             // txtFiltro3
@@ -227,7 +227,7 @@ namespace Programa_STPMJ
             this.txtFiltro3.Location = new System.Drawing.Point(266, 118);
             this.txtFiltro3.Name = "txtFiltro3";
             this.txtFiltro3.Size = new System.Drawing.Size(121, 26);
-            this.txtFiltro3.TabIndex = 4;
+            this.txtFiltro3.TabIndex = 0;
             this.txtFiltro3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // lblFiltro3
@@ -237,7 +237,7 @@ namespace Programa_STPMJ
             this.lblFiltro3.Location = new System.Drawing.Point(262, 62);
             this.lblFiltro3.Name = "lblFiltro3";
             this.lblFiltro3.Size = new System.Drawing.Size(57, 20);
-            this.lblFiltro3.TabIndex = 5;
+            this.lblFiltro3.TabIndex = 0;
             this.lblFiltro3.Text = "Filtro 3";
             this.lblFiltro3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -271,7 +271,7 @@ namespace Programa_STPMJ
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView1.Size = new System.Drawing.Size(1319, 476);
-            this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
@@ -284,7 +284,7 @@ namespace Programa_STPMJ
             this.statusStrip1.Location = new System.Drawing.Point(0, 629);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1343, 22);
-            this.statusStrip1.TabIndex = 7;
+            this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
@@ -309,7 +309,7 @@ namespace Programa_STPMJ
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnAtualizar.Size = new System.Drawing.Size(147, 47);
-            this.btnAtualizar.TabIndex = 1;
+            this.btnAtualizar.TabIndex = 0;
             this.btnAtualizar.Text = "Atualizar ( )";
             this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAtualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -332,7 +332,7 @@ namespace Programa_STPMJ
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnDeletar.Size = new System.Drawing.Size(147, 47);
-            this.btnDeletar.TabIndex = 1;
+            this.btnDeletar.TabIndex = 0;
             this.btnDeletar.Text = "Deletar ( )";
             this.btnDeletar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -346,7 +346,7 @@ namespace Programa_STPMJ
             this.label3.Location = new System.Drawing.Point(263, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 13);
-            this.label3.TabIndex = 9;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Reg. Selecionado";
             this.label3.Visible = false;
             // 
@@ -355,7 +355,7 @@ namespace Programa_STPMJ
             this.txtRegistroSelecionado.Location = new System.Drawing.Point(361, 16);
             this.txtRegistroSelecionado.Name = "txtRegistroSelecionado";
             this.txtRegistroSelecionado.Size = new System.Drawing.Size(18, 20);
-            this.txtRegistroSelecionado.TabIndex = 10;
+            this.txtRegistroSelecionado.TabIndex = 0;
             this.txtRegistroSelecionado.Visible = false;
             // 
             // txtFiltroMatricula
@@ -365,7 +365,7 @@ namespace Programa_STPMJ
             this.txtFiltroMatricula.Location = new System.Drawing.Point(12, 86);
             this.txtFiltroMatricula.Name = "txtFiltroMatricula";
             this.txtFiltroMatricula.Size = new System.Drawing.Size(121, 26);
-            this.txtFiltroMatricula.TabIndex = 11;
+            this.txtFiltroMatricula.TabIndex = 0;
             this.txtFiltroMatricula.Text = "Matricula";
             // 
             // lblFiltro1
@@ -375,7 +375,7 @@ namespace Programa_STPMJ
             this.lblFiltro1.Location = new System.Drawing.Point(12, 62);
             this.lblFiltro1.Name = "lblFiltro1";
             this.lblFiltro1.Size = new System.Drawing.Size(57, 20);
-            this.lblFiltro1.TabIndex = 5;
+            this.lblFiltro1.TabIndex = 0;
             this.lblFiltro1.Text = "Filtro 1";
             this.lblFiltro1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -385,7 +385,7 @@ namespace Programa_STPMJ
             this.txtFiltro1.Location = new System.Drawing.Point(12, 118);
             this.txtFiltro1.Name = "txtFiltro1";
             this.txtFiltro1.Size = new System.Drawing.Size(121, 26);
-            this.txtFiltro1.TabIndex = 4;
+            this.txtFiltro1.TabIndex = 0;
             this.txtFiltro1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.filtro1_KeyDown);
             // 
             // cboxMesAniversario
@@ -409,7 +409,7 @@ namespace Programa_STPMJ
             this.cboxMesAniversario.Location = new System.Drawing.Point(393, 84);
             this.cboxMesAniversario.Name = "cboxMesAniversario";
             this.cboxMesAniversario.Size = new System.Drawing.Size(121, 28);
-            this.cboxMesAniversario.TabIndex = 3;
+            this.cboxMesAniversario.TabIndex = 0;
             this.cboxMesAniversario.SelectedIndexChanged += new System.EventHandler(this.cboxMesAniversario_SelectedIndexChanged);
             // 
             // label1
@@ -419,7 +419,7 @@ namespace Programa_STPMJ
             this.label1.Location = new System.Drawing.Point(389, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 20);
-            this.label1.TabIndex = 5;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Mês Aniversário";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -430,7 +430,7 @@ namespace Programa_STPMJ
             this.label2.Location = new System.Drawing.Point(583, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 20);
-            this.label2.TabIndex = 5;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Data Cadastro";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -438,7 +438,7 @@ namespace Programa_STPMJ
             // 
             this.calendario1.Location = new System.Drawing.Point(526, 90);
             this.calendario1.Name = "calendario1";
-            this.calendario1.TabIndex = 12;
+            this.calendario1.TabIndex = 0;
             this.calendario1.Visible = false;
             this.calendario1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendario1_DateSelected);
             // 
@@ -448,7 +448,7 @@ namespace Programa_STPMJ
             this.txtData1.Location = new System.Drawing.Point(541, 84);
             this.txtData1.Name = "txtData1";
             this.txtData1.Size = new System.Drawing.Size(97, 26);
-            this.txtData1.TabIndex = 4;
+            this.txtData1.TabIndex = 0;
             this.txtData1.DoubleClick += new System.EventHandler(this.MostrarCalendario1);
             // 
             // txtData2
@@ -457,14 +457,14 @@ namespace Programa_STPMJ
             this.txtData2.Location = new System.Drawing.Point(644, 84);
             this.txtData2.Name = "txtData2";
             this.txtData2.Size = new System.Drawing.Size(97, 26);
-            this.txtData2.TabIndex = 4;
+            this.txtData2.TabIndex = 0;
             this.txtData2.DoubleClick += new System.EventHandler(this.MostrarCalendario2);
             // 
             // calendario2
             // 
             this.calendario2.Location = new System.Drawing.Point(526, 90);
             this.calendario2.Name = "calendario2";
-            this.calendario2.TabIndex = 13;
+            this.calendario2.TabIndex = 0;
             this.calendario2.Visible = false;
             this.calendario2.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendario2_DateSelected);
             // 
@@ -482,7 +482,7 @@ namespace Programa_STPMJ
             this.btnFiltroAniversario.Name = "btnFiltroAniversario";
             this.btnFiltroAniversario.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnFiltroAniversario.Size = new System.Drawing.Size(110, 27);
-            this.btnFiltroAniversario.TabIndex = 1;
+            this.btnFiltroAniversario.TabIndex = 0;
             this.btnFiltroAniversario.Text = "Filtrar";
             this.btnFiltroAniversario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFiltroAniversario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -504,7 +504,7 @@ namespace Programa_STPMJ
             this.btnFiltroCadastro.Name = "btnFiltroCadastro";
             this.btnFiltroCadastro.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnFiltroCadastro.Size = new System.Drawing.Size(110, 27);
-            this.btnFiltroCadastro.TabIndex = 1;
+            this.btnFiltroCadastro.TabIndex = 0;
             this.btnFiltroCadastro.Text = "Filtrar";
             this.btnFiltroCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFiltroCadastro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -518,7 +518,7 @@ namespace Programa_STPMJ
             this.txtData1Convert.Location = new System.Drawing.Point(703, 12);
             this.txtData1Convert.Name = "txtData1Convert";
             this.txtData1Convert.Size = new System.Drawing.Size(97, 26);
-            this.txtData1Convert.TabIndex = 4;
+            this.txtData1Convert.TabIndex = 0;
             this.txtData1Convert.Visible = false;
             // 
             // txtData2Convert
@@ -527,7 +527,7 @@ namespace Programa_STPMJ
             this.txtData2Convert.Location = new System.Drawing.Point(703, 44);
             this.txtData2Convert.Name = "txtData2Convert";
             this.txtData2Convert.Size = new System.Drawing.Size(97, 26);
-            this.txtData2Convert.TabIndex = 4;
+            this.txtData2Convert.TabIndex = 0;
             this.txtData2Convert.Visible = false;
             // 
             // txtMesAniversario
@@ -536,7 +536,7 @@ namespace Programa_STPMJ
             this.txtMesAniversario.Location = new System.Drawing.Point(400, 12);
             this.txtMesAniversario.Name = "txtMesAniversario";
             this.txtMesAniversario.Size = new System.Drawing.Size(97, 26);
-            this.txtMesAniversario.TabIndex = 4;
+            this.txtMesAniversario.TabIndex = 0;
             this.txtMesAniversario.Visible = false;
             // 
             // FormPesquisa

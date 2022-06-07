@@ -55,7 +55,7 @@ namespace Programa_STPMJ
             if (MessageBox.Show("Tem certeza que deseja deletar os dados selecionados?", "Deletar Dados",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                CRUD.sql = "DELETE FROM DEPENDENTES WHERE CadReferencia = '" + txtMatReferencia.Text + "' AND NOME = '" + registroSelecionado + "'";
+                CRUD.sql = "DELETE FROM DEPENDENTES WHERE MatReferencia = '" + txtMatReferencia.Text + "' AND NOME = '" + registroSelecionado + "'";
                 CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
                 CRUD.PerformCRUD(CRUD.cmd);
 
@@ -79,12 +79,19 @@ namespace Programa_STPMJ
 
             formcadastro.btnSalvar.Visible = false;
             formcadastro.btnAtualizar.Visible = true;
+            formcadastro.btnAdcDependente.Visible = false;
+            formcadastro.btnAtualizarDependente.Visible = true;
             formcadastro.Show();
 
             formcadastro.txtMatricula.Text = txtMatReferencia.Text.Trim();
+            
             formcadastro.txtNomeDependente.Text = Convert.ToString(dgv.CurrentRow.Cells[1].Value);
             formcadastro.txtGrauParentesco.Text = Convert.ToString(dgv.CurrentRow.Cells[3].Value);
             formcadastro.txtDataNascimentoDependente.Text = Convert.ToString(dgv.CurrentRow.Cells[2].Value);
+            formcadastro.pesquisa();
+            
+
+
         }
 
         private void SelecionarDependente(object sender, DataGridViewCellEventArgs e)
@@ -106,12 +113,16 @@ namespace Programa_STPMJ
 
             formcadastro.btnSalvar.Visible = false;
             formcadastro.btnAtualizar.Visible = true;
+            formcadastro.btnAdcDependente.Visible = false;
+            formcadastro.btnAtualizarDependente.Visible = true;
             formcadastro.Show();
 
             formcadastro.txtMatricula.Text = txtMatReferencia.Text.Trim();
+
             formcadastro.txtNomeDependente.Text = Convert.ToString(dgv.CurrentRow.Cells[1].Value);
             formcadastro.txtGrauParentesco.Text = Convert.ToString(dgv.CurrentRow.Cells[3].Value);
             formcadastro.txtDataNascimentoDependente.Text = Convert.ToString(dgv.CurrentRow.Cells[2].Value);
+            formcadastro.pesquisa();
         }
     }
 }

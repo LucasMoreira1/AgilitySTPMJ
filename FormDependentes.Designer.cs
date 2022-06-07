@@ -58,7 +58,7 @@
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 20);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Matricula";
             // 
             // txtNomeSocio
@@ -77,7 +77,7 @@
             this.label2.Location = new System.Drawing.Point(197, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 20);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Nome";
             // 
             // dataGridView1
@@ -108,7 +108,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 70;
             this.dataGridView1.Size = new System.Drawing.Size(992, 241);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelecionarDependente);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EditarDependente);
             // 
@@ -118,7 +118,7 @@
             this.btnExluir.Location = new System.Drawing.Point(905, 9);
             this.btnExluir.Name = "btnExluir";
             this.btnExluir.Size = new System.Drawing.Size(103, 26);
-            this.btnExluir.TabIndex = 3;
+            this.btnExluir.TabIndex = 0;
             this.btnExluir.Text = "Excluir";
             this.btnExluir.UseVisualStyleBackColor = true;
             this.btnExluir.Click += new System.EventHandler(this.btnExluir_Click);
@@ -129,7 +129,7 @@
             this.btnEditar.Location = new System.Drawing.Point(796, 9);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(103, 26);
-            this.btnEditar.TabIndex = 3;
+            this.btnEditar.TabIndex = 0;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -140,7 +140,7 @@
             this.btnAtualizar.Location = new System.Drawing.Point(687, 9);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(103, 26);
-            this.btnAtualizar.TabIndex = 3;
+            this.btnAtualizar.TabIndex = 0;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
@@ -150,7 +150,7 @@
             this.txtSelecionado.Location = new System.Drawing.Point(512, -1);
             this.txtSelecionado.Name = "txtSelecionado";
             this.txtSelecionado.Size = new System.Drawing.Size(131, 20);
-            this.txtSelecionado.TabIndex = 4;
+            this.txtSelecionado.TabIndex = 0;
             this.txtSelecionado.Visible = false;
             // 
             // FormDependentes

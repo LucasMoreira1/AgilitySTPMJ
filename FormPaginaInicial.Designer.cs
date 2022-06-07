@@ -104,7 +104,7 @@ namespace Programa_STPMJ
             this.btnAjuda.Name = "btnAjuda";
             this.btnAjuda.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnAjuda.Size = new System.Drawing.Size(198, 45);
-            this.btnAjuda.TabIndex = 9;
+            this.btnAjuda.TabIndex = 0;
             this.btnAjuda.Text = "Ajuda";
             this.btnAjuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAjuda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -120,7 +120,7 @@ namespace Programa_STPMJ
             this.panelDocumentos.Location = new System.Drawing.Point(0, 513);
             this.panelDocumentos.Name = "panelDocumentos";
             this.panelDocumentos.Size = new System.Drawing.Size(198, 94);
-            this.panelDocumentos.TabIndex = 8;
+            this.panelDocumentos.TabIndex = 0;
             // 
             // btnCheques
             // 
@@ -141,7 +141,7 @@ namespace Programa_STPMJ
             this.btnCheques.Name = "btnCheques";
             this.btnCheques.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnCheques.Size = new System.Drawing.Size(198, 45);
-            this.btnCheques.TabIndex = 3;
+            this.btnCheques.TabIndex = 0;
             this.btnCheques.Text = "Cheques";
             this.btnCheques.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCheques.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -167,7 +167,7 @@ namespace Programa_STPMJ
             this.btnCarteirinha.Name = "btnCarteirinha";
             this.btnCarteirinha.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnCarteirinha.Size = new System.Drawing.Size(198, 45);
-            this.btnCarteirinha.TabIndex = 2;
+            this.btnCarteirinha.TabIndex = 0;
             this.btnCarteirinha.Text = "Carteirinha";
             this.btnCarteirinha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCarteirinha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -193,7 +193,7 @@ namespace Programa_STPMJ
             this.btnDocumentos.Name = "btnDocumentos";
             this.btnDocumentos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnDocumentos.Size = new System.Drawing.Size(198, 45);
-            this.btnDocumentos.TabIndex = 7;
+            this.btnDocumentos.TabIndex = 0;
             this.btnDocumentos.Text = "Documentos";
             this.btnDocumentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDocumentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -219,7 +219,7 @@ namespace Programa_STPMJ
             this.btnRelatorios.Name = "btnRelatorios";
             this.btnRelatorios.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnRelatorios.Size = new System.Drawing.Size(198, 45);
-            this.btnRelatorios.TabIndex = 5;
+            this.btnRelatorios.TabIndex = 0;
             this.btnRelatorios.Text = "Relatorios";
             this.btnRelatorios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRelatorios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -235,7 +235,7 @@ namespace Programa_STPMJ
             this.panelPesquisas.Location = new System.Drawing.Point(0, 329);
             this.panelPesquisas.Name = "panelPesquisas";
             this.panelPesquisas.Size = new System.Drawing.Size(198, 94);
-            this.panelPesquisas.TabIndex = 4;
+            this.panelPesquisas.TabIndex = 0;
             // 
             // btnPesquisarEmpresa
             // 
@@ -256,7 +256,7 @@ namespace Programa_STPMJ
             this.btnPesquisarEmpresa.Name = "btnPesquisarEmpresa";
             this.btnPesquisarEmpresa.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnPesquisarEmpresa.Size = new System.Drawing.Size(198, 45);
-            this.btnPesquisarEmpresa.TabIndex = 3;
+            this.btnPesquisarEmpresa.TabIndex = 0;
             this.btnPesquisarEmpresa.Text = "Pesquisar Convênio";
             this.btnPesquisarEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPesquisarEmpresa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -282,7 +282,7 @@ namespace Programa_STPMJ
             this.btnPesquisarCliente.Name = "btnPesquisarCliente";
             this.btnPesquisarCliente.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnPesquisarCliente.Size = new System.Drawing.Size(198, 45);
-            this.btnPesquisarCliente.TabIndex = 2;
+            this.btnPesquisarCliente.TabIndex = 0;
             this.btnPesquisarCliente.Text = "Pesquisar sócio";
             this.btnPesquisarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPesquisarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -308,7 +308,7 @@ namespace Programa_STPMJ
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnPesquisar.Size = new System.Drawing.Size(198, 45);
-            this.btnPesquisar.TabIndex = 3;
+            this.btnPesquisar.TabIndex = 0;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -324,7 +324,7 @@ namespace Programa_STPMJ
             this.panelCadastros.Location = new System.Drawing.Point(0, 190);
             this.panelCadastros.Name = "panelCadastros";
             this.panelCadastros.Size = new System.Drawing.Size(198, 94);
-            this.panelCadastros.TabIndex = 2;
+            this.panelCadastros.TabIndex = 0;
             // 
             // btnCadastroEmpresa
             // 
@@ -345,7 +345,7 @@ namespace Programa_STPMJ
             this.btnCadastroEmpresa.Name = "btnCadastroEmpresa";
             this.btnCadastroEmpresa.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnCadastroEmpresa.Size = new System.Drawing.Size(198, 45);
-            this.btnCadastroEmpresa.TabIndex = 3;
+            this.btnCadastroEmpresa.TabIndex = 0;
             this.btnCadastroEmpresa.Text = "Cadastrar Convênio";
             this.btnCadastroEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastroEmpresa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -371,7 +371,7 @@ namespace Programa_STPMJ
             this.btnCadastroCliente.Name = "btnCadastroCliente";
             this.btnCadastroCliente.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnCadastroCliente.Size = new System.Drawing.Size(198, 45);
-            this.btnCadastroCliente.TabIndex = 2;
+            this.btnCadastroCliente.TabIndex = 0;
             this.btnCadastroCliente.Text = "Cadastrar sócio";
             this.btnCadastroCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastroCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -397,7 +397,7 @@ namespace Programa_STPMJ
             this.btnCadastros.Name = "btnCadastros";
             this.btnCadastros.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnCadastros.Size = new System.Drawing.Size(198, 45);
-            this.btnCadastros.TabIndex = 1;
+            this.btnCadastros.TabIndex = 0;
             this.btnCadastros.Text = "Cadastros";
             this.btnCadastros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -423,7 +423,7 @@ namespace Programa_STPMJ
             this.btnPaginaInicial.Name = "btnPaginaInicial";
             this.btnPaginaInicial.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnPaginaInicial.Size = new System.Drawing.Size(198, 45);
-            this.btnPaginaInicial.TabIndex = 10;
+            this.btnPaginaInicial.TabIndex = 0;
             this.btnPaginaInicial.Text = "Pagina Inicial";
             this.btnPaginaInicial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPaginaInicial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -458,7 +458,7 @@ namespace Programa_STPMJ
             this.panelFormTitulo.Location = new System.Drawing.Point(215, 0);
             this.panelFormTitulo.Name = "panelFormTitulo";
             this.panelFormTitulo.Size = new System.Drawing.Size(1049, 30);
-            this.panelFormTitulo.TabIndex = 1;
+            this.panelFormTitulo.TabIndex = 0;
             // 
             // panelFormCentral
             // 
@@ -470,7 +470,7 @@ namespace Programa_STPMJ
             this.panelFormCentral.Location = new System.Drawing.Point(215, 30);
             this.panelFormCentral.Name = "panelFormCentral";
             this.panelFormCentral.Size = new System.Drawing.Size(1049, 651);
-            this.panelFormCentral.TabIndex = 2;
+            this.panelFormCentral.TabIndex = 0;
             // 
             // webView21
             // 
@@ -504,7 +504,7 @@ namespace Programa_STPMJ
             this.btnLancamento.Name = "btnLancamento";
             this.btnLancamento.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnLancamento.Size = new System.Drawing.Size(198, 45);
-            this.btnLancamento.TabIndex = 11;
+            this.btnLancamento.TabIndex = 0;
             this.btnLancamento.Text = "Lançamentos";
             this.btnLancamento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLancamento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

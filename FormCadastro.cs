@@ -19,6 +19,7 @@ namespace Programa_STPMJ
         {
             InitializeComponent();
             ResetMe();
+            
 
         }
         FilterInfoCollection filterInfoCollection;
@@ -89,12 +90,15 @@ namespace Programa_STPMJ
             CRUD.cmd.Parameters.AddWithValue("rg", txtRG.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("cpf", txtCPF.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("data_nascimento", Convert.ToDateTime(txtDataNascimento.Text.Trim()));
+            //CRUD.cmd.Parameters.AddWithValue("data_nascimento", txtDataNascimento.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("estado_civil", cboxEstadoCivil.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("nacionalidade", txtNacionalidade.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("data_cadastro", Convert.ToDateTime(txtDataCadastro.Text.Trim()));
+            //CRUD.cmd.Parameters.AddWithValue("data_cadastro", txtDataCadastro.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("secretaria", cboxEmpresa.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("funcao", txtFuncao.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("admissao", Convert.ToDateTime(txtAdmissao.Text.Trim()));
+            //CRUD.cmd.Parameters.AddWithValue("admissao", txtAdmissao.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("local_trabalho", txtLocalTrabalho.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("telefone", txtTelefone.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("recado", txtRecado.Text.Trim());
@@ -112,7 +116,7 @@ namespace Programa_STPMJ
             CRUD.cmd.Parameters.AddWithValue("foto", img);
             CRUD.cmd.Parameters.AddWithValue("registro_sindical", txtRegistro.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("nomeDependente", txtNomeDependente.Text.Trim());
-            CRUD.cmd.Parameters.AddWithValue("DataNascimentoDependnete", txtDataNascimentoDependente.Text.Trim());
+            CRUD.cmd.Parameters.AddWithValue("DataNascimentoDependente", txtDataNascimentoDependente.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("GrauParentesco", txtGrauParentesco.Text.Trim());
            
         }
@@ -125,9 +129,11 @@ namespace Programa_STPMJ
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtMatricula.Text.Trim()) ||
-                    string.IsNullOrEmpty(txtNome.Text.Trim()))
+                    string.IsNullOrEmpty(txtNome.Text.Trim()) ||
+                    string.IsNullOrEmpty(txtDataNascimento.Text.Trim()) ||
+                    string.IsNullOrEmpty(txtAdmissao.Text.Trim()))
             {
-                MessageBox.Show("Por favor insira a Matrícula e Nome completo", "Dados Obrigatórios",
+                MessageBox.Show("Campos obrigatórios: Matricula, Nome, Data Nascimento, Data Admissão", "Dados Obrigatórios",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
@@ -149,8 +155,10 @@ namespace Programa_STPMJ
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
+            
 
             DataGridView dgv = dataGridView1;
+            dgv.Visible = true;
 
             dgv.MultiSelect = false;
             dgv.AutoGenerateColumns = true;
@@ -158,12 +166,12 @@ namespace Programa_STPMJ
             dgv.DataSource = dt;
             // dgv.Columns["Foto"].Visible = false;
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            string NumeroRegistro = dgv.CurrentCell.Value.ToString();
+            // .CurrentRow.Cells[0].Value
+            dgv.Visible = false;
 
-
-
-
-            MessageBox.Show("Sócio registrado. Registro número: " + dgv.CurrentRow.Cells[0].Value + ".", "Cadastro",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Sócio registrado. Registro número: " + NumeroRegistro + ".", "Cadastro",
+                MessageBoxButtons.OK, MessageBoxIcon.Information) ;
 
             
 
@@ -202,9 +210,11 @@ namespace Programa_STPMJ
             
 
             if (string.IsNullOrEmpty(txtMatricula.Text.Trim()) || 
-                    string.IsNullOrEmpty(txtNome.Text.Trim()))
+                    string.IsNullOrEmpty(txtNome.Text.Trim()) ||
+                    string.IsNullOrEmpty(txtDataNascimento.Text.Trim()) ||
+                    string.IsNullOrEmpty(txtAdmissao.Text.Trim()))
             {
-                MessageBox.Show("Por favor insira a Matrícula e Nome completo", "Dados Obrigatórios",
+                MessageBox.Show("Campos obrigatórios: Matricula, Nome, Data Nascimento, Data Admissão", "Dados Obrigatórios",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
@@ -360,7 +370,7 @@ namespace Programa_STPMJ
 
 
             CRUD.sql = "INSERT INTO DEPENDENTES(MatReferencia,Nome,DataNascimento,GrauParantesco)" +
-                "Values(@matricula, @nomeDependente, @DataNascimentoDependnete, @GrauParentesco);";
+                "Values(@matricula, @nomeDependente, @DataNascimentoDependente, @GrauParentesco);";
 
 
             Executar(CRUD.sql, "Insert");
@@ -410,62 +420,90 @@ namespace Programa_STPMJ
 
         }
 
+        public void pesquisa()
+        {
+
+            CRUD.sql = "SELECT * FROM SOCIOS WHERE MATRICULA LIKE '" + txtMatricula.Text.Trim() + "'";
+
+            CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
+            DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
+            DataGridView dgv = dataGridView1;
+
+            dgv.Visible = true;
+            dgv.MultiSelect = false;
+            dgv.AutoGenerateColumns = true;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.DataSource = dt;
+            dgv.Columns["Foto"].Visible = false;
+            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
+            btnSalvar.Visible = false;
+            btnAtualizar.Visible = true;
+
+            txtMatricula.Text = Convert.ToString(dgv.CurrentRow.Cells[0].Value);
+            txtNome.Text = Convert.ToString(dgv.CurrentRow.Cells[1].Value);
+            txtRG.Text = Convert.ToString(dgv.CurrentRow.Cells[2].Value);
+            txtCPF.Text = Convert.ToString(dgv.CurrentRow.Cells[3].Value);
+            txtDataNascimento.Text = Convert.ToString(dgv.CurrentRow.Cells[4].Value);
+            cboxEstadoCivil.Text = Convert.ToString(dgv.CurrentRow.Cells[5].Value);
+            txtNacionalidade.Text = Convert.ToString(dgv.CurrentRow.Cells[6].Value);
+            txtDataCadastro.Text = Convert.ToString(dgv.CurrentRow.Cells[7].Value);
+            cboxEmpresa.Text = Convert.ToString(dgv.CurrentRow.Cells[8].Value);
+            txtFuncao.Text = Convert.ToString(dgv.CurrentRow.Cells[9].Value);
+            txtAdmissao.Text = Convert.ToString(dgv.CurrentRow.Cells[10].Value);
+            txtLocalTrabalho.Text = Convert.ToString(dgv.CurrentRow.Cells[11].Value);
+            txtTelefone.Text = Convert.ToString(dgv.CurrentRow.Cells[12].Value);
+            txtRecado.Text = Convert.ToString(dgv.CurrentRow.Cells[13].Value);
+            txtEmail.Text = Convert.ToString(dgv.CurrentRow.Cells[14].Value);
+            txtCEP.Text = Convert.ToString(dgv.CurrentRow.Cells[15].Value);
+            txtLogradouro.Text = Convert.ToString(dgv.CurrentRow.Cells[16].Value);
+            txtNumero.Text = Convert.ToString(dgv.CurrentRow.Cells[17].Value);
+            txtComplemento.Text = Convert.ToString(dgv.CurrentRow.Cells[18].Value);
+            txtBairro.Text = Convert.ToString(dgv.CurrentRow.Cells[19].Value);
+            txtCidade.Text = Convert.ToString(dgv.CurrentRow.Cells[20].Value);
+            txtEstado.Text = Convert.ToString(dgv.CurrentRow.Cells[21].Value);
+            txtLimite.Text = Convert.ToString(dgv.CurrentRow.Cells[22].Value);
+            txtDisponivel.Text = Convert.ToString(dgv.CurrentRow.Cells[23].Value);
+            txtObservacao.Text = Convert.ToString(dgv.CurrentRow.Cells[24].Value);
+            MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[25].Value);
+            imgCamera.Image = Image.FromStream(ms);
+            txtRegistro.Text = Convert.ToString(dgv.CurrentRow.Cells[26].Value);
+
+            dgv.Visible = false;
+
+          
+            
+        }
+
         private void Pesquisar(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                CRUD.sql = "SELECT * FROM SOCIOS WHERE MATRICULA LIKE '" + txtMatricula.Text.Trim() + "'";
-
-                CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
-                DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
-                DataGridView dgv = dataGridView1;
-
-                dgv.MultiSelect = false;
-                dgv.AutoGenerateColumns = true;
-                dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dgv.DataSource = dt;
-                dgv.Columns["Foto"].Visible = false;
-                dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-
-                btnSalvar.Visible = false;
-                btnAtualizar.Visible = true;
-
-                txtMatricula.Text = Convert.ToString(dgv.CurrentRow.Cells[0].Value);
-                txtNome.Text = Convert.ToString(dgv.CurrentRow.Cells[1].Value);
-                txtRG.Text = Convert.ToString(dgv.CurrentRow.Cells[2].Value);
-                txtCPF.Text = Convert.ToString(dgv.CurrentRow.Cells[3].Value);
-                txtDataNascimento.Text = Convert.ToString(dgv.CurrentRow.Cells[4].Value);
-                cboxEstadoCivil.Text = Convert.ToString(dgv.CurrentRow.Cells[5].Value);
-                txtNacionalidade.Text = Convert.ToString(dgv.CurrentRow.Cells[6].Value);
-                txtDataCadastro.Text = Convert.ToString(dgv.CurrentRow.Cells[7].Value);
-                cboxEmpresa.Text = Convert.ToString(dgv.CurrentRow.Cells[8].Value);
-                txtFuncao.Text = Convert.ToString(dgv.CurrentRow.Cells[9].Value);
-                txtAdmissao.Text = Convert.ToString(dgv.CurrentRow.Cells[10].Value);
-                txtLocalTrabalho.Text = Convert.ToString(dgv.CurrentRow.Cells[11].Value);
-                txtTelefone.Text = Convert.ToString(dgv.CurrentRow.Cells[12].Value);
-                txtRecado.Text = Convert.ToString(dgv.CurrentRow.Cells[13].Value);
-                txtEmail.Text = Convert.ToString(dgv.CurrentRow.Cells[14].Value);
-                txtCEP.Text = Convert.ToString(dgv.CurrentRow.Cells[15].Value);
-                txtLogradouro.Text = Convert.ToString(dgv.CurrentRow.Cells[16].Value);
-                txtNumero.Text = Convert.ToString(dgv.CurrentRow.Cells[17].Value);
-                txtComplemento.Text = Convert.ToString(dgv.CurrentRow.Cells[18].Value);
-                txtBairro.Text = Convert.ToString(dgv.CurrentRow.Cells[19].Value);
-                txtCidade.Text = Convert.ToString(dgv.CurrentRow.Cells[20].Value);
-                txtEstado.Text = Convert.ToString(dgv.CurrentRow.Cells[21].Value);
-                txtLimite.Text = Convert.ToString(dgv.CurrentRow.Cells[22].Value);
-                txtDisponivel.Text = Convert.ToString(dgv.CurrentRow.Cells[23].Value);
-                txtObservacao.Text = Convert.ToString(dgv.CurrentRow.Cells[24].Value);
-                MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[25].Value);
-                imgCamera.Image = Image.FromStream(ms);
-                txtRegistro.Text = Convert.ToString(dgv.CurrentRow.Cells[26].Value);
+                pesquisa();
             }
-                
-            
+               
         }
 
         private void Imprimir(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void btnAtualizarDependente_Click(object sender, EventArgs e)
+        {
+            CRUD.sql = "UPDATE DEPENDENTES SET Nome = @nomeDependente, DataNascimento = @DataNascimentoDependente,GrauParantesco = @GrauParentesco WHERE MatReferencia = @matricula";
+
+            //"UPDATE DEPENDENTES SET Nome = @nomeDependente, DataNascimento = @DataNascimentoDependente, GrauParentesco = @GrauParentesco WHERE MatReferencia = @matricula";
+
+
+            Executar(CRUD.sql, "Update");
+
+            MessageBox.Show("Dados atualizados.", "Cadastro",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            ResetMe();
+            this.Close();
         }
     }
 }
