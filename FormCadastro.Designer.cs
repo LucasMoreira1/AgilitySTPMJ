@@ -316,7 +316,7 @@
             "FUNCIONARIO PUBLICO ESTADUAL",
             "FUNDAÇÃO CULTURAL DE JACAREI",
             "INSTITUTO DE PREVIDÊNCIA DO MUNICÍPIO DE JACAREÍ (IPMJ)",
-            "SIND.  DOS TRABS. PUBL. MUNIC.DE JACAREI",
+            "STPMJ",
             "APOSENTADO",
             "PENSIONISTA",
             "OUTROS(ESPECIFICAR NA OBSERVAÇÃO)"});
@@ -597,7 +597,7 @@
             this.groupBox2.Controls.Add(this.txtBairro);
             this.groupBox2.Controls.Add(this.txtNumero);
             this.groupBox2.Controls.Add(this.txtLogradouro);
-            this.groupBox2.Location = new System.Drawing.Point(12, 611);
+            this.groupBox2.Location = new System.Drawing.Point(12, 461);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(903, 177);
             this.groupBox2.TabIndex = 2;
@@ -607,7 +607,7 @@
             // txtCEP
             // 
             this.txtCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCEP.Location = new System.Drawing.Point(100, 19);
+            this.txtCEP.Location = new System.Drawing.Point(102, 16);
             this.txtCEP.Mask = "00,000-000";
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(89, 26);
@@ -927,7 +927,7 @@
             this.groupBox5.Controls.Add(this.label25);
             this.groupBox5.Controls.Add(this.label27);
             this.groupBox5.Controls.Add(this.label28);
-            this.groupBox5.Location = new System.Drawing.Point(12, 461);
+            this.groupBox5.Location = new System.Drawing.Point(12, 644);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(903, 144);
             this.groupBox5.TabIndex = 3;
