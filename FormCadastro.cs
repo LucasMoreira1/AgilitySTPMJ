@@ -82,9 +82,8 @@ namespace Programa_STPMJ
             
             byte[] img = ms.GetBuffer();
 
-
-
             
+
             CRUD.cmd.Parameters.AddWithValue("matricula", txtMatricula.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("nome", txtNome.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("rg", txtRG.Text.Trim());
@@ -97,7 +96,7 @@ namespace Programa_STPMJ
             //CRUD.cmd.Parameters.AddWithValue("data_cadastro", txtDataCadastro.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("secretaria", cboxEmpresa.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("funcao", txtFuncao.Text.Trim());
-            CRUD.cmd.Parameters.AddWithValue("admissao", Convert.ToDateTime(txtAdmissao.Text.Trim()));
+            CRUD.cmd.Parameters.AddWithValue("admissao", txtAdmissao.Text.Trim());
             //CRUD.cmd.Parameters.AddWithValue("admissao", txtAdmissao.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("local_trabalho", txtLocalTrabalho.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("telefone", txtTelefone.Text.Trim());
@@ -128,16 +127,15 @@ namespace Programa_STPMJ
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtMatricula.Text.Trim()) ||
-                    string.IsNullOrEmpty(txtNome.Text.Trim()) ||
-                    string.IsNullOrEmpty(txtDataNascimento.Text.Trim()) ||
-                    string.IsNullOrEmpty(txtAdmissao.Text.Trim()))
+            if (string.IsNullOrEmpty(txtMatricula.Text.Trim()) &&
+                    string.IsNullOrEmpty(txtNome.Text.Trim()) &&
+                    string.IsNullOrEmpty(txtDataNascimento.Text.Trim()))
             {
-                MessageBox.Show("Campos obrigatórios: Matricula, Nome, Data Nascimento, Data Admissão", "Dados Obrigatórios",
+                MessageBox.Show("Campos obrigatórios: Matricula, Nome, Data Nascimento", "Dados Obrigatórios",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            
+
 
             CRUD.sql = "INSERT INTO SOCIOS(matricula,nome,rg,cpf,datanascimento,estadocivil," +
                 "nacionalidade,datacadastro,secretaria,funcao,admissao,localtrabalho," +
@@ -255,6 +253,23 @@ namespace Programa_STPMJ
             }
             //cboxCamera.SelectedIndex = 0;
             videoCaptureDevice = new VideoCaptureDevice();
+
+            AlimentarComboBox();
+
+        }
+
+        public void AlimentarComboBox()
+        {
+            CRUD.sql = "SELECT * FROM SECRETARIAS";
+            CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
+
+            DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                cboxEmpresa.Items.Add(dr[0]).ToString();
+
+            }
         }
 
         private void btnIniciarCamera_Click(object sender, EventArgs e)

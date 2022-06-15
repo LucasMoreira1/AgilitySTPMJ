@@ -1,36 +1,25 @@
-﻿using System;
-using AForge.Video;
-using AForge.Video.DirectShow;
-using System.Drawing;
+﻿using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Programa_STPMJ
 {
     class Funcoes
     {
-        
-        public void CarregarCamera()
-        {
-            //filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            //foreach (FilterInfo filterInfo in filterInfoCollection)
-            //    formCadastro.cboxCamera.Items.Add(filterInfo.Name);
-            //formCadastro.cboxCamera.SelectedIndex = 0;
-            //videoCaptureDevice = new VideoCaptureDevice();
-        }
-        public void IniciarCamera()
-        {
 
-            //if (!CameraOn)
-            //{
-            //    videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[formCadastro.cboxCamera.SelectedIndex].MonikerString);
-            //    videoCaptureDevice.NewFrame += new NewFrameEventHandler(VideoCaptureDevice_NewFrame);
-            //    CameraOn = true;
-            //    videoCaptureDevice.Start();
-            //}
-        }
+        //public void AlimentarComboBox1()
+        //{
+        //    FormCadastro formCadastro = new FormCadastro();
 
-        public void VideoCaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
-        {
-            //imgCamera.Image = (Bitmap)eventArgs.Frame.Clone();
-        }
+        //    CRUD.sql = "SELECT * FROM SECRETARIAS";
+        //    CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
+
+        //    DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
+
+        //    foreach (DataRow dr in dt.Rows)
+        //    {
+        //        formCadastro.cboxEmpresa.Items.Add(dr[0]).ToString();
+                
+        //    }
+        //}
     }
 }

@@ -72,6 +72,8 @@ namespace Programa_STPMJ
             this.btnPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPesquisar.BackColor = System.Drawing.Color.LightGray;
             this.btnPesquisar.FlatAppearance.BorderSize = 0;
+            this.btnPesquisar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnPesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisar.IconChar = FontAwesome.Sharp.IconChar.Search;
@@ -95,6 +97,8 @@ namespace Programa_STPMJ
             this.btnMostrarTodos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMostrarTodos.BackColor = System.Drawing.Color.LightGray;
             this.btnMostrarTodos.FlatAppearance.BorderSize = 0;
+            this.btnMostrarTodos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnMostrarTodos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnMostrarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMostrarTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrarTodos.IconChar = FontAwesome.Sharp.IconChar.Search;
@@ -299,6 +303,8 @@ namespace Programa_STPMJ
             this.btnAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtualizar.BackColor = System.Drawing.Color.LightGray;
             this.btnAtualizar.FlatAppearance.BorderSize = 0;
+            this.btnAtualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnAtualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizar.IconChar = FontAwesome.Sharp.IconChar.Search;
@@ -322,6 +328,8 @@ namespace Programa_STPMJ
             this.btnDeletar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeletar.BackColor = System.Drawing.Color.LightGray;
             this.btnDeletar.FlatAppearance.BorderSize = 0;
+            this.btnDeletar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnDeletar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletar.IconChar = FontAwesome.Sharp.IconChar.Search;
