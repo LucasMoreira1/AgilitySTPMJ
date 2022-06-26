@@ -260,16 +260,16 @@ namespace Programa_STPMJ
 
         public void AlimentarComboBox()
         {
-            CRUD.sql = "SELECT * FROM SECRETARIAS";
-            CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
+            //CRUD.sql = "SELECT * FROM SECRETARIAS";
+            //CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
 
-            DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
+            //DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
 
-            foreach (DataRow dr in dt.Rows)
-            {
-                cboxEmpresa.Items.Add(dr[0]).ToString();
+            //foreach (DataRow dr in dt.Rows)
+            //{
+            //    cboxEmpresa.Items.Add(dr[0]).ToString();
 
-            }
+            //}
         }
 
         private void btnIniciarCamera_Click(object sender, EventArgs e)
@@ -501,7 +501,9 @@ namespace Programa_STPMJ
 
         private void Imprimir(object sender, EventArgs e)
         {
-
+            FormFichaCadastral formFichaCadastral = new FormFichaCadastral();
+            formFichaCadastral.Show();
+            
 
         }
 
