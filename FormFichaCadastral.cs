@@ -17,7 +17,7 @@ namespace Programa_STPMJ
         { 
             Socios dsSocios = GetData();
             ReportDataSource datasource = new ReportDataSource("Socios", dsSocios.Tables[0]);
-            
+
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(datasource);
             this.reportViewer1.RefreshReport();
