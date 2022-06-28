@@ -295,6 +295,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="reportCarteirinha.rdlc" />
     <EmbeddedResource Include="reportFichaCadastral.rdlc" />
     <None Include="packages.config" />
     <None Include="Programa STPMJ_TemporaryKey.pfx" />
