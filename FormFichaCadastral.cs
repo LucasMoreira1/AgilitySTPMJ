@@ -14,42 +14,51 @@ namespace Programa_STPMJ
         }
 
         private void FormFichaCadastral_Load(object sender, EventArgs e)
-        { 
-            Socios dsSocios = GetData();
-            ReportDataSource datasource = new ReportDataSource("Socios", dsSocios.Tables[0]);
+        {
+            //Socios dsSocios = GetData();
+            //ReportDataSource datasource = new ReportDataSource("Socios", dsSocios.Tables[0]);
 
+            //this.reportViewer1.LocalReport.DataSources.Clear();
+            //this.reportViewer1.LocalReport.DataSources.Add(datasource);
+            //this.reportViewer1.RefreshReport();
+
+            Socios dsCustomers = GetData();
+            ReportDataSource datasource = new ReportDataSource("Socios", dsCustomers.Tables[1]);
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(datasource);
             this.reportViewer1.RefreshReport();
         }
+        private static string getConnectionString()
+        {
+            string conString = "Server=108.167.132.199;Database=soluc963_STPMJ;Uid=soluc963_STPMJ;Pwd=R~X4ro$%K18b; ";
+            return conString;
+        }
+
+        
+
         private Socios GetData()
         {
-            CRUD.sql = "SELECT * FROM SOCIOS LIMIT 50";
-            
-            CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
-            DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
-            MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter();
-            
-            sqlDataAdapter.SelectCommand = CRUD.cmd;
-            Socios dsSocios = new Socios();
-            dsSocios.DataSetName = "SOCIOS";
-            dsSocios.CreateDataReader(dt);
-            //sqlDataAdapter.Fill(dsSocios, "SOCIOS");
-            return dsSocios;
-                
 
-            
-            //using (MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter())
-            //{
-            //    sqlDataAdapter.SelectCommand = CRUD.cmd;
-            //    using (Socios dsSocios = new Socios())
-            //    {
-            //        sqlDataAdapter.Fill(dsSocios, "SOCIOS");
-            //        return dsSocios;
-            //    }
 
-            //}
+            using (MySqlConnection con = new MySqlConnection(getConnectionString()))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM SOCIOS LIMIT 1"))
+                {
+                    using (MySqlDataAdapter sda = new MySqlDataAdapter())
+                    {
+                        cmd.Connection = con;
+                        sda.SelectCommand = cmd;
 
+                        using (Socios dsCustomers = new Socios())
+                        { 
+                            sda.Fill(dsCustomers);
+                            return dsCustomers;
+                        }
+                       
+                    }
+                }
+            }
         }
+
     }
 }
