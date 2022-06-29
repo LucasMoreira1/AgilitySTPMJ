@@ -8,6 +8,7 @@ namespace Programa_STPMJ
 {
     public partial class FormFichaCadastral : Form
     {
+        
         public FormFichaCadastral()
         {
             InitializeComponent();
@@ -42,7 +43,7 @@ namespace Programa_STPMJ
 
             using (MySqlConnection con = new MySqlConnection(getConnectionString()))
             {
-                using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM SOCIOS LIMIT 1"))
+                using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM SOCIOS WHERE MATRICULA LIKE '" + txtMatricula.Text.Trim() + "'"))
                 {
                     using (MySqlDataAdapter sda = new MySqlDataAdapter())
                     {

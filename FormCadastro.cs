@@ -502,6 +502,7 @@ namespace Programa_STPMJ
         private void Imprimir(object sender, EventArgs e)
         {
             FormFichaCadastral formFichaCadastral = new FormFichaCadastral();
+            formFichaCadastral.txtMatricula.Text = txtMatricula.Text;
             formFichaCadastral.Show();
             
 

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.txtMatricula = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -38,24 +39,35 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
+            this.reportViewer1.Size = new System.Drawing.Size(800, 665);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // txtMatricula
+            // 
+            this.txtMatricula.Location = new System.Drawing.Point(278, 192);
+            this.txtMatricula.Name = "txtMatricula";
+            this.txtMatricula.Size = new System.Drawing.Size(112, 20);
+            this.txtMatricula.TabIndex = 1;
+            this.txtMatricula.Visible = false;
             // 
             // FormFichaCadastral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 665);
+            this.Controls.Add(this.txtMatricula);
             this.Controls.Add(this.reportViewer1);
             this.Name = "FormFichaCadastral";
             this.Text = "FormFichaCadastral";
             this.Load += new System.EventHandler(this.FormFichaCadastral_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        public System.Windows.Forms.TextBox txtMatricula;
     }
 }
