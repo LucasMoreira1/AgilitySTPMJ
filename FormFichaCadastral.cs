@@ -23,10 +23,13 @@ namespace Programa_STPMJ
             //this.reportViewer1.LocalReport.DataSources.Add(datasource);
             //this.reportViewer1.RefreshReport();
 
-            Socios dsCustomers = GetData();
-            ReportDataSource datasource = new ReportDataSource("Socios", dsCustomers.Tables[1]);
+            Socios dsSocios = GetSocios();
+            Dependentes dsDependentes = GetDependentes();
+            ReportDataSource datasource1 = new ReportDataSource("Socios", dsSocios.Tables[1]);
+            ReportDataSource datasource2 = new ReportDataSource("Dependentes", dsDependentes.Tables[1]);
             this.reportViewer1.LocalReport.DataSources.Clear();
-            this.reportViewer1.LocalReport.DataSources.Add(datasource);
+            this.reportViewer1.LocalReport.DataSources.Add(datasource1);
+            this.reportViewer1.LocalReport.DataSources.Add(datasource2);
             this.reportViewer1.RefreshReport();
         }
         private static string getConnectionString()
@@ -37,7 +40,7 @@ namespace Programa_STPMJ
 
         
 
-        private Socios GetData()
+        private Socios GetSocios()
         {
 
 
@@ -50,12 +53,35 @@ namespace Programa_STPMJ
                         cmd.Connection = con;
                         sda.SelectCommand = cmd;
 
-                        using (Socios dsCustomers = new Socios())
+                        using (Socios dsSocios = new Socios())
                         { 
-                            sda.Fill(dsCustomers);
-                            return dsCustomers;
+                            sda.Fill(dsSocios);
+                            return dsSocios;
                         }
                        
+                    }
+                }
+            }
+        }
+        private Dependentes GetDependentes()
+        {
+
+
+            using (MySqlConnection con = new MySqlConnection(getConnectionString()))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM DEPENDENTES WHERE MatReferencia = " + txtMatricula.Text + ";"))
+                {
+                    using (MySqlDataAdapter sda = new MySqlDataAdapter())
+                    {
+                        cmd.Connection = con;
+                        sda.SelectCommand = cmd;
+
+                        using (Dependentes dsDependentes = new Dependentes())
+                        {
+                            sda.Fill(dsDependentes);
+                            return dsDependentes;
+                        }
+
                     }
                 }
             }
