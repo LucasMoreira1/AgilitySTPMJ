@@ -918,13 +918,13 @@
             this.groupBox5.Controls.Add(this.dataGridView1);
             this.groupBox5.Controls.Add(this.txtDataNascimentoDependente);
             this.groupBox5.Controls.Add(this.btnListaDependentes);
-            this.groupBox5.Controls.Add(this.btnAtualizarDependente);
             this.groupBox5.Controls.Add(this.btnAdcDependente);
             this.groupBox5.Controls.Add(this.txtGrauParentesco);
             this.groupBox5.Controls.Add(this.txtNomeDependente);
             this.groupBox5.Controls.Add(this.label25);
             this.groupBox5.Controls.Add(this.label27);
             this.groupBox5.Controls.Add(this.label28);
+            this.groupBox5.Controls.Add(this.btnAtualizarDependente);
             this.groupBox5.Location = new System.Drawing.Point(12, 644);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(903, 144);

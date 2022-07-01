@@ -30,6 +30,7 @@
         {
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.txtMatricula = new System.Windows.Forms.TextBox();
+            this.txtMatriculaDependente = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -50,11 +51,20 @@
             this.txtMatricula.TabIndex = 1;
             this.txtMatricula.Visible = false;
             // 
+            // txtMatriculaDependente
+            // 
+            this.txtMatriculaDependente.Location = new System.Drawing.Point(431, 192);
+            this.txtMatriculaDependente.Name = "txtMatriculaDependente";
+            this.txtMatriculaDependente.Size = new System.Drawing.Size(112, 20);
+            this.txtMatriculaDependente.TabIndex = 2;
+            this.txtMatriculaDependente.Visible = false;
+            // 
             // FormFichaCadastral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 665);
+            this.Controls.Add(this.txtMatriculaDependente);
             this.Controls.Add(this.txtMatricula);
             this.Controls.Add(this.reportViewer1);
             this.Name = "FormFichaCadastral";
@@ -69,5 +79,6 @@
 
         public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         public System.Windows.Forms.TextBox txtMatricula;
+        public System.Windows.Forms.TextBox txtMatriculaDependente;
     }
 }

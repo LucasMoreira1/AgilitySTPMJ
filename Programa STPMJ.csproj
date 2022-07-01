@@ -204,6 +204,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CRUD.cs" />
+    <Compile Include="Dependentes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dependentes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +302,17 @@
     </Compile>
     <EmbeddedResource Include="reportCarteirinha.rdlc" />
     <EmbeddedResource Include="reportFichaCadastral.rdlc" />
+    <None Include="Dependentes.xsc">
+      <DependentUpon>Dependentes.xsd</DependentUpon>
+    </None>
+    <None Include="Dependentes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dependentes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dependentes.xss">
+      <DependentUpon>Dependentes.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Programa STPMJ_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
