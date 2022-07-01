@@ -233,8 +233,8 @@ namespace Programa_STPMJ
             MessageBox.Show("Dados atualizados.", "Cadastro",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            ResetMe();
-            this.Close();
+            //ResetMe();
+            //this.Close();
 
             //FormPesquisa formPesquisa = new FormPesquisa();
             //formPesquisa.loadFiltro();
@@ -376,6 +376,8 @@ namespace Programa_STPMJ
 
         private void btnAdcDependente_Click(object sender, EventArgs e)
         {
+            btnSalvar.PerformClick();
+
             if (string.IsNullOrEmpty(txtMatricula.Text.Trim()) ||
                    string.IsNullOrEmpty(txtNome.Text.Trim()))
             {
@@ -523,6 +525,14 @@ namespace Programa_STPMJ
 
             ResetMe();
             this.Close();
+        }
+
+        private void btnImprimirCarteirinha_Click(object sender, EventArgs e)
+        {
+            FormCarteirinha formCarteirinha = new FormCarteirinha();
+            formCarteirinha.txtMatricula.Text = txtMatricula.Text;
+            formCarteirinha.Show();
+
         }
     }
 }

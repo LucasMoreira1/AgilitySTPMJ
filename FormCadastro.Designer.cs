@@ -68,7 +68,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtDisponivel = new System.Windows.Forms.NumericUpDown();
             this.txtCEP = new System.Windows.Forms.MaskedTextBox();
+            this.txtLimite = new System.Windows.Forms.NumericUpDown();
             this.btnBuscarCEP = new FontAwesome.Sharp.IconButton();
             this.label17 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -83,11 +85,6 @@
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.txtLogradouro = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtDisponivel = new System.Windows.Forms.NumericUpDown();
-            this.txtLimite = new System.Windows.Forms.NumericUpDown();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.btnSalvar = new FontAwesome.Sharp.IconButton();
             this.btnAtualizar = new FontAwesome.Sharp.IconButton();
             this.btnImagemEmBranco = new FontAwesome.Sharp.IconButton();
@@ -99,17 +96,17 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtDataNascimentoDependente = new System.Windows.Forms.MaskedTextBox();
             this.btnListaDependentes = new System.Windows.Forms.Button();
-            this.btnAtualizarDependente = new System.Windows.Forms.Button();
             this.btnAdcDependente = new System.Windows.Forms.Button();
             this.txtGrauParentesco = new System.Windows.Forms.TextBox();
             this.txtNomeDependente = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.btnAtualizarDependente = new System.Windows.Forms.Button();
+            this.btnImprimirCarteirinha = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCamera)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDisponivel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLimite)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -581,7 +578,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtDisponivel);
             this.groupBox2.Controls.Add(this.txtCEP);
+            this.groupBox2.Controls.Add(this.txtLimite);
             this.groupBox2.Controls.Add(this.btnBuscarCEP);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.label20);
@@ -603,6 +602,29 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Endereço";
             // 
+            // txtDisponivel
+            // 
+            this.txtDisponivel.DecimalPlaces = 2;
+            this.txtDisponivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisponivel.InterceptArrowKeys = false;
+            this.txtDisponivel.Location = new System.Drawing.Point(680, 131);
+            this.txtDisponivel.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.txtDisponivel.Minimum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            -2147483648});
+            this.txtDisponivel.Name = "txtDisponivel";
+            this.txtDisponivel.Size = new System.Drawing.Size(88, 26);
+            this.txtDisponivel.TabIndex = 2;
+            this.txtDisponivel.Tag = "";
+            this.txtDisponivel.ThousandsSeparator = true;
+            this.txtDisponivel.Visible = false;
+            // 
             // txtCEP
             // 
             this.txtCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -612,6 +634,24 @@
             this.txtCEP.Size = new System.Drawing.Size(89, 26);
             this.txtCEP.TabIndex = 1;
             this.txtCEP.Click += new System.EventHandler(this.IniciarEsquerda);
+            // 
+            // txtLimite
+            // 
+            this.txtLimite.DecimalPlaces = 2;
+            this.txtLimite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLimite.InterceptArrowKeys = false;
+            this.txtLimite.Location = new System.Drawing.Point(565, 131);
+            this.txtLimite.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.txtLimite.Name = "txtLimite";
+            this.txtLimite.Size = new System.Drawing.Size(88, 26);
+            this.txtLimite.TabIndex = 1;
+            this.txtLimite.Tag = "";
+            this.txtLimite.ThousandsSeparator = true;
+            this.txtLimite.Visible = false;
             // 
             // btnBuscarCEP
             // 
@@ -745,85 +785,13 @@
             this.txtLogradouro.Size = new System.Drawing.Size(333, 26);
             this.txtLogradouro.TabIndex = 3;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.txtDisponivel);
-            this.groupBox3.Controls.Add(this.txtLimite);
-            this.groupBox3.Controls.Add(this.label24);
-            this.groupBox3.Controls.Add(this.label26);
-            this.groupBox3.Location = new System.Drawing.Point(12, 794);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(206, 115);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Limites e Saldos";
-            // 
-            // txtDisponivel
-            // 
-            this.txtDisponivel.DecimalPlaces = 2;
-            this.txtDisponivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDisponivel.InterceptArrowKeys = false;
-            this.txtDisponivel.Location = new System.Drawing.Point(100, 52);
-            this.txtDisponivel.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.txtDisponivel.Minimum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            -2147483648});
-            this.txtDisponivel.Name = "txtDisponivel";
-            this.txtDisponivel.Size = new System.Drawing.Size(88, 26);
-            this.txtDisponivel.TabIndex = 2;
-            this.txtDisponivel.Tag = "";
-            this.txtDisponivel.ThousandsSeparator = true;
-            // 
-            // txtLimite
-            // 
-            this.txtLimite.DecimalPlaces = 2;
-            this.txtLimite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLimite.InterceptArrowKeys = false;
-            this.txtLimite.Location = new System.Drawing.Point(100, 20);
-            this.txtLimite.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.txtLimite.Name = "txtLimite";
-            this.txtLimite.Size = new System.Drawing.Size(88, 26);
-            this.txtLimite.TabIndex = 1;
-            this.txtLimite.Tag = "";
-            this.txtLimite.ThousandsSeparator = true;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(6, 22);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(51, 20);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Limite";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(6, 52);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(81, 20);
-            this.label26.TabIndex = 0;
-            this.label26.Text = "Disponível";
-            // 
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSalvar.IconColor = System.Drawing.Color.Black;
             this.btnSalvar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSalvar.Location = new System.Drawing.Point(515, 74);
+            this.btnSalvar.Location = new System.Drawing.Point(721, 74);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(85, 35);
             this.btnSalvar.TabIndex = 0;
@@ -837,7 +805,7 @@
             this.btnAtualizar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAtualizar.IconColor = System.Drawing.Color.Black;
             this.btnAtualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAtualizar.Location = new System.Drawing.Point(515, 74);
+            this.btnAtualizar.Location = new System.Drawing.Point(721, 74);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(85, 35);
             this.btnAtualizar.TabIndex = 0;
@@ -852,12 +820,13 @@
             this.btnImagemEmBranco.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnImagemEmBranco.IconColor = System.Drawing.Color.Black;
             this.btnImagemEmBranco.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnImagemEmBranco.Location = new System.Drawing.Point(606, 33);
+            this.btnImagemEmBranco.Location = new System.Drawing.Point(812, 33);
             this.btnImagemEmBranco.Name = "btnImagemEmBranco";
             this.btnImagemEmBranco.Size = new System.Drawing.Size(85, 35);
             this.btnImagemEmBranco.TabIndex = 0;
             this.btnImagemEmBranco.Text = "ImagemEmBranco";
             this.btnImagemEmBranco.UseVisualStyleBackColor = true;
+            this.btnImagemEmBranco.Visible = false;
             this.btnImagemEmBranco.Click += new System.EventHandler(this.btnImagemEmBranco_Click);
             // 
             // txtObservacao
@@ -876,7 +845,7 @@
             this.btnLimpar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnLimpar.IconColor = System.Drawing.Color.Black;
             this.btnLimpar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLimpar.Location = new System.Drawing.Point(606, 74);
+            this.btnLimpar.Location = new System.Drawing.Point(812, 74);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(85, 35);
             this.btnLimpar.TabIndex = 0;
@@ -889,12 +858,13 @@
             this.groupBox4.Controls.Add(this.btnLimpar);
             this.groupBox4.Controls.Add(this.txtObservacao);
             this.groupBox4.Controls.Add(this.btnImagemEmBranco);
+            this.groupBox4.Controls.Add(this.btnImprimirCarteirinha);
             this.groupBox4.Controls.Add(this.btnImprimirFicha);
-            this.groupBox4.Controls.Add(this.btnSalvar);
             this.groupBox4.Controls.Add(this.btnAtualizar);
-            this.groupBox4.Location = new System.Drawing.Point(218, 794);
+            this.groupBox4.Controls.Add(this.btnSalvar);
+            this.groupBox4.Location = new System.Drawing.Point(12, 794);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(697, 115);
+            this.groupBox4.Size = new System.Drawing.Size(903, 115);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Observação";
@@ -902,14 +872,17 @@
             // btnImprimirFicha
             // 
             this.btnImprimirFicha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimirFicha.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnImprimirFicha.IconColor = System.Drawing.Color.Black;
+            this.btnImprimirFicha.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.btnImprimirFicha.IconColor = System.Drawing.Color.Red;
             this.btnImprimirFicha.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnImprimirFicha.Location = new System.Drawing.Point(515, 33);
+            this.btnImprimirFicha.IconSize = 30;
+            this.btnImprimirFicha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImprimirFicha.Location = new System.Drawing.Point(445, 60);
             this.btnImprimirFicha.Name = "btnImprimirFicha";
-            this.btnImprimirFicha.Size = new System.Drawing.Size(85, 35);
+            this.btnImprimirFicha.Size = new System.Drawing.Size(126, 49);
             this.btnImprimirFicha.TabIndex = 0;
-            this.btnImprimirFicha.Text = "Imprimir";
+            this.btnImprimirFicha.Text = "Ficha Cadastral";
+            this.btnImprimirFicha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnImprimirFicha.UseVisualStyleBackColor = true;
             this.btnImprimirFicha.Click += new System.EventHandler(this.Imprimir);
             // 
@@ -962,18 +935,6 @@
             this.btnListaDependentes.Text = "Lista";
             this.btnListaDependentes.UseVisualStyleBackColor = true;
             this.btnListaDependentes.Click += new System.EventHandler(this.btnListaDependentes_Click);
-            // 
-            // btnAtualizarDependente
-            // 
-            this.btnAtualizarDependente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizarDependente.Location = new System.Drawing.Point(590, 25);
-            this.btnAtualizarDependente.Name = "btnAtualizarDependente";
-            this.btnAtualizarDependente.Size = new System.Drawing.Size(103, 62);
-            this.btnAtualizarDependente.TabIndex = 0;
-            this.btnAtualizarDependente.Text = "Atualizar dependente";
-            this.btnAtualizarDependente.UseVisualStyleBackColor = true;
-            this.btnAtualizarDependente.Visible = false;
-            this.btnAtualizarDependente.Click += new System.EventHandler(this.btnAtualizarDependente_Click);
             // 
             // btnAdcDependente
             // 
@@ -1032,6 +993,35 @@
             this.label28.TabIndex = 0;
             this.label28.Text = "Data Nascimento";
             // 
+            // btnAtualizarDependente
+            // 
+            this.btnAtualizarDependente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizarDependente.Location = new System.Drawing.Point(590, 25);
+            this.btnAtualizarDependente.Name = "btnAtualizarDependente";
+            this.btnAtualizarDependente.Size = new System.Drawing.Size(103, 62);
+            this.btnAtualizarDependente.TabIndex = 0;
+            this.btnAtualizarDependente.Text = "Atualizar dependente";
+            this.btnAtualizarDependente.UseVisualStyleBackColor = true;
+            this.btnAtualizarDependente.Visible = false;
+            this.btnAtualizarDependente.Click += new System.EventHandler(this.btnAtualizarDependente_Click);
+            // 
+            // btnImprimirCarteirinha
+            // 
+            this.btnImprimirCarteirinha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimirCarteirinha.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.btnImprimirCarteirinha.IconColor = System.Drawing.Color.Red;
+            this.btnImprimirCarteirinha.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnImprimirCarteirinha.IconSize = 30;
+            this.btnImprimirCarteirinha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImprimirCarteirinha.Location = new System.Drawing.Point(577, 60);
+            this.btnImprimirCarteirinha.Name = "btnImprimirCarteirinha";
+            this.btnImprimirCarteirinha.Size = new System.Drawing.Size(126, 49);
+            this.btnImprimirCarteirinha.TabIndex = 0;
+            this.btnImprimirCarteirinha.Text = "Carteirinha";
+            this.btnImprimirCarteirinha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnImprimirCarteirinha.UseVisualStyleBackColor = true;
+            this.btnImprimirCarteirinha.Click += new System.EventHandler(this.btnImprimirCarteirinha_Click);
+            // 
             // FormCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1041,7 +1031,6 @@
             this.ClientSize = new System.Drawing.Size(933, 928);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormCadastro";
@@ -1055,8 +1044,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgCamera)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDisponivel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLimite)).EndInit();
             this.groupBox4.ResumeLayout(false);
@@ -1096,9 +1083,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label26;
         public System.Windows.Forms.ComboBox cboxEmpresa;
         public System.Windows.Forms.ComboBox cboxEstadoCivil;
         public System.Windows.Forms.TextBox txtNome;
@@ -1149,5 +1133,6 @@
         public FontAwesome.Sharp.IconButton btnImprimirFicha;
         public System.Windows.Forms.Button btnAdcDependente;
         public System.Windows.Forms.Button btnAtualizarDependente;
+        public FontAwesome.Sharp.IconButton btnImprimirCarteirinha;
     }
 }
