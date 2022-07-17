@@ -32,7 +32,6 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox9">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -62,7 +61,6 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox10">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -548,7 +546,6 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox33">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -578,7 +575,6 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox34">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -613,7 +609,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!DataNascimento.Value, "Socios")</Value>
+                <Value>=Format(CDate(First(Fields!DataNascimento.Value, "Socios")),"dd/MM/yyyy")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -639,7 +635,6 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox36">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -656,7 +651,7 @@
         <Top>8.92869cm</Top>
         <Left>10.32418cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>4.36972cm</Width>
         <ZIndex>22</ZIndex>
         <Style>
           <Border>
@@ -669,7 +664,6 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox37">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -699,7 +693,6 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox38">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -729,7 +722,6 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox39">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -744,7 +736,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox32</rd:DefaultName>
         <Top>8.92869cm</Top>
-        <Left>12.82418cm</Left>
+        <Left>14.72918cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>25</ZIndex>
@@ -759,7 +751,6 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox40">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -789,7 +780,6 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox41">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -806,7 +796,7 @@
         <Top>7.70725cm</Top>
         <Left>5.04532cm</Left>
         <Height>0.6cm</Height>
-        <Width>7.01572cm</Width>
+        <Width>12.55002cm</Width>
         <ZIndex>27</ZIndex>
         <Style>
           <Border>
@@ -819,7 +809,6 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox42">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -853,7 +842,6 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox43">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -898,9 +886,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox15</rd:DefaultName>
         <Top>18.58683cm</Top>
-        <Left>11.93539cm</Left>
+        <Left>11.64435cm</Left>
         <Height>0.79375cm</Height>
-        <Width>1.35057cm</Width>
+        <Width>1.64161cm</Width>
         <ZIndex>30</ZIndex>
         <Style>
           <Border>
@@ -1118,7 +1106,6 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox46">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -1196,7 +1183,7 @@
         <Top>7.10725cm</Top>
         <Left>5.04532cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.77886cm</Width>
+        <Width>5.30653cm</Width>
         <ZIndex>40</ZIndex>
         <Style>
           <Border>
@@ -1239,7 +1226,6 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox48">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -1299,7 +1285,6 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox49">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -1359,7 +1344,6 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox51">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -1448,7 +1432,6 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox54">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
