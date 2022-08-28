@@ -16,7 +16,7 @@ namespace Programa_STPMJ
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formPaginaInicial());
+            Application.Run(new FormLogin());
 
         }
     }

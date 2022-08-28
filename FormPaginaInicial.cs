@@ -53,7 +53,9 @@ namespace Programa_STPMJ
 
         private void btnCadastroCliente_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormCadastro());
+            //OpenChildForm(new FormCadastro());
+            FormCadastro formCadastro = new FormCadastro();
+            formCadastro.Show();
             //..
             //Codigos
             //..
@@ -62,7 +64,9 @@ namespace Programa_STPMJ
 
         private void btnCadastroEmpresa_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormCadastroConvenio());
+            //OpenChildForm(new FormCadastroConvenio());
+            FormCadastroConvenio formCadastroConvenio = new FormCadastroConvenio();
+            formCadastroConvenio.Show();
             //..
             //Codigos
             //..
@@ -77,7 +81,9 @@ namespace Programa_STPMJ
 
         private void btnPesquisarCliente_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormPesquisa());
+            //OpenChildForm(new FormPesquisa());
+            FormPesquisa formPesquisa = new FormPesquisa();
+            formPesquisa.Show();
             //..
             //Codigos
             //..
@@ -86,7 +92,9 @@ namespace Programa_STPMJ
 
         private void btnPesquisarEmpresa_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormPesquisaConvenio());
+            //OpenChildForm(new FormPesquisaConvenio());
+            FormPesquisaConvenio formPesquisaConvenio = new FormPesquisaConvenio();
+            formPesquisaConvenio.Show();
             //..
             //Codigos
             //..
@@ -96,6 +104,7 @@ namespace Programa_STPMJ
         #region Relatorios
         private void btnRelatorios_Click(object sender, EventArgs e)
         {
+            
             //..
             //Codigos
             //..

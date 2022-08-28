@@ -91,6 +91,7 @@
             this.txtObservacao = new System.Windows.Forms.TextBox();
             this.btnLimpar = new FontAwesome.Sharp.IconButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnImprimirCarteirinha = new FontAwesome.Sharp.IconButton();
             this.btnImprimirFicha = new FontAwesome.Sharp.IconButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -103,7 +104,6 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.btnAtualizarDependente = new System.Windows.Forms.Button();
-            this.btnImprimirCarteirinha = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCamera)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -869,6 +869,23 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Observação";
             // 
+            // btnImprimirCarteirinha
+            // 
+            this.btnImprimirCarteirinha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimirCarteirinha.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.btnImprimirCarteirinha.IconColor = System.Drawing.Color.Red;
+            this.btnImprimirCarteirinha.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnImprimirCarteirinha.IconSize = 30;
+            this.btnImprimirCarteirinha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImprimirCarteirinha.Location = new System.Drawing.Point(577, 60);
+            this.btnImprimirCarteirinha.Name = "btnImprimirCarteirinha";
+            this.btnImprimirCarteirinha.Size = new System.Drawing.Size(126, 49);
+            this.btnImprimirCarteirinha.TabIndex = 0;
+            this.btnImprimirCarteirinha.Text = "Carteirinha";
+            this.btnImprimirCarteirinha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnImprimirCarteirinha.UseVisualStyleBackColor = true;
+            this.btnImprimirCarteirinha.Click += new System.EventHandler(this.btnImprimirCarteirinha_Click);
+            // 
             // btnImprimirFicha
             // 
             this.btnImprimirFicha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1005,23 +1022,6 @@
             this.btnAtualizarDependente.Visible = false;
             this.btnAtualizarDependente.Click += new System.EventHandler(this.btnAtualizarDependente_Click);
             // 
-            // btnImprimirCarteirinha
-            // 
-            this.btnImprimirCarteirinha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimirCarteirinha.IconChar = FontAwesome.Sharp.IconChar.Print;
-            this.btnImprimirCarteirinha.IconColor = System.Drawing.Color.Red;
-            this.btnImprimirCarteirinha.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnImprimirCarteirinha.IconSize = 30;
-            this.btnImprimirCarteirinha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimirCarteirinha.Location = new System.Drawing.Point(577, 60);
-            this.btnImprimirCarteirinha.Name = "btnImprimirCarteirinha";
-            this.btnImprimirCarteirinha.Size = new System.Drawing.Size(126, 49);
-            this.btnImprimirCarteirinha.TabIndex = 0;
-            this.btnImprimirCarteirinha.Text = "Carteirinha";
-            this.btnImprimirCarteirinha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnImprimirCarteirinha.UseVisualStyleBackColor = true;
-            this.btnImprimirCarteirinha.Click += new System.EventHandler(this.btnImprimirCarteirinha_Click);
-            // 
             // FormCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1036,7 +1036,6 @@
             this.Name = "FormCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormCadastro_FormClosing);
             this.Load += new System.EventHandler(this.FormCadastro_Load);
             this.groupBox1.ResumeLayout(false);
