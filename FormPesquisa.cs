@@ -39,7 +39,7 @@ namespace Programa_STPMJ
         public void loadFiltro()
         {
             CRUD.sql = "SELECT * FROM SOCIOS WHERE " + cboxFiltro2.Text.Trim() + " LIKE '%" + txtFiltro2.Text.Trim() + "%' AND " +
-              "" + cboxFiltro3.Text.Trim() + " LIKE '%" + txtFiltro3.Text.Trim() + "%';";
+              "" + cboxFiltro3.Text.Trim() + " LIKE '%" + txtFiltro3.Text.Trim() + "%' ORDER BY NOME;";
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
@@ -57,7 +57,7 @@ namespace Programa_STPMJ
 
         private void loadData()
         {
-            CRUD.sql = "SELECT * FROM SOCIOS";
+            CRUD.sql = "SELECT * FROM SOCIOS ORDER BY NOME";
             //CRUD.sql = "SELECT * FROM SOCIOS WHERE 1";
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
@@ -222,7 +222,7 @@ namespace Programa_STPMJ
 
         private void filtro1()
         {
-            CRUD.sql = "SELECT * FROM SOCIOS WHERE " + txtFiltroMatricula.Text.Trim() + " LIKE '" + txtFiltro1.Text.Trim() + "'";
+            CRUD.sql = "SELECT * FROM SOCIOS WHERE " + txtFiltroMatricula.Text.Trim() + " LIKE '" + txtFiltro1.Text.Trim() + "' ORDER BY NOME";
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
@@ -274,7 +274,7 @@ namespace Programa_STPMJ
 
         private void btnFiltroAniversario_Click(object sender, EventArgs e)
         {
-            CRUD.sql = "SELECT * FROM SOCIOS WHERE MONTH(DATANASCIMENTO)= " + txtMesAniversario.Text + "";
+            CRUD.sql = "SELECT * FROM SOCIOS WHERE MONTH(DATANASCIMENTO)= " + txtMesAniversario.Text + " ORDER BY NOME";
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
@@ -316,7 +316,7 @@ namespace Programa_STPMJ
             var data1 = txtData1Convert.Text;
             var data2 = txtData2Convert.Text;
 
-            CRUD.sql = "SELECT * FROM `SOCIOS` WHERE `DataCadastro` BETWEEN '" + data1 + "' AND '" + data2 + "' ;";
+            CRUD.sql = "SELECT * FROM `SOCIOS` WHERE `DataCadastro` BETWEEN '" + data1 + "' AND '" + data2 + "' ORDER BY NOME;";
 
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastro));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnEncerrarCamera = new System.Windows.Forms.Button();
             this.btnImportarFoto = new FontAwesome.Sharp.IconButton();
@@ -1032,9 +1033,11 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormCadastro_FormClosing);
             this.Load += new System.EventHandler(this.FormCadastro_Load);
             this.groupBox1.ResumeLayout(false);
