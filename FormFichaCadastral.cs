@@ -1,14 +1,13 @@
-﻿using System;
-using System.Windows.Forms;
-using System.Data;
+﻿using Microsoft.Reporting.WinForms;
 using MySql.Data.MySqlClient;
-using Microsoft.Reporting.WinForms;
+using System;
+using System.Windows.Forms;
 
 namespace Programa_STPMJ
 {
     public partial class FormFichaCadastral : Form
     {
-        
+
         public FormFichaCadastral()
         {
             InitializeComponent();
@@ -38,7 +37,7 @@ namespace Programa_STPMJ
             return conString;
         }
 
-        
+
 
         private Socios GetSocios()
         {
@@ -54,11 +53,11 @@ namespace Programa_STPMJ
                         sda.SelectCommand = cmd;
 
                         using (Socios dsSocios = new Socios())
-                        { 
+                        {
                             sda.Fill(dsSocios);
                             return dsSocios;
                         }
-                       
+
                     }
                 }
             }

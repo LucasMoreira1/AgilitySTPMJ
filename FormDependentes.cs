@@ -1,7 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 
 namespace Programa_STPMJ
@@ -84,12 +84,12 @@ namespace Programa_STPMJ
             formcadastro.Show();
 
             formcadastro.txtMatricula.Text = txtMatReferencia.Text.Trim();
-            
+
             formcadastro.txtNomeDependente.Text = Convert.ToString(dgv.CurrentRow.Cells[1].Value);
             formcadastro.txtGrauParentesco.Text = Convert.ToString(dgv.CurrentRow.Cells[3].Value);
             formcadastro.txtDataNascimentoDependente.Text = Convert.ToString(dgv.CurrentRow.Cells[2].Value);
             formcadastro.pesquisa();
-            
+
 
 
         }

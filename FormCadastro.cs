@@ -1,25 +1,25 @@
-﻿using System;
-using System.Data;
-using System.Windows.Forms;
+﻿using AForge.Imaging.Filters;
 using AForge.Video;
 using AForge.Video.DirectShow;
-using AForge.Imaging.Filters;
-using System.Drawing;
 using MySql.Data.MySqlClient;
+using System;
+using System.Data;
+using System.Drawing;
 using System.IO;
+using System.Windows.Forms;
 
 namespace Programa_STPMJ
 {
     public partial class FormCadastro : Form
     {
-        
+
         public Boolean CameraOn = false;
         public string localizacaoFoto;
         public FormCadastro()
         {
             InitializeComponent();
             ResetMe();
-            
+
 
         }
         FilterInfoCollection filterInfoCollection;
@@ -60,7 +60,7 @@ namespace Programa_STPMJ
 
         private void Executar(string mySQL, string param)
         {
-            CRUD.cmd = new MySqlCommand(mySQL,CRUD.con);
+            CRUD.cmd = new MySqlCommand(mySQL, CRUD.con);
             AddParametros(param);
             CRUD.PerformCRUD(CRUD.cmd);
         }
@@ -78,11 +78,11 @@ namespace Programa_STPMJ
             {
                 imgCamera.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             }
-            
-            
+
+
             byte[] img = ms.GetBuffer();
 
-            
+
 
             CRUD.cmd.Parameters.AddWithValue("matricula", txtMatricula.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("nome", txtNome.Text.Trim());
@@ -117,7 +117,7 @@ namespace Programa_STPMJ
             CRUD.cmd.Parameters.AddWithValue("nomeDependente", txtNomeDependente.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("DataNascimentoDependente", txtDataNascimentoDependente.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("GrauParentesco", txtGrauParentesco.Text.Trim());
-           
+
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
@@ -153,7 +153,7 @@ namespace Programa_STPMJ
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
-            
+
 
             DataGridView dgv = dataGridView1;
             dgv.Visible = true;
@@ -169,11 +169,11 @@ namespace Programa_STPMJ
             dgv.Visible = false;
 
             MessageBox.Show("Sócio registrado. Registro número: " + NumeroRegistro + ".", "Cadastro",
-                MessageBoxButtons.OK, MessageBoxIcon.Information) ;
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            
 
-            
+
+
             //loadData("");
             ResetMe();
             pesquisa();
@@ -184,7 +184,7 @@ namespace Programa_STPMJ
             try
             {
                 DataSet ds = new DataSet();
-                string xml = "http://cep.republicavirtual.com.br/web_cep.php?cep=@cep&formato=xml".Replace("@cep",txtCEP.Text);
+                string xml = "http://cep.republicavirtual.com.br/web_cep.php?cep=@cep&formato=xml".Replace("@cep", txtCEP.Text);
 
                 ds.ReadXml(xml);
 
@@ -192,7 +192,8 @@ namespace Programa_STPMJ
                 txtBairro.Text = ds.Tables[0].Rows[0]["bairro"].ToString();
                 txtCidade.Text = ds.Tables[0].Rows[0]["cidade"].ToString();
                 txtEstado.Text = ds.Tables[0].Rows[0]["uf"].ToString();
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Erro ao buscar CEP");
             }
@@ -206,9 +207,9 @@ namespace Programa_STPMJ
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
-            
 
-            if (string.IsNullOrEmpty(txtMatricula.Text.Trim()) || 
+
+            if (string.IsNullOrEmpty(txtMatricula.Text.Trim()) ||
                     string.IsNullOrEmpty(txtNome.Text.Trim()) ||
                     string.IsNullOrEmpty(txtDataNascimento.Text.Trim()) ||
                     string.IsNullOrEmpty(txtAdmissao.Text.Trim()))
@@ -238,7 +239,7 @@ namespace Programa_STPMJ
 
             //FormPesquisa formPesquisa = new FormPesquisa();
             //formPesquisa.loadFiltro();
-            
+
         }
 
         private void FormCadastro_Load(object sender, EventArgs e)
@@ -248,7 +249,7 @@ namespace Programa_STPMJ
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo filterInfo in filterInfoCollection)
                 cboxCamera.Items.Add(filterInfo.Name);
-            if (cboxCamera.Items.Count >= 1) 
+            if (cboxCamera.Items.Count >= 1)
             {
                 cboxCamera.SelectedIndex = 0;
             }
@@ -306,7 +307,7 @@ namespace Programa_STPMJ
 
             ///add these two lines to mirror the image
             var filter = new Mirror(false, true);
-            
+
             filter.ApplyInPlace(bitmap);
 
             ///
@@ -419,12 +420,12 @@ namespace Programa_STPMJ
             formDependentes.txtMatReferencia.Text = txtMatricula.Text;
             formDependentes.txtNomeSocio.Text = txtNome.Text;
             formDependentes.Show();
-            
+
         }
 
         private void IniciarEsquerda(object sender, EventArgs e)
         {
-            
+
             txtRG.SelectionStart = 0;
             txtCPF.SelectionStart = 0;
             txtDataNascimento.SelectionStart = 0;
@@ -433,7 +434,7 @@ namespace Programa_STPMJ
             txtRecado.SelectionStart = 0;
 
             txtDataNascimentoDependente.SelectionStart = 0;
-            
+
             txtCEP.SelectionStart = 0;
 
         }
@@ -489,8 +490,8 @@ namespace Programa_STPMJ
 
             dgv.Visible = false;
 
-          
-            
+
+
         }
 
         private void Pesquisar(object sender, KeyEventArgs e)
@@ -499,7 +500,7 @@ namespace Programa_STPMJ
             {
                 pesquisa();
             }
-               
+
         }
 
         private void Imprimir(object sender, EventArgs e)
@@ -507,7 +508,7 @@ namespace Programa_STPMJ
             FormFichaCadastral formFichaCadastral = new FormFichaCadastral();
             formFichaCadastral.txtMatricula.Text = txtMatricula.Text;
             formFichaCadastral.Show();
-            
+
 
         }
 

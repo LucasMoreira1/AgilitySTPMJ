@@ -230,6 +230,12 @@
     <Compile Include="FormCarteirinha.Designer.cs">
       <DependentUpon>FormCarteirinha.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChequinho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChequinho.Designer.cs">
+      <DependentUpon>FormChequinho.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDependentes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +293,9 @@
     <EmbeddedResource Include="FormCarteirinha.resx">
       <DependentUpon>FormCarteirinha.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormChequinho.resx">
+      <DependentUpon>FormChequinho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDependentes.resx">
       <DependentUpon>FormDependentes.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +325,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="reportCarteirinha.rdlc" />
+    <EmbeddedResource Include="reportChequinho.rdlc" />
     <EmbeddedResource Include="reportFichaCadastral.rdlc" />
     <None Include="Dependentes.xsc">
       <DependentUpon>Dependentes.xsd</DependentUpon>

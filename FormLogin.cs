@@ -1,7 +1,7 @@
-﻿using System;
-using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Programa_STPMJ
 {
@@ -45,7 +45,6 @@ namespace Programa_STPMJ
             {
                 this.Hide();
                 formPaginaInicial FormPaginaInicial = new formPaginaInicial();
-
                 FormPaginaInicial.Show();
             }
         }

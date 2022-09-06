@@ -1,9 +1,11 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using System.IO;
 using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
+
+
 
 namespace Programa_STPMJ
 {
@@ -17,6 +19,7 @@ namespace Programa_STPMJ
         {
             InitializeComponent();
         }
+
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
@@ -49,7 +52,7 @@ namespace Programa_STPMJ
             dgv.DataSource = dt;
             dgv.Columns["Foto"].Visible = false;
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-            
+
         }
 
         private void loadData()
@@ -187,7 +190,7 @@ namespace Programa_STPMJ
             }
             int registroSelecionado = Convert.ToInt32(txtRegistroSelecionado.Text);
 
-            if(MessageBox.Show("Tem certeza que deseja deletar os dados selecionados?","Deletar Dados",
+            if (MessageBox.Show("Tem certeza que deseja deletar os dados selecionados?", "Deletar Dados",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 CRUD.sql = "DELETE FROM SOCIOS WHERE RegistroSindical = " + registroSelecionado + "";
@@ -208,7 +211,7 @@ namespace Programa_STPMJ
         public void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                btnPesquisar_Click(sender,e);
+                btnPesquisar_Click(sender, e);
         }
 
         private void filtro1_KeyDown(object sender, KeyEventArgs e)
@@ -423,10 +426,12 @@ namespace Programa_STPMJ
                     worksheet.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
                 }
             }
+            MessageBox.Show("Exportação realizada.", "Exportação",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
             // save the application  
             //workbook.SaveAs("c:\\output.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
             // Exit from the application  
-            app.Quit();
+            //app.Quit();
         }
     }
 }

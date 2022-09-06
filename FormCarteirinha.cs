@@ -1,8 +1,7 @@
-﻿using System;
-using System.Windows.Forms;
-using System.Data;
+﻿using Microsoft.Reporting.WinForms;
 using MySql.Data.MySqlClient;
-using Microsoft.Reporting.WinForms;
+using System;
+using System.Windows.Forms;
 
 namespace Programa_STPMJ
 {

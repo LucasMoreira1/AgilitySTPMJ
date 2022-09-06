@@ -1,6 +1,6 @@
-﻿using System.Data;
+﻿using MySql.Data.MySqlClient;
+using System.Data;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Programa_STPMJ
 {
@@ -13,7 +13,7 @@ namespace Programa_STPMJ
         }
 
         public static MySqlConnection con = new MySqlConnection(getConnectionString());
-        public static MySqlCommand cmd = default (MySqlCommand);
+        public static MySqlCommand cmd = default(MySqlCommand);
         public static string sql = string.Empty;
 
         public static DataTable PerformCRUD(MySqlCommand com)
@@ -32,8 +32,8 @@ namespace Programa_STPMJ
             {
                 MessageBox.Show("Ocorreu um erro: " + ex.Message,
                     "Operação CRUD Falhou : Contate o ADM",
-                    MessageBoxButtons.OK,MessageBoxIcon.Error);
-                dt=null;
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dt = null;
             }
             return dt;
         }

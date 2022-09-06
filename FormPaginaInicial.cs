@@ -6,7 +6,7 @@ namespace Programa_STPMJ
 
     public partial class formPaginaInicial : Form
     {
-        
+
         public formPaginaInicial()
         {
             InitializeComponent();
@@ -15,7 +15,7 @@ namespace Programa_STPMJ
             formCadastro.AlimentarComboBox();
 
         }
-        
+
         private void CustomizeDesign()
         {
             panelCadastros.Visible = false;
@@ -104,13 +104,13 @@ namespace Programa_STPMJ
         #region Relatorios
         private void btnRelatorios_Click(object sender, EventArgs e)
         {
-            
+
             //..
             //Codigos
             //..
             EsconderSubmenu();
         }
-#endregion
+        #endregion
         #region Documentos
         private void btnDocumentos_Click(object sender, EventArgs e)
         {
@@ -127,12 +127,14 @@ namespace Programa_STPMJ
 
         private void btnCheques_Click(object sender, EventArgs e)
         {
+            FormChequinho formChequinho = new FormChequinho();
+            formChequinho.Show();
             //..
             //Codigos
             //..
             EsconderSubmenu();
         }
-#endregion
+        #endregion
         #region Ajuda
         private void btnAjuda_Click(object sender, EventArgs e)
         {
