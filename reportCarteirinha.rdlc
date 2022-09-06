@@ -245,8 +245,8 @@
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>0.26364cm</Top>
-        <Left>9.07203cm</Left>
+        <Top>1.21614cm</Top>
+        <Left>10.02453cm</Left>
         <Height>6.5727cm</Height>
         <Width>8.91646cm</Width>
         <Style>
@@ -730,7 +730,6 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox18</rd:DefaultName>
-            <Top>0cm</Top>
             <Left>8.27263cm</Left>
             <Height>6.5727cm</Height>
             <Width>0.32632cm</Width>
@@ -766,8 +765,8 @@
           </Image>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>0.26364cm</Top>
-        <Left>0.22614cm</Left>
+        <Top>1.21614cm</Top>
+        <Left>1.17864cm</Left>
         <Height>6.5727cm</Height>
         <Width>8.59896cm</Width>
         <ZIndex>1</ZIndex>
@@ -778,7 +777,7 @@
         </Style>
       </Rectangle>
     </ReportItems>
-    <Height>7.49556cm</Height>
+    <Height>8.47452cm</Height>
     <Style>
       <Border>
         <Style>None</Style>

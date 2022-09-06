@@ -433,5 +433,10 @@ namespace Programa_STPMJ
             // Exit from the application  
             //app.Quit();
         }
+
+        private void btnEtiquetas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

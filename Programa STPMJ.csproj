@@ -326,6 +326,7 @@
     </Compile>
     <EmbeddedResource Include="reportCarteirinha.rdlc" />
     <EmbeddedResource Include="reportChequinho.rdlc" />
+    <EmbeddedResource Include="reportEtiquetas.rdlc" />
     <EmbeddedResource Include="reportFichaCadastral.rdlc" />
     <None Include="Dependentes.xsc">
       <DependentUpon>Dependentes.xsd</DependentUpon>
