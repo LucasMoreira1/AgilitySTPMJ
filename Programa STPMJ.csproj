@@ -278,6 +278,12 @@
     <Compile Include="FormPesquisaConvenio.Designer.cs">
       <DependentUpon>FormPesquisaConvenio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRelacaoAssociados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRelacaoAssociados.Designer.cs">
+      <DependentUpon>FormRelacaoAssociados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Funcoes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -323,6 +329,9 @@
     <EmbeddedResource Include="FormPesquisaConvenio.resx">
       <DependentUpon>FormPesquisaConvenio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRelacaoAssociados.resx">
+      <DependentUpon>FormRelacaoAssociados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -337,6 +346,7 @@
     <EmbeddedResource Include="reportChequinho.rdlc" />
     <EmbeddedResource Include="reportEtiquetas.rdlc" />
     <EmbeddedResource Include="reportFichaCadastral.rdlc" />
+    <EmbeddedResource Include="reportRelacaoAssociados.rdlc" />
     <None Include="Dependentes.xsc">
       <DependentUpon>Dependentes.xsd</DependentUpon>
     </None>

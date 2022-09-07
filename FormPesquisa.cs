@@ -479,5 +479,37 @@ namespace Programa_STPMJ
             public string Estado { get; set; }
             public string Bairro { get; set; }
         }
+
+        private void btnRelacaoAssociados_Click(object sender, EventArgs e)
+        {
+            List<Relacao_Associados> lst = new List<Relacao_Associados>();
+            lst.Clear();
+
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                Relacao_Associados relacao_Associados = new Relacao_Associados
+                {
+                    Matricula = dataGridView1.Rows[i].Cells[0].Value.ToString(),
+                    Nome = dataGridView1.Rows[i].Cells[1].Value.ToString(),
+                };
+                lst.Add(relacao_Associados);
+            }
+
+            rs.Name = "RelacaoAssociados";
+            rs.Value = lst;
+            FormRelacaoAssociados formRelacaoAssociados = new FormRelacaoAssociados();
+            formRelacaoAssociados.reportViewer1.LocalReport.DataSources.Clear();
+            formRelacaoAssociados.reportViewer1.LocalReport.DataSources.Add(rs);
+            formRelacaoAssociados.reportViewer1.LocalReport.ReportEmbeddedResource = "Programa_STPMJ.reportRelacaoAssociados.rdlc";
+
+            formRelacaoAssociados.ShowDialog();
+        }
+        public class Relacao_Associados
+        {
+            public string Matricula { get; set; }
+            public string Nome { get; set; }
+        }
+
+
     }
 }

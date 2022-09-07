@@ -65,6 +65,7 @@ namespace Programa_STPMJ
             this.txtMesAniversario = new System.Windows.Forms.TextBox();
             this.btnExportarExcel = new System.Windows.Forms.Button();
             this.btnEtiquetas = new System.Windows.Forms.Button();
+            this.btnRelacaoAssociados = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -507,7 +508,7 @@ namespace Programa_STPMJ
             // txtData1Convert
             // 
             this.txtData1Convert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtData1Convert.Location = new System.Drawing.Point(703, 12);
+            this.txtData1Convert.Location = new System.Drawing.Point(526, 6);
             this.txtData1Convert.Name = "txtData1Convert";
             this.txtData1Convert.Size = new System.Drawing.Size(97, 26);
             this.txtData1Convert.TabIndex = 0;
@@ -516,7 +517,7 @@ namespace Programa_STPMJ
             // txtData2Convert
             // 
             this.txtData2Convert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtData2Convert.Location = new System.Drawing.Point(703, 44);
+            this.txtData2Convert.Location = new System.Drawing.Point(526, 38);
             this.txtData2Convert.Name = "txtData2Convert";
             this.txtData2Convert.Size = new System.Drawing.Size(97, 26);
             this.txtData2Convert.TabIndex = 0;
@@ -555,12 +556,25 @@ namespace Programa_STPMJ
             this.btnEtiquetas.UseVisualStyleBackColor = true;
             this.btnEtiquetas.Click += new System.EventHandler(this.btnEtiquetas_Click);
             // 
+            // btnRelacaoAssociados
+            // 
+            this.btnRelacaoAssociados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRelacaoAssociados.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRelacaoAssociados.Location = new System.Drawing.Point(725, 12);
+            this.btnRelacaoAssociados.Name = "btnRelacaoAssociados";
+            this.btnRelacaoAssociados.Size = new System.Drawing.Size(147, 47);
+            this.btnRelacaoAssociados.TabIndex = 1;
+            this.btnRelacaoAssociados.Text = "Relação de Associados";
+            this.btnRelacaoAssociados.UseVisualStyleBackColor = true;
+            this.btnRelacaoAssociados.Click += new System.EventHandler(this.btnRelacaoAssociados_Click);
+            // 
             // FormPesquisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1343, 651);
+            this.Controls.Add(this.btnRelacaoAssociados);
             this.Controls.Add(this.btnEtiquetas);
             this.Controls.Add(this.btnExportarExcel);
             this.Controls.Add(this.calendario2);
@@ -643,5 +657,6 @@ namespace Programa_STPMJ
         public System.Windows.Forms.TextBox txtMesAniversario;
         private System.Windows.Forms.Button btnExportarExcel;
         private System.Windows.Forms.Button btnEtiquetas;
+        private System.Windows.Forms.Button btnRelacaoAssociados;
     }
 }
