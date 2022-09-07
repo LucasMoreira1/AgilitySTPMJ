@@ -510,6 +510,14 @@ namespace Programa_STPMJ
             public string Nome { get; set; }
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

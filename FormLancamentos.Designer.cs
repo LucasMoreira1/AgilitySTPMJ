@@ -47,10 +47,10 @@
             this.cboxUsuario = new System.Windows.Forms.ComboBox();
             this.txtDataLancamento = new System.Windows.Forms.MaskedTextBox();
             this.txtControle = new System.Windows.Forms.TextBox();
-            this.btnRegistrar = new FontAwesome.Sharp.IconButton();
-            this.btnImprimir = new FontAwesome.Sharp.IconButton();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnImprimir = new FontAwesome.Sharp.IconButton();
+            this.btnRegistrar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -232,34 +232,6 @@
             this.txtControle.TabIndex = 0;
             this.txtControle.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtControle_KeyDown);
             // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnRegistrar.IconColor = System.Drawing.Color.Black;
-            this.btnRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRegistrar.Location = new System.Drawing.Point(645, 425);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(85, 35);
-            this.btnRegistrar.TabIndex = 11;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnImprimir.IconColor = System.Drawing.Color.Black;
-            this.btnImprimir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnImprimir.Location = new System.Drawing.Point(554, 425);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(85, 35);
-            this.btnImprimir.TabIndex = 10;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -278,6 +250,34 @@
             this.dataGridView1.Size = new System.Drawing.Size(71, 62);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.Visible = false;
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnImprimir.IconColor = System.Drawing.Color.Black;
+            this.btnImprimir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnImprimir.Location = new System.Drawing.Point(554, 425);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(85, 35);
+            this.btnImprimir.TabIndex = 10;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnRegistrar.IconColor = System.Drawing.Color.Black;
+            this.btnRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRegistrar.Location = new System.Drawing.Point(645, 425);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(85, 35);
+            this.btnRegistrar.TabIndex = 11;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // FormLancamentos
             // 
@@ -334,12 +334,12 @@
         public System.Windows.Forms.TextBox txtCodConvenio;
         public System.Windows.Forms.TextBox txtAtuacao;
         public System.Windows.Forms.TextBox txtValor;
-        private System.Windows.Forms.ComboBox cboxUsuario;
-        private System.Windows.Forms.MaskedTextBox txtDataLancamento;
         public System.Windows.Forms.TextBox txtControle;
         public FontAwesome.Sharp.IconButton btnRegistrar;
         public FontAwesome.Sharp.IconButton btnImprimir;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.ComboBox cboxUsuario;
+        public System.Windows.Forms.MaskedTextBox txtDataLancamento;
     }
 }

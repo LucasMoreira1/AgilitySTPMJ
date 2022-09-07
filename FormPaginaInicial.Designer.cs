@@ -145,6 +145,7 @@ namespace Programa_STPMJ
             this.btnCheques.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCheques.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCheques.UseVisualStyleBackColor = false;
+            this.btnCheques.Visible = false;
             this.btnCheques.Click += new System.EventHandler(this.btnCheques_Click);
             // 
             // btnCarteirinha
@@ -171,6 +172,7 @@ namespace Programa_STPMJ
             this.btnCarteirinha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCarteirinha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCarteirinha.UseVisualStyleBackColor = false;
+            this.btnCarteirinha.Visible = false;
             this.btnCarteirinha.Click += new System.EventHandler(this.btnCarteirinha_Click);
             // 
             // btnDocumentos
@@ -197,6 +199,7 @@ namespace Programa_STPMJ
             this.btnDocumentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDocumentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDocumentos.UseVisualStyleBackColor = false;
+            this.btnDocumentos.Visible = false;
             this.btnDocumentos.Click += new System.EventHandler(this.btnDocumentos_Click);
             // 
             // btnRelatorios
@@ -223,6 +226,7 @@ namespace Programa_STPMJ
             this.btnRelatorios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRelatorios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRelatorios.UseVisualStyleBackColor = false;
+            this.btnRelatorios.Visible = false;
             this.btnRelatorios.Click += new System.EventHandler(this.btnRelatorios_Click);
             // 
             // btnLancamento
@@ -282,7 +286,7 @@ namespace Programa_STPMJ
             this.btnPesquisarEmpresa.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnPesquisarEmpresa.Size = new System.Drawing.Size(198, 45);
             this.btnPesquisarEmpresa.TabIndex = 0;
-            this.btnPesquisarEmpresa.Text = "Pesquisar Convênio";
+            this.btnPesquisarEmpresa.Text = "Pesquisar Lançamentos";
             this.btnPesquisarEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPesquisarEmpresa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPesquisarEmpresa.UseVisualStyleBackColor = false;
@@ -375,6 +379,7 @@ namespace Programa_STPMJ
             this.btnCadastroEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastroEmpresa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastroEmpresa.UseVisualStyleBackColor = false;
+            this.btnCadastroEmpresa.Visible = false;
             this.btnCadastroEmpresa.Click += new System.EventHandler(this.btnCadastroEmpresa_Click);
             // 
             // btnCadastroCliente

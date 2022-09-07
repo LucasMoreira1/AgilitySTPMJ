@@ -33,8 +33,6 @@ namespace Programa_STPMJ
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPesquisa));
-            this.btnPesquisar = new FontAwesome.Sharp.IconButton();
-            this.btnMostrarTodos = new FontAwesome.Sharp.IconButton();
             this.cboxFiltro2 = new System.Windows.Forms.ComboBox();
             this.txtFiltro2 = new System.Windows.Forms.TextBox();
             this.lblFiltro2 = new System.Windows.Forms.Label();
@@ -44,8 +42,6 @@ namespace Programa_STPMJ
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnAtualizar = new FontAwesome.Sharp.IconButton();
-            this.btnDeletar = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.txtRegistroSelecionado = new System.Windows.Forms.TextBox();
             this.txtFiltroMatricula = new System.Windows.Forms.TextBox();
@@ -58,67 +54,21 @@ namespace Programa_STPMJ
             this.txtData1 = new System.Windows.Forms.TextBox();
             this.txtData2 = new System.Windows.Forms.TextBox();
             this.calendario2 = new System.Windows.Forms.MonthCalendar();
-            this.btnFiltroAniversario = new FontAwesome.Sharp.IconButton();
-            this.btnFiltroCadastro = new FontAwesome.Sharp.IconButton();
             this.txtData1Convert = new System.Windows.Forms.TextBox();
             this.txtData2Convert = new System.Windows.Forms.TextBox();
             this.txtMesAniversario = new System.Windows.Forms.TextBox();
             this.btnExportarExcel = new System.Windows.Forms.Button();
             this.btnEtiquetas = new System.Windows.Forms.Button();
             this.btnRelacaoAssociados = new System.Windows.Forms.Button();
+            this.btnDeletar = new FontAwesome.Sharp.IconButton();
+            this.btnMostrarTodos = new FontAwesome.Sharp.IconButton();
+            this.btnAtualizar = new FontAwesome.Sharp.IconButton();
+            this.btnFiltroCadastro = new FontAwesome.Sharp.IconButton();
+            this.btnFiltroAniversario = new FontAwesome.Sharp.IconButton();
+            this.btnPesquisar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPesquisar.BackColor = System.Drawing.Color.LightGray;
-            this.btnPesquisar.FlatAppearance.BorderSize = 0;
-            this.btnPesquisar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnPesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnPesquisar.IconColor = System.Drawing.Color.Black;
-            this.btnPesquisar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPesquisar.IconSize = 32;
-            this.btnPesquisar.Location = new System.Drawing.Point(1031, 44);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnPesquisar.Size = new System.Drawing.Size(147, 47);
-            this.btnPesquisar.TabIndex = 0;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPesquisar.UseMnemonic = false;
-            this.btnPesquisar.UseVisualStyleBackColor = false;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
-            // btnMostrarTodos
-            // 
-            this.btnMostrarTodos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMostrarTodos.BackColor = System.Drawing.Color.LightGray;
-            this.btnMostrarTodos.FlatAppearance.BorderSize = 0;
-            this.btnMostrarTodos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnMostrarTodos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnMostrarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrarTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarTodos.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnMostrarTodos.IconColor = System.Drawing.Color.Black;
-            this.btnMostrarTodos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMostrarTodos.IconSize = 32;
-            this.btnMostrarTodos.Location = new System.Drawing.Point(1031, 97);
-            this.btnMostrarTodos.Name = "btnMostrarTodos";
-            this.btnMostrarTodos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMostrarTodos.Size = new System.Drawing.Size(147, 47);
-            this.btnMostrarTodos.TabIndex = 0;
-            this.btnMostrarTodos.Text = "Mostrar Todos";
-            this.btnMostrarTodos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMostrarTodos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMostrarTodos.UseMnemonic = false;
-            this.btnMostrarTodos.UseVisualStyleBackColor = false;
-            this.btnMostrarTodos.Click += new System.EventHandler(this.btnMostrarTodos_Click);
             // 
             // cboxFiltro2
             // 
@@ -262,6 +212,7 @@ namespace Programa_STPMJ
             this.dataGridView1.Size = new System.Drawing.Size(1319, 476);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // statusStrip1
@@ -282,56 +233,6 @@ namespace Programa_STPMJ
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(115, 17);
             this.toolStripStatusLabel1.Text = "Número de linha(s): ";
-            // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAtualizar.BackColor = System.Drawing.Color.LightGray;
-            this.btnAtualizar.FlatAppearance.BorderSize = 0;
-            this.btnAtualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnAtualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnAtualizar.IconColor = System.Drawing.Color.Black;
-            this.btnAtualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAtualizar.IconSize = 32;
-            this.btnAtualizar.Location = new System.Drawing.Point(1184, 44);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnAtualizar.Size = new System.Drawing.Size(147, 47);
-            this.btnAtualizar.TabIndex = 0;
-            this.btnAtualizar.Text = "Atualizar ( )";
-            this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAtualizar.UseMnemonic = false;
-            this.btnAtualizar.UseVisualStyleBackColor = false;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
-            // 
-            // btnDeletar
-            // 
-            this.btnDeletar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeletar.BackColor = System.Drawing.Color.LightGray;
-            this.btnDeletar.FlatAppearance.BorderSize = 0;
-            this.btnDeletar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnDeletar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletar.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnDeletar.IconColor = System.Drawing.Color.Black;
-            this.btnDeletar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDeletar.IconSize = 32;
-            this.btnDeletar.Location = new System.Drawing.Point(1184, 97);
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnDeletar.Size = new System.Drawing.Size(147, 47);
-            this.btnDeletar.TabIndex = 0;
-            this.btnDeletar.Text = "Deletar ( )";
-            this.btnDeletar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDeletar.UseMnemonic = false;
-            this.btnDeletar.UseVisualStyleBackColor = false;
-            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // label3
             // 
@@ -415,6 +316,7 @@ namespace Programa_STPMJ
             this.label1.TabIndex = 0;
             this.label1.Text = "Mês Aniversário";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -460,50 +362,6 @@ namespace Programa_STPMJ
             this.calendario2.TabIndex = 0;
             this.calendario2.Visible = false;
             this.calendario2.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendario2_DateSelected);
-            // 
-            // btnFiltroAniversario
-            // 
-            this.btnFiltroAniversario.BackColor = System.Drawing.Color.LightGray;
-            this.btnFiltroAniversario.FlatAppearance.BorderSize = 0;
-            this.btnFiltroAniversario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltroAniversario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltroAniversario.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnFiltroAniversario.IconColor = System.Drawing.Color.Black;
-            this.btnFiltroAniversario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroAniversario.IconSize = 25;
-            this.btnFiltroAniversario.Location = new System.Drawing.Point(400, 117);
-            this.btnFiltroAniversario.Name = "btnFiltroAniversario";
-            this.btnFiltroAniversario.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnFiltroAniversario.Size = new System.Drawing.Size(110, 27);
-            this.btnFiltroAniversario.TabIndex = 0;
-            this.btnFiltroAniversario.Text = "Filtrar";
-            this.btnFiltroAniversario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiltroAniversario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFiltroAniversario.UseMnemonic = false;
-            this.btnFiltroAniversario.UseVisualStyleBackColor = false;
-            this.btnFiltroAniversario.Click += new System.EventHandler(this.btnFiltroAniversario_Click);
-            // 
-            // btnFiltroCadastro
-            // 
-            this.btnFiltroCadastro.BackColor = System.Drawing.Color.LightGray;
-            this.btnFiltroCadastro.FlatAppearance.BorderSize = 0;
-            this.btnFiltroCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltroCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltroCadastro.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnFiltroCadastro.IconColor = System.Drawing.Color.Black;
-            this.btnFiltroCadastro.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroCadastro.IconSize = 25;
-            this.btnFiltroCadastro.Location = new System.Drawing.Point(586, 118);
-            this.btnFiltroCadastro.Name = "btnFiltroCadastro";
-            this.btnFiltroCadastro.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnFiltroCadastro.Size = new System.Drawing.Size(110, 27);
-            this.btnFiltroCadastro.TabIndex = 0;
-            this.btnFiltroCadastro.Text = "Filtrar";
-            this.btnFiltroCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiltroCadastro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFiltroCadastro.UseMnemonic = false;
-            this.btnFiltroCadastro.UseVisualStyleBackColor = false;
-            this.btnFiltroCadastro.Click += new System.EventHandler(this.btnFiltroCadastro_Click);
             // 
             // txtData1Convert
             // 
@@ -567,6 +425,150 @@ namespace Programa_STPMJ
             this.btnRelacaoAssociados.Text = "Relação de Associados";
             this.btnRelacaoAssociados.UseVisualStyleBackColor = true;
             this.btnRelacaoAssociados.Click += new System.EventHandler(this.btnRelacaoAssociados_Click);
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeletar.BackColor = System.Drawing.Color.LightGray;
+            this.btnDeletar.FlatAppearance.BorderSize = 0;
+            this.btnDeletar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnDeletar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletar.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnDeletar.IconColor = System.Drawing.Color.Black;
+            this.btnDeletar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDeletar.IconSize = 32;
+            this.btnDeletar.Location = new System.Drawing.Point(1184, 97);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnDeletar.Size = new System.Drawing.Size(147, 47);
+            this.btnDeletar.TabIndex = 0;
+            this.btnDeletar.Text = "Deletar ( )";
+            this.btnDeletar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeletar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDeletar.UseMnemonic = false;
+            this.btnDeletar.UseVisualStyleBackColor = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            // 
+            // btnMostrarTodos
+            // 
+            this.btnMostrarTodos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMostrarTodos.BackColor = System.Drawing.Color.LightGray;
+            this.btnMostrarTodos.FlatAppearance.BorderSize = 0;
+            this.btnMostrarTodos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnMostrarTodos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnMostrarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrarTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarTodos.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnMostrarTodos.IconColor = System.Drawing.Color.Black;
+            this.btnMostrarTodos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMostrarTodos.IconSize = 32;
+            this.btnMostrarTodos.Location = new System.Drawing.Point(1031, 97);
+            this.btnMostrarTodos.Name = "btnMostrarTodos";
+            this.btnMostrarTodos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnMostrarTodos.Size = new System.Drawing.Size(147, 47);
+            this.btnMostrarTodos.TabIndex = 0;
+            this.btnMostrarTodos.Text = "Mostrar Todos";
+            this.btnMostrarTodos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMostrarTodos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMostrarTodos.UseMnemonic = false;
+            this.btnMostrarTodos.UseVisualStyleBackColor = false;
+            this.btnMostrarTodos.Click += new System.EventHandler(this.btnMostrarTodos_Click);
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAtualizar.BackColor = System.Drawing.Color.LightGray;
+            this.btnAtualizar.FlatAppearance.BorderSize = 0;
+            this.btnAtualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnAtualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnAtualizar.IconColor = System.Drawing.Color.Black;
+            this.btnAtualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAtualizar.IconSize = 32;
+            this.btnAtualizar.Location = new System.Drawing.Point(1184, 44);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnAtualizar.Size = new System.Drawing.Size(147, 47);
+            this.btnAtualizar.TabIndex = 0;
+            this.btnAtualizar.Text = "Atualizar ( )";
+            this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAtualizar.UseMnemonic = false;
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // btnFiltroCadastro
+            // 
+            this.btnFiltroCadastro.BackColor = System.Drawing.Color.LightGray;
+            this.btnFiltroCadastro.FlatAppearance.BorderSize = 0;
+            this.btnFiltroCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroCadastro.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnFiltroCadastro.IconColor = System.Drawing.Color.Black;
+            this.btnFiltroCadastro.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFiltroCadastro.IconSize = 25;
+            this.btnFiltroCadastro.Location = new System.Drawing.Point(586, 118);
+            this.btnFiltroCadastro.Name = "btnFiltroCadastro";
+            this.btnFiltroCadastro.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnFiltroCadastro.Size = new System.Drawing.Size(110, 27);
+            this.btnFiltroCadastro.TabIndex = 0;
+            this.btnFiltroCadastro.Text = "Filtrar";
+            this.btnFiltroCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiltroCadastro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFiltroCadastro.UseMnemonic = false;
+            this.btnFiltroCadastro.UseVisualStyleBackColor = false;
+            this.btnFiltroCadastro.Click += new System.EventHandler(this.btnFiltroCadastro_Click);
+            // 
+            // btnFiltroAniversario
+            // 
+            this.btnFiltroAniversario.BackColor = System.Drawing.Color.LightGray;
+            this.btnFiltroAniversario.FlatAppearance.BorderSize = 0;
+            this.btnFiltroAniversario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroAniversario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroAniversario.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnFiltroAniversario.IconColor = System.Drawing.Color.Black;
+            this.btnFiltroAniversario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFiltroAniversario.IconSize = 25;
+            this.btnFiltroAniversario.Location = new System.Drawing.Point(400, 117);
+            this.btnFiltroAniversario.Name = "btnFiltroAniversario";
+            this.btnFiltroAniversario.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnFiltroAniversario.Size = new System.Drawing.Size(110, 27);
+            this.btnFiltroAniversario.TabIndex = 0;
+            this.btnFiltroAniversario.Text = "Filtrar";
+            this.btnFiltroAniversario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiltroAniversario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFiltroAniversario.UseMnemonic = false;
+            this.btnFiltroAniversario.UseVisualStyleBackColor = false;
+            this.btnFiltroAniversario.Click += new System.EventHandler(this.btnFiltroAniversario_Click);
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPesquisar.BackColor = System.Drawing.Color.LightGray;
+            this.btnPesquisar.FlatAppearance.BorderSize = 0;
+            this.btnPesquisar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnPesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnPesquisar.IconColor = System.Drawing.Color.Black;
+            this.btnPesquisar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPesquisar.IconSize = 32;
+            this.btnPesquisar.Location = new System.Drawing.Point(1031, 44);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnPesquisar.Size = new System.Drawing.Size(147, 47);
+            this.btnPesquisar.TabIndex = 0;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPesquisar.UseMnemonic = false;
+            this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // FormPesquisa
             // 

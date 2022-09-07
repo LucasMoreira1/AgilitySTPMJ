@@ -92,9 +92,8 @@ namespace Programa_STPMJ
 
         private void btnPesquisarEmpresa_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new FormPesquisaConvenio());
-            FormPesquisaConvenio formPesquisaConvenio = new FormPesquisaConvenio();
-            formPesquisaConvenio.Show();
+            FormPesquisarLancamentos formPesquisarLancamentos = new FormPesquisarLancamentos();
+            formPesquisarLancamentos.Show();
             //..
             //Codigos
             //..
@@ -127,8 +126,8 @@ namespace Programa_STPMJ
 
         private void btnCheques_Click(object sender, EventArgs e)
         {
-            FormChequinho formChequinho = new FormChequinho();
-            formChequinho.Show();
+            //FormChequinho formChequinho = new FormChequinho();
+            //formChequinho.Show();
             //..
             //Codigos
             //..
