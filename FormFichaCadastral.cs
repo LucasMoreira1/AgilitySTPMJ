@@ -15,13 +15,6 @@ namespace Programa_STPMJ
 
         private void FormFichaCadastral_Load(object sender, EventArgs e)
         {
-            //Socios dsSocios = GetData();
-            //ReportDataSource datasource = new ReportDataSource("Socios", dsSocios.Tables[0]);
-
-            //this.reportViewer1.LocalReport.DataSources.Clear();
-            //this.reportViewer1.LocalReport.DataSources.Add(datasource);
-            //this.reportViewer1.RefreshReport();
-
             Socios dsSocios = GetSocios();
             Dependentes dsDependentes = GetDependentes();
             ReportDataSource datasource1 = new ReportDataSource("Socios", dsSocios.Tables[1]);

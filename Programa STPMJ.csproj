@@ -31,7 +31,7 @@
     <UpdateUrl>https://raw.githubusercontent.com/LucasMoreira1/AgilitySTPMJ/master/published/</UpdateUrl>
     <MinimumRequiredVersion>1.0.0.5</MinimumRequiredVersion>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>17</ApplicationRevision>
+    <ApplicationRevision>18</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -242,6 +242,12 @@
     <Compile Include="FormDependentes.Designer.cs">
       <DependentUpon>FormDependentes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEtiquetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEtiquetas.Designer.cs">
+      <DependentUpon>FormEtiquetas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormFichaCadastral.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDependentes.resx">
       <DependentUpon>FormDependentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEtiquetas.resx">
+      <DependentUpon>FormEtiquetas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormFichaCadastral.resx">
       <DependentUpon>FormFichaCadastral.cs</DependentUpon>

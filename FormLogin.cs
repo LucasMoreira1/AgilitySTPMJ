@@ -33,6 +33,7 @@ namespace Programa_STPMJ
             if (i == 0)
             {
                 MessageBox.Show("Usuário ou senha incorretos");
+                return;
             }
             else if (permissao == "1")
             {

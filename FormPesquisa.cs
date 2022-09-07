@@ -4,6 +4,8 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using System.Collections.Generic;
+using Microsoft.Reporting.WinForms;
 
 
 
@@ -434,9 +436,48 @@ namespace Programa_STPMJ
             //app.Quit();
         }
 
+        ReportDataSource rs = new ReportDataSource();
+
         private void btnEtiquetas_Click(object sender, EventArgs e)
         {
+            List<Dados_Socios> lst = new List<Dados_Socios>();
+            lst.Clear();
 
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                Dados_Socios dados_Socios = new Dados_Socios
+                {
+                    Nome = dataGridView1.Rows[i].Cells[1].Value.ToString(),
+                    Logradouro = dataGridView1.Rows[i].Cells[16].Value.ToString(),
+                    Numero = dataGridView1.Rows[i].Cells[17].Value.ToString(),
+                    Cep = dataGridView1.Rows[i].Cells[15].Value.ToString(),
+                    Cidade = dataGridView1.Rows[i].Cells[20].Value.ToString(),
+                    Estado = dataGridView1.Rows[i].Cells[21].Value.ToString(),
+                    Bairro = dataGridView1.Rows[i].Cells[19].Value.ToString(),
+
+                };
+                lst.Add(dados_Socios);
+            }
+
+                rs.Name = "DadosSocios";
+                rs.Value = lst;
+                FormEtiquetas formEtiquetas = new FormEtiquetas();
+                formEtiquetas.reportViewer1.LocalReport.DataSources.Clear();
+                formEtiquetas.reportViewer1.LocalReport.DataSources.Add(rs);
+                formEtiquetas.reportViewer1.LocalReport.ReportEmbeddedResource = "Programa_STPMJ.reportEtiquetas.rdlc";
+
+                formEtiquetas.ShowDialog();
+            
+        }
+        public class Dados_Socios
+        {
+            public string Nome { get; set; }
+            public string Logradouro { get; set; }
+            public string Numero { get; set; }
+            public string Cep { get; set; }
+            public string Cidade { get; set; }
+            public string Estado { get; set; }
+            public string Bairro { get; set; }
         }
     }
 }
