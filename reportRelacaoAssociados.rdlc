@@ -176,7 +176,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Matricula</Value>
+                      <Value>Matrícula</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -207,7 +207,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Nome do Socio</Value>
+                      <Value>Nome do Sócio</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
