@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtMatriculaDependente = new System.Windows.Forms.TextBox();
+            this.txtControle = new System.Windows.Forms.TextBox();
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // txtMatriculaDependente
+            // txtControle
             // 
-            this.txtMatriculaDependente.Location = new System.Drawing.Point(431, 192);
-            this.txtMatriculaDependente.Name = "txtMatriculaDependente";
-            this.txtMatriculaDependente.Size = new System.Drawing.Size(112, 20);
-            this.txtMatriculaDependente.TabIndex = 5;
-            this.txtMatriculaDependente.Visible = false;
+            this.txtControle.Location = new System.Drawing.Point(431, 192);
+            this.txtControle.Name = "txtControle";
+            this.txtControle.Size = new System.Drawing.Size(112, 20);
+            this.txtControle.TabIndex = 5;
+            this.txtControle.Visible = false;
             // 
             // txtMatricula
             // 
@@ -64,7 +64,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 665);
-            this.Controls.Add(this.txtMatriculaDependente);
+            this.Controls.Add(this.txtControle);
             this.Controls.Add(this.txtMatricula);
             this.Controls.Add(this.reportViewer1);
             this.Name = "FormChequinho";
@@ -78,7 +78,7 @@
 
         #endregion
 
-        public System.Windows.Forms.TextBox txtMatriculaDependente;
+        public System.Windows.Forms.TextBox txtControle;
         public System.Windows.Forms.TextBox txtMatricula;
         public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }

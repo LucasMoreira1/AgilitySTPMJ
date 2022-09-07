@@ -206,7 +206,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Convenio.cs">
+      <DependentUpon>Convenio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Convenio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Convenio.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CRUD.cs" />
+    <Compile Include="Dependentes.cs">
+      <DependentUpon>Dependentes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dependentes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -356,6 +367,17 @@
     <EmbeddedResource Include="reportEtiquetas.rdlc" />
     <EmbeddedResource Include="reportFichaCadastral.rdlc" />
     <EmbeddedResource Include="reportRelacaoAssociados.rdlc" />
+    <None Include="Convenio.xsc">
+      <DependentUpon>Convenio.xsd</DependentUpon>
+    </None>
+    <None Include="Convenio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Convenio.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Convenio.xss">
+      <DependentUpon>Convenio.xsd</DependentUpon>
+    </None>
     <None Include="Dependentes.xsc">
       <DependentUpon>Dependentes.xsd</DependentUpon>
     </None>

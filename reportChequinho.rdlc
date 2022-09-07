@@ -18,9 +18,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
         <Top>4.95544cm</Top>
-        <Left>1.71112cm</Left>
+        <Left>2.74972cm</Left>
         <Height>0.55cm</Height>
-        <Width>2.70106cm</Width>
+        <Width>1.64273cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -37,11 +37,15 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Matricula.Value, "Socios")</Value>
-                <Style />
+                <Value>=Fields!MATRICULA.Value</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
@@ -66,7 +70,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Nome.Value, "Socios")</Value>
+                <Value>=Fields!NOME.Value</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -105,9 +109,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>5.50544cm</Top>
-        <Left>1.71112cm</Left>
+        <Left>2.74972cm</Left>
         <Height>0.55cm</Height>
-        <Width>2.70106cm</Width>
+        <Width>1.64273cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -135,9 +139,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>6.37294cm</Top>
-        <Left>1.69559cm</Left>
+        <Left>2.73419cm</Left>
         <Height>0.55cm</Height>
-        <Width>2.70106cm</Width>
+        <Width>1.64273cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -165,9 +169,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>6.92294cm</Top>
-        <Left>1.69558cm</Left>
+        <Left>2.73418cm</Left>
         <Height>0.55cm</Height>
-        <Width>2.70106cm</Width>
+        <Width>1.64273cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -190,7 +194,9 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
@@ -331,7 +337,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Secretaria.Value, "Socios")</Value>
+                <Value>=Fields!EMPRESA.Value</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -360,12 +366,12 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Format(CDate(First(Fields!DataNascimento.Value, "Socios")),"dd/MM/yyyy")</Value>
+                <Value>=Fields!ATUACAO.Value</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Left</TextAlign>
+              <TextAlign>Center</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
@@ -391,7 +397,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Admissao.Value, "Socios")</Value>
+                <Value>=Fields!CONVENIO.Value</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -400,9 +406,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox32</rd:DefaultName>
         <Top>6.92294cm</Top>
-        <Left>4.39666cm</Left>
+        <Left>5.98614cm</Left>
         <Height>0.55cm</Height>
-        <Width>10.80581cm</Width>
+        <Width>9.21633cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
@@ -420,7 +426,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Funcao.Value, "Socios")</Value>
+                <Value>=Fields!USUARIO.Value</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -548,12 +554,14 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!RG.Value, "Socios")</Value>
-                <Style />
+                <Value>=Fields!CONTROLE.Value</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Left</TextAlign>
+              <TextAlign>Center</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
@@ -611,8 +619,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!CPF.Value, "Socios")</Value>
-                <Style />
+                <Value>=Fields!DATA_LANCAMENTO.Value</Value>
+                <Style>
+                  <Format>d</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -647,7 +657,9 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
@@ -672,11 +684,16 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!EstadoCivil.Value, "Socios")</Value>
-                <Style />
+                <Value>=Fields!VALOR.Value</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                  <Format>'R$'0.00;('R$'0.00)</Format>
+                </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox32</rd:DefaultName>
@@ -693,6 +710,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>pt-BR</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox55">
@@ -922,10 +940,39 @@
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
         <Top>4.95544cm</Top>
-        <Left>7.17552cm</Left>
+        <Left>8.46277cm</Left>
         <Height>0.55cm</Height>
-        <Width>2.52767cm</Width>
+        <Width>1.24042cm</Width>
         <ZIndex>29</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox11">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!COD_CONVENIO.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>6.92294cm</Top>
+        <Left>4.41218cm</Left>
+        <Height>0.55cm</Height>
+        <Width>1.57396cm</Width>
+        <ZIndex>30</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -952,6 +999,88 @@
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="Convenio">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>faf22a8f-7af8-419d-90fb-29c4e16c445a</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="Socios">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>e4d1ec93-0b36-4991-8b82-a8da0d61229c</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Convenio">
+      <Query>
+        <DataSourceName>Convenio</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="CONTROLE">
+          <DataField>CONTROLE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MATRICULA">
+          <DataField>MATRICULA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NOME">
+          <DataField>NOME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EMPRESA">
+          <DataField>EMPRESA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="COD_CONVENIO">
+          <DataField>COD_CONVENIO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CONVENIO">
+          <DataField>CONVENIO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ATUACAO">
+          <DataField>ATUACAO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="USUARIO">
+          <DataField>USUARIO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DATA_LANCAMENTO">
+          <DataField>DATA_LANCAMENTO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VALOR">
+          <DataField>VALOR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VALOR1">
+          <DataField>VALOR1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OBS">
+          <DataField>OBS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Convenio</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Lucas\OneDrive\Área de Trabalho\Agility\PROJETOS\Projetos\Projeto 5 - Sistema Sindicato\Programa STPMJ\Convenio.xsd</rd:SchemaPath>
+        <rd:TableName>DataTable1</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>f4fbe352-3be9-454c-b46d-ac75e9a68685</rd:ReportID>
 </Report>

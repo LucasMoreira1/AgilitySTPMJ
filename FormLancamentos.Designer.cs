@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLancamentos));
-            this.txtDataCadastro = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,27 +39,30 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.btnAtualizar = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.txtSecretaria = new System.Windows.Forms.TextBox();
+            this.txtConvenio = new System.Windows.Forms.TextBox();
+            this.txtCodConvenio = new System.Windows.Forms.TextBox();
+            this.txtAtuacao = new System.Windows.Forms.TextBox();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.cboxUsuario = new System.Windows.Forms.ComboBox();
+            this.txtDataLancamento = new System.Windows.Forms.MaskedTextBox();
+            this.txtControle = new System.Windows.Forms.TextBox();
+            this.btnRegistrar = new FontAwesome.Sharp.IconButton();
+            this.btnImprimir = new FontAwesome.Sharp.IconButton();
             this.label9 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtDataCadastro
+            // txtNome
             // 
-            this.txtDataCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataCadastro.Location = new System.Drawing.Point(273, 119);
-            this.txtDataCadastro.Name = "txtDataCadastro";
-            this.txtDataCadastro.ReadOnly = true;
-            this.txtDataCadastro.Size = new System.Drawing.Size(457, 26);
-            this.txtDataCadastro.TabIndex = 2;
+            this.txtNome.Enabled = false;
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(273, 119);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.ReadOnly = true;
+            this.txtNome.Size = new System.Drawing.Size(457, 26);
+            this.txtNome.TabIndex = 2;
             // 
             // txtMatricula
             // 
@@ -67,7 +70,8 @@
             this.txtMatricula.Location = new System.Drawing.Point(144, 119);
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(123, 26);
-            this.txtMatricula.TabIndex = 3;
+            this.txtMatricula.TabIndex = 1;
+            this.txtMatricula.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMatricula_KeyDown);
             // 
             // label2
             // 
@@ -149,131 +153,148 @@
             this.label8.TabIndex = 4;
             this.label8.Text = "Valor";
             // 
-            // textBox1
+            // txtSecretaria
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(144, 163);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(586, 26);
-            this.textBox1.TabIndex = 6;
+            this.txtSecretaria.Enabled = false;
+            this.txtSecretaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSecretaria.Location = new System.Drawing.Point(144, 163);
+            this.txtSecretaria.Name = "txtSecretaria";
+            this.txtSecretaria.ReadOnly = true;
+            this.txtSecretaria.Size = new System.Drawing.Size(586, 26);
+            this.txtSecretaria.TabIndex = 3;
             // 
-            // textBox2
+            // txtConvenio
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(144, 251);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(457, 26);
-            this.textBox2.TabIndex = 7;
+            this.txtConvenio.Enabled = false;
+            this.txtConvenio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConvenio.Location = new System.Drawing.Point(144, 251);
+            this.txtConvenio.Name = "txtConvenio";
+            this.txtConvenio.ReadOnly = true;
+            this.txtConvenio.Size = new System.Drawing.Size(457, 26);
+            this.txtConvenio.TabIndex = 5;
             // 
-            // textBox3
+            // txtCodConvenio
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(144, 207);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(123, 26);
-            this.textBox3.TabIndex = 3;
+            this.txtCodConvenio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodConvenio.Location = new System.Drawing.Point(144, 207);
+            this.txtCodConvenio.Name = "txtCodConvenio";
+            this.txtCodConvenio.Size = new System.Drawing.Size(123, 26);
+            this.txtCodConvenio.TabIndex = 4;
+            this.txtCodConvenio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodConvenio_KeyDown);
             // 
-            // textBox4
+            // txtAtuacao
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(607, 251);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(123, 26);
-            this.textBox4.TabIndex = 8;
+            this.txtAtuacao.Enabled = false;
+            this.txtAtuacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAtuacao.Location = new System.Drawing.Point(607, 251);
+            this.txtAtuacao.Name = "txtAtuacao";
+            this.txtAtuacao.ReadOnly = true;
+            this.txtAtuacao.Size = new System.Drawing.Size(123, 26);
+            this.txtAtuacao.TabIndex = 6;
             // 
-            // textBox5
+            // txtValor
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(607, 339);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(123, 26);
-            this.textBox5.TabIndex = 9;
+            this.txtValor.Enabled = false;
+            this.txtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValor.Location = new System.Drawing.Point(607, 339);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.ReadOnly = true;
+            this.txtValor.Size = new System.Drawing.Size(123, 26);
+            this.txtValor.TabIndex = 9;
             // 
-            // comboBox1
+            // cboxUsuario
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(144, 296);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(457, 26);
-            this.comboBox1.TabIndex = 10;
+            this.cboxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxUsuario.FormattingEnabled = true;
+            this.cboxUsuario.Location = new System.Drawing.Point(144, 296);
+            this.cboxUsuario.Name = "cboxUsuario";
+            this.cboxUsuario.Size = new System.Drawing.Size(457, 26);
+            this.cboxUsuario.TabIndex = 7;
             // 
-            // maskedTextBox1
+            // txtDataLancamento
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(144, 339);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(123, 26);
-            this.maskedTextBox1.TabIndex = 11;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.txtDataLancamento.Enabled = false;
+            this.txtDataLancamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataLancamento.Location = new System.Drawing.Point(144, 339);
+            this.txtDataLancamento.Mask = "00/00/0000";
+            this.txtDataLancamento.Name = "txtDataLancamento";
+            this.txtDataLancamento.ReadOnly = true;
+            this.txtDataLancamento.Size = new System.Drawing.Size(123, 26);
+            this.txtDataLancamento.TabIndex = 8;
+            this.txtDataLancamento.ValidatingType = typeof(System.DateTime);
             // 
-            // textBox6
+            // txtControle
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(144, 75);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(123, 26);
-            this.textBox6.TabIndex = 12;
+            this.txtControle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtControle.Location = new System.Drawing.Point(144, 75);
+            this.txtControle.Name = "txtControle";
+            this.txtControle.Size = new System.Drawing.Size(123, 26);
+            this.txtControle.TabIndex = 0;
+            this.txtControle.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtControle_KeyDown);
             // 
-            // btnAtualizar
+            // btnRegistrar
             // 
-            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAtualizar.IconColor = System.Drawing.Color.Black;
-            this.btnAtualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAtualizar.Location = new System.Drawing.Point(645, 425);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(85, 35);
-            this.btnAtualizar.TabIndex = 13;
-            this.btnAtualizar.Text = "Registrar";
-            this.btnAtualizar.UseVisualStyleBackColor = true;
-            this.btnAtualizar.Visible = false;
+            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnRegistrar.IconColor = System.Drawing.Color.Black;
+            this.btnRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRegistrar.Location = new System.Drawing.Point(645, 425);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(85, 35);
+            this.btnRegistrar.TabIndex = 11;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // iconButton1
+            // btnImprimir
             // 
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(554, 425);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(85, 35);
-            this.iconButton1.TabIndex = 14;
-            this.iconButton1.Text = "Imprimir";
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Visible = false;
+            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnImprimir.IconColor = System.Drawing.Color.Black;
+            this.btnImprimir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnImprimir.Location = new System.Drawing.Point(554, 425);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(85, 35);
+            this.btnImprimir.TabIndex = 10;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(143, 28);
+            this.label9.Location = new System.Drawing.Point(143, 21);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(471, 26);
             this.label9.TabIndex = 15;
             this.label9.Text = "Tela para Lançamento de Pedidos de Convênio";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(34, 398);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(71, 62);
+            this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.Visible = false;
             // 
             // FormLancamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 505);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.btnAtualizar);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnImprimir);
+            this.Controls.Add(this.btnRegistrar);
+            this.Controls.Add(this.txtControle);
+            this.Controls.Add(this.txtDataLancamento);
+            this.Controls.Add(this.cboxUsuario);
+            this.Controls.Add(this.txtValor);
+            this.Controls.Add(this.txtAtuacao);
+            this.Controls.Add(this.txtConvenio);
+            this.Controls.Add(this.txtSecretaria);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -282,12 +303,15 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtDataCadastro);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.txtCodConvenio);
             this.Controls.Add(this.txtMatricula);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLancamentos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lançamentos";
+            this.Load += new System.EventHandler(this.FormLancamentos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,7 +319,7 @@
 
         #endregion
 
-        public System.Windows.Forms.TextBox txtDataCadastro;
+        public System.Windows.Forms.TextBox txtNome;
         public System.Windows.Forms.TextBox txtMatricula;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -305,16 +329,17 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox3;
-        public System.Windows.Forms.TextBox textBox4;
-        public System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        public System.Windows.Forms.TextBox textBox6;
-        public FontAwesome.Sharp.IconButton btnAtualizar;
-        public FontAwesome.Sharp.IconButton iconButton1;
+        public System.Windows.Forms.TextBox txtSecretaria;
+        public System.Windows.Forms.TextBox txtConvenio;
+        public System.Windows.Forms.TextBox txtCodConvenio;
+        public System.Windows.Forms.TextBox txtAtuacao;
+        public System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.ComboBox cboxUsuario;
+        private System.Windows.Forms.MaskedTextBox txtDataLancamento;
+        public System.Windows.Forms.TextBox txtControle;
+        public FontAwesome.Sharp.IconButton btnRegistrar;
+        public FontAwesome.Sharp.IconButton btnImprimir;
         private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

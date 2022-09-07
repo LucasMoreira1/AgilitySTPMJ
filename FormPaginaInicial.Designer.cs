@@ -38,6 +38,7 @@ namespace Programa_STPMJ
             this.btnCarteirinha = new FontAwesome.Sharp.IconButton();
             this.btnDocumentos = new FontAwesome.Sharp.IconButton();
             this.btnRelatorios = new FontAwesome.Sharp.IconButton();
+            this.btnLancamento = new FontAwesome.Sharp.IconButton();
             this.panelPesquisas = new System.Windows.Forms.Panel();
             this.btnPesquisarEmpresa = new FontAwesome.Sharp.IconButton();
             this.btnPesquisarCliente = new FontAwesome.Sharp.IconButton();
@@ -52,7 +53,6 @@ namespace Programa_STPMJ
             this.panelFormTitulo = new System.Windows.Forms.Panel();
             this.panelFormCentral = new System.Windows.Forms.Panel();
             this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
-            this.btnLancamento = new FontAwesome.Sharp.IconButton();
             this.panelEsquerdo.SuspendLayout();
             this.panelDocumentos.SuspendLayout();
             this.panelPesquisas.SuspendLayout();
@@ -67,7 +67,6 @@ namespace Programa_STPMJ
             // 
             this.panelEsquerdo.AutoScroll = true;
             this.panelEsquerdo.BackColor = System.Drawing.Color.White;
-            
             this.panelEsquerdo.Controls.Add(this.btnAjuda);
             this.panelEsquerdo.Controls.Add(this.panelDocumentos);
             this.panelEsquerdo.Controls.Add(this.btnDocumentos);
@@ -100,7 +99,7 @@ namespace Programa_STPMJ
             this.btnAjuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAjuda.IconSize = 35;
             this.btnAjuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAjuda.Location = new System.Drawing.Point(0, 607);
+            this.btnAjuda.Location = new System.Drawing.Point(0, 652);
             this.btnAjuda.Name = "btnAjuda";
             this.btnAjuda.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnAjuda.Size = new System.Drawing.Size(198, 45);
@@ -117,7 +116,7 @@ namespace Programa_STPMJ
             this.panelDocumentos.Controls.Add(this.btnCheques);
             this.panelDocumentos.Controls.Add(this.btnCarteirinha);
             this.panelDocumentos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDocumentos.Location = new System.Drawing.Point(0, 513);
+            this.panelDocumentos.Location = new System.Drawing.Point(0, 558);
             this.panelDocumentos.Name = "panelDocumentos";
             this.panelDocumentos.Size = new System.Drawing.Size(198, 94);
             this.panelDocumentos.TabIndex = 0;
@@ -189,7 +188,7 @@ namespace Programa_STPMJ
             this.btnDocumentos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDocumentos.IconSize = 35;
             this.btnDocumentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDocumentos.Location = new System.Drawing.Point(0, 468);
+            this.btnDocumentos.Location = new System.Drawing.Point(0, 513);
             this.btnDocumentos.Name = "btnDocumentos";
             this.btnDocumentos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnDocumentos.Size = new System.Drawing.Size(198, 45);
@@ -215,7 +214,7 @@ namespace Programa_STPMJ
             this.btnRelatorios.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRelatorios.IconSize = 35;
             this.btnRelatorios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRelatorios.Location = new System.Drawing.Point(0, 423);
+            this.btnRelatorios.Location = new System.Drawing.Point(0, 468);
             this.btnRelatorios.Name = "btnRelatorios";
             this.btnRelatorios.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnRelatorios.Size = new System.Drawing.Size(198, 45);
@@ -225,6 +224,32 @@ namespace Programa_STPMJ
             this.btnRelatorios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRelatorios.UseVisualStyleBackColor = false;
             this.btnRelatorios.Click += new System.EventHandler(this.btnRelatorios_Click);
+            // 
+            // btnLancamento
+            // 
+            this.btnLancamento.BackColor = System.Drawing.Color.White;
+            this.btnLancamento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLancamento.FlatAppearance.BorderSize = 0;
+            this.btnLancamento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnLancamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnLancamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLancamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLancamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnLancamento.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnLancamento.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnLancamento.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLancamento.IconSize = 35;
+            this.btnLancamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLancamento.Location = new System.Drawing.Point(0, 423);
+            this.btnLancamento.Name = "btnLancamento";
+            this.btnLancamento.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnLancamento.Size = new System.Drawing.Size(198, 45);
+            this.btnLancamento.TabIndex = 0;
+            this.btnLancamento.Text = "Lançamentos";
+            this.btnLancamento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLancamento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLancamento.UseVisualStyleBackColor = false;
+            this.btnLancamento.Click += new System.EventHandler(this.btnLancamento_Click);
             // 
             // panelPesquisas
             // 
@@ -484,31 +509,6 @@ namespace Programa_STPMJ
             this.webView21.Source = new System.Uri("https://stpmj.org.br/", System.UriKind.Absolute);
             this.webView21.TabIndex = 0;
             this.webView21.ZoomFactor = 1D;
-            // 
-            // btnLancamento
-            // 
-            this.btnLancamento.BackColor = System.Drawing.Color.White;
-            this.btnLancamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLancamento.FlatAppearance.BorderSize = 0;
-            this.btnLancamento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnLancamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnLancamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLancamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLancamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnLancamento.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnLancamento.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnLancamento.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLancamento.IconSize = 35;
-            this.btnLancamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLancamento.Location = new System.Drawing.Point(0, 652);
-            this.btnLancamento.Name = "btnLancamento";
-            this.btnLancamento.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnLancamento.Size = new System.Drawing.Size(198, 45);
-            this.btnLancamento.TabIndex = 0;
-            this.btnLancamento.Text = "Lançamentos";
-            this.btnLancamento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLancamento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLancamento.UseVisualStyleBackColor = false;
             // 
             // formPaginaInicial
             // 

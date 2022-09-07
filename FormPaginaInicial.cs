@@ -171,5 +171,11 @@ namespace Programa_STPMJ
             panelFormCentral.Controls.Clear();
             panelFormCentral.Controls.Add(webView21);
         }
+
+        private void btnLancamento_Click(object sender, EventArgs e)
+        {
+            FormLancamentos formLancamentos = new FormLancamentos();
+            formLancamentos.Show();
+        }
     }
 }
