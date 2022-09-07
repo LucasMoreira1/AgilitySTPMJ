@@ -58,7 +58,7 @@ namespace Programa_STPMJ
             CRUD.cmd.Parameters.AddWithValue("convenio", txtConvenio.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("atuacao", txtAtuacao.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("usuario", cboxUsuario.Text.Trim());
-            CRUD.cmd.Parameters.AddWithValue("data_lancamento", txtDataLancamento.Text.Trim());
+            CRUD.cmd.Parameters.AddWithValue("data_lancamento", Convert.ToDateTime(txtDataLancamento.Text.Trim()));
             CRUD.cmd.Parameters.AddWithValue("valor", txtValor.Text.Trim());
             
         }
@@ -206,6 +206,20 @@ namespace Programa_STPMJ
 
             dgv.Visible = false;
 
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtControle.Text = "";
+            txtMatricula.Text = "";
+            txtNome.Text = "";
+            txtSecretaria.Text = "";
+            txtCodConvenio.Text = "";
+            txtConvenio.Text = "";
+            txtAtuacao.Text = "";
+            cboxUsuario.Text = "";
+            txtDataLancamento.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            txtValor.Text = "";
         }
     }
 }

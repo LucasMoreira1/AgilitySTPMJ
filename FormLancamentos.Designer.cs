@@ -51,6 +51,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnImprimir = new FontAwesome.Sharp.IconButton();
             this.btnRegistrar = new FontAwesome.Sharp.IconButton();
+            this.btnLimpar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -257,7 +258,7 @@
             this.btnImprimir.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnImprimir.IconColor = System.Drawing.Color.Black;
             this.btnImprimir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnImprimir.Location = new System.Drawing.Point(554, 425);
+            this.btnImprimir.Location = new System.Drawing.Point(463, 425);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(85, 35);
             this.btnImprimir.TabIndex = 10;
@@ -279,6 +280,20 @@
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnLimpar.IconColor = System.Drawing.Color.Black;
+            this.btnLimpar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLimpar.Location = new System.Drawing.Point(554, 425);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(85, 35);
+            this.btnLimpar.TabIndex = 10;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // FormLancamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,6 +301,7 @@
             this.ClientSize = new System.Drawing.Size(756, 505);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label9);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtControle);
@@ -341,5 +357,6 @@
         public System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.ComboBox cboxUsuario;
         public System.Windows.Forms.MaskedTextBox txtDataLancamento;
+        public FontAwesome.Sharp.IconButton btnLimpar;
     }
 }

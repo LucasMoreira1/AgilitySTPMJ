@@ -45,5 +45,77 @@ namespace Programa_STPMJ
             formLancamentos.txtDataLancamento.Text = Convert.ToString(dgv.CurrentRow.Cells[8].Value);
             formLancamentos.txtValor.Text = Convert.ToString(dgv.CurrentRow.Cells[9].Value);
         }
+
+        private void btnFiltroAniversario_Click(object sender, EventArgs e)
+        {
+            CRUD.sql = "SELECT * FROM LANCAMENTOS WHERE MONTH(DATA_LANCAMENTO)= " + txtMesAniversario.Text + " ORDER BY NOME";
+
+            CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
+            DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
+
+            DataGridView dgv = dataGridView1;
+
+            dgv.MultiSelect = false;
+            dgv.AutoGenerateColumns = true;
+
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.DataSource = dt;
+
+            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+        }
+
+        private void cboxMesAniversario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cboxMesAniversario.SelectedIndex)
+            {
+                case 0:
+                    txtMesAniversario.Text = "01";
+                    break;
+
+                case 1:
+                    txtMesAniversario.Text = "02";
+                    break;
+
+                case 2:
+                    txtMesAniversario.Text = "03";
+                    break;
+
+                case 3:
+                    txtMesAniversario.Text = "04";
+                    break;
+
+                case 4:
+                    txtMesAniversario.Text = "05";
+                    break;
+
+                case 5:
+                    txtMesAniversario.Text = "06";
+                    break;
+
+                case 6:
+                    txtMesAniversario.Text = "07";
+                    break;
+
+                case 7:
+                    txtMesAniversario.Text = "08";
+                    break;
+
+                case 8:
+                    txtMesAniversario.Text = "09";
+                    break;
+
+                case 9:
+                    txtMesAniversario.Text = "10";
+                    break;
+
+                case 10:
+                    txtMesAniversario.Text = "11";
+                    break;
+
+                case 11:
+                    txtMesAniversario.Text = "12";
+                    break;
+            }
+        }
     }
 }
