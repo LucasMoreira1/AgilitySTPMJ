@@ -675,8 +675,8 @@
             </Style>
           </Textbox>
           <Line Name="Line1">
-            <Top>4.94082cm</Top>
-            <Left>2.45181cm</Left>
+            <Top>4.86145cm</Top>
+            <Left>2.47827cm</Left>
             <Height>0cm</Height>
             <Width>2.28424cm</Width>
             <ZIndex>13</ZIndex>
@@ -701,8 +701,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox16</rd:DefaultName>
-            <Top>5.00592cm</Top>
-            <Left>2.45181cm</Left>
+            <Top>4.92654cm</Top>
+            <Left>2.47827cm</Left>
             <Height>0.6cm</Height>
             <Width>2.25778cm</Width>
             <ZIndex>14</ZIndex>
