@@ -294,29 +294,6 @@
             this.cboxEmpresa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboxEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxEmpresa.FormattingEnabled = true;
-            this.cboxEmpresa.Items.AddRange(new object[] {
-            "GABINETE (PREFEITO)",
-            "SECRETARIA DE ADMINISTRACAO E RH",
-            "SECRETARIA  DE ASSISTÊNCIA SOCIAL",
-            "SECRETARIA DE DESENVOLVIMENTO ECONOMICO",
-            "SECRETARIA MUNICIPAL DE EDUCACAO",
-            "SECRETARIA DE ESPORTE E RECREAÇÃO",
-            "SECRETARIA DE FINANÇAS",
-            "CHEFIA DE GABINETE",
-            "SECRETARIA DE GOVERNO E PLANEJAMENTO",
-            "SECRETARIA DE INFRAESTRUTURA",
-            "SECRETARIA DO MEIO AMBIENTE E ZELADORIA URBANA",
-            "SECRETARIA DE MOBILIDADE URBANA",
-            "PROCURADORIA GERAL",
-            "SECRETARIA DE SAUDE",
-            "SECRETARIA DE SEGURANCA E DEFESA DO CIDADÃO",
-            "FUNCIONARIO PUBLICO ESTADUAL",
-            "FUNDAÇÃO CULTURAL DE JACAREI",
-            "INSTITUTO DE PREVIDÊNCIA DO MUNICÍPIO DE JACAREÍ (IPMJ)",
-            "STPMJ",
-            "APOSENTADO",
-            "PENSIONISTA",
-            "OUTROS(ESPECIFICAR NA OBSERVAÇÃO)"});
             this.cboxEmpresa.Location = new System.Drawing.Point(145, 240);
             this.cboxEmpresa.Name = "cboxEmpresa";
             this.cboxEmpresa.Size = new System.Drawing.Size(420, 28);
