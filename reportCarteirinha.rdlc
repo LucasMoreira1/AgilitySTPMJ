@@ -227,7 +227,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox18</rd:DefaultName>
             <Left>0.65264cm</Left>
-            <Height>6.5727cm</Height>
+            <Height>5.85833cm</Height>
             <Width>0.93486cm</Width>
             <ZIndex>2</ZIndex>
             <Visibility>
@@ -247,7 +247,7 @@
         <KeepTogether>true</KeepTogether>
         <Top>1.21614cm</Top>
         <Left>10.02453cm</Left>
-        <Height>6.5727cm</Height>
+        <Height>5.85833cm</Height>
         <Width>8.91646cm</Width>
         <Style>
           <Border>
@@ -731,7 +731,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox18</rd:DefaultName>
             <Left>8.27263cm</Left>
-            <Height>6.5727cm</Height>
+            <Height>5.85833cm</Height>
             <Width>0.32632cm</Width>
             <ZIndex>15</ZIndex>
             <Visibility>
@@ -767,7 +767,7 @@
         <KeepTogether>true</KeepTogether>
         <Top>1.21614cm</Top>
         <Left>1.17864cm</Left>
-        <Height>6.5727cm</Height>
+        <Height>5.85833cm</Height>
         <Width>8.59896cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
