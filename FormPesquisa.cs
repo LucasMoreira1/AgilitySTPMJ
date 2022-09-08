@@ -281,16 +281,7 @@ namespace Programa_STPMJ
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
 
-            //if (dt.Rows.Count > 0)
-            //{
-            //    row = Convert.ToInt32(dt.Rows.Count.ToString());
-            //}
-            //else
-            //{
-            //    row = 0;
-            //}
-
-            //toolStripStatusLabel1.Text = "Número de linha(s): " + row.ToString();
+            
 
             DataGridView dgv = dataGridView1;
 
@@ -323,17 +314,6 @@ namespace Programa_STPMJ
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
-
-            //if (dt.Rows.Count > 0)
-            //{
-            //    row = Convert.ToInt32(dt.Rows.Count.ToString());
-            //}
-            //else
-            //{
-            //    row = 0;
-            //}
-
-            //toolStripStatusLabel1.Text = "Número de linha(s): " + row.ToString();
 
             DataGridView dgv = dataGridView1;
 

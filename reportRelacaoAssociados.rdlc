@@ -163,7 +163,7 @@
   <Width>21cm</Width>
   <Page>
     <PageHeader>
-      <Height>2.43417cm</Height>
+      <Height>2.77813cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -402,7 +402,7 @@
             </Textbox>
           </ReportItems>
           <KeepTogether>true</KeepTogether>
-          <Top>0.31432cm</Top>
+          <Top>0.63182cm</Top>
           <Left>0.77688cm</Left>
           <Height>2.05021cm</Height>
           <Width>19.63224cm</Width>

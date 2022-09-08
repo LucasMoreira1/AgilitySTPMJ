@@ -512,9 +512,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(6, 202);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 20);
+            this.label7.Size = new System.Drawing.Size(99, 20);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Nacionalidade";
+            this.label7.Text = "Naturalidade";
             // 
             // label3
             // 
@@ -555,7 +555,7 @@
             this.txtNacionalidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNacionalidade.Location = new System.Drawing.Point(145, 204);
             this.txtNacionalidade.Name = "txtNacionalidade";
-            this.txtNacionalidade.Size = new System.Drawing.Size(122, 26);
+            this.txtNacionalidade.Size = new System.Drawing.Size(420, 26);
             this.txtNacionalidade.TabIndex = 8;
             // 
             // label1
@@ -827,6 +827,7 @@
             this.btnImagemEmBranco.TabIndex = 0;
             this.btnImagemEmBranco.Text = "ImagemEmBranco";
             this.btnImagemEmBranco.UseVisualStyleBackColor = true;
+            this.btnImagemEmBranco.Visible = false;
             this.btnImagemEmBranco.Click += new System.EventHandler(this.btnImagemEmBranco_Click);
             // 
             // txtObservacao

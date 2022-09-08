@@ -37,6 +37,15 @@
             this.btnMostrarTodos = new FontAwesome.Sharp.IconButton();
             this.btnFiltroAniversario = new FontAwesome.Sharp.IconButton();
             this.txtMesAniversario = new System.Windows.Forms.TextBox();
+            this.calendario2 = new System.Windows.Forms.MonthCalendar();
+            this.calendario1 = new System.Windows.Forms.MonthCalendar();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtData2 = new System.Windows.Forms.TextBox();
+            this.txtData1 = new System.Windows.Forms.TextBox();
+            this.btnFiltroCadastro = new FontAwesome.Sharp.IconButton();
+            this.txtData2Convert = new System.Windows.Forms.TextBox();
+            this.txtData1Convert = new System.Windows.Forms.TextBox();
+            this.btnExportarExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,7 +129,7 @@
             this.btnMostrarTodos.IconColor = System.Drawing.Color.Black;
             this.btnMostrarTodos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMostrarTodos.IconSize = 32;
-            this.btnMostrarTodos.Location = new System.Drawing.Point(186, 23);
+            this.btnMostrarTodos.Location = new System.Drawing.Point(384, 23);
             this.btnMostrarTodos.Name = "btnMostrarTodos";
             this.btnMostrarTodos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnMostrarTodos.Size = new System.Drawing.Size(147, 47);
@@ -157,17 +166,122 @@
             // txtMesAniversario
             // 
             this.txtMesAniversario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMesAniversario.Location = new System.Drawing.Point(402, 23);
+            this.txtMesAniversario.Location = new System.Drawing.Point(1044, 12);
             this.txtMesAniversario.Name = "txtMesAniversario";
             this.txtMesAniversario.Size = new System.Drawing.Size(97, 26);
             this.txtMesAniversario.TabIndex = 6;
             this.txtMesAniversario.Visible = false;
+            // 
+            // calendario2
+            // 
+            this.calendario2.Location = new System.Drawing.Point(145, 38);
+            this.calendario2.Name = "calendario2";
+            this.calendario2.TabIndex = 7;
+            this.calendario2.Visible = false;
+            this.calendario2.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendario2_DateSelected);
+            // 
+            // calendario1
+            // 
+            this.calendario1.Location = new System.Drawing.Point(145, 38);
+            this.calendario1.Name = "calendario1";
+            this.calendario1.TabIndex = 8;
+            this.calendario1.Visible = false;
+            this.calendario1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendario1_DateSelected);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(186, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 20);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Data Lançamento";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtData2
+            // 
+            this.txtData2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtData2.Location = new System.Drawing.Point(259, 32);
+            this.txtData2.Name = "txtData2";
+            this.txtData2.Size = new System.Drawing.Size(97, 26);
+            this.txtData2.TabIndex = 10;
+            this.txtData2.DoubleClick += new System.EventHandler(this.txtData2_DoubleClick);
+            // 
+            // txtData1
+            // 
+            this.txtData1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtData1.Location = new System.Drawing.Point(156, 32);
+            this.txtData1.Name = "txtData1";
+            this.txtData1.Size = new System.Drawing.Size(97, 26);
+            this.txtData1.TabIndex = 11;
+            this.txtData1.DoubleClick += new System.EventHandler(this.txtData1_DoubleClick);
+            // 
+            // btnFiltroCadastro
+            // 
+            this.btnFiltroCadastro.BackColor = System.Drawing.Color.LightGray;
+            this.btnFiltroCadastro.FlatAppearance.BorderSize = 0;
+            this.btnFiltroCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroCadastro.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnFiltroCadastro.IconColor = System.Drawing.Color.Black;
+            this.btnFiltroCadastro.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFiltroCadastro.IconSize = 25;
+            this.btnFiltroCadastro.Location = new System.Drawing.Point(202, 65);
+            this.btnFiltroCadastro.Name = "btnFiltroCadastro";
+            this.btnFiltroCadastro.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnFiltroCadastro.Size = new System.Drawing.Size(110, 27);
+            this.btnFiltroCadastro.TabIndex = 12;
+            this.btnFiltroCadastro.Text = "Filtrar";
+            this.btnFiltroCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiltroCadastro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFiltroCadastro.UseMnemonic = false;
+            this.btnFiltroCadastro.UseVisualStyleBackColor = false;
+            this.btnFiltroCadastro.Click += new System.EventHandler(this.btnFiltroCadastro_Click);
+            // 
+            // txtData2Convert
+            // 
+            this.txtData2Convert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtData2Convert.Location = new System.Drawing.Point(1147, 44);
+            this.txtData2Convert.Name = "txtData2Convert";
+            this.txtData2Convert.Size = new System.Drawing.Size(97, 26);
+            this.txtData2Convert.TabIndex = 13;
+            this.txtData2Convert.Visible = false;
+            // 
+            // txtData1Convert
+            // 
+            this.txtData1Convert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtData1Convert.Location = new System.Drawing.Point(1147, 12);
+            this.txtData1Convert.Name = "txtData1Convert";
+            this.txtData1Convert.Size = new System.Drawing.Size(97, 26);
+            this.txtData1Convert.TabIndex = 14;
+            this.txtData1Convert.Visible = false;
+            // 
+            // btnExportarExcel
+            // 
+            this.btnExportarExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarExcel.Location = new System.Drawing.Point(537, 23);
+            this.btnExportarExcel.Name = "btnExportarExcel";
+            this.btnExportarExcel.Size = new System.Drawing.Size(147, 47);
+            this.btnExportarExcel.TabIndex = 15;
+            this.btnExportarExcel.Text = "Exportar Excel";
+            this.btnExportarExcel.UseVisualStyleBackColor = true;
+            this.btnExportarExcel.Click += new System.EventHandler(this.btnExportarExcel_Click);
             // 
             // FormPesquisarLancamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1343, 651);
+            this.Controls.Add(this.btnExportarExcel);
+            this.Controls.Add(this.txtData2Convert);
+            this.Controls.Add(this.txtData1Convert);
+            this.Controls.Add(this.btnFiltroCadastro);
+            this.Controls.Add(this.calendario2);
+            this.Controls.Add(this.calendario1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtData2);
+            this.Controls.Add(this.txtData1);
             this.Controls.Add(this.txtMesAniversario);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
@@ -193,5 +307,14 @@
         private FontAwesome.Sharp.IconButton btnMostrarTodos;
         public FontAwesome.Sharp.IconButton btnFiltroAniversario;
         public System.Windows.Forms.TextBox txtMesAniversario;
+        private System.Windows.Forms.MonthCalendar calendario2;
+        private System.Windows.Forms.MonthCalendar calendario1;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox txtData2;
+        public System.Windows.Forms.TextBox txtData1;
+        public FontAwesome.Sharp.IconButton btnFiltroCadastro;
+        public System.Windows.Forms.TextBox txtData2Convert;
+        public System.Windows.Forms.TextBox txtData1Convert;
+        private System.Windows.Forms.Button btnExportarExcel;
     }
 }
