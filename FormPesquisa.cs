@@ -202,7 +202,7 @@ namespace Programa_STPMJ
                 MessageBox.Show("Dados deletados com sucesso.", "Deletar dados",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                loadData();
+                //loadData();
             }
         }
         private void FormPesquisa_Load(object sender, EventArgs e)

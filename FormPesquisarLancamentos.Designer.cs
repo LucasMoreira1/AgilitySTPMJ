@@ -46,6 +46,8 @@
             this.txtData2Convert = new System.Windows.Forms.TextBox();
             this.txtData1Convert = new System.Windows.Forms.TextBox();
             this.btnExportarExcel = new System.Windows.Forms.Button();
+            this.btnDeletar = new FontAwesome.Sharp.IconButton();
+            this.txtRegistroSelecionado = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,7 +176,7 @@
             // 
             // calendario2
             // 
-            this.calendario2.Location = new System.Drawing.Point(145, 38);
+            this.calendario2.Location = new System.Drawing.Point(145, 44);
             this.calendario2.Name = "calendario2";
             this.calendario2.TabIndex = 7;
             this.calendario2.Visible = false;
@@ -182,7 +184,7 @@
             // 
             // calendario1
             // 
-            this.calendario1.Location = new System.Drawing.Point(145, 38);
+            this.calendario1.Location = new System.Drawing.Point(145, 44);
             this.calendario1.Name = "calendario1";
             this.calendario1.TabIndex = 8;
             this.calendario1.Visible = false;
@@ -268,15 +270,49 @@
             this.btnExportarExcel.UseVisualStyleBackColor = true;
             this.btnExportarExcel.Click += new System.EventHandler(this.btnExportarExcel_Click);
             // 
+            // btnDeletar
+            // 
+            this.btnDeletar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeletar.BackColor = System.Drawing.Color.LightGray;
+            this.btnDeletar.FlatAppearance.BorderSize = 0;
+            this.btnDeletar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnDeletar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletar.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnDeletar.IconColor = System.Drawing.Color.Black;
+            this.btnDeletar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDeletar.IconSize = 32;
+            this.btnDeletar.Location = new System.Drawing.Point(690, 23);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnDeletar.Size = new System.Drawing.Size(147, 47);
+            this.btnDeletar.TabIndex = 16;
+            this.btnDeletar.Text = "Deletar ( )";
+            this.btnDeletar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeletar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDeletar.UseMnemonic = false;
+            this.btnDeletar.UseVisualStyleBackColor = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            // 
+            // txtRegistroSelecionado
+            // 
+            this.txtRegistroSelecionado.Location = new System.Drawing.Point(1044, 44);
+            this.txtRegistroSelecionado.Name = "txtRegistroSelecionado";
+            this.txtRegistroSelecionado.Size = new System.Drawing.Size(18, 20);
+            this.txtRegistroSelecionado.TabIndex = 17;
+            this.txtRegistroSelecionado.Visible = false;
+            // 
             // FormPesquisarLancamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1343, 651);
+            this.Controls.Add(this.txtRegistroSelecionado);
+            this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.btnExportarExcel);
             this.Controls.Add(this.txtData2Convert);
             this.Controls.Add(this.txtData1Convert);
-            this.Controls.Add(this.btnFiltroCadastro);
             this.Controls.Add(this.calendario2);
             this.Controls.Add(this.calendario1);
             this.Controls.Add(this.label2);
@@ -288,6 +324,7 @@
             this.Controls.Add(this.cboxMesAniversario);
             this.Controls.Add(this.btnMostrarTodos);
             this.Controls.Add(this.btnFiltroAniversario);
+            this.Controls.Add(this.btnFiltroCadastro);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPesquisarLancamentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -316,5 +353,7 @@
         public System.Windows.Forms.TextBox txtData2Convert;
         public System.Windows.Forms.TextBox txtData1Convert;
         private System.Windows.Forms.Button btnExportarExcel;
+        private FontAwesome.Sharp.IconButton btnDeletar;
+        private System.Windows.Forms.TextBox txtRegistroSelecionado;
     }
 }

@@ -7,6 +7,7 @@ namespace Programa_STPMJ
 {
     public partial class FormPesquisarLancamentos : Form
     {
+        private string id = "";
         public FormPesquisarLancamentos()
         {
             InitializeComponent();
@@ -128,7 +129,7 @@ namespace Programa_STPMJ
             var data1 = txtData1Convert.Text;
             var data2 = txtData2Convert.Text;
 
-            CRUD.sql = "SELECT * FROM `SOCIOS` WHERE `DataCadastro` BETWEEN '" + data1 + "' AND '" + data2 + "' ORDER BY NOME;";
+            CRUD.sql = "SELECT * FROM `LANCAMENTOS` WHERE `DATA_LANCAMENTO` BETWEEN '" + data1 + "' AND '" + data2 + "' ORDER BY NOME;";
 
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
@@ -203,6 +204,36 @@ namespace Programa_STPMJ
             //workbook.SaveAs("c:\\output.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
             // Exit from the application  
             //app.Quit();
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            DataGridView dgv = dataGridView1;
+
+            if (dgv.Rows.Count == 0)
+            {
+                return;
+            }
+            if (string.IsNullOrEmpty(this.id))
+            {
+                MessageBox.Show("Por favor, selecione um item da lista.", "Deletar dados",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            int registroSelecionado = Convert.ToInt32(txtRegistroSelecionado.Text);
+
+            if (MessageBox.Show("Tem certeza que deseja deletar os dados selecionados?", "Deletar Dados",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                CRUD.sql = "DELETE FROM LANCAMENTOS WHERE RegistroSindical = " + registroSelecionado + "";
+                CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
+                CRUD.PerformCRUD(CRUD.cmd);
+
+                MessageBox.Show("Dados deletados com sucesso.", "Deletar dados",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                
+            }
         }
     }
 }
