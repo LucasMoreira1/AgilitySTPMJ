@@ -751,7 +751,7 @@
             <Source>Database</Source>
             <Value>=First(Fields!Foto.Value, "Socios")</Value>
             <MIMEType>image/jpeg</MIMEType>
-            <Sizing>Clip</Sizing>
+            <Sizing>FitProportional</Sizing>
             <Top>2.72298cm</Top>
             <Left>5.40631cm</Left>
             <Height>2.88294cm</Height>
