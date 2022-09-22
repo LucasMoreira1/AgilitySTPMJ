@@ -222,7 +222,7 @@
             this.imgCamera.Location = new System.Drawing.Point(590, 19);
             this.imgCamera.Name = "imgCamera";
             this.imgCamera.Size = new System.Drawing.Size(293, 305);
-            this.imgCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.imgCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgCamera.TabIndex = 0;
             this.imgCamera.TabStop = false;
             // 
@@ -804,7 +804,6 @@
             this.btnImagemEmBranco.TabIndex = 0;
             this.btnImagemEmBranco.Text = "ImagemEmBranco";
             this.btnImagemEmBranco.UseVisualStyleBackColor = true;
-            this.btnImagemEmBranco.Visible = false;
             this.btnImagemEmBranco.Click += new System.EventHandler(this.btnImagemEmBranco_Click);
             // 
             // txtObservacao

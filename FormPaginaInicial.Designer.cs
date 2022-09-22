@@ -44,7 +44,6 @@ namespace Programa_STPMJ
             this.btnPesquisarCliente = new FontAwesome.Sharp.IconButton();
             this.btnPesquisar = new FontAwesome.Sharp.IconButton();
             this.panelCadastros = new System.Windows.Forms.Panel();
-            this.btnCadastroEmpresa = new FontAwesome.Sharp.IconButton();
             this.btnCadastroCliente = new FontAwesome.Sharp.IconButton();
             this.btnCadastros = new FontAwesome.Sharp.IconButton();
             this.btnPaginaInicial = new FontAwesome.Sharp.IconButton();
@@ -53,6 +52,7 @@ namespace Programa_STPMJ
             this.panelFormTitulo = new System.Windows.Forms.Panel();
             this.panelFormCentral = new System.Windows.Forms.Panel();
             this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.btnCadastroEmpresa = new FontAwesome.Sharp.IconButton();
             this.panelEsquerdo.SuspendLayout();
             this.panelDocumentos.SuspendLayout();
             this.panelPesquisas.SuspendLayout();
@@ -99,10 +99,10 @@ namespace Programa_STPMJ
             this.btnAjuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAjuda.IconSize = 35;
             this.btnAjuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAjuda.Location = new System.Drawing.Point(0, 652);
+            this.btnAjuda.Location = new System.Drawing.Point(0, 591);
             this.btnAjuda.Name = "btnAjuda";
             this.btnAjuda.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnAjuda.Size = new System.Drawing.Size(198, 45);
+            this.btnAjuda.Size = new System.Drawing.Size(215, 45);
             this.btnAjuda.TabIndex = 0;
             this.btnAjuda.Text = "Ajuda";
             this.btnAjuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -116,9 +116,9 @@ namespace Programa_STPMJ
             this.panelDocumentos.Controls.Add(this.btnCheques);
             this.panelDocumentos.Controls.Add(this.btnCarteirinha);
             this.panelDocumentos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDocumentos.Location = new System.Drawing.Point(0, 558);
+            this.panelDocumentos.Location = new System.Drawing.Point(0, 503);
             this.panelDocumentos.Name = "panelDocumentos";
-            this.panelDocumentos.Size = new System.Drawing.Size(198, 94);
+            this.panelDocumentos.Size = new System.Drawing.Size(215, 88);
             this.panelDocumentos.TabIndex = 0;
             // 
             // btnCheques
@@ -139,7 +139,7 @@ namespace Programa_STPMJ
             this.btnCheques.Location = new System.Drawing.Point(0, 45);
             this.btnCheques.Name = "btnCheques";
             this.btnCheques.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCheques.Size = new System.Drawing.Size(198, 45);
+            this.btnCheques.Size = new System.Drawing.Size(215, 45);
             this.btnCheques.TabIndex = 0;
             this.btnCheques.Text = "Cheques";
             this.btnCheques.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -166,7 +166,7 @@ namespace Programa_STPMJ
             this.btnCarteirinha.Location = new System.Drawing.Point(0, 0);
             this.btnCarteirinha.Name = "btnCarteirinha";
             this.btnCarteirinha.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCarteirinha.Size = new System.Drawing.Size(198, 45);
+            this.btnCarteirinha.Size = new System.Drawing.Size(215, 45);
             this.btnCarteirinha.TabIndex = 0;
             this.btnCarteirinha.Text = "Carteirinha";
             this.btnCarteirinha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -190,10 +190,10 @@ namespace Programa_STPMJ
             this.btnDocumentos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDocumentos.IconSize = 35;
             this.btnDocumentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDocumentos.Location = new System.Drawing.Point(0, 513);
+            this.btnDocumentos.Location = new System.Drawing.Point(0, 458);
             this.btnDocumentos.Name = "btnDocumentos";
             this.btnDocumentos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnDocumentos.Size = new System.Drawing.Size(198, 45);
+            this.btnDocumentos.Size = new System.Drawing.Size(215, 45);
             this.btnDocumentos.TabIndex = 0;
             this.btnDocumentos.Text = "Documentos";
             this.btnDocumentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -217,10 +217,10 @@ namespace Programa_STPMJ
             this.btnRelatorios.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRelatorios.IconSize = 35;
             this.btnRelatorios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRelatorios.Location = new System.Drawing.Point(0, 468);
+            this.btnRelatorios.Location = new System.Drawing.Point(0, 413);
             this.btnRelatorios.Name = "btnRelatorios";
             this.btnRelatorios.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnRelatorios.Size = new System.Drawing.Size(198, 45);
+            this.btnRelatorios.Size = new System.Drawing.Size(215, 45);
             this.btnRelatorios.TabIndex = 0;
             this.btnRelatorios.Text = "Relatorios";
             this.btnRelatorios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -244,10 +244,10 @@ namespace Programa_STPMJ
             this.btnLancamento.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLancamento.IconSize = 35;
             this.btnLancamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLancamento.Location = new System.Drawing.Point(0, 423);
+            this.btnLancamento.Location = new System.Drawing.Point(0, 368);
             this.btnLancamento.Name = "btnLancamento";
             this.btnLancamento.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnLancamento.Size = new System.Drawing.Size(198, 45);
+            this.btnLancamento.Size = new System.Drawing.Size(215, 45);
             this.btnLancamento.TabIndex = 0;
             this.btnLancamento.Text = "Lançamentos";
             this.btnLancamento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -261,9 +261,9 @@ namespace Programa_STPMJ
             this.panelPesquisas.Controls.Add(this.btnPesquisarEmpresa);
             this.panelPesquisas.Controls.Add(this.btnPesquisarCliente);
             this.panelPesquisas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPesquisas.Location = new System.Drawing.Point(0, 329);
+            this.panelPesquisas.Location = new System.Drawing.Point(0, 280);
             this.panelPesquisas.Name = "panelPesquisas";
-            this.panelPesquisas.Size = new System.Drawing.Size(198, 94);
+            this.panelPesquisas.Size = new System.Drawing.Size(215, 88);
             this.panelPesquisas.TabIndex = 0;
             // 
             // btnPesquisarEmpresa
@@ -284,7 +284,7 @@ namespace Programa_STPMJ
             this.btnPesquisarEmpresa.Location = new System.Drawing.Point(0, 45);
             this.btnPesquisarEmpresa.Name = "btnPesquisarEmpresa";
             this.btnPesquisarEmpresa.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnPesquisarEmpresa.Size = new System.Drawing.Size(198, 45);
+            this.btnPesquisarEmpresa.Size = new System.Drawing.Size(215, 45);
             this.btnPesquisarEmpresa.TabIndex = 0;
             this.btnPesquisarEmpresa.Text = "Pesquisar Lançamentos";
             this.btnPesquisarEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -310,7 +310,7 @@ namespace Programa_STPMJ
             this.btnPesquisarCliente.Location = new System.Drawing.Point(0, 0);
             this.btnPesquisarCliente.Name = "btnPesquisarCliente";
             this.btnPesquisarCliente.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnPesquisarCliente.Size = new System.Drawing.Size(198, 45);
+            this.btnPesquisarCliente.Size = new System.Drawing.Size(215, 45);
             this.btnPesquisarCliente.TabIndex = 0;
             this.btnPesquisarCliente.Text = "Pesquisar sócio";
             this.btnPesquisarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -333,10 +333,10 @@ namespace Programa_STPMJ
             this.btnPesquisar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPesquisar.IconSize = 35;
             this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.Location = new System.Drawing.Point(0, 284);
+            this.btnPesquisar.Location = new System.Drawing.Point(0, 235);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnPesquisar.Size = new System.Drawing.Size(198, 45);
+            this.btnPesquisar.Size = new System.Drawing.Size(215, 45);
             this.btnPesquisar.TabIndex = 0;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -352,35 +352,8 @@ namespace Programa_STPMJ
             this.panelCadastros.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCadastros.Location = new System.Drawing.Point(0, 190);
             this.panelCadastros.Name = "panelCadastros";
-            this.panelCadastros.Size = new System.Drawing.Size(198, 94);
+            this.panelCadastros.Size = new System.Drawing.Size(215, 45);
             this.panelCadastros.TabIndex = 0;
-            // 
-            // btnCadastroEmpresa
-            // 
-            this.btnCadastroEmpresa.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCadastroEmpresa.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCadastroEmpresa.FlatAppearance.BorderSize = 0;
-            this.btnCadastroEmpresa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnCadastroEmpresa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCadastroEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastroEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastroEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCadastroEmpresa.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
-            this.btnCadastroEmpresa.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCadastroEmpresa.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCadastroEmpresa.IconSize = 35;
-            this.btnCadastroEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastroEmpresa.Location = new System.Drawing.Point(0, 45);
-            this.btnCadastroEmpresa.Name = "btnCadastroEmpresa";
-            this.btnCadastroEmpresa.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCadastroEmpresa.Size = new System.Drawing.Size(198, 45);
-            this.btnCadastroEmpresa.TabIndex = 0;
-            this.btnCadastroEmpresa.Text = "Cadastrar Convênio";
-            this.btnCadastroEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastroEmpresa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCadastroEmpresa.UseVisualStyleBackColor = false;
-            this.btnCadastroEmpresa.Visible = false;
-            this.btnCadastroEmpresa.Click += new System.EventHandler(this.btnCadastroEmpresa_Click);
             // 
             // btnCadastroCliente
             // 
@@ -400,7 +373,7 @@ namespace Programa_STPMJ
             this.btnCadastroCliente.Location = new System.Drawing.Point(0, 0);
             this.btnCadastroCliente.Name = "btnCadastroCliente";
             this.btnCadastroCliente.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCadastroCliente.Size = new System.Drawing.Size(198, 45);
+            this.btnCadastroCliente.Size = new System.Drawing.Size(215, 45);
             this.btnCadastroCliente.TabIndex = 0;
             this.btnCadastroCliente.Text = "Cadastrar sócio";
             this.btnCadastroCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -426,7 +399,7 @@ namespace Programa_STPMJ
             this.btnCadastros.Location = new System.Drawing.Point(0, 145);
             this.btnCadastros.Name = "btnCadastros";
             this.btnCadastros.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnCadastros.Size = new System.Drawing.Size(198, 45);
+            this.btnCadastros.Size = new System.Drawing.Size(215, 45);
             this.btnCadastros.TabIndex = 0;
             this.btnCadastros.Text = "Cadastros";
             this.btnCadastros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -452,7 +425,7 @@ namespace Programa_STPMJ
             this.btnPaginaInicial.Location = new System.Drawing.Point(0, 100);
             this.btnPaginaInicial.Name = "btnPaginaInicial";
             this.btnPaginaInicial.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnPaginaInicial.Size = new System.Drawing.Size(198, 45);
+            this.btnPaginaInicial.Size = new System.Drawing.Size(215, 45);
             this.btnPaginaInicial.TabIndex = 0;
             this.btnPaginaInicial.Text = "Pagina Inicial";
             this.btnPaginaInicial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -467,7 +440,7 @@ namespace Programa_STPMJ
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(198, 100);
+            this.panelLogo.Size = new System.Drawing.Size(215, 100);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -476,7 +449,7 @@ namespace Programa_STPMJ
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(198, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(215, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -514,6 +487,33 @@ namespace Programa_STPMJ
             this.webView21.Source = new System.Uri("https://stpmj.org.br/", System.UriKind.Absolute);
             this.webView21.TabIndex = 0;
             this.webView21.ZoomFactor = 1D;
+            // 
+            // btnCadastroEmpresa
+            // 
+            this.btnCadastroEmpresa.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCadastroEmpresa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCadastroEmpresa.FlatAppearance.BorderSize = 0;
+            this.btnCadastroEmpresa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCadastroEmpresa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCadastroEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastroEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastroEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCadastroEmpresa.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            this.btnCadastroEmpresa.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCadastroEmpresa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCadastroEmpresa.IconSize = 35;
+            this.btnCadastroEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastroEmpresa.Location = new System.Drawing.Point(0, 45);
+            this.btnCadastroEmpresa.Name = "btnCadastroEmpresa";
+            this.btnCadastroEmpresa.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnCadastroEmpresa.Size = new System.Drawing.Size(215, 43);
+            this.btnCadastroEmpresa.TabIndex = 0;
+            this.btnCadastroEmpresa.Text = "Cadastrar Convênio";
+            this.btnCadastroEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastroEmpresa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCadastroEmpresa.UseVisualStyleBackColor = false;
+            this.btnCadastroEmpresa.Visible = false;
+            this.btnCadastroEmpresa.Click += new System.EventHandler(this.btnCadastroEmpresa_Click);
             // 
             // formPaginaInicial
             // 
@@ -560,7 +560,6 @@ namespace Programa_STPMJ
         private FontAwesome.Sharp.IconButton btnPesquisarCliente;
         private FontAwesome.Sharp.IconButton btnPesquisar;
         private System.Windows.Forms.Panel panelCadastros;
-        private FontAwesome.Sharp.IconButton btnCadastroEmpresa;
         private FontAwesome.Sharp.IconButton btnCadastroCliente;
         private FontAwesome.Sharp.IconButton btnCadastros;
         private System.Windows.Forms.Panel panelFormTitulo;
@@ -570,6 +569,7 @@ namespace Programa_STPMJ
         private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
         private FontAwesome.Sharp.IconButton btnPaginaInicial;
         private FontAwesome.Sharp.IconButton btnLancamento;
+        private FontAwesome.Sharp.IconButton btnCadastroEmpresa;
     }
 }
 

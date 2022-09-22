@@ -234,11 +234,6 @@ namespace Programa_STPMJ
             MessageBox.Show("Dados atualizados.", "Cadastro",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            //ResetMe();
-            //this.Close();
-
-            //FormPesquisa formPesquisa = new FormPesquisa();
-            //formPesquisa.loadFiltro();
 
         }
 
@@ -307,7 +302,8 @@ namespace Programa_STPMJ
 
             ///add these two lines to mirror the image
             var filter = new Mirror(false, true);
-
+            //Crop filter1 = new Crop(new Rectangle(75, 75, 320, 240));
+            //Bitmap newImage = filter1.Apply(bitmap);
             filter.ApplyInPlace(bitmap);
 
             ///
