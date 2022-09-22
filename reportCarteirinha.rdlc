@@ -759,7 +759,7 @@
             <ZIndex>16</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
             </Style>
           </Image>

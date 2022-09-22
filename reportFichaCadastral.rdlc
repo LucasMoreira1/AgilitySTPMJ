@@ -943,13 +943,13 @@
         <MIMEType>image/jpeg</MIMEType>
         <Sizing>FitProportional</Sizing>
         <Top>2.1428cm</Top>
-        <Left>16.73328cm</Left>
-        <Height>3.60107cm</Height>
+        <Left>16.09828cm</Left>
+        <Height>3.2198cm</Height>
         <Width>3.2198cm</Width>
         <ZIndex>32</ZIndex>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
         </Style>
       </Image>
