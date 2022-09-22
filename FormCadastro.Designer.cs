@@ -804,6 +804,7 @@
             this.btnImagemEmBranco.TabIndex = 0;
             this.btnImagemEmBranco.Text = "ImagemEmBranco";
             this.btnImagemEmBranco.UseVisualStyleBackColor = true;
+            this.btnImagemEmBranco.Visible = false;
             this.btnImagemEmBranco.Click += new System.EventHandler(this.btnImagemEmBranco_Click);
             // 
             // txtObservacao
