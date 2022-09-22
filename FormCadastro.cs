@@ -301,7 +301,7 @@ namespace Programa_STPMJ
             bitmap = (Bitmap)eventArgs.Frame.Clone();
 
             // create filter
-            Crop filter2 = new Crop(new Rectangle(460, 160, 435, 430));
+            Crop filter2 = new Crop(new Rectangle(440, 130, 545, 550));
             // apply the filter
             Bitmap newImage = filter2.Apply(bitmap);
 
