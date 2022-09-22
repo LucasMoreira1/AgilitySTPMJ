@@ -300,15 +300,25 @@ namespace Programa_STPMJ
 
             bitmap = (Bitmap)eventArgs.Frame.Clone();
 
+            // create filter
+            Crop filter2 = new Crop(new Rectangle(460, 160, 435, 430));
+            // apply the filter
+            Bitmap newImage = filter2.Apply(bitmap);
+
             ///add these two lines to mirror the image
             var filter = new Mirror(false, true);
-            //Crop filter1 = new Crop(new Rectangle(75, 75, 320, 240));
-            //Bitmap newImage = filter1.Apply(bitmap);
-            filter.ApplyInPlace(bitmap);
+            GammaCorrection filter1 = new GammaCorrection(1.7);
+            //Crop filter2 = new Crop(new Rectangle(75, 75, 320, 240));
+            // apply the filter
 
+            filter1.ApplyInPlace(newImage);
+            //filter2.ApplyInPlace(bitmap);
+            //Bitmap newImage = filter2.Apply(bitmap);
+            filter.ApplyInPlace(newImage);
+            
             ///
 
-            imgCamera.Image = bitmap;
+            imgCamera.Image = newImage;
         }
 
         private void FormCadastro_FormClosing(object sender, FormClosingEventArgs e)

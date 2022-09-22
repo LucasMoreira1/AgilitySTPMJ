@@ -165,7 +165,7 @@
             // btnEncerrarCamera
             // 
             this.btnEncerrarCamera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEncerrarCamera.Location = new System.Drawing.Point(792, 357);
+            this.btnEncerrarCamera.Location = new System.Drawing.Point(790, 347);
             this.btnEncerrarCamera.Name = "btnEncerrarCamera";
             this.btnEncerrarCamera.Size = new System.Drawing.Size(91, 33);
             this.btnEncerrarCamera.TabIndex = 0;
@@ -179,7 +179,7 @@
             this.btnImportarFoto.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnImportarFoto.IconColor = System.Drawing.Color.Black;
             this.btnImportarFoto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnImportarFoto.Location = new System.Drawing.Point(792, 396);
+            this.btnImportarFoto.Location = new System.Drawing.Point(790, 386);
             this.btnImportarFoto.Name = "btnImportarFoto";
             this.btnImportarFoto.Size = new System.Drawing.Size(91, 30);
             this.btnImportarFoto.TabIndex = 0;
@@ -193,7 +193,7 @@
             this.btnTirarFoto.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnTirarFoto.IconColor = System.Drawing.Color.Black;
             this.btnTirarFoto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTirarFoto.Location = new System.Drawing.Point(590, 396);
+            this.btnTirarFoto.Location = new System.Drawing.Point(588, 386);
             this.btnTirarFoto.Name = "btnTirarFoto";
             this.btnTirarFoto.Size = new System.Drawing.Size(91, 30);
             this.btnTirarFoto.TabIndex = 0;
@@ -207,7 +207,7 @@
             this.btnIniciarCamera.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnIniciarCamera.IconColor = System.Drawing.Color.Black;
             this.btnIniciarCamera.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnIniciarCamera.Location = new System.Drawing.Point(590, 357);
+            this.btnIniciarCamera.Location = new System.Drawing.Point(588, 347);
             this.btnIniciarCamera.Name = "btnIniciarCamera";
             this.btnIniciarCamera.Size = new System.Drawing.Size(91, 33);
             this.btnIniciarCamera.TabIndex = 0;
@@ -219,9 +219,9 @@
             // 
             this.imgCamera.BackgroundImage = global::Programa_STPMJ.Properties.Resources.Socio_sem_foto;
             this.imgCamera.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgCamera.Location = new System.Drawing.Point(590, 19);
+            this.imgCamera.Location = new System.Drawing.Point(588, 24);
             this.imgCamera.Name = "imgCamera";
-            this.imgCamera.Size = new System.Drawing.Size(293, 305);
+            this.imgCamera.Size = new System.Drawing.Size(293, 290);
             this.imgCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgCamera.TabIndex = 0;
             this.imgCamera.TabStop = false;
@@ -304,7 +304,7 @@
             this.cboxCamera.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.cboxCamera.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboxCamera.FormattingEnabled = true;
-            this.cboxCamera.Location = new System.Drawing.Point(590, 330);
+            this.cboxCamera.Location = new System.Drawing.Point(588, 320);
             this.cboxCamera.Name = "cboxCamera";
             this.cboxCamera.Size = new System.Drawing.Size(293, 21);
             this.cboxCamera.TabIndex = 0;
