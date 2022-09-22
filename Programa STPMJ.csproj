@@ -31,7 +31,7 @@
     <UpdateUrl>https://raw.githubusercontent.com/LucasMoreira1/AgilitySTPMJ/master/published/</UpdateUrl>
     <MinimumRequiredVersion>1.0.0.5</MinimumRequiredVersion>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>38</ApplicationRevision>
+    <ApplicationRevision>40</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
