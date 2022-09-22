@@ -301,19 +301,18 @@ namespace Programa_STPMJ
             bitmap = (Bitmap)eventArgs.Frame.Clone();
 
             // create filter
-            Crop filter2 = new Crop(new Rectangle(440, 130, 545, 550));
+            Crop filter2 = new Crop(new Rectangle(470, 120, 595, 590));
             // apply the filter
             Bitmap newImage = filter2.Apply(bitmap);
 
-            ///add these two lines to mirror the image
+            ///add the filters
             var filter = new Mirror(false, true);
             GammaCorrection filter1 = new GammaCorrection(1.7);
-            //Crop filter2 = new Crop(new Rectangle(75, 75, 320, 240));
-            // apply the filter
+            Sharpen filter3 = new Sharpen();
 
+            // apply the filter
+            filter3.ApplyInPlace(newImage);
             filter1.ApplyInPlace(newImage);
-            //filter2.ApplyInPlace(bitmap);
-            //Bitmap newImage = filter2.Apply(bitmap);
             filter.ApplyInPlace(newImage);
             
             ///
