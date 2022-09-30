@@ -949,7 +949,7 @@
         <ZIndex>32</ZIndex>
         <Style>
           <Border>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
         </Style>
       </Image>

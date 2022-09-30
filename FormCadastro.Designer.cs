@@ -798,11 +798,11 @@
             this.btnImagemEmBranco.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnImagemEmBranco.IconColor = System.Drawing.Color.Black;
             this.btnImagemEmBranco.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnImagemEmBranco.Location = new System.Drawing.Point(812, 33);
+            this.btnImagemEmBranco.Location = new System.Drawing.Point(518, 18);
             this.btnImagemEmBranco.Name = "btnImagemEmBranco";
-            this.btnImagemEmBranco.Size = new System.Drawing.Size(85, 35);
+            this.btnImagemEmBranco.Size = new System.Drawing.Size(107, 35);
             this.btnImagemEmBranco.TabIndex = 0;
-            this.btnImagemEmBranco.Text = "ImagemEmBranco";
+            this.btnImagemEmBranco.Text = "Não clique";
             this.btnImagemEmBranco.UseVisualStyleBackColor = true;
             this.btnImagemEmBranco.Visible = false;
             this.btnImagemEmBranco.Click += new System.EventHandler(this.btnImagemEmBranco_Click);
