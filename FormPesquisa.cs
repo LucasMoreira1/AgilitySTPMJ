@@ -16,7 +16,7 @@ namespace Programa_STPMJ
     {
         private int row = 0;
         private string id = "";
-        MySqlDataReader reader;
+        
         public FormPesquisa()
         {
             InitializeComponent();
