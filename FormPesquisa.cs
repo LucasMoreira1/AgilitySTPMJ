@@ -38,6 +38,43 @@ namespace Programa_STPMJ
             loadFiltro();
         }
 
+        //public void loadFiltro()
+        //{
+        //    string filter1 = cboxFiltro2.Text;
+        //    string filter2 = cboxFiltro3.Text;
+        //    string filterValue1 = txtFiltro2.Text;
+        //    string filterValue2 = txtFiltro3.Text;
+
+        //    CRUD.sql = "SELECT * FROM SOCIOS WHERE " + filter1 + " = '%@filterValue1%' AND " + filter2 + " = '%@filterValue2%' ORDER BY NOME";
+
+        //    CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
+        //    CRUD.cmd.Parameters.AddWithValue("@filterValue1", filterValue1);
+        //    CRUD.cmd.Parameters.AddWithValue("@filterValue2", filterValue2);
+
+        //    DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
+
+        //    DataGridView dgv = dataGridView1;
+
+            
+        //    dgv.MultiSelect = false;
+        //    dgv.AutoGenerateColumns = false;
+        //    dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        //    dgv.DataSource = dt;
+        //    //dgv.Columns["Foto"].Visible = false;
+
+        //    if (dt.Rows.Count > 0)
+        //    {
+        //        row = Convert.ToInt32(dt.Rows.Count.ToString());
+        //    }
+        //    else
+        //    {
+        //        row = 0;
+        //    }
+
+        //    toolStripStatusLabel1.Text = "Número de linha(s): " + row.ToString();
+
+        //}
+
         public void loadFiltro()
         {
             CRUD.sql = "SELECT * FROM SOCIOS WHERE " + cboxFiltro2.Text.Trim() + " LIKE '%" + txtFiltro2.Text.Trim() + "%' AND " +
@@ -45,6 +82,16 @@ namespace Programa_STPMJ
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
+
+            DataGridView dgv = dataGridView1;
+
+            dgv.Columns["Foto"].Visible = false;
+            dgv.MultiSelect = false;
+            dgv.AutoGenerateColumns = true;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.DataSource = dt;
+
+            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
             if (dt.Rows.Count > 0)
             {
@@ -57,14 +104,6 @@ namespace Programa_STPMJ
 
             toolStripStatusLabel1.Text = "Número de linha(s): " + row.ToString();
 
-            DataGridView dgv = dataGridView1;
-
-            dgv.MultiSelect = false;
-            dgv.AutoGenerateColumns = true;
-            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv.DataSource = dt;
-            dgv.Columns["Foto"].Visible = false;
-            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
         }
 
@@ -76,11 +115,14 @@ namespace Programa_STPMJ
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
             DataGridView dgv = dataGridView1;
+
             dgv.MultiSelect = false;
             dgv.AutoGenerateColumns = true;
-
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.DataSource = dt;
+            dgv.Columns["Foto"].Visible = false;
+            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
 
             if (dt.Rows.Count > 0)
             {
@@ -92,13 +134,6 @@ namespace Programa_STPMJ
             }
 
             toolStripStatusLabel1.Text = "Número de linha(s): " + row.ToString();
-
-            //dgv.Columns["Matricula"].Visible = true;
-            //dgv.Columns["Nome"].Visible = true;
-            dgv.Columns["Foto"].Visible = false;
-
-
-            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

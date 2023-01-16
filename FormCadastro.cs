@@ -168,9 +168,16 @@ namespace Programa_STPMJ
             // .CurrentRow.Cells[0].Value
             dgv.Visible = false;
 
+
+
             MessageBox.Show("Sócio registrado. Registro número: " + NumeroRegistro + ".", "Cadastro",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            CRUD.sql = "INSERT INTO FOTOS(NOME_SOCIO,SOCIO_ID,DATA_FOTO,FOTO)" +
+                "Values(@nome,@matricula,@data_cadastro,@foto);";
+
+
+            Executar(CRUD.sql, "Insert");
 
 
 
