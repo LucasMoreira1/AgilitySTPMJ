@@ -85,7 +85,7 @@ namespace Programa_STPMJ
 
             DataGridView dgv = dataGridView1;
 
-            dgv.Columns["Foto"].Visible = false;
+            //dgv.Columns["Foto"].Visible = false;
             dgv.MultiSelect = false;
             dgv.AutoGenerateColumns = true;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -120,7 +120,7 @@ namespace Programa_STPMJ
             dgv.AutoGenerateColumns = true;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.DataSource = dt;
-            dgv.Columns["Foto"].Visible = false;
+            //dgv.Columns["Foto"].Visible = false;
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
 
@@ -177,9 +177,9 @@ namespace Programa_STPMJ
             formcadastro.txtLimite.Text = Convert.ToString(dgv.CurrentRow.Cells[22].Value);
             formcadastro.txtDisponivel.Text = Convert.ToString(dgv.CurrentRow.Cells[23].Value);
             formcadastro.txtObservacao.Text = Convert.ToString(dgv.CurrentRow.Cells[24].Value);
-            MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[25].Value);
-            formcadastro.imgCamera.Image = Image.FromStream(ms);
-            formcadastro.txtRegistro.Text = Convert.ToString(dgv.CurrentRow.Cells[26].Value);
+            //MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[25].Value);
+            //formcadastro.imgCamera.Image = Image.FromStream(ms);
+            formcadastro.txtRegistro.Text = Convert.ToString(dgv.CurrentRow.Cells[25].Value);
 
         }
 
@@ -189,7 +189,7 @@ namespace Programa_STPMJ
             {
                 DataGridView dgv = dataGridView1;
                 this.id = Convert.ToString(dgv.CurrentRow.Cells[0].Value);
-                txtRegistroSelecionado.Text = Convert.ToString(dgv.CurrentRow.Cells[26].Value);
+                txtRegistroSelecionado.Text = Convert.ToString(dgv.CurrentRow.Cells[25].Value);
                 btnAtualizar.Text = "Atualizar (" + this.id + ")";
                 btnDeletar.Text = "Deletar (" + this.id + ")";
 
@@ -228,8 +228,7 @@ namespace Programa_STPMJ
             formcadastro.txtLimite.Text = Convert.ToString(dgv.CurrentRow.Cells[22].Value);
             formcadastro.txtDisponivel.Text = Convert.ToString(dgv.CurrentRow.Cells[23].Value);
             formcadastro.txtObservacao.Text = Convert.ToString(dgv.CurrentRow.Cells[24].Value);
-
-            formcadastro.txtRegistro.Text = Convert.ToString(dgv.CurrentRow.Cells[26].Value);
+            formcadastro.txtRegistro.Text = Convert.ToString(dgv.CurrentRow.Cells[25].Value);
 
         }
 
@@ -303,7 +302,7 @@ namespace Programa_STPMJ
             dgv.AutoGenerateColumns = true;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.DataSource = dt;
-            dgv.Columns["Foto"].Visible = false;
+            //dgv.Columns["Foto"].Visible = false;
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
 
@@ -361,7 +360,7 @@ namespace Programa_STPMJ
 
             //dgv.Columns["Matricula"].Visible = true;
             //dgv.Columns["Nome"].Visible = true;
-            dgv.Columns["Foto"].Visible = false;
+            //dgv.Columns["Foto"].Visible = false;
 
 
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
