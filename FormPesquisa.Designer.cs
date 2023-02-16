@@ -66,6 +66,7 @@ namespace Programa_STPMJ
             this.btnFiltroCadastro = new FontAwesome.Sharp.IconButton();
             this.btnFiltroAniversario = new FontAwesome.Sharp.IconButton();
             this.btnPesquisar = new FontAwesome.Sharp.IconButton();
+            this.txtMatriculaSelecionada = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -570,12 +571,21 @@ namespace Programa_STPMJ
             this.btnPesquisar.UseVisualStyleBackColor = false;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
+            // txtMatriculaSelecionada
+            // 
+            this.txtMatriculaSelecionada.Location = new System.Drawing.Point(229, 16);
+            this.txtMatriculaSelecionada.Name = "txtMatriculaSelecionada";
+            this.txtMatriculaSelecionada.Size = new System.Drawing.Size(18, 20);
+            this.txtMatriculaSelecionada.TabIndex = 2;
+            this.txtMatriculaSelecionada.Visible = false;
+            // 
             // FormPesquisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1343, 651);
+            this.Controls.Add(this.txtMatriculaSelecionada);
             this.Controls.Add(this.btnRelacaoAssociados);
             this.Controls.Add(this.btnEtiquetas);
             this.Controls.Add(this.btnExportarExcel);
@@ -660,5 +670,6 @@ namespace Programa_STPMJ
         private System.Windows.Forms.Button btnExportarExcel;
         private System.Windows.Forms.Button btnEtiquetas;
         private System.Windows.Forms.Button btnRelacaoAssociados;
+        private System.Windows.Forms.TextBox txtMatriculaSelecionada;
     }
 }

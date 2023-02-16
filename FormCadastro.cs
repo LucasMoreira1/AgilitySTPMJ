@@ -140,11 +140,11 @@ namespace Programa_STPMJ
             CRUD.sql = "INSERT INTO SOCIOS(matricula,nome,rg,cpf,datanascimento,estadocivil," +
                 "nacionalidade,datacadastro,secretaria,funcao,admissao,localtrabalho," +
                 "telefone,recados,email,cep,logradouro,numero,complemento,bairro,cidade,estado," +
-                "limite,disponivel,observacao,foto)" +
+                "limite,disponivel,observacao)" +
                 "Values(@matricula,@nome,@rg,@cpf,@data_nascimento,@estado_civil,@nacionalidade," +
                 "@data_cadastro,@secretaria,@funcao,@admissao,@local_trabalho," +
                 "@telefone,@recado,@email,@cep,@logradouro,@numero,@complemento,@bairro,@cidade,@estado," +
-                "@limite,@disponivel,@observacao,@foto);";
+                "@limite,@disponivel,@observacao);";
 
 
             Executar(CRUD.sql, "Insert");
@@ -184,6 +184,30 @@ namespace Programa_STPMJ
             //loadData("");
             ResetMe();
             pesquisa();
+
+            
+            CRUD.sql = "SELECT * FROM FOTOS WHERE SOCIO_ID LIKE '" + txtMatricula.Text.Trim() + "'";
+
+            CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
+            DataTable dt2 = CRUD.PerformCRUD(CRUD.cmd);
+            
+            dgv.Visible = true;
+            dgv.MultiSelect = false;
+            dgv.AutoGenerateColumns = true;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.DataSource = dt2;
+            //dgv.Columns["Foto"].Visible = false;
+            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
+            btnSalvar.Visible = false;
+            btnAtualizar.Visible = true;
+
+            MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[4].Value);
+            imgCamera.Image = Image.FromStream(ms);
+
+            dgv.Visible = false;
+
+            
         }
 
         private void btnBuscarCEP_Click(object sender, EventArgs e)
@@ -233,7 +257,7 @@ namespace Programa_STPMJ
                 "telefone = @telefone, recados = @recado, email = @email, cep = @cep, " +
                 "logradouro = @logradouro, numero = @numero, complemento = @complemento, bairro = @bairro," +
                 "cidade = @cidade, estado = @estado, limite = @limite, disponivel = @disponivel, " +
-                "observacao = @observacao, foto = @foto WHERE registrosindical = @registro_sindical";
+                "observacao = @observacao WHERE registrosindical = @registro_sindical";
 
 
             Executar(CRUD.sql, "Update");
@@ -246,6 +270,7 @@ namespace Programa_STPMJ
 
         private void FormCadastro_Load(object sender, EventArgs e)
         {
+            
             txtDataCadastro.Text = DateTime.Now.ToString("dd/MM/yyyy");
             //Camera
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
@@ -259,6 +284,8 @@ namespace Programa_STPMJ
             videoCaptureDevice = new VideoCaptureDevice();
 
             AlimentarComboBox();
+
+            
 
         }
 
@@ -377,7 +404,7 @@ namespace Programa_STPMJ
         {
 
 
-            CRUD.sql = "UPDATE SOCIOS SET foto = @foto";
+            CRUD.sql = "UPDATE FOTOS SET foto = @foto";
 
 
             Executar(CRUD.sql, "Update");
@@ -465,7 +492,7 @@ namespace Programa_STPMJ
             dgv.AutoGenerateColumns = true;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.DataSource = dt;
-            dgv.Columns["Foto"].Visible = false;
+            //dgv.Columns["Foto"].Visible = false;
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
             btnSalvar.Visible = false;
@@ -496,9 +523,9 @@ namespace Programa_STPMJ
             txtLimite.Text = Convert.ToString(dgv.CurrentRow.Cells[22].Value);
             txtDisponivel.Text = Convert.ToString(dgv.CurrentRow.Cells[23].Value);
             txtObservacao.Text = Convert.ToString(dgv.CurrentRow.Cells[24].Value);
-            MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[25].Value);
-            imgCamera.Image = Image.FromStream(ms);
-            txtRegistro.Text = Convert.ToString(dgv.CurrentRow.Cells[26].Value);
+            //MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[25].Value);
+            //imgCamera.Image = Image.FromStream(ms);
+            txtRegistro.Text = Convert.ToString(dgv.CurrentRow.Cells[25].Value);
 
             dgv.Visible = false;
 
@@ -546,6 +573,45 @@ namespace Programa_STPMJ
             formCarteirinha.txtMatricula.Text = txtMatricula.Text;
             formCarteirinha.Show();
 
+        }
+
+        private void FormCadastro_Activated(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void FormCadastro_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtFoto_TextChanged(object sender, EventArgs e)
+        {
+            if (txtMatricula.Text != "")
+            {
+                CRUD.sql = "SELECT * FROM FOTOS WHERE SOCIO_ID LIKE '" + txtMatricula.Text.Trim() + "'";
+
+                CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
+                DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
+                DataGridView dgv = dataGridView1;
+
+                dgv.Visible = true;
+                dgv.MultiSelect = false;
+                dgv.AutoGenerateColumns = true;
+                dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dgv.DataSource = dt;
+                //dgv.Columns["Foto"].Visible = false;
+                dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
+                btnSalvar.Visible = false;
+                btnAtualizar.Visible = true;
+
+                MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[4].Value);
+                imgCamera.Image = Image.FromStream(ms);
+
+                dgv.Visible = false;
+
+            }
         }
     }
 }

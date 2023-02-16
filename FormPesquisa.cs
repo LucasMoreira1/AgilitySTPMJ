@@ -152,6 +152,7 @@ namespace Programa_STPMJ
             formcadastro.btnSalvar.Visible = false;
             formcadastro.btnAtualizar.Visible = true;
             formcadastro.Show();
+
             formcadastro.txtMatricula.Text = Convert.ToString(dgv.CurrentRow.Cells[0].Value);
             formcadastro.txtNome.Text = Convert.ToString(dgv.CurrentRow.Cells[1].Value);
             formcadastro.txtRG.Text = Convert.ToString(dgv.CurrentRow.Cells[2].Value);
@@ -180,7 +181,7 @@ namespace Programa_STPMJ
             //MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[25].Value);
             //formcadastro.imgCamera.Image = Image.FromStream(ms);
             formcadastro.txtRegistro.Text = Convert.ToString(dgv.CurrentRow.Cells[25].Value);
-
+            formcadastro.txtFoto.Text = "1";
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -190,6 +191,7 @@ namespace Programa_STPMJ
                 DataGridView dgv = dataGridView1;
                 this.id = Convert.ToString(dgv.CurrentRow.Cells[0].Value);
                 txtRegistroSelecionado.Text = Convert.ToString(dgv.CurrentRow.Cells[25].Value);
+                txtMatriculaSelecionada.Text = Convert.ToString(dgv.CurrentRow.Cells[0].Value);
                 btnAtualizar.Text = "Atualizar (" + this.id + ")";
                 btnDeletar.Text = "Deletar (" + this.id + ")";
 
@@ -247,11 +249,17 @@ namespace Programa_STPMJ
                 return;
             }
             int registroSelecionado = Convert.ToInt32(txtRegistroSelecionado.Text);
+            int matriculaSelecionada = Convert.ToInt32(txtMatriculaSelecionada.Text);
+
 
             if (MessageBox.Show("Tem certeza que deseja deletar os dados selecionados?", "Deletar Dados",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 CRUD.sql = "DELETE FROM SOCIOS WHERE RegistroSindical = " + registroSelecionado + "";
+                CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
+                CRUD.PerformCRUD(CRUD.cmd);
+
+                CRUD.sql = "DELETE FROM FOTOS WHERE SOCIO_ID = " + matriculaSelecionada + "";
                 CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
                 CRUD.PerformCRUD(CRUD.cmd);
 

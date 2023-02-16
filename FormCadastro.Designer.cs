@@ -105,6 +105,7 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.btnAtualizarDependente = new System.Windows.Forms.Button();
+            this.txtFoto = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCamera)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -117,6 +118,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtFoto);
             this.groupBox1.Controls.Add(this.btnEncerrarCamera);
             this.groupBox1.Controls.Add(this.btnImportarFoto);
             this.groupBox1.Controls.Add(this.btnTirarFoto);
@@ -838,8 +840,8 @@
             this.groupBox4.Controls.Add(this.btnImagemEmBranco);
             this.groupBox4.Controls.Add(this.btnImprimirCarteirinha);
             this.groupBox4.Controls.Add(this.btnImprimirFicha);
-            this.groupBox4.Controls.Add(this.btnAtualizar);
             this.groupBox4.Controls.Add(this.btnSalvar);
+            this.groupBox4.Controls.Add(this.btnAtualizar);
             this.groupBox4.Location = new System.Drawing.Point(12, 794);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(903, 115);
@@ -1000,6 +1002,16 @@
             this.btnAtualizarDependente.Visible = false;
             this.btnAtualizarDependente.Click += new System.EventHandler(this.btnAtualizarDependente_Click);
             // 
+            // txtFoto
+            // 
+            this.txtFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFoto.Location = new System.Drawing.Point(715, 364);
+            this.txtFoto.Name = "txtFoto";
+            this.txtFoto.Size = new System.Drawing.Size(53, 26);
+            this.txtFoto.TabIndex = 15;
+            this.txtFoto.Visible = false;
+            this.txtFoto.TextChanged += new System.EventHandler(this.txtFoto_TextChanged);
+            // 
             // FormCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1018,6 +1030,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormCadastro_FormClosing);
             this.Load += new System.EventHandler(this.FormCadastro_Load);
+            this.Click += new System.EventHandler(this.FormCadastro_Click);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCamera)).EndInit();
@@ -1113,5 +1126,6 @@
         public System.Windows.Forms.Button btnAdcDependente;
         public System.Windows.Forms.Button btnAtualizarDependente;
         public FontAwesome.Sharp.IconButton btnImprimirCarteirinha;
+        public System.Windows.Forms.TextBox txtFoto;
     }
 }
