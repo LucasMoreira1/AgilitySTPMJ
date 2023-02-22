@@ -12,7 +12,7 @@ namespace Programa_STPMJ
 {
     public partial class FormCadastro : Form
     {
-
+        int i;
         public Boolean CameraOn = false;
         public string localizacaoFoto;
         public FormCadastro()
@@ -480,55 +480,66 @@ namespace Programa_STPMJ
 
         public void pesquisa()
         {
+            i = 0;
 
             CRUD.sql = "SELECT * FROM SOCIOS WHERE MATRICULA LIKE '" + txtMatricula.Text.Trim() + "'";
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
+            i = Convert.ToInt32(dt.Rows.Count.ToString());
             DataGridView dgv = dataGridView1;
 
-            dgv.Visible = true;
-            dgv.MultiSelect = false;
-            dgv.AutoGenerateColumns = true;
-            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv.DataSource = dt;
-            //dgv.Columns["Foto"].Visible = false;
-            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
-            btnSalvar.Visible = false;
-            btnAtualizar.Visible = true;
+            if (i == 0)
+            {
+                dgv.Visible = false;
+                MessageBox.Show("Não há sócio com essa matricula!");
+            }
+            else
+            {
 
-            txtMatricula.Text = Convert.ToString(dgv.CurrentRow.Cells[0].Value);
-            txtNome.Text = Convert.ToString(dgv.CurrentRow.Cells[1].Value);
-            txtRG.Text = Convert.ToString(dgv.CurrentRow.Cells[2].Value);
-            txtCPF.Text = Convert.ToString(dgv.CurrentRow.Cells[3].Value);
-            txtDataNascimento.Text = Convert.ToString(dgv.CurrentRow.Cells[4].Value);
-            cboxEstadoCivil.Text = Convert.ToString(dgv.CurrentRow.Cells[5].Value);
-            txtNacionalidade.Text = Convert.ToString(dgv.CurrentRow.Cells[6].Value);
-            txtDataCadastro.Text = Convert.ToString(dgv.CurrentRow.Cells[7].Value);
-            cboxEmpresa.Text = Convert.ToString(dgv.CurrentRow.Cells[8].Value);
-            txtFuncao.Text = Convert.ToString(dgv.CurrentRow.Cells[9].Value);
-            txtAdmissao.Text = Convert.ToString(dgv.CurrentRow.Cells[10].Value);
-            txtLocalTrabalho.Text = Convert.ToString(dgv.CurrentRow.Cells[11].Value);
-            txtTelefone.Text = Convert.ToString(dgv.CurrentRow.Cells[12].Value);
-            txtRecado.Text = Convert.ToString(dgv.CurrentRow.Cells[13].Value);
-            txtEmail.Text = Convert.ToString(dgv.CurrentRow.Cells[14].Value);
-            txtCEP.Text = Convert.ToString(dgv.CurrentRow.Cells[15].Value);
-            txtLogradouro.Text = Convert.ToString(dgv.CurrentRow.Cells[16].Value);
-            txtNumero.Text = Convert.ToString(dgv.CurrentRow.Cells[17].Value);
-            txtComplemento.Text = Convert.ToString(dgv.CurrentRow.Cells[18].Value);
-            txtBairro.Text = Convert.ToString(dgv.CurrentRow.Cells[19].Value);
-            txtCidade.Text = Convert.ToString(dgv.CurrentRow.Cells[20].Value);
-            txtEstado.Text = Convert.ToString(dgv.CurrentRow.Cells[21].Value);
-            txtLimite.Text = Convert.ToString(dgv.CurrentRow.Cells[22].Value);
-            txtDisponivel.Text = Convert.ToString(dgv.CurrentRow.Cells[23].Value);
-            txtObservacao.Text = Convert.ToString(dgv.CurrentRow.Cells[24].Value);
-            //MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[25].Value);
-            //imgCamera.Image = Image.FromStream(ms);
-            txtRegistro.Text = Convert.ToString(dgv.CurrentRow.Cells[25].Value);
+                dgv.Visible = true;
+                dgv.MultiSelect = false;
+                dgv.AutoGenerateColumns = true;
+                dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dgv.DataSource = dt;
+                //dgv.Columns["Foto"].Visible = false;
+                dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
-            dgv.Visible = false;
+                btnSalvar.Visible = false;
+                btnAtualizar.Visible = true;
 
+                txtMatricula.Text = Convert.ToString(dgv.CurrentRow.Cells[0].Value);
+                txtNome.Text = Convert.ToString(dgv.CurrentRow.Cells[1].Value);
+                txtRG.Text = Convert.ToString(dgv.CurrentRow.Cells[2].Value);
+                txtCPF.Text = Convert.ToString(dgv.CurrentRow.Cells[3].Value);
+                txtDataNascimento.Text = Convert.ToString(dgv.CurrentRow.Cells[4].Value);
+                cboxEstadoCivil.Text = Convert.ToString(dgv.CurrentRow.Cells[5].Value);
+                txtNacionalidade.Text = Convert.ToString(dgv.CurrentRow.Cells[6].Value);
+                txtDataCadastro.Text = Convert.ToString(dgv.CurrentRow.Cells[7].Value);
+                cboxEmpresa.Text = Convert.ToString(dgv.CurrentRow.Cells[8].Value);
+                txtFuncao.Text = Convert.ToString(dgv.CurrentRow.Cells[9].Value);
+                txtAdmissao.Text = Convert.ToString(dgv.CurrentRow.Cells[10].Value);
+                txtLocalTrabalho.Text = Convert.ToString(dgv.CurrentRow.Cells[11].Value);
+                txtTelefone.Text = Convert.ToString(dgv.CurrentRow.Cells[12].Value);
+                txtRecado.Text = Convert.ToString(dgv.CurrentRow.Cells[13].Value);
+                txtEmail.Text = Convert.ToString(dgv.CurrentRow.Cells[14].Value);
+                txtCEP.Text = Convert.ToString(dgv.CurrentRow.Cells[15].Value);
+                txtLogradouro.Text = Convert.ToString(dgv.CurrentRow.Cells[16].Value);
+                txtNumero.Text = Convert.ToString(dgv.CurrentRow.Cells[17].Value);
+                txtComplemento.Text = Convert.ToString(dgv.CurrentRow.Cells[18].Value);
+                txtBairro.Text = Convert.ToString(dgv.CurrentRow.Cells[19].Value);
+                txtCidade.Text = Convert.ToString(dgv.CurrentRow.Cells[20].Value);
+                txtEstado.Text = Convert.ToString(dgv.CurrentRow.Cells[21].Value);
+                txtLimite.Text = Convert.ToString(dgv.CurrentRow.Cells[22].Value);
+                txtDisponivel.Text = Convert.ToString(dgv.CurrentRow.Cells[23].Value);
+                txtObservacao.Text = Convert.ToString(dgv.CurrentRow.Cells[24].Value);
+                //MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[25].Value);
+                //imgCamera.Image = Image.FromStream(ms);
+                txtRegistro.Text = Convert.ToString(dgv.CurrentRow.Cells[25].Value);
+
+                dgv.Visible = false;
+            }
 
 
         }

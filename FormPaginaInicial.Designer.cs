@@ -33,6 +33,7 @@ namespace Programa_STPMJ
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formPaginaInicial));
             this.panelEsquerdo = new System.Windows.Forms.Panel();
             this.btnAjuda = new FontAwesome.Sharp.IconButton();
+            this.btnVisualizarLogs = new FontAwesome.Sharp.IconButton();
             this.panelDocumentos = new System.Windows.Forms.Panel();
             this.btnCheques = new FontAwesome.Sharp.IconButton();
             this.btnCarteirinha = new FontAwesome.Sharp.IconButton();
@@ -44,6 +45,7 @@ namespace Programa_STPMJ
             this.btnPesquisarCliente = new FontAwesome.Sharp.IconButton();
             this.btnPesquisar = new FontAwesome.Sharp.IconButton();
             this.panelCadastros = new System.Windows.Forms.Panel();
+            this.btnCadastroEmpresa = new FontAwesome.Sharp.IconButton();
             this.btnCadastroCliente = new FontAwesome.Sharp.IconButton();
             this.btnCadastros = new FontAwesome.Sharp.IconButton();
             this.btnPaginaInicial = new FontAwesome.Sharp.IconButton();
@@ -51,8 +53,9 @@ namespace Programa_STPMJ
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelFormTitulo = new System.Windows.Forms.Panel();
             this.panelFormCentral = new System.Windows.Forms.Panel();
+            this.txtPermissaoLogin = new System.Windows.Forms.TextBox();
             this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
-            this.btnCadastroEmpresa = new FontAwesome.Sharp.IconButton();
+            this.txtNomeLogin = new System.Windows.Forms.TextBox();
             this.panelEsquerdo.SuspendLayout();
             this.panelDocumentos.SuspendLayout();
             this.panelPesquisas.SuspendLayout();
@@ -68,6 +71,7 @@ namespace Programa_STPMJ
             this.panelEsquerdo.AutoScroll = true;
             this.panelEsquerdo.BackColor = System.Drawing.Color.White;
             this.panelEsquerdo.Controls.Add(this.btnAjuda);
+            this.panelEsquerdo.Controls.Add(this.btnVisualizarLogs);
             this.panelEsquerdo.Controls.Add(this.panelDocumentos);
             this.panelEsquerdo.Controls.Add(this.btnDocumentos);
             this.panelEsquerdo.Controls.Add(this.btnRelatorios);
@@ -94,21 +98,45 @@ namespace Programa_STPMJ
             this.btnAjuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnAjuda.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
+            this.btnAjuda.IconChar = FontAwesome.Sharp.IconChar.CircleQuestion;
             this.btnAjuda.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnAjuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAjuda.IconSize = 35;
             this.btnAjuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAjuda.Location = new System.Drawing.Point(0, 591);
+            this.btnAjuda.Location = new System.Drawing.Point(0, 636);
             this.btnAjuda.Name = "btnAjuda";
             this.btnAjuda.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnAjuda.Size = new System.Drawing.Size(215, 45);
-            this.btnAjuda.TabIndex = 0;
+            this.btnAjuda.TabIndex = 1;
             this.btnAjuda.Text = "Ajuda";
             this.btnAjuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAjuda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAjuda.UseVisualStyleBackColor = false;
-            this.btnAjuda.Click += new System.EventHandler(this.btnAjuda_Click);
+            // 
+            // btnVisualizarLogs
+            // 
+            this.btnVisualizarLogs.BackColor = System.Drawing.Color.White;
+            this.btnVisualizarLogs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVisualizarLogs.FlatAppearance.BorderSize = 0;
+            this.btnVisualizarLogs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnVisualizarLogs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnVisualizarLogs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisualizarLogs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarLogs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnVisualizarLogs.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
+            this.btnVisualizarLogs.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnVisualizarLogs.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnVisualizarLogs.IconSize = 35;
+            this.btnVisualizarLogs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVisualizarLogs.Location = new System.Drawing.Point(0, 591);
+            this.btnVisualizarLogs.Name = "btnVisualizarLogs";
+            this.btnVisualizarLogs.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnVisualizarLogs.Size = new System.Drawing.Size(215, 45);
+            this.btnVisualizarLogs.TabIndex = 0;
+            this.btnVisualizarLogs.Text = "Visualizar Logs";
+            this.btnVisualizarLogs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVisualizarLogs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVisualizarLogs.UseVisualStyleBackColor = false;
             // 
             // panelDocumentos
             // 
@@ -131,7 +159,7 @@ namespace Programa_STPMJ
             this.btnCheques.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheques.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheques.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCheques.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
+            this.btnCheques.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckDollar;
             this.btnCheques.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCheques.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCheques.IconSize = 35;
@@ -276,7 +304,7 @@ namespace Programa_STPMJ
             this.btnPesquisarEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisarEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisarEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnPesquisarEmpresa.IconChar = FontAwesome.Sharp.IconChar.SearchLocation;
+            this.btnPesquisarEmpresa.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlassLocation;
             this.btnPesquisarEmpresa.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnPesquisarEmpresa.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPesquisarEmpresa.IconSize = 35;
@@ -328,7 +356,7 @@ namespace Programa_STPMJ
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnPesquisar.IconChar = FontAwesome.Sharp.IconChar.SearchPlus;
+            this.btnPesquisar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlassPlus;
             this.btnPesquisar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnPesquisar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPesquisar.IconSize = 35;
@@ -354,6 +382,33 @@ namespace Programa_STPMJ
             this.panelCadastros.Name = "panelCadastros";
             this.panelCadastros.Size = new System.Drawing.Size(215, 45);
             this.panelCadastros.TabIndex = 0;
+            // 
+            // btnCadastroEmpresa
+            // 
+            this.btnCadastroEmpresa.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCadastroEmpresa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCadastroEmpresa.FlatAppearance.BorderSize = 0;
+            this.btnCadastroEmpresa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCadastroEmpresa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCadastroEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastroEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastroEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCadastroEmpresa.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            this.btnCadastroEmpresa.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCadastroEmpresa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCadastroEmpresa.IconSize = 35;
+            this.btnCadastroEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastroEmpresa.Location = new System.Drawing.Point(0, 45);
+            this.btnCadastroEmpresa.Name = "btnCadastroEmpresa";
+            this.btnCadastroEmpresa.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnCadastroEmpresa.Size = new System.Drawing.Size(215, 43);
+            this.btnCadastroEmpresa.TabIndex = 0;
+            this.btnCadastroEmpresa.Text = "Cadastrar Convênio";
+            this.btnCadastroEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastroEmpresa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCadastroEmpresa.UseVisualStyleBackColor = false;
+            this.btnCadastroEmpresa.Visible = false;
+            this.btnCadastroEmpresa.Click += new System.EventHandler(this.btnCadastroEmpresa_Click);
             // 
             // btnCadastroCliente
             // 
@@ -468,12 +523,22 @@ namespace Programa_STPMJ
             this.panelFormCentral.BackColor = System.Drawing.Color.White;
             this.panelFormCentral.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelFormCentral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelFormCentral.Controls.Add(this.txtPermissaoLogin);
             this.panelFormCentral.Controls.Add(this.webView21);
+            this.panelFormCentral.Controls.Add(this.txtNomeLogin);
             this.panelFormCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormCentral.Location = new System.Drawing.Point(215, 30);
             this.panelFormCentral.Name = "panelFormCentral";
             this.panelFormCentral.Size = new System.Drawing.Size(1049, 651);
             this.panelFormCentral.TabIndex = 0;
+            // 
+            // txtPermissaoLogin
+            // 
+            this.txtPermissaoLogin.Location = new System.Drawing.Point(936, 31);
+            this.txtPermissaoLogin.Name = "txtPermissaoLogin";
+            this.txtPermissaoLogin.Size = new System.Drawing.Size(100, 20);
+            this.txtPermissaoLogin.TabIndex = 6;
+            this.txtPermissaoLogin.Visible = false;
             // 
             // webView21
             // 
@@ -488,32 +553,13 @@ namespace Programa_STPMJ
             this.webView21.TabIndex = 0;
             this.webView21.ZoomFactor = 1D;
             // 
-            // btnCadastroEmpresa
+            // txtNomeLogin
             // 
-            this.btnCadastroEmpresa.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCadastroEmpresa.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCadastroEmpresa.FlatAppearance.BorderSize = 0;
-            this.btnCadastroEmpresa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnCadastroEmpresa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCadastroEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastroEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastroEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCadastroEmpresa.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
-            this.btnCadastroEmpresa.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCadastroEmpresa.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCadastroEmpresa.IconSize = 35;
-            this.btnCadastroEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastroEmpresa.Location = new System.Drawing.Point(0, 45);
-            this.btnCadastroEmpresa.Name = "btnCadastroEmpresa";
-            this.btnCadastroEmpresa.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCadastroEmpresa.Size = new System.Drawing.Size(215, 43);
-            this.btnCadastroEmpresa.TabIndex = 0;
-            this.btnCadastroEmpresa.Text = "Cadastrar Convênio";
-            this.btnCadastroEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastroEmpresa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCadastroEmpresa.UseVisualStyleBackColor = false;
-            this.btnCadastroEmpresa.Visible = false;
-            this.btnCadastroEmpresa.Click += new System.EventHandler(this.btnCadastroEmpresa_Click);
+            this.txtNomeLogin.Location = new System.Drawing.Point(936, 5);
+            this.txtNomeLogin.Name = "txtNomeLogin";
+            this.txtNomeLogin.Size = new System.Drawing.Size(100, 20);
+            this.txtNomeLogin.TabIndex = 7;
+            this.txtNomeLogin.Visible = false;
             // 
             // formPaginaInicial
             // 
@@ -540,6 +586,7 @@ namespace Programa_STPMJ
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelFormCentral.ResumeLayout(false);
+            this.panelFormCentral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
             this.ResumeLayout(false);
 
@@ -549,7 +596,6 @@ namespace Programa_STPMJ
 
         #endregion
         private System.Windows.Forms.Panel panelEsquerdo;
-        private FontAwesome.Sharp.IconButton btnAjuda;
         private System.Windows.Forms.Panel panelDocumentos;
         private FontAwesome.Sharp.IconButton btnCheques;
         private FontAwesome.Sharp.IconButton btnCarteirinha;
@@ -570,6 +616,10 @@ namespace Programa_STPMJ
         private FontAwesome.Sharp.IconButton btnPaginaInicial;
         private FontAwesome.Sharp.IconButton btnLancamento;
         private FontAwesome.Sharp.IconButton btnCadastroEmpresa;
+        public System.Windows.Forms.TextBox txtPermissaoLogin;
+        public System.Windows.Forms.TextBox txtNomeLogin;
+        private FontAwesome.Sharp.IconButton btnAjuda;
+        public FontAwesome.Sharp.IconButton btnVisualizarLogs;
     }
 }
 
