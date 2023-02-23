@@ -602,26 +602,36 @@ namespace Programa_STPMJ
             {
                 CRUD.sql = "SELECT * FROM FOTOS WHERE SOCIO_ID LIKE '" + txtMatricula.Text.Trim() + "'";
 
+                // se nao retornar nada, continuar sem
+                i = 0;
                 CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
                 DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
+                i = Convert.ToInt32(dt.Rows.Count.ToString());
                 DataGridView dgv = dataGridView1;
 
-                dgv.Visible = true;
-                dgv.MultiSelect = false;
-                dgv.AutoGenerateColumns = true;
-                dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dgv.DataSource = dt;
-                //dgv.Columns["Foto"].Visible = false;
-                dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+                if (i == 0)
+                {
+                    dgv.Visible = false;
+                    //MessageBox.Show("Usuário ou senha incorretos");
+                }
+                else
+                {
+                    dgv.Visible = true;
+                    dgv.MultiSelect = false;
+                    dgv.AutoGenerateColumns = true;
+                    dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    dgv.DataSource = dt;
+                    //dgv.Columns["Foto"].Visible = false;
+                    dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
-                btnSalvar.Visible = false;
-                btnAtualizar.Visible = true;
+                    btnSalvar.Visible = false;
+                    btnAtualizar.Visible = true;
 
-                MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[4].Value);
-                imgCamera.Image = Image.FromStream(ms);
+                    MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[4].Value);
+                    imgCamera.Image = Image.FromStream(ms);
 
-                dgv.Visible = false;
-
+                    dgv.Visible = false;
+                }
             }
         }
     }
