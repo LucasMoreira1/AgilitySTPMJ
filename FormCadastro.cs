@@ -202,7 +202,7 @@ namespace Programa_STPMJ
             btnSalvar.Visible = false;
             btnAtualizar.Visible = true;
 
-            MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[4].Value);
+            MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[3].Value);
             imgCamera.Image = Image.FromStream(ms);
 
             dgv.Visible = false;
@@ -541,6 +541,40 @@ namespace Programa_STPMJ
                 dgv.Visible = false;
             }
 
+            CRUD.sql = "SELECT * FROM FOTOS WHERE SOCIO_ID LIKE '" + txtMatricula.Text.Trim() + "'";
+
+            // se nao retornar nada, continuar sem
+            i = 0;
+            CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
+            DataTable dt2 = CRUD.PerformCRUD(CRUD.cmd);
+            i = Convert.ToInt32(dt2.Rows.Count.ToString());
+            DataGridView dgv2 = dataGridView1;
+
+            if (i == 0)
+            {
+                dgv2.Visible = false;
+                //MessageBox.Show("Usuário ou senha incorretos");
+            }
+            else
+            {
+                dgv2.Visible = true;
+                dgv2.MultiSelect = false;
+                dgv2.AutoGenerateColumns = true;
+                dgv2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dgv2.DataSource = dt2;
+                //dgv.Columns["Foto"].Visible = false;
+                dgv2.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
+                btnSalvar.Visible = false;
+                btnAtualizar.Visible = true;
+
+                MemoryStream ms = new MemoryStream((byte[])dgv2.CurrentRow.Cells[3].Value);
+                imgCamera.Image = Image.FromStream(ms);
+
+                dgv2.Visible = false;
+            }
+            
+
 
         }
 
@@ -627,7 +661,7 @@ namespace Programa_STPMJ
                     btnSalvar.Visible = false;
                     btnAtualizar.Visible = true;
 
-                    MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[4].Value);
+                    MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[3].Value);
                     imgCamera.Image = Image.FromStream(ms);
 
                     dgv.Visible = false;
