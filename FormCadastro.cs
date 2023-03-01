@@ -262,6 +262,12 @@ namespace Programa_STPMJ
 
             Executar(CRUD.sql, "Update");
 
+            CRUD.sql = "UPDATE FOTOS SET foto = @foto  WHERE SOCIO_ID LIKE '" + txtMatricula.Text.Trim() + "'";
+
+
+            Executar(CRUD.sql, "Update");
+
+
             MessageBox.Show("Dados atualizados.", "Cadastro",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
