@@ -4,5 +4,8 @@
 
     partial class Socios
     {
+        partial class DataTable2DataTable
+        {
+        }
     }
 }

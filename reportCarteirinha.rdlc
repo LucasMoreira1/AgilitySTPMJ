@@ -709,7 +709,7 @@
           </Textbox>
           <Image Name="Image1">
             <Source>Database</Source>
-            <Value>=First(Fields!Foto.Value, "Socios")</Value>
+            <Value>=First(Fields!FOTO.Value, "Fotos")</Value>
             <MIMEType>image/jpeg</MIMEType>
             <Sizing>FitProportional</Sizing>
             <Top>2.76707cm</Top>
@@ -770,6 +770,13 @@
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
       <rd:DataSourceID>b8005225-ae63-4341-94ab-f9e414ab3ad8</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="Fotos">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>4394f8e0-cdab-4b34-8a76-db4470af9978</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -923,6 +930,38 @@
       <rd:DataSetInfo>
         <rd:DataSetName>Dependentes</rd:DataSetName>
         <rd:SchemaPath>C:\Users\Lucas\OneDrive\Área de Trabalho\Agility\PROJETOS\Projetos\Projeto 5 - Sistema Sindicato\Programa STPMJ\Dependentes.xsd</rd:SchemaPath>
+        <rd:TableName>DataTable1</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Fotos">
+      <Query>
+        <DataSourceName>Fotos</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="NOME_SOCIO">
+          <DataField>NOME_SOCIO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SOCIO_ID">
+          <DataField>SOCIO_ID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DATA_FOTO">
+          <DataField>DATA_FOTO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FOTO">
+          <DataField>FOTO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Fotos</rd:DataSetName>
+        <rd:SchemaPath>C:\Agility\Projetos\Projeto 5 - Sistema Sindicato\Programa STPMJ\Fotos.xsd</rd:SchemaPath>
         <rd:TableName>DataTable1</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

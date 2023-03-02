@@ -16,11 +16,14 @@ namespace Programa_STPMJ
         {
             Socios dsSocios = GetSocios();
             Dependentes dsDependentes = GetDependentes();
+            Fotos dsFotos = GetFotos();
             ReportDataSource datasource1 = new ReportDataSource("Socios", dsSocios.Tables[1]);
             ReportDataSource datasource2 = new ReportDataSource("Dependentes", dsDependentes.Tables[1]);
+            ReportDataSource datasource3 = new ReportDataSource("Fotos", dsFotos.Tables[1]);
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(datasource1);
             this.reportViewer1.LocalReport.DataSources.Add(datasource2);
+            this.reportViewer1.LocalReport.DataSources.Add(datasource3);
             this.reportViewer1.RefreshReport();
         }
 
@@ -72,6 +75,29 @@ namespace Programa_STPMJ
                         {
                             sda.Fill(dsDependentes);
                             return dsDependentes;
+                        }
+
+                    }
+                }
+            }
+        }
+        private Fotos GetFotos()
+        {
+
+
+            using (MySqlConnection con = new MySqlConnection(getConnectionString()))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM FOTOS WHERE SOCIO_ID = " + txtMatricula.Text + ";"))
+                {
+                    using (MySqlDataAdapter sda = new MySqlDataAdapter())
+                    {
+                        cmd.Connection = con;
+                        sda.SelectCommand = cmd;
+
+                        using (Fotos dsFotos = new Fotos())
+                        {
+                            sda.Fill(dsFotos);
+                            return dsFotos;
                         }
 
                     }

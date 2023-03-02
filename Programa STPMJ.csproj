@@ -29,7 +29,7 @@
     <UpdateUrl>https://raw.githubusercontent.com/LucasMoreira1/AgilitySTPMJ/master/published/</UpdateUrl>
     <MinimumRequiredVersion>1.0.0.5</MinimumRequiredVersion>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>53</ApplicationRevision>
+    <ApplicationRevision>54</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -312,6 +312,14 @@
     <Compile Include="FormRelacaoAssociados.Designer.cs">
       <DependentUpon>FormRelacaoAssociados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fotos.cs">
+      <DependentUpon>Fotos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Fotos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fotos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Funcoes.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Program.cs" />
@@ -403,6 +411,17 @@
     </None>
     <None Include="Dependentes.xss">
       <DependentUpon>Dependentes.xsd</DependentUpon>
+    </None>
+    <None Include="Fotos.xsc">
+      <DependentUpon>Fotos.xsd</DependentUpon>
+    </None>
+    <None Include="Fotos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Fotos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Fotos.xss">
+      <DependentUpon>Fotos.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Programa STPMJ_1_TemporaryKey.pfx" />
