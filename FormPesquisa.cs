@@ -85,7 +85,6 @@ namespace Programa_STPMJ
 
             DataGridView dgv = dataGridView1;
 
-            //dgv.Columns["Foto"].Visible = false;
             dgv.MultiSelect = false;
             dgv.AutoGenerateColumns = true;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -120,7 +119,6 @@ namespace Programa_STPMJ
             dgv.AutoGenerateColumns = true;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.DataSource = dt;
-            //dgv.Columns["Foto"].Visible = false;
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
 

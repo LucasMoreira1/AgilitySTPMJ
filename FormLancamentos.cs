@@ -125,7 +125,7 @@ namespace Programa_STPMJ
             dgv.AutoGenerateColumns = true;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.DataSource = dt;
-            dgv.Columns["Foto"].Visible = false;
+            //dgv.Columns["Foto"].Visible = false;
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
             txtMatricula.Text = Convert.ToString(dgv.CurrentRow.Cells[0].Value);
@@ -220,6 +220,11 @@ namespace Programa_STPMJ
             cboxUsuario.Text = "";
             txtDataLancamento.Text = DateTime.Now.ToString("dd/MM/yyyy");
             txtValor.Text = "";
+        }
+
+        private void txtMatricula_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
