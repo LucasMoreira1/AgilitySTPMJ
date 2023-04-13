@@ -202,7 +202,7 @@ namespace Programa_STPMJ
             btnSalvar.Visible = false;
             btnAtualizar.Visible = true;
 
-            MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[3].Value);
+            MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[4].Value);
             imgCamera.Image = Image.FromStream(ms);
 
             dgv.Visible = false;
@@ -574,7 +574,7 @@ namespace Programa_STPMJ
                 btnSalvar.Visible = false;
                 btnAtualizar.Visible = true;
 
-                MemoryStream ms = new MemoryStream((byte[])dgv2.CurrentRow.Cells[3].Value);
+                MemoryStream ms = new MemoryStream((byte[])dgv2.CurrentRow.Cells[4].Value);
                 imgCamera.Image = Image.FromStream(ms);
 
                 dgv2.Visible = false;
@@ -667,7 +667,7 @@ namespace Programa_STPMJ
                     btnSalvar.Visible = false;
                     btnAtualizar.Visible = true;
 
-                    MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[3].Value);
+                    MemoryStream ms = new MemoryStream((byte[])dgv.CurrentRow.Cells[4].Value);
                     imgCamera.Image = Image.FromStream(ms);
 
                     dgv.Visible = false;
