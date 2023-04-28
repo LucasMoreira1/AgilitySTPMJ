@@ -200,7 +200,6 @@
             this.txtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtValor.Location = new System.Drawing.Point(607, 339);
             this.txtValor.Name = "txtValor";
-            this.txtValor.ReadOnly = true;
             this.txtValor.Size = new System.Drawing.Size(123, 26);
             this.txtValor.TabIndex = 9;
             // 
