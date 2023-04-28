@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastro));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtFoto = new System.Windows.Forms.TextBox();
             this.btnEncerrarCamera = new System.Windows.Forms.Button();
             this.btnImportarFoto = new FontAwesome.Sharp.IconButton();
             this.btnTirarFoto = new FontAwesome.Sharp.IconButton();
             this.btnIniciarCamera = new FontAwesome.Sharp.IconButton();
             this.imgCamera = new System.Windows.Forms.PictureBox();
-            this.txtRG = new System.Windows.Forms.MaskedTextBox();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.txtAdmissao = new System.Windows.Forms.MaskedTextBox();
             this.txtDataNascimento = new System.Windows.Forms.MaskedTextBox();
@@ -105,7 +105,7 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.btnAtualizarDependente = new System.Windows.Forms.Button();
-            this.txtFoto = new System.Windows.Forms.TextBox();
+            this.txtRG = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCamera)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -118,13 +118,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtRG);
             this.groupBox1.Controls.Add(this.txtFoto);
             this.groupBox1.Controls.Add(this.btnEncerrarCamera);
             this.groupBox1.Controls.Add(this.btnImportarFoto);
             this.groupBox1.Controls.Add(this.btnTirarFoto);
             this.groupBox1.Controls.Add(this.btnIniciarCamera);
             this.groupBox1.Controls.Add(this.imgCamera);
-            this.groupBox1.Controls.Add(this.txtRG);
             this.groupBox1.Controls.Add(this.txtCPF);
             this.groupBox1.Controls.Add(this.txtAdmissao);
             this.groupBox1.Controls.Add(this.txtDataNascimento);
@@ -163,6 +163,16 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Identificação";
+            // 
+            // txtFoto
+            // 
+            this.txtFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFoto.Location = new System.Drawing.Point(715, 364);
+            this.txtFoto.Name = "txtFoto";
+            this.txtFoto.Size = new System.Drawing.Size(53, 26);
+            this.txtFoto.TabIndex = 15;
+            this.txtFoto.Visible = false;
+            this.txtFoto.TextChanged += new System.EventHandler(this.txtFoto_TextChanged);
             // 
             // btnEncerrarCamera
             // 
@@ -227,16 +237,6 @@
             this.imgCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgCamera.TabIndex = 0;
             this.imgCamera.TabStop = false;
-            // 
-            // txtRG
-            // 
-            this.txtRG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRG.Location = new System.Drawing.Point(145, 96);
-            this.txtRG.Mask = "00,000,000-0";
-            this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(122, 26);
-            this.txtRG.TabIndex = 3;
-            this.txtRG.Click += new System.EventHandler(this.IniciarEsquerda);
             // 
             // txtCPF
             // 
@@ -1002,15 +1002,15 @@
             this.btnAtualizarDependente.Visible = false;
             this.btnAtualizarDependente.Click += new System.EventHandler(this.btnAtualizarDependente_Click);
             // 
-            // txtFoto
+            // txtRG
             // 
-            this.txtFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFoto.Location = new System.Drawing.Point(715, 364);
-            this.txtFoto.Name = "txtFoto";
-            this.txtFoto.Size = new System.Drawing.Size(53, 26);
-            this.txtFoto.TabIndex = 15;
-            this.txtFoto.Visible = false;
-            this.txtFoto.TextChanged += new System.EventHandler(this.txtFoto_TextChanged);
+            this.txtRG.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtRG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRG.Location = new System.Drawing.Point(145, 96);
+            this.txtRG.Name = "txtRG";
+            this.txtRG.Size = new System.Drawing.Size(121, 26);
+            this.txtRG.TabIndex = 16;
+            this.txtRG.Click += new System.EventHandler(this.IniciarEsquerda);
             // 
             // FormCadastro
             // 
@@ -1093,7 +1093,6 @@
         public System.Windows.Forms.MaskedTextBox txtTelefone;
         public System.Windows.Forms.MaskedTextBox txtRecado;
         public System.Windows.Forms.MaskedTextBox txtAdmissao;
-        public System.Windows.Forms.MaskedTextBox txtRG;
         public System.Windows.Forms.MaskedTextBox txtCPF;
         public System.Windows.Forms.MaskedTextBox txtDataNascimento;
         public System.Windows.Forms.MaskedTextBox txtCEP;
@@ -1127,5 +1126,6 @@
         public System.Windows.Forms.Button btnAtualizarDependente;
         public FontAwesome.Sharp.IconButton btnImprimirCarteirinha;
         public System.Windows.Forms.TextBox txtFoto;
+        public System.Windows.Forms.TextBox txtRG;
     }
 }

@@ -549,7 +549,7 @@ namespace Programa_STPMJ
             List<Relacao_Associados> lst = new List<Relacao_Associados>();
             lst.Clear();
 
-            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 Relacao_Associados relacao_Associados = new Relacao_Associados
                 {
