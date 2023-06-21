@@ -485,7 +485,7 @@ namespace Programa_STPMJ
                 worksheet.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
             }
             // storing Each row and column value to excel sheet  
-            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 for (int j = 0; j < dataGridView1.Columns.Count; j++)
                 {
