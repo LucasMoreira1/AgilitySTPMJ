@@ -507,7 +507,7 @@ namespace Programa_STPMJ
             List<Dados_Socios> lst = new List<Dados_Socios>();
             lst.Clear();
 
-            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 Dados_Socios dados_Socios = new Dados_Socios
                 {
