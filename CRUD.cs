@@ -9,7 +9,7 @@ namespace Programa_STPMJ
         private static string getConnectionString()
         {
             //string conString = "Server=108.167.132.199;Database=soluc963_STPMJ;Uid=soluc963_STPMJ;Pwd=R~X4ro$%K18b; ";
-            string conString = "Server=100.64.42.33;Port=3306;Database=soluc963_STPMJ;Uid=Agility;Pwd=!Parrudo292701;";
+            string conString = "Server=187.95.26.193;Port=3306;Database=soluc963_STPMJ;Uid=Agility;Pwd=!Parrudo292701;";
             return conString;
         }
 
