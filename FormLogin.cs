@@ -1,12 +1,9 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using Microsoft.VisualBasic;
 using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 using System.IO;
-using System.Configuration;
-using Microsoft.VisualBasic;
-using System.Collections.Generic;
-using System.Data.SqlClient;
+using System.Windows.Forms;
 
 
 namespace Programa_STPMJ

@@ -1,7 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Programa_STPMJ
 {
@@ -232,7 +232,7 @@ namespace Programa_STPMJ
                 MessageBox.Show("Dados deletados com sucesso.", "Deletar dados",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                
+
             }
         }
     }

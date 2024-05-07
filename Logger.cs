@@ -1,6 +1,5 @@
-﻿using System.Configuration;
+﻿using System;
 using System.IO;
-using System;
 
 namespace Programa_STPMJ
 {

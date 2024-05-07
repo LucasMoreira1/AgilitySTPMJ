@@ -1,5 +1,5 @@
-﻿using System;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -60,7 +60,7 @@ namespace Programa_STPMJ
             CRUD.cmd.Parameters.AddWithValue("usuario", cboxUsuario.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("data_lancamento", Convert.ToDateTime(txtDataLancamento.Text.Trim()));
             CRUD.cmd.Parameters.AddWithValue("valor", txtValor.Text.Trim());
-            
+
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -131,7 +131,7 @@ namespace Programa_STPMJ
             txtMatricula.Text = Convert.ToString(dgv.CurrentRow.Cells[0].Value);
             txtNome.Text = Convert.ToString(dgv.CurrentRow.Cells[1].Value);
             txtSecretaria.Text = Convert.ToString(dgv.CurrentRow.Cells[8].Value);
-            
+
             dgv.Visible = false;
 
             CarregarCbox();

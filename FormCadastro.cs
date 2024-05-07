@@ -185,12 +185,12 @@ namespace Programa_STPMJ
             ResetMe();
             pesquisa();
 
-            
+
             CRUD.sql = "SELECT * FROM FOTOS WHERE SOCIO_ID LIKE '" + txtMatricula.Text.Trim() + "'";
 
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt2 = CRUD.PerformCRUD(CRUD.cmd);
-            
+
             dgv.Visible = true;
             dgv.MultiSelect = false;
             dgv.AutoGenerateColumns = true;
@@ -207,7 +207,7 @@ namespace Programa_STPMJ
 
             dgv.Visible = false;
 
-            
+
         }
 
         private void btnBuscarCEP_Click(object sender, EventArgs e)
@@ -276,7 +276,7 @@ namespace Programa_STPMJ
 
         private void FormCadastro_Load(object sender, EventArgs e)
         {
-            
+
             txtDataCadastro.Text = DateTime.Now.ToString("dd/MM/yyyy");
             //Camera
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
@@ -291,7 +291,7 @@ namespace Programa_STPMJ
 
             AlimentarComboBox();
 
-            
+
 
         }
 
@@ -354,7 +354,7 @@ namespace Programa_STPMJ
             filter3.ApplyInPlace(newImage);
             filter1.ApplyInPlace(newImage);
             filter.ApplyInPlace(newImage);
-            
+
             ///
 
             imgCamera.Image = newImage;
@@ -579,7 +579,7 @@ namespace Programa_STPMJ
 
                 dgv2.Visible = false;
             }
-            
+
 
 
         }
@@ -628,12 +628,12 @@ namespace Programa_STPMJ
 
         private void FormCadastro_Activated(object sender, EventArgs e)
         {
-            
+
         }
 
         private void FormCadastro_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtFoto_TextChanged(object sender, EventArgs e)

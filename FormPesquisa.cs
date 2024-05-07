@@ -1,11 +1,9 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.Reporting.WinForms;
+using MySql.Data.MySqlClient;
 using System;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Windows.Forms;
 using System.Collections.Generic;
-using Microsoft.Reporting.WinForms;
+using System.Data;
+using System.Windows.Forms;
 
 
 
@@ -16,7 +14,7 @@ namespace Programa_STPMJ
     {
         private int row = 0;
         private string id = "";
-        
+
         public FormPesquisa()
         {
             InitializeComponent();
@@ -55,7 +53,7 @@ namespace Programa_STPMJ
 
         //    DataGridView dgv = dataGridView1;
 
-            
+
         //    dgv.MultiSelect = false;
         //    dgv.AutoGenerateColumns = false;
         //    dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -343,7 +341,7 @@ namespace Programa_STPMJ
             CRUD.cmd = new MySqlCommand(CRUD.sql, CRUD.con);
             DataTable dt = CRUD.PerformCRUD(CRUD.cmd);
 
-            
+
 
             DataGridView dgv = dataGridView1;
 
@@ -523,15 +521,15 @@ namespace Programa_STPMJ
                 lst.Add(dados_Socios);
             }
 
-                rs.Name = "DadosSocios";
-                rs.Value = lst;
-                FormEtiquetas formEtiquetas = new FormEtiquetas();
-                formEtiquetas.reportViewer1.LocalReport.DataSources.Clear();
-                formEtiquetas.reportViewer1.LocalReport.DataSources.Add(rs);
-                formEtiquetas.reportViewer1.LocalReport.ReportEmbeddedResource = "Programa_STPMJ.reportEtiquetas.rdlc";
+            rs.Name = "DadosSocios";
+            rs.Value = lst;
+            FormEtiquetas formEtiquetas = new FormEtiquetas();
+            formEtiquetas.reportViewer1.LocalReport.DataSources.Clear();
+            formEtiquetas.reportViewer1.LocalReport.DataSources.Add(rs);
+            formEtiquetas.reportViewer1.LocalReport.ReportEmbeddedResource = "Programa_STPMJ.reportEtiquetas.rdlc";
 
-                formEtiquetas.ShowDialog();
-            
+            formEtiquetas.ShowDialog();
+
         }
         public class Dados_Socios
         {
