@@ -226,5 +226,23 @@ namespace Programa_STPMJ
         {
 
         }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtCodConvenio.Text.Trim()) ||
+                    string.IsNullOrEmpty(txtValor.Text.Trim()))
+            {
+                MessageBox.Show("Campos obrigatórios: Cod Convenio e valor", "Dados Obrigatórios",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            CRUD.sql = "UPDATE CONVENIO SET valor = @valor WHERE cod_convenio = @cod_convenio";
+
+            Executar(CRUD.sql, "Update");
+
+            MessageBox.Show("Dados atualizados.", "Valor Convenio",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
