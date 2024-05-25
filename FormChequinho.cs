@@ -30,7 +30,8 @@ namespace Programa_STPMJ
             //
             //
             //;Pwd=!Parrudo292701;";
-            string conString = "Server=mysql-agility.advogadodigital.click;Port=3306;Database=soluc963_STPMJ;Uid=Agility;Pwd=!Parrudo292701;";
+            //string conString = "Server=mysql-agility.advogadodigital.click;Port=3306;Database=soluc963_STPMJ;Uid=Agility;Pwd=!Parrudo292701;";
+            string conString = "Server=192.168.15.29;Port=3306;Database=soluc963_STPMJ;Uid=stpmj;Pwd=!Stpmj292701;";
             return conString;
         }
         //private Socios GetSocios()
